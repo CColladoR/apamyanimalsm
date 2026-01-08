@@ -3,13 +3,14 @@ import { TEAM_MEMBERS } from '../constants';
 import { Camera } from 'lucide-react';
 
 export const About: React.FC = () => {
+  // Placeholder images with question marks as requested
   const galleryImages = [
-    "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1517423568366-697553f1d7ad?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1544568100-847a948585b9?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1596492784531-6e6eb5ea9205?q=80&w=600&auto=format&fit=crop",
+    "https://placehold.co/600x400/f5f5f4/a8a29e?text=?",
+    "https://placehold.co/600x600/f5f5f4/a8a29e?text=?",
+    "https://placehold.co/600x400/f5f5f4/a8a29e?text=?",
+    "https://placehold.co/600x500/f5f5f4/a8a29e?text=?",
+    "https://placehold.co/600x400/f5f5f4/a8a29e?text=?",
+    "https://placehold.co/600x600/f5f5f4/a8a29e?text=?",
   ];
 
   return (
@@ -70,13 +71,13 @@ export const About: React.FC = () => {
                         <img 
                             src={src} 
                             alt={`Momento APA Myanimalsm ${idx + 1}`} 
-                            className="w-full h-auto hover:scale-105 transition-transform duration-700 block" 
+                            className="w-full h-auto hover:scale-105 transition-transform duration-700 block opacity-70 dark:opacity-50" 
                         />
                     </div>
                 ))}
             </div>
-            <p className="text-center text-sm text-stone-500 dark:text-stone-400 mt-8 italic">
-                Pequeños instantes de felicidad compartida que nos impulsan a seguir adelante.
+            <p className="text-center text-lg text-stone-600 dark:text-stone-300 mt-10 italic font-serif">
+                "Próximamente compartiremos pequeños instantes de felicidad compartida que nos impulsan a seguir adelante"
             </p>
         </div>
       </div>

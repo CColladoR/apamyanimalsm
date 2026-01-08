@@ -172,31 +172,31 @@ export const ANIMALS: Animal[] = [
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: '1',
-    name: 'Laura García',
+    name: 'Laura',
     role: 'Presidenta y Fundadora',
-    imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop',
-    bio: 'Fundadora de APA Myanimalsm. Su pasión por los animales le llevó a crear este proyecto para dar voz a los que no la tienen.'
+    imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Laura.jpg',
+    bio: 'Mi pasión por la naturaleza y los animales me llevó a embarcarme en este reto. Soy la fundadora de este bonito proyecto. De niña no podía pensar en un futuro sin ellos. Desde muy joven comencé como particular en la alimentación, rescate y gestión de colonias. Fui voluntaria en varias organizaciones, pero nunca pensé que mi sueño se llegaría a cumplir tan pronto. Con 23 años tenía mi propia asociación, encontré a un equipo con mis mismos ideales. Desde entonces he crecido junto a ellas, he aprendido cada día, hemos caído y nos hemos levantado juntas, superamos todo lo duro de este mundo y por supuesto lo recompensamos con todo lo bueno que nos da. Eso es APA. Myanimalsm, enfocado siempre en salvar la vida a todo aquel animalito que lo necesite.'
   },
   {
     id: '2',
-    name: 'Dra. María Ruiz',
-    role: 'Veterinaria',
-    imageUrl: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=400&auto=format&fit=crop',
-    bio: 'Especialista en medicina felina. Se encarga de la salud y bienestar de todos nuestros rescatados.'
+    name: 'Reyes',
+    role: 'Vicepresidenta',
+    imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Reyes.jpg',
+    bio: 'Mi ropa ha estado siempre marcada por pelitos de gato, soy de las que piensa que "hogar" significa abrir la puerta y ver que un lindo gatito te está esperando. No concibo el día a día sin tener a un michi ronroneando en mi pecho y me es imposible mirar hacia otro lado cuando hay algún caso que necesita de nuestra ayuda. Estar en Apa Myanimalsm me ha salvado de lo peor de la sociedad y me permite volar muy alto sin poner límites a lo que más quiero: dar todo de mí por los gatos. Cada día conseguimos abarcar más casos y todo es gracias al gran equipo que formamos.'
   },
   {
     id: '3',
-    name: 'Carmen López',
-    role: 'Coordinadora de Adopciones',
-    imageUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop',
-    bio: 'Gestiona las entrevistas y seguimientos para asegurar que cada animal encuentra el hogar perfecto.'
+    name: 'Angelines',
+    role: 'Secretaria',
+    imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Angelines.jpg',
+    bio: 'Empecé en en el mundo de la protección animal siendo rescatista de casos imposibles, metiéndome en alcantarillas para sacar a camadas atrapadas, he pasado horas en el Manzanares para rescatar a un gato que se había precipitado y he formado parte de varios grupos de rescate animal donde he aprendido muchísimo sobre capturas y socialización. Mi pasión por los animales es tan fuerte que mis días deberían tener más de 24h para que me diese tiempo a abarcar todo lo que me gustaría. Cuando recibo halagos por salvar a tantos peludos suelo contestar lo mismo: son ellos los que siempre me salvan a mí.'
   },
   {
     id: '4',
-    name: 'Ana Torres',
-    role: 'Responsable de Acogidas',
-    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop',
-    bio: 'El nexo de unión entre la asociación y nuestras casas de acogida, pilar fundamental de nuestra labor.'
+    name: 'Christian',
+    role: 'Tesorero',
+    imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris.jpg',
+    bio: 'La gestión de la burocracia, gestión económica y la administración de la asociación, es ayuda que quizás no se ve desde fuera. En lo personal, ha derribado mis propios mitos, pasando de ser exclusivamente una persona "de perros" a entender y compartir el amor por los gatos con esa misma intensidad. Además, me considero una pieza fundamental de nuestra red de casas de acogida, ofrezco mi hogar como refugio seguro, demostrando que el trabajo de protección animal se hace tanto detrás de una pantalla, en la calle y desde el salón de mi casa.'
   }
 ];
 
