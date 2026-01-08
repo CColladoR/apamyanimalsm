@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ANIMALS } from '../constants';
-import { Heart, Home, Ruler, Calendar, Info, ArrowLeft, Check, X, Clock, Stethoscope } from 'lucide-react';
-import { MedicalStatusValue } from '../types';
+import { Heart, Home, Ruler, Calendar, Info, ArrowLeft, Check, X, Clock, Stethoscope, AlertCircle } from 'lucide-react';
+import { MedicalStatusValue, FelvFivValue } from '../types';
 
 export const AnimalDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -17,24 +17,30 @@ export const AnimalDetail: React.FC = () => {
     );
   }
 
-  const renderStatusBadge = (status?: MedicalStatusValue) => {
+  const renderStatusBadge = (status?: string) => {
     if (!status) return <span className="text-stone-400">-</span>;
 
-    const styles = {
+    const styles: Record<string, string> = {
       'Sí': 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800',
+      'Negativo': 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800',
       'No': 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 border-red-200 dark:border-red-800',
       'Pte': 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 border-amber-200 dark:border-amber-800',
+      'Positivo (FELV)': 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 border-amber-200 dark:border-amber-800',
+      'Positivo (FIV)': 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 border-amber-200 dark:border-amber-800',
     };
 
-    const icons = {
+    const icons: Record<string, React.ReactNode> = {
       'Sí': <Check size={14} className="mr-1.5" />,
+      'Negativo': <Check size={14} className="mr-1.5" />,
       'No': <X size={14} className="mr-1.5" />,
       'Pte': <Clock size={14} className="mr-1.5" />,
+      'Positivo (FELV)': <AlertCircle size={14} className="mr-1.5" />,
+      'Positivo (FIV)': <AlertCircle size={14} className="mr-1.5" />,
     };
 
     return (
-      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold border ${styles[status]}`}>
-        {icons[status]}
+      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold border ${styles[status] || styles['Pte']}`}>
+        {icons[status] || <Info size={14} className="mr-1.5" />}
         {status}
       </span>
     );
@@ -99,8 +105,8 @@ export const AnimalDetail: React.FC = () => {
               </div>
             </div>
 
-            {/* Medical Status Section - ONLY FOR CATS */}
-            {animal.species === 'Gato' && animal.medicalStatus && (
+            {/* Medical Status Section */}
+            {animal.medicalStatus && (
               <div className="mb-8 bg-teal-50 dark:bg-teal-900/10 rounded-xl p-5 border border-teal-100 dark:border-teal-900/30">
                  <h3 className="flex items-center font-serif font-bold text-teal-900 dark:text-teal-200 mb-4">
                    <Stethoscope size={20} className="mr-2" />
@@ -111,10 +117,13 @@ export const AnimalDetail: React.FC = () => {
                       <span className="text-stone-700 dark:text-stone-300 text-sm font-medium">Desparasitación</span>
                       {renderStatusBadge(animal.medicalStatus.deworming)}
                     </div>
-                    <div className="flex justify-between items-center pb-2 border-b border-teal-100 dark:border-teal-900/30 last:border-0 last:pb-0">
-                      <span className="text-stone-700 dark:text-stone-300 text-sm font-medium">Test FELV/FIV</span>
-                      {renderStatusBadge(animal.medicalStatus.felvFiv)}
-                    </div>
+                    {/* Only show FELV/FIV for cats */}
+                    {animal.species === 'Gato' && (
+                        <div className="flex justify-between items-center pb-2 border-b border-teal-100 dark:border-teal-900/30 last:border-0 last:pb-0">
+                          <span className="text-stone-700 dark:text-stone-300 text-sm font-medium">Test FELV/FIV</span>
+                          {renderStatusBadge(animal.medicalStatus.felvFiv)}
+                        </div>
+                    )}
                     <div className="flex justify-between items-center pb-2 border-b border-teal-100 dark:border-teal-900/30 last:border-0 last:pb-0">
                       <span className="text-stone-700 dark:text-stone-300 text-sm font-medium">Vacunación</span>
                       {renderStatusBadge(animal.medicalStatus.vaccination)}
@@ -133,11 +142,11 @@ export const AnimalDetail: React.FC = () => {
 
             <div className="mb-8 prose prose-stone dark:prose-invert">
               <h3 className="text-lg font-bold font-serif mb-2 text-stone-800 dark:text-stone-100">Mi Historia</h3>
-              <p className="text-stone-600 dark:text-stone-300 leading-relaxed mb-4">
+              <p className="text-stone-600 dark:text-stone-300 leading-relaxed mb-4 whitespace-pre-line">
                 {animal.story}
               </p>
               <h3 className="text-lg font-bold font-serif mb-2 text-stone-800 dark:text-stone-100">Más sobre mí</h3>
-              <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
+              <p className="text-stone-600 dark:text-stone-300 leading-relaxed whitespace-pre-line">
                 {animal.description}
               </p>
             </div>

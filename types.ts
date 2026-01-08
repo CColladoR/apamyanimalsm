@@ -1,8 +1,10 @@
 export type MedicalStatusValue = 'Sí' | 'No' | 'Pte';
 
+export type FelvFivValue = 'No' | 'Pte' | 'Negativo' | 'Positivo (FELV)' | 'Positivo (FIV)';
+
 export interface MedicalStatus {
   deworming: MedicalStatusValue; // Desparasitación
-  felvFiv: MedicalStatusValue;   // Test FELV/FIV
+  felvFiv: FelvFivValue;         // Test FELV/FIV (Updated type)
   vaccination: MedicalStatusValue; // Vacunación
   microchip: MedicalStatusValue;   // Microchip
   sterilization: MedicalStatusValue; // Esterilización
@@ -15,11 +17,11 @@ export interface Animal {
   breed: string;
   age: string;
   gender: 'Macho' | 'Hembra';
-  size: 'Pequeño' | 'Mediano' | 'Grande';
+  size: string;
   imageUrl: string;
   description: string;
   story: string;
-  status: 'En Adopción' | 'Reservado' | 'Urgente';
+  status: 'En Adopción' | 'Reservado' | 'Urgente' | 'En residencia' | 'Próximamente en Adopción' | 'Pendiente de Adopción';
   medicalStatus?: MedicalStatus; // Optional, mainly for cats
 }
 

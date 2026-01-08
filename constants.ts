@@ -2,89 +2,17 @@ import { Animal, TeamMember, DonationMethod } from './types';
 
 export const ANIMALS: Animal[] = [
   {
-    id: '7',
-    name: 'Nuevo Rescate (Instagram)',
-    species: 'Perro', // Cambiar si es Gato u Otro
-    breed: 'Mestizo',
-    age: 'Consultar ficha',
-    gender: 'Macho',
-    size: 'Mediano',
-    imageUrl: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=1000&auto=format&fit=crop', // Sustituir por la foto real
-    description: 'Recién llegado a la familia APA Myanimalsm. Estamos actualizando su ficha con los datos del post.',
-    story: 'Este animal acaba de ser publicado en nuestras redes sociales. Para más información inmediata visita el post original: https://www.instagram.com/p/DS42kTGDB_M/',
-    status: 'En Adopción'
-  },
-  {
     id: '1',
-    name: 'Toby',
+    name: 'Maíz',
     species: 'Perro',
-    breed: 'Mestizo de Labrador',
-    age: '2 años',
-    gender: 'Macho',
-    size: 'Grande',
-    imageUrl: 'https://images.unsplash.com/photo-1591769225440-811ad7d6eca6?q=80&w=1000&auto=format&fit=crop',
-    description: 'Toby es un perro lleno de energía y amor para dar. Le encantan los paseos largos.',
-    story: 'Toby fue encontrado vagando cerca de una carretera. Estaba desnutrido y asustado. Después de meses de recuperación, ha demostrado ser un compañero leal y juguetón. Se lleva bien con otros perros, pero prefiere no convivir con gatos. Necesita una familia activa que pueda seguir su ritmo.',
-    status: 'En Adopción'
-  },
-  {
-    id: '2',
-    name: 'Luna',
-    species: 'Gato',
-    breed: 'Europeo Común',
-    age: '8 meses',
-    gender: 'Hembra',
-    size: 'Pequeño',
-    imageUrl: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1000&auto=format&fit=crop',
-    description: 'Luna es una gatita curiosa y muy cariñosa. El motor de su ronroneo nunca se apaga.',
-    story: 'Luna y sus hermanos fueron dejados en una caja en la puerta del refugio. Es la única que queda por adoptar de su camada. Es muy sociable, le encanta dormir al sol y jugar con cualquier cosa que se mueva.',
-    status: 'En Adopción',
-    medicalStatus: {
-      deworming: 'Sí',
-      felvFiv: 'No', // Negativo en tests
-      vaccination: 'Sí',
-      microchip: 'Sí',
-      sterilization: 'Pte' // Pendiente por edad
-    }
-  },
-  {
-    id: '3',
-    name: 'Max',
-    species: 'Perro',
-    breed: 'Pastor Alemán',
-    age: '5 años',
-    gender: 'Macho',
-    size: 'Grande',
-    imageUrl: 'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?q=80&w=1000&auto=format&fit=crop',
-    description: 'Max es un perro noble, obediente y protector. Ideal para casas con jardín.',
-    story: 'Su anterior dueño falleció y la familia no pudo hacerse cargo. Max es un perro muy educado, sabe sentarse y dar la pata. Es tranquilo en casa pero necesita su dosis diaria de ejercicio. Sería el compañero perfecto para una persona mayor activa o una familia tranquila.',
-    status: 'Urgente'
-  },
-  {
-    id: '4',
-    name: 'Coco',
-    species: 'Perro',
-    breed: 'Podenco',
-    age: '3 años',
-    gender: 'Macho',
-    size: 'Mediano',
-    imageUrl: 'https://images.unsplash.com/photo-1625316708582-7c38734c3121?q=80&w=1000&auto=format&fit=crop',
-    description: 'Coco es un poco tímido al principio, pero un amor cuando coge confianza.',
-    story: 'Rescatado de una situación de maltrato, a Coco le cuesta un poco confiar en los extraños. Sin embargo, una vez que te conoce, es la sombra más dulce que podrías tener. Busca un hogar tranquilo y paciente que le de el amor que nunca tuvo.',
-    status: 'En Adopción'
-  },
-  {
-    id: '5',
-    name: 'Mia',
-    species: 'Gato',
-    breed: 'Siamés',
+    breed: 'Mestizo',
     age: '4 años',
-    gender: 'Hembra',
-    size: 'Mediano',
-    imageUrl: 'https://images.unsplash.com/photo-1513245543132-31f507417b26?q=80&w=1000&auto=format&fit=crop',
-    description: 'Elegante y vocal. Mia siempre tendrá algo que contarte.',
-    story: 'Mia es una gata con mucha personalidad. Le gusta ser el centro de atención y no duda en pedir mimos cuando los quiere. Convive bien con otros gatos si se hacen las presentaciones adecuadas.',
-    status: 'Reservado',
+    gender: 'Macho',
+    size: 'Grande',
+    imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Maiz.jpg',
+    description: 'Maíz es un perro súper casero, actualmente en residencia, que busca urgentemente un hogar. Ha trabajado mucho sus miedos y es un perro agradecido y listo para aprender.',
+    story: 'Maíz es un perro super casero, se fue adoptado con 3 meses (en 2021) y lo devolvieron en otoño de 2023 con un cuadro de ansiedad importante. La familia no supo educarle y en lugar de trabajar con el desde una parte positiva, lo hicieron con castigos, encierros y ansiedad. Eso provocó que Maíz volviera muy vulnerable, sin entender nada y que estuviera varios meses en shock, apático y llorando de pena💔\n\nDesde que nos lo devolvieron, se encuentra en una residencia canina donde hemos trabajado con especialistas sus miedos y su frustración, además de que le han enseñado muchos trucos que le motivan en el día a día y hacen su estancia más amena. De hecho, vuelve a ser el perrito contento que era, pero no deja de estar en una residencia...es decir, como perro que siempre ha vivido en una casa, le esta afectando el vivir en un chenil 😞\n\nSabemos que por tamaño y por no ser "un bebé pequeño" sus solicitudes de adopción o acogida temporal son NULAS. Pero no por ello vamos a dejar de intentarlo, así que: buscamos sacarlo de allí bien como casa de acogida o bien con adopción definitiva 🙏🏻\n\nEsto no es un juego, hablamos de una vida que, a su corta edad, ya ha sido dañada. Los casos de perros devueltos a las protectoras son muy sensibles puesto que el animal es muy consciente del abandono y, siendo totalmente casero, tiene que pasar a vivir en un chenil de una residencia canina donde se pierden todas las comodidades de un hogar, generando en ellos un shock y adaptación brutal. Necesitamos que las personas que estén interesadas en ayudar tengan muy claro que se necesita paciencia y conectar desde el cariño con el animal para poco a poco ir enseñándole que no volverá a pasar por ese shock, que no todos somos malos y que puede llevar de nuevo una vida feliz 🥹',
+    status: 'Urgente',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'No',
@@ -93,84 +21,216 @@ export const ANIMALS: Animal[] = [
       sterilization: 'Sí'
     }
   },
-    {
-    id: '6',
-    name: 'Bimba',
+  {
+    id: '2',
+    name: 'Brie',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Siamés',
+    age: '1.5 años',
+    gender: 'Hembra',
+    size: '3kg',
+    imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Brie.jpg',
+    description: 'Actualmente me encuentro en una casa de acogida en Madrid. No estaré en adopción hasta finalizar todos los procedimientos que tengo pendientes y la asociación tenga el visto bueno por parte de nuestras veterinarias. Mientras tanto, puedes ser mi madrina o padrino para ayudar a cubrir los gastos de mi recuperación.',
+    story: 'Brie llegó a nosotras pesando solamente 1kg (siendo gata adulta) en un estado límite rozando la muerte, de hecho, un día más en la calle y no lo hubiera contado. Fue rociada con veneno/gasolina por todo el cuerpo y eso le causó inflamación y quemaduras en la boca y vías respiratorias causándole muchísima mucosidad y dificultad para respirar😭\n\nHace un mes de su tan sonada operación de boca, donde se removió cielo y tierra para conseguirlo. Y sí, aquí estamos, habiendo dado un paso gigante en su calidad de vida. Después de pasar por la operación de odontología, donde pudieron extraerle todas las piezas y curar las úlceras, Brie a día de hoy, está mucho más tranquila: come que da gusto, no tiene dolor e incluso se le ha bajado un poco la inflamación de las vías altas. \n\nActualmente, gracias a toda vuestra ayuda, hemos recorrido la mitad del camino, solo nos queda el final. Nuestras veterinarias están intentando mantener esos mocos con un tratamiento diario y así intentar que siga ganando peso, pero la realidad es que, en breves, habrá que realizarle un TAC para estudiar la causa que provoca que esos mocos no cesen y encontrar la solución para que pueda respirar con normalidad sin necesidad de aerosoles y humidificador. Asimismo, queremos recordar el hecho de que ella es + inmuno, por lo que sus defensas siempre van a estar más bajitas y el tiempo de recuperación se ralentiza más 🥹.\n\nEsto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto es terminar encontrándole un hogar cuando esté totalmente recuperada. Seguimos yendo a por todas, gracias infinitas a quienes nos habéis ayudado y pusisteis vuestro granito de arena, esto es una cadena...¡seguimos! ❤️',
+    status: 'Próximamente en Adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Positivo (FIV)',
+      vaccination: 'Sí',
+      microchip: 'Sí',
+      sterilization: 'Sí'
+    }
+  },
+  {
+    id: '3',
+    name: 'Omega',
     species: 'Perro',
-    breed: 'Bodeguero',
+    breed: 'Mestizo de Pastor Alemán',
+    age: '4 años',
+    gender: 'Macho',
+    size: 'Grande',
+    imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Omega.jpg',
+    description: 'Las dos plazas de la residencia nos cuestan 350€ al mes. Necesitamos tu ayuda 🙏',
+    story: 'Con 3 mesecitos se fueron adoptados, el que era su dueño pasó todos nuestros procesos de adopción, teníamos un buen seguimiento de como iban evolucionando y creciendo felices en la que parecía que sería su familia definitiva... Un año después nos dimos cuenta de que no fueron más que un capricho.\n\nLos dos hermanos que nos devolvieron al ser descubiertos por la policía porque su dueño los tenían en pésimas condiciones (mintieron lo más grande y los usaban como perros guardianes de una finca). \n\nActualmente se encuentran en una residencia canina especializada y trabajan para mejorar su conducta y comportamiento, ya que arrastran traumas por falta de atención, ansiedad, agresividad con otros animales y muestran indicios de maltrato. Llevan ya 3 años con nosotras y aún falta mucho progreso por delante. \n\nAhora solo esperamos que descansen y vuelvan a ser los perros felices y nobles que eran cuando se marcharon. Como decimos y repetiremos siempre, aquí estamos por y para ellos ✨\n\nTiempo, paciencia, trabajo y a buscar lo mejor para ellos siempre... ❤️‍🩹',
+    status: 'En residencia'
+  },
+  {
+    id: '4',
+    name: 'Delta',
+    species: 'Perro',
+    breed: 'Mestizo de Pastor Alemán',
+    age: '4 años',
+    gender: 'Macho',
+    size: 'Grande',
+    imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Delta.jpg',
+    description: 'Las dos plazas de la residencia nos cuestan 350€ al mes. Necesitamos tu ayuda 🙏',
+    story: 'Con 3 mesecitos se fueron adoptados, el que era su dueño pasó todos nuestros procesos de adopción, teníamos un buen seguimiento de como iban evolucionando y creciendo felices en la que parecía que sería su familia definitiva... Un año después nos dimos cuenta de que no fueron más que un capricho.\n\nLos dos hermanos que nos devolvieron al ser descubiertos por la policía porque su dueño los tenían en pésimas condiciones (mintieron lo más grande y los usaban como perros guardianes de una finca). \n\nActualmente se encuentran en una residencia canina especializada y trabajan para mejorar su conducta y comportamiento, ya que arrastran traumas por falta de atención, ansiedad, agresividad con otros animales y muestran indicios de maltrato. Llevan ya 3 años con nosotras y aún falta mucho progreso por delante. \n\nAhora solo esperamos que descansen y vuelvan a ser los perros felices y nobles que eran cuando se marcharon. Como decimos y repetiremos siempre, aquí estamos por y para ellos ✨\n\nTiempo, paciencia, trabajo y a buscar lo mejor para ellos siempre... ❤️‍🩹',
+    status: 'En residencia'
+  },
+  {
+    id: '5',
+    name: 'Sidra',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Blanco y Negro',
     age: '1 año',
     gender: 'Hembra',
-    size: 'Pequeño',
-    imageUrl: 'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=1000&auto=format&fit=crop',
-    description: 'Pura alegría en formato pequeño. Bimba es saltarina y muy lista.',
-    story: 'Apareció vagando por el campo. Es una perra muy inteligente, aprende trucos con facilidad y le encanta jugar a la pelota. Es ideal para familias con niños porque nunca se cansa de jugar.',
-    status: 'En Adopción'
+    size: '3 kg',
+    imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Sidra.jpg',
+    description: 'Actualmente estamos ambas juntas en una casa de acogida en Madrid. Necesitamos recaudar fondos para poder cubrir el protocolo veterinario de ambas.',
+    story: 'Hace unos días publicamos la necesidad de una acogida urgente para Cava y Sidra, dos hembras jovenes ultra sociables que vivían en una colonia feral descontrolada en un pueblo de Toledo, comiendo de aquella manera y pasando las noches a la intemperie.\n\nObviamente obra del abandono, es evidente que ambas han convivido antes en un hogar por los comportamientos, mimos, ronroneos y saber estar que tienen a día de hoy en su maravillosa acogida, que no dudo ni un instante en aceptar el caso y darles la bienvenida en su casa\n\nNos propusimos que ambas terminasen el año en un hogar y así ha sido. Ambas han salido de la calle, iniciando su cuarentena para poder hacer después todo el protocolo veterinario. Iremos informando sobre sus avances y en pocas semanas, si todo va bien, esperamos poder anunciar su adopción\n\nA día de hoy, ambas necesitan madrinas y padrinos. Necesitamos cubrir una esterilización urgente para evitar sorpresas. ¿Quién se anima?',
+    status: 'En Adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Sí',
+      sterilization: 'Sí'
+    }
+  },
+  {
+    id: '6',
+    name: 'Cava',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Blanco y Negro',
+    age: '1 año',
+    gender: 'Hembra',
+    size: '3 kg',
+    imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Cava.jpg',
+    description: 'Actualmente estamos ambas juntas en una casa de acogida en Madrid. Necesitamos recaudar fondos para poder cubrir el protocolo veterinario de ambas.',
+    story: 'Hace unos días publicamos la necesidad de una acogida urgente para Cava y Sidra, dos hembras jovenes ultra sociables que vivían en una colonia feral descontrolada en un pueblo de Toledo, comiendo de aquella manera y pasando las noches a la intemperie.\n\nObviamente obra del abandono, es evidente que ambas han convivido antes en un hogar por los comportamientos, mimos, ronroneos y saber estar que tienen a día de hoy en su maravillosa acogida, que no dudo ni un instante en aceptar el caso y darles la bienvenida en su casa\n\nNos propusimos que ambas terminasen el año en un hogar y así ha sido. Ambas han salido de la calle, iniciando su cuarentena para poder hacer después todo el protocolo veterinario. Iremos informando sobre sus avances y en pocas semanas, si todo va bien, esperamos poder anunciar su adopción\n\nA día de hoy, ambas necesitan madrinas y padrinos. Necesitamos cubrir una esterilización urgente para evitar sorpresas. ¿Quién se anima?',
+    status: 'En Adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Sí',
+      sterilization: 'Sí'
+    }
+  },
+  {
+    id: '7',
+    name: 'Jengibre',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Siamés',
+    age: '10 meses',
+    gender: 'Macho',
+    size: '2.8kg',
+    imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Jengibre.jpg',
+    description: 'Jengibre se recupera actualmente en una casa de acogida en Toledo. Está en proceso de sociabilización y valoración veterinaria tras ser rescatado de la calle.',
+    story: 'Fui rescatado de una zona peligrosa donde corría riesgo de atropello. Vivía con Cava y Sidra, que fueron sacadas de la colonia unos pocos días antes que yo. En cuanto ellas no estuvieron, los vecinos dejaron desatendida la colonia y de repente no tenía comida ni agua. Dormía en la calle y cuando el frío llegó mi estado de salud empeoró drásticamente. Además, estoy cojito. Las chicas que me rescataron me llevaron al veterinario y parece que tengo una fractura en la cadera que se está valorando a día de hoy por el equipo de Traumatólogos. \n\nEstoy ubicado en una casa de acogida en Toledo. Están sociabilizando conmigo para que empiece a confiar en las personas y pueda llevar una vida feliz cuando esté totalmente recuperado.',
+    status: 'Próximamente en Adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '8',
+    name: 'Ana Mena',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Carey',
+    age: '1.5 meses',
+    gender: 'Hembra',
+    size: '950gr',
+    imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/AnaMena.jpg',
+    description: 'Actualmente, las chicas me han trasladado a una casa de acogida estable en Madrid, en la que también tengo otros compañeros gatunos que me están ayudando en todo el proceso de adaptación.\n\nActualmente NO estoy en adopción. Aún debo pasar toda la cuarentena y todo el protocolo veterinario. Mis tutoras informarán por redes sociales cuando esté lista para encontrar un hogar.',
+    story: 'Aparecí una mañana en una colonia controlada en un pueblo de Toledo. Las chicas que alimentaban a todos los compis gatunos que estaban allí me vieron enseguida y supieron que me habían dejado allí, abandonada, a -3º toda la noche.\n\nMe rescataron de inmediato y ahora estoy segura, caliente y en proceso de recuperación. ¡Pronto estaré lista para encontrar mi familia definitiva!',
+    status: 'Próximamente en Adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '9',
+    name: 'Romeo',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Atigrado',
+    age: '7 meses',
+    gender: 'Macho',
+    size: '3kg',
+    imageUrl: 'https://images.unsplash.com/photo-1519052537078-e6302a4968d4?q=80&w=1000&auto=format&fit=crop',
+    description: 'Joven gatito atigrado recién llegado a la familia. Se encuentra en casa de acogida en Toledo esperando completar su protocolo veterinario.',
+    story: 'Me llaman Romeo y es un placer conocerte :P\n\nLlevo tan solo unos días en la protectora. Anteriormente, me había tenido una familia durante varias semanas, aparecí en la puerta de su casa, al principio pensaron que podría tener familia pero cuando las horas pasaban y yo no me alejaba de allí, decidieron llevarme al veterinario. No tenía microchip pero estaba muy limpito y sanito y por mi aspecto el veterinario dijo que quizás podría tener familia.\n\nMe publicaron, me difundieron y mi familia nunca apareció, tampoco nadie que me quisiera así que empezaron a contactar con asociaciones para entregarme en una de ellas.\n\nDe casualidad y en el último momento, justo antes de que valorasen el soltarme de nuevo en la calle, aparecieron estos chicos tan majos, con los que vivo actualmente en Toledo. Me están cuidando y dicen que tengo que ir al veterinario pronto y si todo está bien, podré estar oficialmente en adopción.',
+    status: 'Próximamente en Adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
   }
 ];
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     id: '1',
-    name: 'Laura',
+    name: 'Laura García',
     role: 'Presidenta y Fundadora',
     imageUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop',
-    bio: 'Desde muy joven comencé como particular en la alimentación, rescate y gestión de colonias. Fui voluntaria en varias organizaciones, pero nunca pensé que mi sueño se llegaría a cumplir tan pronto. Con 23 años tenía mi propia asociación, encontré a un equipo con mis mismos ideales. Desde entonces he crecido junto a ellas, he aprendido cada día, hemos caído y nos hemos levantado juntas, superamos todo lo duro de este mundo y por supuesto lo recompensamos con todo lo bueno que nos da. Eso es APA. Myanimalsm, enfocado siempre en salvar la vida a todo aquel animalito que lo necesite.'
+    bio: 'Fundadora de APA Myanimalsm. Su pasión por los animales le llevó a crear este proyecto para dar voz a los que no la tienen.'
   },
   {
     id: '2',
-    name: 'Reyes',
-    role: 'Vicepresidenta',
-    imageUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop',
-    bio: 'Mi ropa ha estado siempre marcada por pelitos de gato, soy de las que piensa que "hogar" significa abrir la puerta y ver que un lindo gatito te está esperando. No concibo el día a día sin tener a un michi ronroneando en mi pecho y me es imposible mirar hacia otro lado cuando hay algún caso que necesita de nuestra ayuda. Estar en Apa Myanimalsm me ha salvado de lo peor de la sociedad y me permite volar muy alto sin poner límites a lo que más quiero: dar todo de mí por los gatos. Cada día conseguimos abarcar más casos y todo es gracias al gran equipo que formamos.'
+    name: 'Dra. María Ruiz',
+    role: 'Veterinaria',
+    imageUrl: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=400&auto=format&fit=crop',
+    bio: 'Especialista en medicina felina. Se encarga de la salud y bienestar de todos nuestros rescatados.'
   },
   {
     id: '3',
-    name: 'Angelines',
-    role: 'Secretaria',
-    imageUrl: 'https://images.unsplash.com/photo-1554151228-14d9def656ec?q=80&w=400&auto=format&fit=crop',
-    bio: 'Empecé en el mundo de la protección animal siendo rescatista de casos imposibles, metiéndome en alcantarillas para sacar a camadas atrapadas, he pasado horas en el Manzanares para rescatar a un gato que se había precipitado y he formado parte de varios grupos de rescate animal donde he aprendido muchísimo sobre capturas y socialización. Mi pasión por los animales es tan fuerte que mis días deberían tener más de 24h para que me diese tiempo a abarcar todo lo que me gustaría. Cuando recibo halagos por salvar a tantos peludos suelo contestar lo mismo: son ellos los que siempre me salvan a mí.'
+    name: 'Carmen López',
+    role: 'Coordinadora de Adopciones',
+    imageUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop',
+    bio: 'Gestiona las entrevistas y seguimientos para asegurar que cada animal encuentra el hogar perfecto.'
   },
   {
     id: '4',
-    name: 'Christian',
-    role: 'Tesorero',
-    imageUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop',
-    bio: 'La gestión de la burocracia, gestión económica y la administración de la asociación, es ayuda que quizás no se ve desde fuera. En lo personal, ha derribado mis propios mitos, pasando de ser exclusivamente una persona "de perros" a entender y compartir el amor por los gatos con esa misma intensidad. Además, me considero una pieza fundamental de nuestra red de casas de acogida, ofrezco mi hogar como refugio seguro, demostrando que el trabajo de protección animal se hace tanto detrás de una pantalla, en la calle y desde el salón de mi casa.'
+    name: 'Ana Torres',
+    role: 'Responsable de Acogidas',
+    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop',
+    bio: 'El nexo de unión entre la asociación y nuestras casas de acogida, pilar fundamental de nuestra labor.'
   }
 ];
 
 export const DONATION_METHODS: DonationMethod[] = [
   {
-    id: 'teaming',
+    id: '1',
     name: 'Teaming',
-    description: 'Dona 1€ al mes. Un pequeño gesto que suma mucho.',
+    description: 'Ayúdanos con solo 1€ al mes. Una pequeña aportación que hace una gran diferencia.',
     iconName: 'Users',
-    actionUrl: 'https://www.teaming.net/',
+    actionUrl: 'https://www.teaming.net/apa-myanimalsm',
+    color: 'bg-teal-500'
+  },
+  {
+    id: '2',
+    name: 'Bizum',
+    description: 'Donación inmediata y sencilla desde tu móvil.',
+    iconName: 'Smartphone',
+    details: 'Código envío ONG: 00000',
     color: 'bg-blue-500'
   },
   {
-    id: 'bizum',
-    name: 'Bizum',
-    description: 'Donación rápida y sencilla desde tu móvil.',
-    iconName: 'Smartphone',
-    details: 'Código de envío: 04872 (Concepto: Donación)',
-    color: 'bg-teal-600'
-  },
-  {
-    id: 'paypal',
-    name: 'PayPal',
-    description: 'Dona de forma segura con tu cuenta PayPal o tarjeta.',
-    iconName: 'CreditCard',
-    actionUrl: 'https://www.paypal.com/',
-    details: 'Cuenta: myanimalsm@gmail.com',
-    color: 'bg-indigo-600'
-  },
-  {
-    id: 'transfer',
+    id: '3',
     name: 'Transferencia',
-    description: 'Transferencia bancaria directa a nuestra cuenta.',
+    description: 'Realiza una transferencia bancaria directa a nuestra cuenta.',
     iconName: 'Landmark',
-    details: 'IBAN: ES69 0073 0100 5205 0607 9064',
-    color: 'bg-stone-600'
+    details: 'IBAN: ES00 0000 0000 0000 0000 0000',
+    color: 'bg-purple-500'
+  },
+  {
+    id: '4',
+    name: 'PayPal',
+    description: 'Dona de forma segura a través de PayPal, con tarjeta o saldo.',
+    iconName: 'CreditCard',
+    actionUrl: 'https://paypal.me/myanimalsm',
+    color: 'bg-indigo-500'
   }
 ];
