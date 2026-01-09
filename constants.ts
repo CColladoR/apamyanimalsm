@@ -206,7 +206,7 @@ export const DONATION_METHODS: DonationMethod[] = [
     name: 'Teaming',
     description: 'Ayúdanos con solo 1€ al mes. Una pequeña aportación que hace una gran diferencia.',
     iconName: 'Users',
-    actionUrl: 'https://www.teaming.net/apa-myanimalsm',
+    actionUrl: 'https://www.teaming.net/apamyanimalsm',
     color: 'bg-teal-500'
   },
   {
@@ -214,7 +214,7 @@ export const DONATION_METHODS: DonationMethod[] = [
     name: 'Bizum',
     description: 'Donación inmediata y sencilla desde tu móvil.',
     iconName: 'Smartphone',
-    details: 'Código envío ONG: 00000',
+    details: 'Código de envío: 04872',
     color: 'bg-blue-500'
   },
   {
@@ -222,7 +222,7 @@ export const DONATION_METHODS: DonationMethod[] = [
     name: 'Transferencia',
     description: 'Realiza una transferencia bancaria directa a nuestra cuenta.',
     iconName: 'Landmark',
-    details: 'IBAN: ES00 0000 0000 0000 0000 0000',
+    details: 'IBAN: ES69 0073 0100 5205 0607 9064',
     color: 'bg-purple-500'
   },
   {
@@ -231,6 +231,8 @@ export const DONATION_METHODS: DonationMethod[] = [
     description: 'Dona de forma segura a través de PayPal, con tarjeta o saldo.',
     iconName: 'CreditCard',
     actionUrl: 'https://paypal.me/myanimalsm',
-    color: 'bg-indigo-500'
+    details: 'myanimalsm@gmail.com',
+    color: 'bg-indigo-500',
+    note: 'Marcar el envío como Amigos y Familiares para recibir el importe íntegro, sin retenciones'
   }
 ];

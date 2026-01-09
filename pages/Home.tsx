@@ -2,15 +2,36 @@ import React, { useState, useMemo } from 'react';
 import { ANIMALS } from '../constants';
 import { AnimalCard } from '../components/AnimalCard';
 import { Link } from 'react-router-dom';
-import { HeartHandshake, Dog, Cat, Feather, LayoutGrid, Star, Quote, ExternalLink, Instagram, Activity } from 'lucide-react';
+import { 
+  HeartHandshake, Dog, Cat, Feather, LayoutGrid, Star, Quote, 
+  ExternalLink, Instagram, Activity,
+  AlertCircle, Clock, Home as HomeIcon, Building2
+} from 'lucide-react';
 
 export const Home: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<'Todos' | 'Perro' | 'Gato' | 'Otro'>('Todos');
+  const [activeStatus, setActiveStatus] = useState<string>('Todos');
 
   const filteredAnimals = useMemo(() => {
-    if (activeCategory === 'Todos') return ANIMALS;
-    return ANIMALS.filter(animal => animal.species === activeCategory);
-  }, [activeCategory]);
+    const priority: Record<string, number> = {
+      'Urgente': 1,
+      'En Adopción': 2,
+      'Próximamente en Adopción': 3,
+      'En residencia': 4
+    };
+
+    const getPriority = (status: string) => priority[status] || 99;
+
+    return ANIMALS
+      .filter(animal => {
+        const matchesCategory = activeCategory === 'Todos' || animal.species === activeCategory;
+        const matchesStatus = activeStatus === 'Todos' || animal.status === activeStatus;
+        return matchesCategory && matchesStatus;
+      })
+      .sort((a, b) => {
+        return getPriority(a.status) - getPriority(b.status);
+      });
+  }, [activeCategory, activeStatus]);
 
   const categories = [
     { id: 'Todos', label: 'Todos', icon: LayoutGrid },
@@ -18,6 +39,14 @@ export const Home: React.FC = () => {
     { id: 'Gato', label: 'Gatos', icon: Cat },
     { id: 'Otro', label: 'Otros animales', icon: Feather },
   ] as const;
+
+  const statusCategories = [
+    { id: 'Todos', label: 'Todos', icon: null },
+    { id: 'En Adopción', label: 'En adopción', icon: HomeIcon },
+    { id: 'Urgente', label: 'Casos Urgentes', icon: AlertCircle },
+    { id: 'Próximamente en Adopción', label: 'Pronto en adopción', icon: Clock },
+    { id: 'En residencia', label: 'En residencia', icon: Building2 },
+  ];
 
   const REVIEWS = [
     {
@@ -86,12 +115,12 @@ export const Home: React.FC = () => {
 
       {/* Animal List Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-6">
           <h2 className="text-3xl font-serif font-bold text-stone-800 dark:text-stone-100">
             Animales en Adopción
           </h2>
           
-          {/* Category Selector */}
+          {/* Category Selector (Species) */}
           <div className="flex flex-wrap justify-center gap-2">
             {categories.map((cat) => {
               const Icon = cat.icon;
@@ -115,8 +144,40 @@ export const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="mb-4 text-stone-500 dark:text-stone-400 text-sm font-medium">
-          {filteredAnimals.length} {filteredAnimals.length === 1 ? 'animal te está esperando' : 'animales te están esperando'}
+        {/* Status Filter - Redesigned & Centered */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {statusCategories.map((status) => {
+              const Icon = status.icon;
+              const isSelected = activeStatus === status.id;
+              return (
+                <button
+                  key={status.id}
+                  onClick={() => setActiveStatus(status.id)}
+                  className={`
+                    group flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border
+                    ${isSelected 
+                      ? 'bg-primary border-primary text-white shadow-lg shadow-teal-500/25 transform -translate-y-0.5' 
+                      : 'bg-white dark:bg-stone-900 border-stone-200 dark:border-stone-800 text-stone-500 dark:text-stone-400 hover:border-primary/50 hover:bg-stone-50 dark:hover:bg-stone-800 hover:text-primary dark:hover:text-primary'}
+                  `}
+                >
+                  {Icon && (
+                    <Icon 
+                      size={16} 
+                      className={`transition-colors duration-300 ${isSelected ? 'text-white' : 'text-stone-400 group-hover:text-primary'}`} 
+                    />
+                  )}
+                  {status.label}
+                </button>
+              );
+            })}
+        </div>
+
+        <div className="mb-6 text-stone-500 dark:text-stone-400 text-sm font-medium flex items-center gap-2">
+          <div className="h-px bg-stone-200 dark:bg-stone-800 flex-grow"></div>
+          <span>
+            {filteredAnimals.length} {filteredAnimals.length === 1 ? 'animal te está esperando' : 'animales te están esperando'}
+          </span>
+          <div className="h-px bg-stone-200 dark:bg-stone-800 flex-grow"></div>
         </div>
         
         {filteredAnimals.length > 0 ? (
@@ -128,13 +189,13 @@ export const Home: React.FC = () => {
         ) : (
           <div className="text-center py-20 bg-stone-50 dark:bg-stone-900/50 rounded-3xl border border-stone-100 dark:border-stone-800 border-dashed">
             <div className="text-4xl mb-4">🔍</div>
-            <h3 className="text-xl font-bold text-stone-800 dark:text-stone-100 mb-2">No hay animales en esta categoría</h3>
-            <p className="text-stone-600 dark:text-stone-400 mb-6">Actualmente no tenemos animales de este tipo en adopción.</p>
+            <h3 className="text-xl font-bold text-stone-800 dark:text-stone-100 mb-2">No hay resultados</h3>
+            <p className="text-stone-600 dark:text-stone-400 mb-6">No hemos encontrado animales con los filtros seleccionados.</p>
             <button 
-              onClick={() => setActiveCategory('Todos')}
+              onClick={() => { setActiveCategory('Todos'); setActiveStatus('Todos'); }}
               className="text-primary font-semibold hover:underline"
             >
-              Ver todos los animales
+              Borrar filtros y ver todos
             </button>
           </div>
         )}

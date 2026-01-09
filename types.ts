@@ -40,5 +40,6 @@ export interface DonationMethod {
   iconName: string; // We will map string to Lucide icon component
   actionUrl?: string;
   details?: string;
+  note?: string;
   color: string;
 }

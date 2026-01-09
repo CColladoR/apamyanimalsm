@@ -40,7 +40,13 @@ export const Donate: React.FC = () => {
                  </div>
                )}
 
-               {method.actionUrl ? (
+               {method.note && (
+                 <div className="mt-auto mb-6 p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg text-sm text-amber-800 dark:text-amber-200 border border-amber-100 dark:border-amber-900/30">
+                   {method.note}
+                 </div>
+               )}
+
+               {method.actionUrl && (
                  <a 
                     href={method.actionUrl} 
                     target="_blank" 
@@ -49,10 +55,6 @@ export const Donate: React.FC = () => {
                  >
                     Donar con {method.name} <ExternalLink size={18} className="ml-2" />
                  </a>
-               ) : (
-                  <button className="mt-auto w-full px-6 py-3 rounded-xl font-bold text-stone-400 dark:text-stone-500 bg-stone-100 dark:bg-stone-800 cursor-default">
-                    Usar datos bancarios arriba
-                  </button>
                )}
             </div>
           ))}
@@ -71,14 +73,13 @@ export const Donate: React.FC = () => {
               <div className="md:col-span-3 p-8 md:p-12 flex flex-col justify-center">
                 <h3 className="text-2xl font-bold text-stone-800 dark:text-stone-100 mb-4">¿Prefieres enviarnos productos?</h3>
                 <p className="text-stone-600 dark:text-stone-400 mb-6">
-                  Hemos creado una lista en Amazon con los productos que más necesitamos en el día a día del refugio. 
-                  Es una forma directa de ayudarnos, sabiendo exactamente a qué se destina tu aportación.
+                  Hemos creado una lista en Amazon con los productos que más necesitamos en el día a día en la asociación. Es una forma directa de ayudarnos, sabiendo exactamente a qué se destina tu aportación.
                 </p>
                 
                 <div className="mb-8">
                   <h4 className="text-sm font-bold text-stone-400 uppercase mb-3 tracking-wider">Lo que más necesitamos:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['Pienso Alta Energía', 'Latas de Comida Húmeda', 'Lejía', 'Mantas Polares', 'Juguetes Kong'].map((item) => (
+                    {['Latas para gatos kitten y adultos', 'Latas gastrointestinales para gatos', 'Pienso gastrointestinal para gatos', 'Impromune'].map((item) => (
                       <span key={item} className="inline-flex items-center px-3 py-1 bg-orange-50 dark:bg-orange-900/30 text-orange-700 dark:text-orange-200 rounded-full text-sm font-medium border border-orange-100 dark:border-orange-900/50">
                         <Package size={14} className="mr-1.5" />
                         {item}
