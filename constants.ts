@@ -206,7 +206,7 @@ export const DONATION_METHODS: DonationMethod[] = [
     name: 'Teaming',
     description: 'Ayúdanos con solo 1€ al mes. Una pequeña aportación que hace una gran diferencia.',
     iconName: 'Users',
-    actionUrl: 'https://www.teaming.net/apamyanimalsm',
+    actionUrl: 'https://www.teaming.net/asociacionmyanimalsm',
     color: 'bg-teal-500'
   },
   {
