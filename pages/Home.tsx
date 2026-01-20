@@ -1,23 +1,40 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { ANIMALS } from '../constants';
 import { AnimalCard } from '../components/AnimalCard';
 import { Link } from 'react-router-dom';
 import { 
   HeartHandshake, Dog, Cat, Feather, LayoutGrid, Star, Quote, 
   ExternalLink, Instagram, Activity,
-  AlertCircle, Clock, Home as HomeIcon, Building2
+  AlertCircle, Clock, Home as HomeIcon, Building2, Bookmark, Heart,
+  ChevronDown, Filter, XCircle
 } from 'lucide-react';
+import { AnimalStatus } from '../types';
 
 export const Home: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<'Todos' | 'Perro' | 'Gato' | 'Otro'>('Todos');
   const [activeStatus, setActiveStatus] = useState<string>('Todos');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const filteredAnimals = useMemo(() => {
     const priority: Record<string, number> = {
       'Urgente': 1,
       'En Adopción': 2,
       'Próximamente en Adopción': 3,
-      'En residencia': 4
+      'En residencia': 4,
+      'Reservado': 5,
+      'Adoptado': 6
     };
 
     const getPriority = (status: string) => priority[status] || 99;
@@ -25,7 +42,9 @@ export const Home: React.FC = () => {
     return ANIMALS
       .filter(animal => {
         const matchesCategory = activeCategory === 'Todos' || animal.species === activeCategory;
-        const matchesStatus = activeStatus === 'Todos' || animal.status === activeStatus;
+        const matchesStatus = activeStatus === 'Todos' || 
+          animal.status === activeStatus || 
+          (animal.secondaryStatuses && animal.secondaryStatuses.includes(activeStatus as any));
         return matchesCategory && matchesStatus;
       })
       .sort((a, b) => {
@@ -41,12 +60,16 @@ export const Home: React.FC = () => {
   ] as const;
 
   const statusCategories = [
-    { id: 'Todos', label: 'Todos', icon: null },
+    { id: 'Todos', label: 'Todos los estados', icon: LayoutGrid },
     { id: 'En Adopción', label: 'En adopción', icon: HomeIcon },
     { id: 'Urgente', label: 'Casos Urgentes', icon: AlertCircle },
     { id: 'Próximamente en Adopción', label: 'Pronto en adopción', icon: Clock },
     { id: 'En residencia', label: 'En residencia', icon: Building2 },
+    { id: 'Reservado', label: 'Reservados', icon: Bookmark },
+    { id: 'Adoptado', label: 'Adoptados', icon: Heart },
   ];
+
+  const activeStatusObj = statusCategories.find(s => s.id === activeStatus);
 
   const REVIEWS = [
     {
@@ -87,7 +110,7 @@ export const Home: React.FC = () => {
   return (
     <div className="min-h-screen relative">
       {/* Hero Section */}
-      <div className="bg-stone-100 dark:bg-stone-900 py-16 sm:py-24 transition-colors duration-300">
+      <div className="bg-stone-100 dark:bg-stone-900 pt-16 pb-8 sm:pt-24 sm:pb-12 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-6">
             Encuentra a tu <span className="text-primary">mejor amigo</span>
@@ -95,18 +118,18 @@ export const Home: React.FC = () => {
           <p className="text-lg md:text-xl text-stone-600 dark:text-stone-300 max-w-2xl mx-auto mb-10">
             En APA Myanimalsm luchamos cada día por dar una segunda oportunidad a quienes más lo necesitan. Adopta, no compres.
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex items-center justify-center gap-4">
              <Link 
                 to="/adopta" 
-                className="bg-primary hover:bg-teal-600 text-white px-8 py-3 rounded-full font-semibold text-lg transition-transform hover:-translate-y-1 shadow-md"
+                className="bg-stone-800 dark:bg-stone-200 hover:bg-stone-700 dark:hover:bg-white text-stone-50 dark:text-stone-900 px-6 py-2.5 rounded-full font-medium text-sm transition-all shadow-sm hover:shadow-md"
              >
                 Cómo Adoptar
              </Link>
              <Link 
                 to="/donar" 
-                className="bg-white dark:bg-stone-800 hover:bg-stone-50 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 border border-stone-200 dark:border-stone-700 px-8 py-3 rounded-full font-semibold text-lg transition-transform hover:-translate-y-1 shadow-sm flex items-center gap-2"
+                className="group flex items-center gap-2 bg-white dark:bg-stone-800 border border-stone-200 dark:border-stone-700 hover:border-rose-200 dark:hover:border-rose-900 text-stone-600 dark:text-stone-300 hover:text-rose-500 px-6 py-2.5 rounded-full font-medium text-sm transition-all shadow-sm hover:shadow-md"
              >
-                <HeartHandshake size={20} />
+                <HeartHandshake size={18} className="text-stone-400 group-hover:text-rose-500 transition-colors" />
                 Ayúdanos
              </Link>
           </div>
@@ -114,15 +137,20 @@ export const Home: React.FC = () => {
       </div>
 
       {/* Animal List Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-6">
-          <h2 className="text-3xl font-serif font-bold text-stone-800 dark:text-stone-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
+        
+        <div className="flex items-center gap-2 mb-8">
+           <h2 className="text-3xl font-serif font-bold text-stone-800 dark:text-stone-100">
             Animales en Adopción
           </h2>
+        </div>
+
+        {/* Unified Filter Toolbar */}
+        <div className="sticky top-20 z-40 bg-white/90 dark:bg-stone-900/90 backdrop-blur-md p-4 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-sm mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
           
-          {/* Category Selector (Species) */}
-          <div className="flex flex-wrap justify-center gap-2">
-            {categories.map((cat) => {
+          {/* Left: Species Filters */}
+          <div className="flex flex-wrap justify-center md:justify-start gap-2 w-full md:w-auto">
+             {categories.map((cat) => {
               const Icon = cat.icon;
               const isSelected = activeCategory === cat.id;
               return (
@@ -130,10 +158,10 @@ export const Home: React.FC = () => {
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
                   className={`
-                    flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 shadow-sm
+                    flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 border
                     ${isSelected 
-                      ? 'bg-stone-800 dark:bg-stone-200 text-white dark:text-stone-900 shadow-md transform scale-105' 
-                      : 'bg-white dark:bg-stone-900 text-stone-600 dark:text-stone-400 border border-stone-200 dark:border-stone-800 hover:border-primary dark:hover:border-primary hover:text-primary dark:hover:text-primary'}
+                      ? 'bg-stone-800 dark:bg-stone-200 text-white dark:text-stone-900 border-stone-800 dark:border-stone-200 shadow-md' 
+                      : 'bg-transparent text-stone-600 dark:text-stone-400 border-stone-300 dark:border-stone-700 hover:border-primary dark:hover:border-primary hover:text-primary dark:hover:text-primary'}
                   `}
                 >
                   <Icon size={14} />
@@ -142,34 +170,66 @@ export const Home: React.FC = () => {
               );
             })}
           </div>
-        </div>
 
-        {/* Status Filter - Redesigned & Centered */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {statusCategories.map((status) => {
-              const Icon = status.icon;
-              const isSelected = activeStatus === status.id;
-              return (
-                <button
-                  key={status.id}
-                  onClick={() => setActiveStatus(status.id)}
-                  className={`
-                    group flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border
-                    ${isSelected 
-                      ? 'bg-primary border-primary text-white shadow-lg shadow-teal-500/25 transform -translate-y-0.5' 
-                      : 'bg-white dark:bg-stone-900 border-stone-200 dark:border-stone-800 text-stone-500 dark:text-stone-400 hover:border-primary/50 hover:bg-stone-50 dark:hover:bg-stone-800 hover:text-primary dark:hover:text-primary'}
-                  `}
+          {/* Right: Status Dropdown */}
+          <div className="flex items-center gap-3 w-full md:w-auto justify-center md:justify-end">
+             {/* Clear Filters Button (Only visible if filters changed) */}
+             {(activeCategory !== 'Todos' || activeStatus !== 'Todos') && (
+                <button 
+                  onClick={() => { setActiveCategory('Todos'); setActiveStatus('Todos'); }}
+                  className="text-xs font-medium text-stone-500 hover:text-rose-500 transition-colors flex items-center gap-1"
                 >
-                  {Icon && (
-                    <Icon 
-                      size={16} 
-                      className={`transition-colors duration-300 ${isSelected ? 'text-white' : 'text-stone-400 group-hover:text-primary'}`} 
-                    />
-                  )}
-                  {status.label}
+                  <XCircle size={14} />
+                  Limpiar filtros
                 </button>
-              );
-            })}
+             )}
+
+             <div className="relative" ref={dropdownRef}>
+               <button
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className={`
+                    flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all shadow-sm border
+                    ${activeStatus !== 'Todos' 
+                      ? 'bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300 border-teal-200 dark:border-teal-800' 
+                      : 'bg-white dark:bg-stone-800 text-stone-700 dark:text-stone-200 border-stone-200 dark:border-stone-700 hover:border-primary'}
+                  `}
+               >
+                  <Filter size={16} className={activeStatus !== 'Todos' ? 'text-teal-600' : 'text-stone-400'} />
+                  <span>
+                    {activeStatus === 'Todos' ? 'Filtrar por Estado' : activeStatusObj?.label}
+                  </span>
+                  <ChevronDown size={16} className={`transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+               </button>
+
+               {isDropdownOpen && (
+                  <div className="absolute right-0 mt-2 w-64 bg-white dark:bg-stone-800 rounded-xl shadow-xl border border-stone-100 dark:border-stone-700 overflow-hidden z-50 animate-in fade-in zoom-in-95 duration-100 origin-top-right">
+                      {statusCategories.map((status) => {
+                        const Icon = status.icon;
+                        const isSelected = activeStatus === status.id;
+                        return (
+                          <button
+                              key={status.id}
+                              onClick={() => {
+                                  setActiveStatus(status.id);
+                                  setIsDropdownOpen(false);
+                              }}
+                              className={`
+                                w-full text-left px-4 py-3 text-sm flex items-center gap-3 transition-colors border-b border-stone-50 dark:border-stone-700/50 last:border-0
+                                ${isSelected 
+                                  ? 'bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300 font-semibold' 
+                                  : 'text-stone-600 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-700/50'}
+                              `}
+                          >
+                               {Icon && <Icon size={16} className={isSelected ? 'text-teal-600 dark:text-teal-400' : 'text-stone-400'} />}
+                               {status.label}
+                               {isSelected && <div className="ml-auto w-1.5 h-1.5 rounded-full bg-teal-500" />}
+                          </button>
+                        );
+                      })}
+                  </div>
+               )}
+             </div>
+          </div>
         </div>
 
         <div className="mb-6 text-stone-500 dark:text-stone-400 text-sm font-medium flex items-center gap-2">

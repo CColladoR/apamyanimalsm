@@ -53,13 +53,6 @@ export const Navbar: React.FC = () => {
             >
               {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
             </button>
-
-            <Link 
-              to="/donar" 
-              className="bg-primary hover:bg-teal-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition-colors shadow-sm"
-            >
-              ¡Colabora!
-            </Link>
           </div>
 
           {/* Mobile menu button & Theme toggle */}

@@ -12,7 +12,8 @@ export const ANIMALS: Animal[] = [
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Maiz.jpg',
     description: 'Maíz es un perro súper casero, actualmente en residencia, que busca urgentemente un hogar. Ha trabajado mucho sus miedos y es un perro agradecido y listo para aprender.',
     story: 'Maíz es un perro super casero, se fue adoptado con 3 meses (en 2021) y lo devolvieron en otoño de 2023 con un cuadro de ansiedad importante. La familia no supo educarle y en lugar de trabajar con el desde una parte positiva, lo hicieron con castigos, encierros y ansiedad. Eso provocó que Maíz volviera muy vulnerable, sin entender nada y que estuviera varios meses en shock, apático y llorando de pena💔\n\nDesde que nos lo devolvieron, se encuentra en una residencia canina donde hemos trabajado con especialistas sus miedos y su frustración, además de que le han enseñado muchos trucos que le motivan en el día a día y hacen su estancia más amena. De hecho, vuelve a ser el perrito contento que era, pero no deja de estar en una residencia...es decir, como perro que siempre ha vivido en una casa, le esta afectando el vivir en un chenil 😞\n\nSabemos que por tamaño y por no ser "un bebé pequeño" sus solicitudes de adopción o acogida temporal son NULAS. Pero no por ello vamos a dejar de intentarlo, así que: buscamos sacarlo de allí bien como casa de acogida o bien con adopción definitiva 🙏🏻\n\nEsto no es un juego, hablamos de una vida que, a su corta edad, ya ha sido dañada. Los casos de perros devueltos a las protectoras son muy sensibles puesto que el animal es muy consciente del abandono y, siendo totalmente casero, tiene que pasar a vivir en un chenil de una residencia canina donde se pierden todas las comodidades de un hogar, generando en ellos un shock y adaptación brutal. Necesitamos que las personas que estén interesadas en ayudar tengan muy claro que se necesita paciencia y conectar desde el cariño con el animal para poco a poco ir enseñándole que no volverá a pasar por ese shock, que no todos somos malos y que puede llevar de nuevo una vida feliz 🥹',
-    status: 'Urgente',
+    status: 'En residencia',
+    secondaryStatuses: ['Urgente', 'En Adopción'],
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'No',
@@ -155,10 +156,10 @@ export const ANIMALS: Animal[] = [
     age: '7 meses',
     gender: 'Macho',
     size: '3kg',
-    imageUrl: 'https://images.unsplash.com/photo-1519052537078-e6302a4968d4?q=80&w=1000&auto=format&fit=crop',
+    imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/IMG_20260119_190406_308%7E2.jpg',
     description: 'Joven gatito atigrado recién llegado a la familia. Se encuentra en casa de acogida en Toledo esperando completar su protocolo veterinario.',
     story: 'Me llaman Romeo y es un placer conocerte :P\n\nLlevo tan solo unos días en la protectora. Anteriormente, me había tenido una familia durante varias semanas, aparecí en la puerta de su casa, al principio pensaron que podría tener familia pero cuando las horas pasaban y yo no me alejaba de allí, decidieron llevarme al veterinario. No tenía microchip pero estaba muy limpito y sanito y por mi aspecto el veterinario dijo que quizás podría tener familia.\n\nMe publicaron, me difundieron y mi familia nunca apareció, tampoco nadie que me quisiera así que empezaron a contactar con asociaciones para entregarme en una de ellas.\n\nDe casualidad y en el último momento, justo antes de que valorasen el soltarme de nuevo en la calle, aparecieron estos chicos tan majos, con los que vivo actualmente en Toledo. Me están cuidando y dicen que tengo que ir al veterinario pronto y si todo está bien, podré estar oficialmente en adopción.',
-    status: 'Próximamente en Adopción',
+    status: 'Reservado',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Pte',
@@ -202,14 +203,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
 
 export const DONATION_METHODS: DonationMethod[] = [
   {
-    id: '1',
-    name: 'Teaming',
-    description: 'Ayúdanos con solo 1€ al mes. Una pequeña aportación que hace una gran diferencia.',
-    iconName: 'Users',
-    actionUrl: 'https://www.teaming.net/asociacionmyanimalsm',
-    color: 'bg-teal-500'
-  },
-  {
     id: '2',
     name: 'Bizum',
     description: 'Donación inmediata y sencilla desde tu móvil.',
@@ -234,5 +227,21 @@ export const DONATION_METHODS: DonationMethod[] = [
     details: 'myanimalsm@gmail.com',
     color: 'bg-indigo-500',
     note: 'Marcar el envío como Amigos y Familiares para recibir el importe íntegro, sin retenciones'
+  },
+  {
+    id: '5',
+    name: 'Coral',
+    description: 'Colabora de forma sencilla a través de Coral.',
+    iconName: 'Heart',
+    actionUrl: 'http://url2054.coral.to/ls/click?upn=u001.r3vfhCzANAGHByqYfgCUu42gu5Yh-2BLLzyrmZM6tY5zwyFdceFvd-2FqmJ8Cw-2Fbvt3IAoon_HwbuW4oT7ZSKET-2FmXxMngqe2Qrz-2B-2Bh0fJ05jIPHYUqAoWBnjlkRxccRhapL9a9PZ5jWNVgI0wpLctv7Mp9GHRofzQL5q9uE7l8ISFMCWmK3O3L3j8WTN7KRVKwLUoHh5SJ9jnlC-2F2vm6O7hWpErFV-2BQe-2FFVe85zqDdxxRD6-2FLzWfI3FVHO5090iKPdPe9kp3784T7BGgBqTmn1-2BdGvwsWg-3D-3D',
+    color: 'bg-rose-400'
+  },
+  {
+    id: '1',
+    name: 'Teaming',
+    description: 'Ayúdanos con solo 1€ al mes. Una pequeña aportación que hace una gran diferencia.',
+    iconName: 'Users',
+    actionUrl: 'https://www.teaming.net/asociacionmyanimalsm',
+    color: 'bg-teal-500'
   }
 ];

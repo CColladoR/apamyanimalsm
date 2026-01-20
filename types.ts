@@ -10,6 +10,8 @@ export interface MedicalStatus {
   sterilization: MedicalStatusValue; // Esterilización
 }
 
+export type AnimalStatus = 'En Adopción' | 'Reservado' | 'Urgente' | 'En residencia' | 'Próximamente en Adopción' | 'Pendiente de Adopción' | 'Adoptado';
+
 export interface Animal {
   id: string;
   name: string;
@@ -21,7 +23,8 @@ export interface Animal {
   imageUrl: string;
   description: string;
   story: string;
-  status: 'En Adopción' | 'Reservado' | 'Urgente' | 'En residencia' | 'Próximamente en Adopción' | 'Pendiente de Adopción';
+  status: AnimalStatus;
+  secondaryStatuses?: AnimalStatus[];
   medicalStatus?: MedicalStatus; // Optional, mainly for cats
 }
 
