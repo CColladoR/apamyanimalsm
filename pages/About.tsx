@@ -21,7 +21,7 @@ export const About: React.FC = () => {
     "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris2.jpg",
     "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris3.jpg",
     "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris4.jpg",
-    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris5.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris5.jpeg",
     "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris6.jpg",
   ];
 
