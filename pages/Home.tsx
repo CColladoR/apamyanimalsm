@@ -6,7 +6,7 @@ import {
   HeartHandshake, Dog, Cat, Feather, LayoutGrid, Star, Quote, 
   ExternalLink, Instagram, Activity,
   AlertCircle, Clock, Home as HomeIcon, Building2, Bookmark, Heart,
-  ChevronDown, Filter, XCircle
+  ChevronDown, Filter, XCircle, Sparkles
 } from 'lucide-react';
 import { AnimalStatus } from '../types';
 
@@ -27,19 +27,25 @@ export const Home: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // 1. Separate Adopted animals from the rest
+  const adoptedAnimals = useMemo(() => {
+    return ANIMALS.filter(a => a.status === 'Adoptado');
+  }, []);
+
+  // 2. Filter logic for the main list (Excluding Adopted)
   const filteredAnimals = useMemo(() => {
     const priority: Record<string, number> = {
       'Urgente': 1,
       'En Adopción': 2,
       'Próximamente en Adopción': 3,
       'En residencia': 4,
-      'Reservado': 5,
-      'Adoptado': 6
+      'Reservado': 5
     };
 
     const getPriority = (status: string) => priority[status] || 99;
 
     return ANIMALS
+      .filter(animal => animal.status !== 'Adoptado') // Exclude adopted from main list
       .filter(animal => {
         const matchesCategory = activeCategory === 'Todos' || animal.species === activeCategory;
         const matchesStatus = activeStatus === 'Todos' || 
@@ -66,7 +72,7 @@ export const Home: React.FC = () => {
     { id: 'Próximamente en Adopción', label: 'Pronto en adopción', icon: Clock },
     { id: 'En residencia', label: 'En residencia', icon: Building2 },
     { id: 'Reservado', label: 'Reservados', icon: Bookmark },
-    { id: 'Adoptado', label: 'Adoptados', icon: Heart },
+    // Removed 'Adoptado' from filter since they have their own section
   ];
 
   const activeStatusObj = statusCategories.find(s => s.id === activeStatus);
@@ -110,7 +116,7 @@ export const Home: React.FC = () => {
   return (
     <div className="min-h-screen relative">
       {/* Hero Section */}
-      <div className="bg-stone-100 dark:bg-stone-900 pt-16 pb-8 sm:pt-24 sm:pb-12 transition-colors duration-300">
+      <div className="bg-background dark:bg-stone-900 pt-16 pb-8 sm:pt-24 sm:pb-12 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-6">
             Encuentra a tu <span className="text-primary">mejor amigo</span>
@@ -261,8 +267,47 @@ export const Home: React.FC = () => {
         )}
       </div>
 
+      {/* Adopted Animals Section (Happy Endings) */}
+      {adoptedAnimals.length > 0 && (
+        <div className="bg-white dark:bg-stone-900 py-16 border-t border-stone-100 dark:border-stone-800">
+           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-10">
+                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-800 dark:text-stone-100 flex items-center justify-center gap-2">
+                   <Sparkles className="text-amber-400 fill-amber-400" size={24} />
+                   Finales Felices
+                   <Sparkles className="text-amber-400 fill-amber-400" size={24} />
+                 </h2>
+                 <p className="text-stone-500 dark:text-stone-400 mt-2">
+                   Ellos ya encontraron su hogar. ¡Animales adoptados!
+                 </p>
+              </div>
+              
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 justify-center">
+                 {adoptedAnimals.map((animal) => (
+                   <Link 
+                      key={animal.id} 
+                      to={`/animal/${animal.id}`}
+                      className="group flex flex-col items-center"
+                   >
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-tr from-amber-200 to-amber-100 dark:from-amber-900 dark:to-stone-800 mb-3 shadow-md group-hover:shadow-lg group-hover:scale-105 transition-all duration-300">
+                        <img 
+                          src={animal.imageUrl} 
+                          alt={animal.name} 
+                          className="w-full h-full object-cover rounded-full border-2 border-white dark:border-stone-900"
+                        />
+                      </div>
+                      <span className="font-bold text-sm text-stone-700 dark:text-stone-300 group-hover:text-primary transition-colors">
+                        {animal.name}
+                      </span>
+                   </Link>
+                 ))}
+              </div>
+           </div>
+        </div>
+      )}
+
       {/* Reviews Section */}
-      <div className="bg-teal-50 dark:bg-stone-800/50 py-16 md:py-24 border-t border-teal-100 dark:border-stone-800">
+      <div className="bg-background dark:bg-stone-800/50 py-16 md:py-24 border-t border-stone-200 dark:border-stone-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-4">
@@ -327,7 +372,7 @@ export const Home: React.FC = () => {
       </div>
 
       {/* Stats Graph Section */}
-      <div className="py-24 bg-white dark:bg-stone-950">
+      <div className="py-24 bg-background dark:bg-stone-950">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
              <h2 className="text-3xl font-serif font-bold text-stone-800 dark:text-stone-100 flex items-center justify-center gap-3">

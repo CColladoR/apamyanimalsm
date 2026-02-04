@@ -94,7 +94,7 @@ export const AdoptionProcess: React.FC = () => {
         </div>
 
         {/* Medical Protocol Highlight */}
-        <div className="mb-12 bg-teal-50 dark:bg-teal-900/20 rounded-3xl p-8 border border-teal-100 dark:border-teal-900/50 shadow-sm">
+        <div className="mb-8 bg-teal-50 dark:bg-teal-900/20 rounded-3xl p-8 border border-teal-100 dark:border-teal-900/50 shadow-sm">
             <h2 className="text-2xl font-serif font-bold text-teal-900 dark:text-teal-200 mb-6">
                 Protocolo Veterinario
             </h2>
@@ -115,6 +115,16 @@ export const AdoptionProcess: React.FC = () => {
                     </div>
                 ))}
             </div>
+        </div>
+
+        {/* Salvas dos vidas Section (Moved from Foster and adapted) */}
+        <div className="mb-12 bg-teal-50 dark:bg-teal-900/20 rounded-3xl p-8 border border-teal-100 dark:border-teal-900/50 shadow-sm">
+            <h2 className="text-2xl font-serif font-bold text-teal-900 dark:text-teal-200 mb-4">
+                Salvas dos vidas
+            </h2>
+            <p className="text-teal-800 dark:text-teal-300">
+                Al adoptar a un animal, le brindas un hogar definitivo y nos permites rescatar a otro de la calle. Al no disponer de refugio físico, dependemos de que nuestros animales encuentren familia para liberar casas de acogida y poder seguir salvando vidas. ¡Tu ayuda es vital!
+            </p>
         </div>
 
         {/* Instagram CTA Button */}

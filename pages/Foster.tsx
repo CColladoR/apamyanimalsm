@@ -84,13 +84,6 @@ export const Foster: React.FC = () => {
               </p>
             </div>
           </div>
-
-          <div className="bg-teal-50 dark:bg-teal-900/20 rounded-2xl p-8 border border-teal-100 dark:border-teal-900/50">
-            <h3 className="font-bold text-lg text-teal-900 dark:text-teal-200 mb-4">Salvas dos vidas</h3>
-            <p className="text-teal-800 dark:text-teal-300 mb-0">
-              Al acoger a un animal, le brindas un hogar temporal y nos permites rescatar a otro de la calle. Al no disponer de refugio físico, dependemos exclusivamente de las casas de acogida para poder salvar vidas. ¡Tu ayuda es vital!
-            </p>
-          </div>
         </div>
 
         {/* Instagram CTA Button */}

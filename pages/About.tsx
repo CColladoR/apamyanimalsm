@@ -3,14 +3,26 @@ import { TEAM_MEMBERS } from '../constants';
 import { Camera } from 'lucide-react';
 
 export const About: React.FC = () => {
-  // Placeholder images with question marks as requested
+  // Family Album images
   const galleryImages = [
-    "https://placehold.co/600x400/f5f5f4/a8a29e?text=?",
-    "https://placehold.co/600x600/f5f5f4/a8a29e?text=?",
-    "https://placehold.co/600x400/f5f5f4/a8a29e?text=?",
-    "https://placehold.co/600x500/f5f5f4/a8a29e?text=?",
-    "https://placehold.co/600x400/f5f5f4/a8a29e?text=?",
-    "https://placehold.co/600x600/f5f5f4/a8a29e?text=?",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau1.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau2.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau3.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau4.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau5.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau6.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes1.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes2.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes3.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes4.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes5.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes6.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris1.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris2.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris3.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris4.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris5.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris6.jpg",
   ];
 
   return (
@@ -50,15 +62,6 @@ export const About: React.FC = () => {
           </p>
         </div>
 
-        <div className="mt-24 bg-teal-50 dark:bg-teal-900/20 rounded-3xl p-8 md:p-12 text-center border border-teal-100 dark:border-teal-900/50">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-teal-900 dark:text-teal-200 mb-6">
-            Nuestra Misión
-          </h2>
-          <p className="text-teal-800 dark:text-teal-300 text-lg max-w-4xl mx-auto">
-            "No solo rescatamos animales, reconstruimos vidas. Creemos firmemente que cada ser vivo merece respeto, dignidad y un hogar donde sentirse seguro."
-          </p>
-        </div>
-
         {/* Photo Gallery Section */}
         <div className="mt-24 mb-12">
             <h2 className="text-3xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-8 text-center flex items-center justify-center gap-3">
@@ -71,13 +74,13 @@ export const About: React.FC = () => {
                         <img 
                             src={src} 
                             alt={`Momento APA Myanimalsm ${idx + 1}`} 
-                            className="w-full h-auto hover:scale-105 transition-transform duration-700 block opacity-70 dark:opacity-50" 
+                            className="w-full h-auto hover:scale-105 transition-transform duration-700 block" 
                         />
                     </div>
                 ))}
             </div>
             <p className="text-center text-lg text-stone-600 dark:text-stone-300 mt-10 italic font-serif">
-                "Próximamente compartiremos pequeños instantes de felicidad compartida que nos impulsan a seguir adelante"
+                "Pequeños instantes de felicidad compartida que nos impulsan a seguir adelante"
             </p>
         </div>
       </div>
