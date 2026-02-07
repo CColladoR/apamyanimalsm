@@ -43,7 +43,7 @@ export const Donate: React.FC = () => {
                <p className="text-stone-600 dark:text-stone-400 mb-6 text-sm flex-grow">{method.description}</p>
                
                {method.details && (
-                 <div className="mb-6 p-3 bg-stone-50 dark:bg-stone-800 rounded-lg font-mono text-sm text-stone-700 dark:text-stone-300 border border-stone-200 dark:border-stone-700 break-all">
+                 <div className="mb-6 p-3 bg-stone-50 dark:bg-stone-800 rounded-lg font-mono text-[11px] sm:text-xs text-stone-700 dark:text-stone-300 border border-stone-200 dark:border-stone-700 whitespace-nowrap overflow-x-auto scrollbar-hide">
                    {method.details}
                  </div>
                )}
@@ -107,28 +107,27 @@ export const Donate: React.FC = () => {
             </div>
         )}
 
-        {/* Amazon Wishlist Section */}
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-white dark:bg-stone-900 rounded-3xl shadow-sm border border-orange-100 dark:border-orange-900/30 overflow-hidden">
-            <div className="grid md:grid-cols-5 h-full">
-              <div className="md:col-span-2 bg-gradient-to-br from-orange-400 to-amber-500 p-8 flex flex-col justify-center items-center text-white relative overflow-hidden">
+        {/* Amazon Wishlist Section - More compact version */}
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white dark:bg-stone-900 rounded-2xl shadow-sm border border-orange-100 dark:border-orange-900/30 overflow-hidden">
+            <div className="grid md:grid-cols-3 h-full">
+              <div className="md:col-span-1 bg-gradient-to-br from-orange-400 to-amber-500 p-6 flex flex-col justify-center items-center text-white relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-white opacity-10 transform -skew-x-12 translate-x-1/2"></div>
-                <Gift size={64} className="mb-4 relative z-10" />
-                <h3 className="text-2xl font-serif font-bold text-center relative z-10">Lista de Deseos</h3>
-                <p className="text-orange-50 text-center text-sm mt-2 relative z-10">Donación de material</p>
+                <Gift size={40} className="mb-3 relative z-10" />
+                <h3 className="text-xl font-serif font-bold text-center relative z-10">Lista de Deseos</h3>
+                <p className="text-orange-50 text-center text-xs mt-1 relative z-10">Donación de material</p>
               </div>
-              <div className="md:col-span-3 p-8 md:p-12 flex flex-col justify-center">
-                <h3 className="text-2xl font-bold text-stone-800 dark:text-stone-100 mb-4">¿Prefieres enviarnos productos?</h3>
-                <p className="text-stone-600 dark:text-stone-400 mb-6">
-                  Hemos creado una lista en Amazon con los productos que más necesitamos en el día a día en la asociación. Es una forma directa de ayudarnos, sabiendo exactamente a qué se destina tu aportación.
+              <div className="md:col-span-2 p-6 md:p-8 flex flex-col justify-center">
+                <h3 className="text-xl font-bold text-stone-800 dark:text-stone-100 mb-3">¿Prefieres enviarnos productos?</h3>
+                <p className="text-stone-600 dark:text-stone-400 mb-5 text-sm">
+                  Hemos seleccionado en Amazon los productos que más consumimos. Es una forma directa de cubrir necesidades básicas diarias.
                 </p>
                 
-                <div className="mb-8">
-                  <h4 className="text-sm font-bold text-stone-400 uppercase mb-3 tracking-wider">Lo que más necesitamos:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {['Latas para gatos kitten y adultos', 'Latas gastrointestinales para gatos', 'Pienso gastrointestinal para gatos', 'Impromune'].map((item) => (
-                      <span key={item} className="inline-flex items-center px-3 py-1 bg-orange-50 dark:bg-orange-900/30 text-orange-700 dark:text-orange-200 rounded-full text-sm font-medium border border-orange-100 dark:border-orange-900/50">
-                        <Package size={14} className="mr-1.5" />
+                <div className="mb-6">
+                  <div className="flex flex-wrap gap-1.5">
+                    {['Latas kitten/adultos', 'Latas Gastro', 'Pienso Gastro', 'Impromune'].map((item) => (
+                      <span key={item} className="inline-flex items-center px-2 py-0.5 bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-200 rounded-full text-[10px] font-bold border border-orange-100 dark:border-orange-900/40">
+                        <Package size={10} className="mr-1" />
                         {item}
                       </span>
                     ))}
@@ -139,9 +138,9 @@ export const Donate: React.FC = () => {
                   href="https://www.amazon.es/hz/wishlist/ls/2QSTF53HZ40Y1?ref_=wl_share&fbclid=PAT01DUAPHj95leHRuA2FlbQIxMABzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafnocxm5Y7X35QWda1ikA-kHXwn9BwLNC4Sw9yFEjMQiBJkonV_R1IVi627qA_aem_qZkNFifijeCQInYN64XkUQ" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-stone-800 hover:bg-stone-900 dark:bg-stone-700 dark:hover:bg-stone-600 text-white font-bold rounded-xl transition-all hover:shadow-lg hover:-translate-y-0.5 w-full sm:w-auto self-start"
+                  className="inline-flex items-center justify-center px-5 py-2.5 bg-stone-800 hover:bg-stone-900 dark:bg-stone-700 dark:hover:bg-stone-600 text-white text-sm font-bold rounded-xl transition-all hover:shadow-lg hover:-translate-y-0.5 w-full sm:w-auto self-start"
                 >
-                  <ShoppingBag size={20} className="mr-2" />
+                  <ShoppingBag size={18} className="mr-2" />
                   Ver Lista en Amazon
                 </a>
               </div>

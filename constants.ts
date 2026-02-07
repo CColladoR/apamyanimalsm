@@ -11,7 +11,7 @@ export const ANIMALS: Animal[] = [
     size: 'Grande',
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Maiz.jpg',
     description: 'Maíz es un perro súper casero, actualmente en residencia, que busca urgentemente un hogar. Ha trabajado mucho sus miedos y es un perro agradecido y listo para aprender.',
-    story: 'Maíz es un perro super casero, se fue adoptado con 3 meses (en 2021) y lo devolvieron en otoño de 2023 con un cuadro de ansiedad importante. La familia no supo educarle y en lugar de trabajar con el desde una parte positiva, lo hicieron con castigos, encierros y ansiedad. Eso provocó que Maíz volviera muy vulnerable, sin entender nada y que estuviera varios meses en shock, apático y llorando de pena💔\n\nDesde que nos lo devolvieron, se encuentra en una residencia canina donde hemos trabajado con especialistas sus miedos y su frustración, además de que le han enseñado muchos trucos que le motivan en el día a día y hacen su estancia más amena. De hecho, vuelve a ser el perrito contento que era, pero no deja de estar en una residencia...es decir, como perro que siempre ha vivido en una casa, le esta afectando el vivir en un chenil 😞\n\nSabemos que por tamaño y por no ser "un bebé pequeño" sus solicitudes de adopción o acogida temporal son NULAS. Pero no por ello vamos a dejar de intentarlo, así que: buscamos sacarlo de allí bien como casa de acogida o bien con adopción definitiva 🙏🏻\n\nEsto no es un juego, hablamos de una vida que, a su corta edad, ya ha sido dañada. Los casos de perros devueltos a las protectoras son muy sensibles puesto que el animal es muy consciente del abandono y, siendo totalmente casero, tiene que pasar a vivir en un chenil de una residencia canina donde se pierden todas las comodidades de un hogar, generando en ellos un shock y adaptación brutal. Necesitamos que las personas que estén interesadas en ayudar tengan muy claro que se necesita paciencia y conectar desde el cariño con el animal para poco a poco ir enseñándole que no volverá a pasar por ese shock, que no todos somos malos y que puede llevar de nuevo una vida feliz 🥹',
+    story: 'Maíz es un perro super casero, se fue adoptado con 3 meses (en 2021) y lo devolvieron en otoño de 2023 con un cuadro de ansiedad importante. La familia no supo educarle y en lugar de trabajar con el desde una parte positiva, lo hicieron con castigos, encierros y ansiedad. Eso provocó que Maíz volviera muy vulnerable, sin entender nada y que estuviera varios meses en shock, apático y llorando de pena💔\n\nDesde que nos lo devolvieron, se encuentra en una residencia canina donde hemos trabajado con especialistas sus miedos y su frustración, además de que le han enseñado muchos trucos que le motivan en el día a día y hacen su estancia más amena. De hecho, vuelve a ser el perrito contento que era, pero no deja de estar en una residencia...es decir, como perro que siempre ha vivido en una casa, le esta afectando el vivir en un chenil 😞\n\nSabemos que por tamaño y por no ser "un bebé pequeño" sus solicitudes de adopción o acogida temporal son NULAS. Pero no por ello vamos a dejar de intentarlo, así que: buscamos sacarlo de allí bien como casa de acogida o bien con adopción definitiva 🙏🏻\n\nEsto no es un juego, hablamos de una vida que, a su corta edad, ya ha sido dañada. Los casi de perros devueltos a las protectoras son muy sensibles puesto que el animal es muy consciente del abandono y, siendo totalmente casero, tiene que pasar a vivir en un chenil de una residencia canina donde se pierden todas las comodidades de un hogar, generando en ellos un shock y adaptación brutal. Necesitamos que las personas que estén interesadas en ayudar tengan muy claro que se necesita paciencia y conectar desde el cariño con el animal para poco a poco ir enseñándole que no volverá a pasar por ese shock, que no todos somos malos y que puede llevar de nuevo una vida feliz 🥹',
     status: 'En residencia',
     secondaryStatuses: ['Urgente', 'En Adopción'],
     medicalStatus: {
@@ -33,7 +33,7 @@ export const ANIMALS: Animal[] = [
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Brie.jpg',
     description: 'Actualmente me encuentro en una casa de acogida en Madrid. No estaré en adopción hasta finalizar todos los procedimientos que tengo pendientes y la asociación tenga el visto bueno por parte de nuestras veterinarias. Mientras tanto, puedes ser mi madrina o padrino para ayudar a cubrir los gastos de mi recuperación.',
     story: 'Brie llegó a nosotras pesando solamente 1kg (siendo gata adulta) en un estado límite rozando la muerte, de hecho, un día más en la calle y no lo hubiera contado. Fue rociada con veneno/gasolina por todo el cuerpo y eso le causó inflamación y quemaduras en la boca y vías respiratorias causándole muchísima mucosidad y dificultad para respirar😭\n\nHace un mes de su tan sonada operación de boca, donde se removió cielo y tierra para conseguirlo. Y sí, aquí estamos, habiendo dado un paso gigante en su calidad de vida. Después de pasar por la operación de odontología, donde pudieron extraerle todas las piezas y curar las úlceras, Brie a día de hoy, está mucho más tranquila: come que da gusto, no tiene dolor e incluso se le ha bajado un poco la inflamación de las vías altas. \n\nActualmente, gracias a toda vuestra ayuda, hemos recorrido la mitad del camino, solo nos queda el final. Nuestras veterinarias están intentando mantener esos mocos con un tratamiento diario y así intentar que siga ganando peso, pero la realidad es que, en breves, habrá que realizarle un TAC para estudiar la causa que provoca que esos mocos no cesen y encontrar la solución para que pueda respirar con normalidad sin necesidad de aerosoles y humidificador. Asimismo, queremos recordar el hecho de que ella es + inmuno, por lo que sus defensas siempre van a estar más bajitas y el tiempo de recuperación se ralentiza más 🥹.\n\nEsto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto es terminar encontrándole un hogar cuando esté totalmente recuperada. Seguimos yendo a por todas, gracias infinitas a quienes nos habéis ayudado y pusisteis vuestro granito de arena, esto es una cadena...¡seguimos! ❤️',
-    status: 'Próximamente en Adopción',
+    status: 'Pronto en adopción',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Positivo (FIV)',
@@ -52,7 +52,7 @@ export const ANIMALS: Animal[] = [
     size: 'Grande',
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Omega.jpg',
     description: 'Las dos plazas de la residencia nos cuestan 350€ al mes. Necesitamos tu ayuda 🙏',
-    story: 'Con 3 mesecitos se fueron adoptados, el que era su dueño pasó todos nuestros procesos de adopción, teníamos un buen seguimiento de como iban evolucionando y creciendo felices en la que parecía que sería su familia definitiva... Un año después nos dimos cuenta de que no fueron más que un capricho.\n\nLos dos hermanos que nos devolvieron al ser descubiertos por la policía porque su dueño los tenían en pésimas condiciones (mintieron lo más grande y los usaban como perros guardianes de una finca). \n\nActualmente se encuentran en una residencia canina especializada y trabajan para mejorar su conducta y comportamiento, ya que arrastran traumas por falta de atención, ansiedad, agresividad con otros animales y muestran indicios de maltrato. Llevan ya 3 años con nosotras y aún falta mucho progreso por delante. \n\nAhora solo esperamos que descansen y vuelvan a ser los perros felices y nobles que eran cuando se marcharon. Como decimos y repetiremos siempre, aquí estamos por y para ellos ✨\n\nTiempo, paciencia, trabajo y a buscar lo mejor para ellos siempre... ❤️‍🩹',
+    story: 'Con 3 mesecitos se fueron adoptados, el que era su dueño pasó todos nuestros procesos de adopción, teníamos un buen seguimiento de como iban evolucionando y creciendo felices en la que parecía que sería su familia definitiva... Un año después nos dimos cuenta de que no fueron más que un capricho.\n\nLos dos hermanos que nos devolvieron al ser descubiertos por la policía porque su dueño los tenían en pésimas condiciones (mintieron lo más grande y los usaban como perros guardianes de una finca). \n\nActualmente se encuentran en una residencia canina especializada y trabajan para mejorar su conducta y comportamiento, ya que arrastras traumas por falta de atención, ansiedad, agresividad con otros animales y muestran indicios de maltrato. Llevan ya 3 años con nosotras y aún falta mucho progreso por delante. \n\nNow solo esperamos que descansen y vuelvan a ser los perros felices y nobles que eran cuando se marcharon. Como decimos y repetiremos siempre, aquí estamos por y para ellos ✨\n\nTiempo, paciencia, trabajo y a buscar lo mejor para ellos siempre... ❤️‍🩹',
     status: 'En residencia'
   },
   {
@@ -65,7 +65,7 @@ export const ANIMALS: Animal[] = [
     size: 'Grande',
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Delta.jpg',
     description: 'Las dos plazas de la residencia nos cuestan 350€ al mes. Necesitamos tu ayuda 🙏',
-    story: 'Con 3 mesecitos se fueron adoptados, el que era su dueño pasó todos nuestros procesos de adopción, teníamos un buen seguimiento de como iban evolucionando y creciendo felices en la que parecía que sería su familia definitiva... Un año después nos dimos cuenta de que no fueron más que un capricho.\n\nLos dos hermanos que nos devolvieron al ser descubiertos por la policía porque su dueño los tenían en pésimas condiciones (mintieron lo más grande y los usaban como perros guardianes de una finca). \n\nActualmente se encuentran en una residencia canina especializada y trabajan para mejorar su conducta y comportamiento, ya que arrastran traumas por falta de atención, ansiedad, agresividad con otros animales y muestran indicios de maltrato. Llevan ya 3 años con nosotras y aún falta mucho progreso por delante. \n\nAhora solo esperamos que descansen y vuelvan a ser los perros felices y nobles que eran cuando se marcharon. Como decimos y repetiremos siempre, aquí estamos por y para ellos ✨\n\nTiempo, paciencia, trabajo y a buscar lo mejor para ellos siempre... ❤️‍🩹',
+    story: 'Con 3 mesecitos se fueron adoptados, el que era su dueño pasó todos nuestros procesos de adopción, teníamos un buen seguimiento de como iban evolucionando y creciendo felices en la que parecía que sería su familia definitiva... Un año después nos dimos cuenta de que no fueron más que un capricho.\n\nLos dos hermanos que nos devolvieron al ser descubiertos por la policía porque su dueño los tenían en pésimas condiciones (mintieron lo más grande y los usaban como perros guardianes de una finca). \n\nActualmente se encuentran en una residencia canina especializada y trabajan para mejorar su conducta y comportamiento, ya que arrastras traumas por falta de atención, ansiedad, agresividad con otros animales y muestran indicios de maltrato. Llevan ya 3 años con nosotras y aún falta mucho progreso por delante. \n\nNow solo esperamos que descansen y vuelvan a ser los perros felices y nobles que eran cuando se marcharon. Como decimos y repetiremos siempre, aquí estamos por y para ellos ✨\n\nTiempo, paciencia, trabajo y a buscar lo mejor para ellos siempre... ❤️‍🩹',
     status: 'En residencia'
   },
   {
@@ -79,11 +79,11 @@ export const ANIMALS: Animal[] = [
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Sidra.jpg',
     description: 'Actualmente estamos ambas juntas en una casa de acogida en Madrid. Necesitamos recaudar fondos para poder cubrir el protocolo veterinario de ambas.',
     story: 'Hace unos días publicamos la necesidad de una acogida urgente para Cava y Sidra, dos hembras jovenes ultra sociables que vivían en una colonia feral descontrolada en un pueblo de Toledo, comiendo de aquella manera y pasando las noches a la intemperie.\n\nObviamente obra del abandono, es evidente que ambas han convivido antes en un hogar por los comportamientos, mimos, ronroneos y saber estar que tienen a día de hoy en su maravillosa acogida, que no dudo ni un instante en aceptar el caso y darles la bienvenida en su casa\n\nNos propusimos que ambas terminasen el año en un hogar y así ha sido. Ambas han salido de la calle, iniciando su cuarentena para poder hacer después todo el protocolo veterinario. Iremos informando sobre sus avances y en pocas semanas, si todo va bien, esperamos poder anunciar su adopción\n\nA día de hoy, ambas necesitan madrinas y padrinos. Necesitamos cubrir una esterilización urgente para evitar sorpresas. ¿Quién se anima?',
-    status: 'Reservado',
+    status: 'Reservada',
     medicalStatus: {
       deworming: 'Sí',
-      felvFiv: 'Pte',
-      vaccination: 'Pte',
+      felvFiv: 'Negativo',
+      vaccination: 'Sí',
       microchip: 'Sí',
       sterilization: 'Sí'
     }
@@ -99,11 +99,11 @@ export const ANIMALS: Animal[] = [
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Cava.jpg',
     description: 'Actualmente estamos ambas juntas en una casa de acogida en Madrid. Necesitamos recaudar fondos para poder cubrir el protocolo veterinario de ambas.',
     story: 'Hace unos días publicamos la necesidad de una acogida urgente para Cava y Sidra, dos hembras jovenes ultra sociables que vivían en una colonia feral descontrolada en un pueblo de Toledo, comiendo de aquella manera y pasando las noches a la intemperie.\n\nObviamente obra del abandono, es evidente que ambas han convivido antes en un hogar por los comportamientos, mimos, ronroneos y saber estar que tienen a día de hoy en su maravillosa acogida, que no dudo ni un instante en aceptar el caso y darles la bienvenida en su casa\n\nNos propusimos que ambas terminasen el año en un hogar y así ha sido. Ambas han salido de la calle, iniciando su cuarentena para poder hacer después todo el protocolo veterinario. Iremos informando sobre sus avances y en pocas semanas, si todo va bien, esperamos poder anunciar su adopción\n\nA día de hoy, ambas necesitan madrinas y padrinos. Necesitamos cubrir una esterilización urgente para evitar sorpresas. ¿Quién se anima?',
-    status: 'Reservado',
+    status: 'Reservada',
     medicalStatus: {
       deworming: 'Sí',
-      felvFiv: 'Pte',
-      vaccination: 'Pte',
+      felvFiv: 'Negativo',
+      vaccination: 'Sí',
       microchip: 'Sí',
       sterilization: 'Sí'
     }
@@ -119,7 +119,7 @@ export const ANIMALS: Animal[] = [
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Jengibre.jpg',
     description: 'Jengibre se recupera actualmente en una casa de acogida en Toledo. Está en proceso de sociabilización y valoración veterinaria tras ser rescatado de la calle.',
     story: 'Fui rescatado de una zona peligrosa donde corría riesgo de atropello. Vivía con Cava y Sidra, que fueron sacadas de la colonia unos pocos días antes que yo. En cuanto ellas no estuvieron, los vecinos dejaron desatendida la colonia y de repente no tenía comida ni agua. Dormía en la calle y cuando el frío llegó mi estado de salud empeoró drásticamente. Además, estoy cojito. Las chicas que me rescataron me llevaron al veterinario y parece que tengo una fractura en la cadera que se está valorando a día de hoy por el equipo de Traumatólogos. \n\nEstoy ubicado en una casa de acogida en Toledo. Están sociabilizando conmigo para que empiece a confiar en las personas y pueda llevar una vida feliz cuando esté totalmente recuperada.',
-    status: 'Próximamente en Adopción',
+    status: 'Pronto en adopción',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Pte',
@@ -179,7 +179,7 @@ export const ANIMALS: Animal[] = [
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Coral.jpg',
     description: 'En el caso de Coral, tras su última revisión, confirmamos que está más que preparada para que te fijes en ella y que sea tu compi de vida. Una gata dulce, pizpireta con todo el mundo, cariñosa a más no poder y con muchas ganas de ronronear contigo encima de una mantita viendo alguna serie 💓',
     story: 'Septiembre de 2020, cuando Apa Myanimalsm se estaba formando, sacamos a la camada de "Las Piedras Preciosas" del patio de un instituto de La Sagra. Las primeras acogidas que confiaron en nosotras aceptaron cuidar a las 5 hermanas hasta salir en adopción, de hecho, ahí fue el momento donde empezamos a hacer equipo y cadena solidaria felina 🥹 Jade y Coral fueron adoptadas juntas a las pocas semanas y fue una gran celebración, ya que era de las primeras adopciones conjuntas que conseguíamos ✨\n\nEn 2023, tres años después de su adopción, la que era su familia, alegando problemas médicos y familiares, recurre a nosotras para devolverlas😡 Llegando Jade y Coral en shock a su nueva acogida, donde estuvieron más de dos meses escondidas debajo de la cama porque no se fiaban de nadie y con mucha pena, puesto que sacar a dos animales del que ha sido su hogar toda su vida también les duele y afecta. Ambas pobres estuvieron con signos de estrés y estereotipias el primer año de vuelta a Apa Myanimalsm 😭\n\nDurante estos 3 años, hemos trabajado muy despacito la adaptación y confianza de ambas. Pero, lamentablemente, la realidad es que ya es difícil una adopción conjunta de dos cachorros, imaginaos la de dos adultas...💔\n\nDespués de mucho valorarlo y ver cómo ellas, a día de hoy, no son dependientes la una de la otra, al revés, se relacionan con todo ser: gatos, perros, humanos, llega el momento de separarlas para buscarles en este 2026 su hogar definitivo, el que tanto se merecen.\n\nEn el caso de Coral, tras su última revisión, confirmamos que está más que preparada para que te fijes en ella y que sea tu compi de vida. Una gata dulce, pizpireta con todo el mundo, cariñosa a más no poder y con muchas ganas de ronronear contigo encima de una mantita viendo alguna serie 💓',
-    status: 'Reservado',
+    status: 'Reservada',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -199,7 +199,7 @@ export const ANIMALS: Animal[] = [
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Jade2.jpg',
     description: 'Ella es una gata tímida, pero la más noble y bella del mundo. Actualmente se está recuperando de un pico de estrés para estar pronto en adopción.',
     story: 'Septiembre de 2020, cuando Apa Myanimalsm se estaba formando, sacamos a la camada de "Las Piedras Preciosas" del patio de un instituto de La Sagra. Las primeras acogidas que confiaron en nosotras aceptaron cuidar a las 5 hermanas hasta salir en adopción, de hecho, ahí fue el momento donde empezamos a hacer equipo y cadena solidaria felina 🥹 Jade y Coral fueron adoptadas juntas a las pocas semanas y fue una gran celebración, ya que era de las primeras adopciones conjuntas que conseguíamos ✨\n\nEn 2023, tres años después de su adopción, la que era su familia, alegando problemas médicos y familiares, recurre a nosotras para devolverlas😡 Llegando Jade y Coral en shock a su nueva acogida, donde estuvieron más de dos meses escondidas debajo de la cama porque no se fiaban de nadie y con mucha pena, puesto que sacar a dos animales del que ha sido su hogar toda su vida también les duele y afecta. Ambas estuvieron con signos de estrés y estereotipias el primer año de vuelta a Apa Myanimalsm 😭\n\nDurante estos 3 años, hemos trabajado muy despacito la adaptación y confianza de ambas. Pero, lamentablemente, la realidad es que ya es difícil una adopción conjunta de dos cachorros, imaginaos la de dos adultas...💔\n\nDespués de mucho valorarlo y ver cómo ellas, a día de hoy, no son dependientes la una de la otra, al revés, se relacionan con todo ser: gatos, perros, humanos, llega el momento de separarlas para buscarles en este 2026 su hogar definitivo, el que tanto se merecen.\n\nEn el caso de Jade, después de su cambio de acogida, ha vuelto a tener un pico de estrés. En la analítica salen los valores un poquito alterados, por lo que toca estar un tiempo con inmunoestimuladores hasta estabilizarla. Ella es una gata tímida, pero la más noble y bella del mundo. Sabemos que superará el bache y pronto estará en adopción, iremos informando.',
-    status: 'Próximamente en Adopción',
+    status: 'Pronto en adopción',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -216,28 +216,28 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Laura',
     role: 'Presidenta y Fundadora',
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Laura.jpg',
-    bio: 'Mi pasión por la naturaleza y los animales me llevó a embarcarme en este reto. Soy la fundadora de este bonito proyecto. De niña no podía pensar en un futuro sin ellos. Desde muy joven comencé como particular en la alimentación, rescate y gestión de colonias. Fui voluntaria en varias organizaciones, pero nunca pensé que mi sueño se llegaría a cumplir tan pronto. Con 23 años tenía mi propia asociación, encontré a un equipo con mis mismos ideales. Desde entonces he crecido junto a ellas, he aprendido cada día, hemos caído y nos hemos levantado juntas, superamos todo lo duro de este mundo y por supuesto lo recompensamos con todo lo bueno que nos da. Eso es APA. Myanimalsm, enfocado siempre en salvar la vida a todo aquel animalito que lo necesite.'
+    bio: 'Apasionada por los animales desde niña, fundé APA Myanimalsm a los 23 años tras años de experiencia en rescates y gestión de colonias. Hoy, junto a un equipo que comparte mis ideales, trabajamos cada día para superar retos y recompensar nuestro esfuerzo salvando vidas. Mi misión es dar una segunda oportunidad a todo aquel animalito que lo necesite.'
   },
   {
     id: '2',
     name: 'Reyes',
     role: 'Vicepresidenta',
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Reyes.jpg',
-    bio: 'Mi ropa ha estado siempre marcada por pelitos de gato, soy de las que piensa que "hogar" significa abrir la puerta y ver que un lindo gatito te está esperando. No concibo el día a día sin tener a un michi ronroneando en mi pecho y me es imposible mirar hacia otro lado cuando hay algún caso que necesita de nuestra ayuda. Estar en Apa Myanimalsm me ha salvado de lo peor de la sociedad y me permite volar muy alto sin poner límites a lo que más quiero: dar todo de mí por los gatos. Cada día conseguimos abarcar más casos y todo es gracias al gran equipo que formamos.'
+    bio: 'No concibo un hogar sin un gato ronroneando cerca. Mi labor en la asociación me permite dar todo de mí por ellos, encontrando en la protección animal un refugio frente a lo peor de la sociedad. Estoy orgullosa de formar parte de este equipo imparable que salva cada vez más vidas.'
   },
   {
     id: '3',
     name: 'Angelines',
     role: 'Secretaria',
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Angelines.jpg',
-    bio: 'Empecé en en el mundo de la protección animal siendo rescatista de casos imposibles, metiéndome en alcantarillas para sacar a camadas atrapadas, he pasado horas en el Manzanares para rescatar a un gato que se había precipitado y he formado parte de varios grupos de rescate animal donde he aprendido muchísimo sobre capturas y socialización. Mi pasión por los animales es tan fuerte que mis días deberían tener más de 24h para que me diese tiempo a abarcar todo lo que me gustaría. Cuando recibo halagos por salvar a tantos peludos suelo contestar lo mismo: son ellos los que siempre me salvan a mí.'
+    bio: 'Especialista en rescates complejos, desde alcantarillas hasta ríos, mi pasión por los animales es mi motor diario. He dedicado años a aprender sobre capturas y socialización porque mi compromiso con ellos no tiene límites. Siempre digo lo mismo: aunque yo trabaje para salvarlos, al final son ellos quienes siempre me salvan a mí.'
   },
   {
     id: '4',
     name: 'Christian',
     role: 'Tesorero',
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris.jpg',
-    bio: 'La gestión de la burocracia, gestión económica y la administración de la asociación, es ayuda que quizás no se ve desde fuera. En lo personal, ha derribado mis propios mitos, pasando de ser exclusivamente una persona "de perros" a entender y compartir el amor por los gatos con esa misma intensidad. Además, me considero una pieza fundamental de nuestra red de casas de acogida, ofrezco mi hogar como refugio seguro, demostrando que el trabajo de protección animal se hace tanto detrás de una pantalla, en la calle y desde el salón de mi casa.'
+    bio: 'La gestión de la burocracia, gestión económica y la administración de la asociación, es ayuda que quizás no se ve desde fuera. Además, me considero una pieza fundamental de nuestra red de casas de acogida, ofrezco mi hogar como refugio seguro, demostrando que el trabajo de protección animal se hace tanto detrás de una pantalla, en la calle y desde el salón de mi casa.'
   }
 ];
 
