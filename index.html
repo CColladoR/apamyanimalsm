@@ -1,9 +1,9 @@
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>APA Myanimalsm</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,6 +29,13 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+      html, body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+        margin: 0;
+        padding: 0;
+      }
       body {
         font-family: 'Inter', sans-serif;
         background-color: #fafaf9;
@@ -40,6 +47,14 @@
       }
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Merriweather', serif;
+      }
+      /* Ocultar barra de scroll para elementos decorativos pero mantener funcionalidad */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
       }
     </style>
   <script type="importmap">
@@ -57,7 +72,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
+  <body class="overflow-x-hidden">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

@@ -1,8 +1,7 @@
 import React, { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ANIMALS } from '../constants';
-import { Heart, Home, Ruler, Calendar, Info, ArrowLeft, Check, X, Clock, Stethoscope, AlertCircle } from 'lucide-react';
-import { MedicalStatusValue, FelvFivValue } from '../types';
+import { Heart, Home, Ruler, Calendar, Info, ArrowLeft, Check, X, Clock, Stethoscope, AlertCircle, Share2 } from 'lucide-react';
 
 export const AnimalDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -10,9 +9,9 @@ export const AnimalDetail: React.FC = () => {
 
   if (!animal) {
     return (
-      <div className="min-h-[60vh] flex flex-col items-center justify-center">
+      <div className="min-h-[60vh] flex flex-col items-center justify-center p-6">
         <h2 className="text-2xl font-bold text-stone-600 dark:text-stone-300 mb-4">Animal no encontrado</h2>
-        <Link to="/" className="text-primary hover:underline">Volver al inicio</Link>
+        <Link to="/" className="bg-primary text-white px-6 py-2 rounded-full font-bold">Volver al inicio</Link>
       </div>
     );
   }
@@ -21,166 +20,136 @@ export const AnimalDetail: React.FC = () => {
     if (!status) return <span className="text-stone-400">-</span>;
 
     const styles: Record<string, string> = {
-      'Sí': 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800',
-      'Negativo': 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800',
-      'No': 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 border-red-200 dark:border-red-800',
-      'Pte': 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 border-amber-200 dark:border-amber-800',
-      'Positivo (FELV)': 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 border-amber-200 dark:border-amber-800',
-      'Positivo (FIV)': 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 border-amber-200 dark:border-amber-800',
-    };
-
-    const icons: Record<string, React.ReactNode> = {
-      'Sí': <Check size={14} className="mr-1.5" />,
-      'Negativo': <Check size={14} className="mr-1.5" />,
-      'No': <X size={14} className="mr-1.5" />,
-      'Pte': <Clock size={14} className="mr-1.5" />,
-      'Positivo (FELV)': <AlertCircle size={14} className="mr-1.5" />,
-      'Positivo (FIV)': <AlertCircle size={14} className="mr-1.5" />,
+      'Sí': 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 border-green-100 dark:border-green-900/30',
+      'Negativo': 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 border-green-100 dark:border-green-900/30',
+      'No': 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 border-red-100 dark:border-red-900/30',
+      'Pte': 'bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400 border-amber-100 dark:border-amber-900/30',
+      'Positivo (FELV)': 'bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400 border-amber-100 dark:border-amber-900/30',
+      'Positivo (FIV)': 'bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400 border-amber-100 dark:border-amber-900/30',
     };
 
     return (
-      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold border ${styles[status] || styles['Pte']}`}>
-        {icons[status] || <Info size={14} className="mr-1.5" />}
+      <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] md:text-xs font-bold border ${styles[status] || styles['Pte']}`}>
         {status}
       </span>
     );
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <Link to="/" className="inline-flex items-center text-stone-500 hover:text-primary dark:text-stone-400 dark:hover:text-primary mb-8 transition-colors">
-        <ArrowLeft size={20} className="mr-2" />
-        Volver al listado
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12">
+      <Link to="/" className="inline-flex items-center text-stone-500 hover:text-primary dark:text-stone-400 transition-colors mb-6 md:mb-8 font-bold text-sm">
+        <ArrowLeft size={18} className="mr-2" />
+        Volver
       </Link>
 
-      <div className="bg-white dark:bg-stone-900 rounded-3xl shadow-lg overflow-hidden border border-stone-100 dark:border-stone-800 transition-colors duration-300">
+      <div className="bg-white dark:bg-stone-900 rounded-3xl shadow-xl overflow-hidden border border-stone-100 dark:border-stone-800">
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          {/* Image Side */}
-          <div className="h-96 lg:h-auto relative">
+          {/* Image Side - Fixed aspect ratio for mobile */}
+          <div className="aspect-square lg:aspect-auto lg:h-[700px] relative">
             <img 
               src={animal.imageUrl} 
               alt={animal.name} 
               className="w-full h-full object-cover"
             />
-            <div className="absolute top-6 left-6 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-sm font-bold text-stone-800 shadow-sm">
+            <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-stone-800 shadow-md">
               {animal.status}
             </div>
+            {/* Mobile Share Button */}
+            <button className="absolute top-4 right-4 p-2 bg-white/90 backdrop-blur rounded-full text-stone-700 shadow-md md:hidden">
+              <Share2 size={20} />
+            </button>
           </div>
 
           {/* Content Side */}
-          <div className="p-8 lg:p-12 flex flex-col">
-            <div className="mb-6">
-              <h1 className="text-4xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-2">{animal.name}</h1>
-              <p className="text-xl text-stone-500 dark:text-stone-400">{animal.breed}</p>
+          <div className="p-6 md:p-12 flex flex-col">
+            <div className="mb-8">
+              <h1 className="text-3xl md:text-4xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-2">{animal.name}</h1>
+              <p className="text-lg text-stone-500 dark:text-stone-400">{animal.breed}</p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="flex items-center p-4 bg-stone-50 dark:bg-stone-800 rounded-xl">
-                <Calendar className="text-primary mr-3" size={24} />
-                <div>
-                  <p className="text-xs text-stone-400 uppercase font-bold">Edad</p>
-                  <p className="font-semibold text-stone-700 dark:text-stone-200">{animal.age}</p>
+            <div className="grid grid-cols-2 gap-3 md:gap-4 mb-8">
+              <div className="flex items-center p-3 md:p-4 bg-stone-50 dark:bg-stone-800 rounded-2xl">
+                <Calendar className="text-primary mr-3" size={20} />
+                <div className="min-w-0">
+                  <p className="text-[10px] text-stone-400 uppercase font-bold truncate">Edad</p>
+                  <p className="font-bold text-sm md:text-base text-stone-700 dark:text-stone-200 truncate">{animal.age}</p>
                 </div>
               </div>
-              <div className="flex items-center p-4 bg-stone-50 dark:bg-stone-800 rounded-xl">
-                <Info className="text-primary mr-3" size={24} />
-                <div>
-                  <p className="text-xs text-stone-400 uppercase font-bold">Sexo</p>
-                  <p className="font-semibold text-stone-700 dark:text-stone-200">{animal.gender}</p>
-                </div>
-              </div>
-              <div className="flex items-center p-4 bg-stone-50 dark:bg-stone-800 rounded-xl">
-                <Ruler className="text-primary mr-3" size={24} />
-                <div>
-                  <p className="text-xs text-stone-400 uppercase font-bold">Tamaño</p>
-                  <p className="font-semibold text-stone-700 dark:text-stone-200">{animal.size}</p>
-                </div>
-              </div>
-              <div className="flex items-center p-4 bg-stone-50 dark:bg-stone-800 rounded-xl">
-                <div className="text-2xl mr-3">{animal.species === 'Perro' ? '🐕' : '🐈'}</div>
-                <div>
-                  <p className="text-xs text-stone-400 uppercase font-bold">Especie</p>
-                  <p className="font-semibold text-stone-700 dark:text-stone-200">{animal.species}</p>
+              <div className="flex items-center p-3 md:p-4 bg-stone-50 dark:bg-stone-800 rounded-2xl">
+                <Info className="text-primary mr-3" size={20} />
+                <div className="min-w-0">
+                  <p className="text-[10px] text-stone-400 uppercase font-bold truncate">Sexo</p>
+                  <p className="font-bold text-sm md:text-base text-stone-700 dark:text-stone-200 truncate">{animal.gender}</p>
                 </div>
               </div>
             </div>
 
-            {/* Medical Status Section */}
+            {/* Medical Status Section - Compact Mobile */}
             {animal.medicalStatus && (
-              <div className="mb-8 bg-teal-50 dark:bg-teal-900/10 rounded-xl p-5 border border-teal-100 dark:border-teal-900/30">
-                 <h3 className="flex items-center font-serif font-bold text-teal-900 dark:text-teal-200 mb-4">
-                   <Stethoscope size={20} className="mr-2" />
-                   Estado Veterinario
+              <div className="mb-8 bg-teal-50/50 dark:bg-teal-900/10 rounded-2xl p-4 md:p-6 border border-teal-100/50 dark:border-teal-900/30">
+                 <h3 className="flex items-center font-serif font-bold text-teal-800 dark:text-teal-200 mb-4 text-sm md:text-base">
+                   <Stethoscope size={18} className="mr-2" />
+                   Veterinario
                  </h3>
-                 <div className="space-y-3">
-                    <div className="flex justify-between items-center pb-2 border-b border-teal-100 dark:border-teal-900/30 last:border-0 last:pb-0">
-                      <span className="text-stone-700 dark:text-stone-300 text-sm font-medium">Desparasitación</span>
+                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                    <div className="flex justify-between items-center text-xs md:text-sm">
+                      <span className="text-stone-500 dark:text-stone-400">Desparasitación</span>
                       {renderStatusBadge(animal.medicalStatus.deworming)}
                     </div>
-                    {/* Only show FELV/FIV for cats */}
                     {animal.species === 'Gato' && (
-                        <div className="flex justify-between items-center pb-2 border-b border-teal-100 dark:border-teal-900/30 last:border-0 last:pb-0">
-                          <span className="text-stone-700 dark:text-stone-300 text-sm font-medium">Test FELV/FIV</span>
+                        <div className="flex justify-between items-center text-xs md:text-sm">
+                          <span className="text-stone-500 dark:text-stone-400">Test FELV/FIV</span>
                           {renderStatusBadge(animal.medicalStatus.felvFiv)}
                         </div>
                     )}
-                    <div className="flex justify-between items-center pb-2 border-b border-teal-100 dark:border-teal-900/30 last:border-0 last:pb-0">
-                      <span className="text-stone-700 dark:text-stone-300 text-sm font-medium">Vacunación</span>
+                    <div className="flex justify-between items-center text-xs md:text-sm">
+                      <span className="text-stone-500 dark:text-stone-400">Vacunación</span>
                       {renderStatusBadge(animal.medicalStatus.vaccination)}
                     </div>
-                    <div className="flex justify-between items-center pb-2 border-b border-teal-100 dark:border-teal-900/30 last:border-0 last:pb-0">
-                      <span className="text-stone-700 dark:text-stone-300 text-sm font-medium">Microchip</span>
+                    <div className="flex justify-between items-center text-xs md:text-sm">
+                      <span className="text-stone-500 dark:text-stone-400">Microchip</span>
                       {renderStatusBadge(animal.medicalStatus.microchip)}
                     </div>
-                    <div className="flex justify-between items-center pb-2 border-b border-teal-100 dark:border-teal-900/30 last:border-0 last:pb-0">
-                      <span className="text-stone-700 dark:text-stone-300 text-sm font-medium">Esterilización</span>
+                    <div className="flex justify-between items-center text-xs md:text-sm">
+                      <span className="text-stone-500 dark:text-stone-400">Esterilizado</span>
                       {renderStatusBadge(animal.medicalStatus.sterilization)}
                     </div>
                  </div>
               </div>
             )}
 
-            <div className="mb-8 prose prose-stone dark:prose-invert">
-              <h3 className="text-lg font-bold font-serif mb-2 text-stone-800 dark:text-stone-100">Mi Historia</h3>
-              <p className="text-stone-600 dark:text-stone-300 leading-relaxed mb-4 whitespace-pre-line">
+            <div className="mb-8">
+              <h3 className="text-lg font-bold font-serif mb-3 text-stone-800 dark:text-stone-100">Mi Historia</h3>
+              <p className="text-stone-600 dark:text-stone-300 text-sm md:text-base leading-relaxed whitespace-pre-line">
                 {animal.story}
               </p>
-              
-              {animal.description && (
-                <>
-                  <h3 className="text-lg font-bold font-serif mb-2 text-stone-800 dark:text-stone-100">Más sobre mí</h3>
-                  <p className="text-stone-600 dark:text-stone-300 leading-relaxed whitespace-pre-line">
-                    {animal.description}
-                  </p>
-                </>
-              )}
             </div>
 
             {animal.status !== 'Adoptado' ? (
-              <div className="mt-auto flex flex-col sm:flex-row gap-4">
+              <div className="mt-auto flex flex-col sm:flex-row gap-3">
                 <Link 
                   to="/adopta" 
-                  className="flex-1 bg-primary hover:bg-teal-600 text-white text-center px-6 py-4 rounded-xl font-bold text-lg transition-colors shadow-sm flex items-center justify-center gap-2"
+                  className="w-full bg-primary hover:bg-teal-600 text-white text-center py-4 rounded-2xl font-bold text-base md:text-lg transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2"
                 >
                   <Home size={20} />
-                  Adoptar a {animal.name}
+                  Adoptar
                 </Link>
                 <Link 
                   to="/donar"
-                  className="flex-1 bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 text-center px-6 py-4 rounded-xl font-bold text-lg transition-colors flex items-center justify-center gap-2"
+                  className="w-full bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-200 text-center py-4 rounded-2xl font-bold text-base md:text-lg transition-all active:scale-95 flex items-center justify-center gap-2"
                 >
                   <Heart size={20} className="text-accent" />
                   Apadrinar
                 </Link>
               </div>
             ) : (
-               <div className="mt-auto p-6 bg-stone-50 dark:bg-stone-800/50 rounded-xl border border-stone-100 dark:border-stone-800 text-center">
+               <div className="mt-auto p-6 bg-stone-50 dark:bg-stone-800/50 rounded-2xl border border-stone-100 dark:border-stone-800 text-center">
                   <p className="text-lg font-serif font-bold text-primary flex items-center justify-center gap-2">
-                     <Heart className="fill-primary text-primary" />
+                     <Heart className="fill-primary" size={20} />
                      ¡Final Feliz!
                   </p>
-                  <p className="text-stone-600 dark:text-stone-400 mt-1">
-                     {animal.name} ya está disfrutando de su nueva familia.
+                  <p className="text-stone-500 dark:text-stone-400 text-sm mt-1">
+                     {animal.name} ya tiene una familia definitiva.
                   </p>
                </div>
             )}

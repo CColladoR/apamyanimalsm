@@ -25,9 +25,9 @@ const App: React.FC = () => {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-stone-50 dark:bg-stone-950 font-sans text-stone-800 dark:text-stone-200 transition-colors duration-300">
+      <div className="flex flex-col min-h-screen bg-stone-50 dark:bg-stone-950 font-sans text-stone-800 dark:text-stone-200 transition-colors duration-300 overflow-x-hidden">
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow overflow-x-hidden">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/nosotros" element={<About />} />
