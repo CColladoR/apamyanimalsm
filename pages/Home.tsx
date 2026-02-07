@@ -355,7 +355,7 @@ export const Home: React.FC = () => {
             <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4 gap-6 scrollbar-hide">
               {REVIEWS.map((review) => (
                 <div key={review.id} className="snap-start w-[60%] sm:w-[380px] md:w-[420px] flex-shrink-0 bg-stone-50 dark:bg-stone-800 p-6 md:p-8 rounded-3xl border border-stone-100 dark:border-stone-700 flex flex-col transition-all shadow-sm">
-                  <Quote className="text-teal-200/50 dark:text-teal-900/50 mb-4" size={32} md:size={40} />
+                  <Quote className="text-teal-200/50 dark:text-teal-900/50 mb-4 w-8 h-8 md:w-10 md:h-10" />
                   <p className="text-stone-600 dark:text-stone-300 text-xs md:text-base italic mb-6 line-clamp-4 flex-grow leading-relaxed">
                     "{review.text}"
                   </p>

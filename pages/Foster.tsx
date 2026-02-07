@@ -46,7 +46,7 @@ export const Foster: React.FC = () => {
         <div className="space-y-10 md:space-y-12">
           <div>
             <h2 className="text-xl md:text-2xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-4 md:mb-6 flex items-center gap-3">
-              <Heart className="text-accent" size={20} md:size={24} />
+              <Heart className="text-accent w-5 h-5 md:w-6 md:h-6" />
               ¿Qué implica acoger?
             </h2>
             <div className="space-y-4 text-stone-600 dark:text-stone-400 leading-relaxed text-sm md:text-base">
