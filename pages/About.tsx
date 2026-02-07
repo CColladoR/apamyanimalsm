@@ -30,8 +30,8 @@ export const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-6">Sobre APA Myanimalsm</h1>
-          <p className="text-sm text-stone-600 dark:text-stone-300 max-w-4xl mx-auto leading-relaxed">
-            Somos una asociación sin ánimo de lucro dedicada al bienestar animal en Madrid y Toledo. Nacimos para proteger a las colonias felinas de nuestra comarca y hoy formamos un gran equipo de voluntarios, familias de acogida y veterinarios comprometidos con dar una segunda oportunidad a los animales más vulnerables. Te presentamos a nuestra junta directiva:
+          <p className="text-xl text-stone-600 dark:text-stone-300 max-w-4xl mx-auto leading-relaxed">
+            Somos una asociación sin ánimo de lucro dedicada en cuerpo y alma al bienestar animal. Nacimos de la necesidad de dar respuesta a los casos de abandono y maltrato que sufrían las colonias felinas en nuestra comarca, trabajando incansablemente para curar heridas físicas y emocionales de nuestros peludos. A día de hoy, APA. Myanimalsm es un gran equipo. Contamos con las mejores casas de acogida, lxs mejores adoptantes, voluntarixs, seguidorxs y veterinarixs, trabajando con casas de acogida repartidas entre Madrid y Toledo. Ahora bien, las cabecitas pensantes que formamos la junta directiva nos queremos presentar oficialmente:
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export const About: React.FC = () => {
 
         <div className="mt-12 max-w-4xl mx-auto text-center px-4">
           <p className="text-lg text-stone-700 dark:text-stone-300 italic leading-relaxed font-serif">
-            "Los gatos nos unieron para trabajar codo con codo por los animales más necesitados. Siempre estamos al pie del cañón, por y para ellos."
+            Podríamos resumirlo como que los gatos nos unieron para darlo todo codo con codo a favor de los animales más necesitados. Desde ese momento, siempre estamos juntas al pie del cañón, llueva, se caiga el cielo o truene, por y para ellos.
           </p>
         </div>
 
@@ -68,6 +68,7 @@ export const About: React.FC = () => {
                 <Camera className="text-primary" size={32} />
                 Álbum de Familia
             </h2>
+            {/* Increased column count to reduce image size */}
             <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
                 {galleryImages.map((src, idx) => (
                     <div key={idx} className="break-inside-avoid rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 bg-stone-100 dark:bg-stone-800">
@@ -85,15 +86,16 @@ export const About: React.FC = () => {
         </div>
       </div>
 
-      {/* Floating Instagram Chat Button - Unified with Home page style */}
+      {/* Floating Instagram Chat Button */}
       <a
         href="https://ig.me/m/apa.myanimalsm"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-4 right-4 z-50 bg-teal-600 text-white p-3.5 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 flex items-center justify-center"
+        className="fixed bottom-6 right-6 z-50 bg-teal-600 hover:bg-teal-700 text-white px-4 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2 group"
         aria-label="Chat en Instagram"
       >
-        <Instagram size={24} />
+        <Instagram size={20} />
+        <span className="font-bold text-xs md:text-sm">¿Podemos ayudarte?</span>
       </a>
     </div>
   );

@@ -5,50 +5,9 @@ import { Heart } from 'lucide-react';
 
 interface AnimalCardProps {
   animal: Animal;
-  compact?: boolean;
 }
 
-export const AnimalCard: React.FC<AnimalCardProps> = ({ animal, compact = false }) => {
-  if (compact) {
-    return (
-      <div className="bg-white dark:bg-stone-900 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-stone-100 dark:border-stone-800 group flex flex-col h-full">
-        <div className="relative h-40 sm:h-48 overflow-hidden flex-shrink-0">
-          <img 
-            src={animal.imageUrl} 
-            alt={animal.name} 
-            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-          />
-          <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded-full text-[9px] font-bold text-stone-700 tracking-wide shadow-sm">
-            {animal.status}
-          </div>
-        </div>
-        <div className="p-3 flex flex-col flex-grow">
-          <div className="flex justify-between items-start mb-1">
-            <h3 className="text-sm font-bold text-stone-800 dark:text-stone-100 truncate">{animal.name}</h3>
-            <span className="text-sm">{animal.species === 'Perro' ? '🐕' : '🐈'}</span>
-          </div>
-          <p className="text-[10px] text-stone-500 dark:text-stone-400 mb-3 truncate">{animal.breed}</p>
-          
-          <div className="flex items-center gap-2 mt-auto">
-            <Link 
-              to={`/animal/${animal.id}`}
-              className="flex-grow text-center bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 font-bold py-1.5 rounded-lg transition-colors duration-200 text-[10px]"
-            >
-              Ver
-            </Link>
-            <Link 
-              to="/donar"
-              className="p-1.5 bg-rose-50 dark:bg-rose-900/20 text-rose-400 rounded-lg"
-              title="Apadrinar"
-            >
-              <Heart size={14} />
-            </Link>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
+export const AnimalCard: React.FC<AnimalCardProps> = ({ animal }) => {
   return (
     <div className="bg-white dark:bg-stone-900 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-stone-100 dark:border-stone-800 group flex flex-col h-full">
       <div className="relative h-64 overflow-hidden flex-shrink-0">
@@ -57,7 +16,7 @@ export const AnimalCard: React.FC<AnimalCardProps> = ({ animal, compact = false 
           alt={animal.name} 
           className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-stone-700 tracking-wide shadow-sm">
+        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-stone-700 uppercase tracking-wide shadow-sm">
           {animal.status}
         </div>
       </div>
