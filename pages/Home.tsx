@@ -1,20 +1,30 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
-import { ANIMALS } from '../constants';
 import { AnimalCard } from '../components/AnimalCard';
 import { Link } from 'react-router-dom';
 import { 
   HeartHandshake, Dog, Cat, LayoutGrid, Star, Quote, 
   ExternalLink, Instagram, Activity,
   AlertCircle, Clock, Home as HomeIcon, Building2, Bookmark, Heart,
-  ChevronDown, Filter, XCircle, Sparkles, Grip, List
+  ChevronDown, Filter, XCircle, Sparkles, Grip, List, Plus
 } from 'lucide-react';
+import { useAnimals } from '../context/AnimalContext';
+import { useAuth } from '../context/AuthContext';
+import { AnimalFormModal } from '../components/AnimalFormModal';
+import { Animal } from '../types';
 
 export const Home: React.FC = () => {
+  const { animals, addAnimal, updateAnimal } = useAnimals();
+  const { isAuthenticated } = useAuth();
+  
   const [activeCategory, setActiveCategory] = useState<'Todos' | 'Perro' | 'Gato'>('Todos');
   const [activeStatus, setActiveStatus] = useState<string>('Todos');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  // Defaulting to 'compact' (grid) as requested by the user
   const [viewMode, setViewMode] = useState<'detailed' | 'compact'>('compact');
+  
+  // Modal state
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [editingAnimal, setEditingAnimal] = useState<Animal | null>(null);
+
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside
@@ -28,9 +38,27 @@ export const Home: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const handleAddClick = () => {
+    setEditingAnimal(null);
+    setIsModalOpen(true);
+  };
+
+  const handleEditClick = (animal: Animal) => {
+    setEditingAnimal(animal);
+    setIsModalOpen(true);
+  };
+
+  const handleSaveAnimal = (animal: Animal) => {
+    if (editingAnimal) {
+      updateAnimal(animal);
+    } else {
+      addAnimal(animal);
+    }
+  };
+
   const adoptedAnimals = useMemo(() => {
-    return ANIMALS.filter(a => a.status === 'Adoptado');
-  }, []);
+    return animals.filter(a => a.status === 'Adoptado');
+  }, [animals]);
 
   const filteredAnimals = useMemo(() => {
     const priority: Record<string, number> = {
@@ -44,7 +72,7 @@ export const Home: React.FC = () => {
 
     const getPriority = (status: string) => priority[status] || 99;
 
-    return ANIMALS
+    return animals
       .filter(animal => animal.status !== 'Adoptado')
       .filter(animal => {
         const matchesCategory = activeCategory === 'Todos' || animal.species === activeCategory;
@@ -55,7 +83,7 @@ export const Home: React.FC = () => {
         return matchesCategory && matchesStatus;
       })
       .sort((a, b) => getPriority(a.status) - getPriority(b.status));
-  }, [activeCategory, activeStatus]);
+  }, [activeCategory, activeStatus, animals]);
 
   const categories = [
     { id: 'Todos', label: 'Todos', icon: LayoutGrid },
@@ -104,7 +132,7 @@ export const Home: React.FC = () => {
     { year: 2023, count: 63 },
     { year: 2024, count: 71 },
     { year: 2025, count: 40 },
-    { year: 2026, count: ANIMALS.length },
+    { year: 2026, count: animals.length },
   ];
 
   const maxStat = Math.max(...RESCUE_STATS.map(s => s.count));
@@ -128,17 +156,26 @@ export const Home: React.FC = () => {
       {/* Animal List Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12 overflow-x-hidden">
         
-        <div className="flex items-center gap-2 mb-6 md:mb-8">
+        <div className="flex items-center justify-between mb-6 md:mb-8">
            <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-800 dark:text-stone-100">
             En Adopción
           </h2>
+          {isAuthenticated && (
+            <button 
+              onClick={handleAddClick}
+              className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-xl font-bold text-sm shadow-md flex items-center gap-2 transition-transform hover:scale-105"
+            >
+                <Plus size={18} />
+                Añadir Animal
+            </button>
+          )}
         </div>
 
-        {/* Unified Filter Toolbar - Mobile Optimized with View Toggle */}
-        <div className="sticky top-[64px] md:top-20 z-40 bg-white/95 dark:bg-stone-900/95 backdrop-blur-md p-3 md:p-4 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-lg mb-8 flex flex-col gap-4">
+        {/* Unified Filter Toolbar - Compact Version */}
+        <div className="sticky top-[64px] md:top-20 z-40 bg-white/95 dark:bg-stone-900/95 backdrop-blur-md p-3 md:p-4 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-lg mb-8 flex flex-col gap-3">
           
-          <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
-            <div className="flex overflow-x-auto pb-1 md:pb-0 -mx-3 px-3 md:mx-0 md:px-0 scrollbar-hide gap-2 w-auto">
+          {/* Top Row: Categories */}
+          <div className="flex overflow-x-auto pb-1 -mx-3 px-3 md:mx-0 md:px-0 scrollbar-hide gap-2 w-auto">
                {categories.map((cat) => {
                 const Icon = cat.icon;
                 const isSelected = activeCategory === cat.id;
@@ -158,28 +195,32 @@ export const Home: React.FC = () => {
                   </button>
                 );
               })}
-            </div>
+          </div>
 
-            <div className="flex items-center gap-2 md:gap-3">
-               <div className="relative flex-grow md:flex-grow-0" ref={dropdownRef}>
+          {/* Bottom Row: Filters & View Toggle */}
+          <div className="flex items-end justify-between gap-3">
+            
+            {/* Left: Status Filter + Clear Button */}
+            <div className="flex items-center gap-2 flex-grow min-w-0">
+               <div className="relative w-full sm:w-auto sm:min-w-[200px]" ref={dropdownRef}>
                  <button
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                     className={`
-                      w-full flex items-center justify-between gap-2 px-4 py-2.5 rounded-xl text-xs md:text-sm font-bold transition-all shadow-sm border
+                      w-full flex items-center justify-between gap-2 px-3 py-2.5 rounded-xl text-xs md:text-sm font-bold transition-all shadow-sm border
                       ${activeStatus !== 'Todos' 
                         ? 'bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300 border-teal-200 dark:border-teal-800' 
                         : 'bg-white dark:bg-stone-800 text-stone-700 dark:text-stone-200 border-stone-200 dark:border-stone-700'}
                     `}
                  >
-                    <div className="flex items-center gap-2">
-                      <Filter size={14} className={activeStatus !== 'Todos' ? 'text-teal-600' : 'text-stone-400'} />
-                      <span>{activeStatus === 'Todos' ? 'Estado' : activeStatusObj?.label}</span>
+                    <div className="flex items-center gap-2 truncate">
+                      <Filter size={14} className={activeStatus !== 'Todos' ? 'text-teal-600' : 'text-stone-400 flex-shrink-0'} />
+                      <span className="truncate">{activeStatus === 'Todos' ? 'Estado' : activeStatusObj?.label}</span>
                     </div>
-                    <ChevronDown size={14} className={`transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown size={14} className={`flex-shrink-0 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
                  </button>
 
                  {isDropdownOpen && (
-                    <div className="absolute right-0 left-0 md:left-auto mt-2 w-full md:w-64 bg-white dark:bg-stone-800 rounded-xl shadow-2xl border border-stone-100 dark:border-stone-700 overflow-hidden z-50 animate-in fade-in zoom-in-95 duration-100 origin-top-right">
+                    <div className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-stone-800 rounded-xl shadow-2xl border border-stone-100 dark:border-stone-700 overflow-hidden z-50 animate-in fade-in zoom-in-95 duration-100 origin-top-left">
                         {statusCategories.map((status) => {
                           const Icon = status.icon;
                           const isSelected = activeStatus === status.id;
@@ -210,50 +251,48 @@ export const Home: React.FC = () => {
                {(activeCategory !== 'Todos' || activeStatus !== 'Todos') && (
                   <button 
                     onClick={() => { setActiveCategory('Todos'); setActiveStatus('Todos'); }}
-                    className="p-2.5 rounded-xl bg-rose-50 dark:bg-rose-900/20 text-rose-600 dark:text-rose-400 hover:bg-rose-100 transition-colors"
+                    className="flex-shrink-0 p-2.5 rounded-xl bg-rose-50 dark:bg-rose-900/20 text-rose-600 dark:text-rose-400 hover:bg-rose-100 transition-colors"
                     title="Limpiar filtros"
                   >
                     <XCircle size={18} />
                   </button>
                )}
-
-               {/* View Toggle Buttons */}
-               <div className="hidden sm:flex items-center bg-stone-100 dark:bg-stone-800 p-1 rounded-xl border border-stone-200 dark:border-stone-700">
-                  <button 
-                    onClick={() => setViewMode('detailed')}
-                    className={`p-1.5 rounded-lg transition-all ${viewMode === 'detailed' ? 'bg-white dark:bg-stone-700 text-primary shadow-sm' : 'text-stone-400 hover:text-stone-600'}`}
-                    title="Vista Detallada"
-                  >
-                    <List size={18} />
-                  </button>
-                  <button 
-                    onClick={() => setViewMode('compact')}
-                    className={`p-1.5 rounded-lg transition-all ${viewMode === 'compact' ? 'bg-white dark:bg-stone-700 text-primary shadow-sm' : 'text-stone-400 hover:text-stone-600'}`}
-                    title="Vista Cuadrícula"
-                  >
-                    <Grip size={18} />
-                  </button>
-               </div>
             </div>
-          </div>
 
-          {/* Mobile Specific View Toggle */}
-          <div className="flex sm:hidden items-center justify-between px-1">
-            <span className="text-[10px] font-bold text-stone-400 uppercase tracking-widest">Estilo de vista</span>
-            <div className="flex items-center bg-stone-100 dark:bg-stone-800 p-1 rounded-xl border border-stone-200 dark:border-stone-700">
+            {/* Right (Mobile): View Toggle Stacked */}
+            <div className="flex flex-col items-end gap-1 sm:hidden flex-shrink-0">
+                <span className="text-[9px] font-bold text-stone-400 uppercase tracking-widest leading-none">Estilo de vista</span>
+                <div className="flex items-center bg-stone-100 dark:bg-stone-800 p-1 rounded-xl border border-stone-200 dark:border-stone-700">
+                    <button 
+                      onClick={() => setViewMode('detailed')}
+                      className={`p-1.5 rounded-lg transition-all ${viewMode === 'detailed' ? 'bg-white dark:bg-stone-700 text-primary shadow-sm' : 'text-stone-400'}`}
+                    >
+                      <List size={16} />
+                    </button>
+                    <button 
+                      onClick={() => setViewMode('compact')}
+                      className={`p-1.5 rounded-lg transition-all ${viewMode === 'compact' ? 'bg-white dark:bg-stone-700 text-primary shadow-sm' : 'text-stone-400'}`}
+                    >
+                      <Grip size={16} />
+                    </button>
+                </div>
+            </div>
+
+            {/* Right (Desktop): View Toggle */}
+            <div className="hidden sm:flex items-center bg-stone-100 dark:bg-stone-800 p-1 rounded-xl border border-stone-200 dark:border-stone-700 ml-auto">
                 <button 
                   onClick={() => setViewMode('detailed')}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[10px] font-bold transition-all ${viewMode === 'detailed' ? 'bg-white dark:bg-stone-700 text-primary shadow-sm' : 'text-stone-400'}`}
+                  className={`p-1.5 rounded-lg transition-all ${viewMode === 'detailed' ? 'bg-white dark:bg-stone-700 text-primary shadow-sm' : 'text-stone-400 hover:text-stone-600'}`}
+                  title="Vista Detallada"
                 >
-                  <List size={14} />
-                  Detalle
+                  <List size={18} />
                 </button>
                 <button 
                   onClick={() => setViewMode('compact')}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[10px] font-bold transition-all ${viewMode === 'compact' ? 'bg-white dark:bg-stone-700 text-primary shadow-sm' : 'text-stone-400'}`}
+                  className={`p-1.5 rounded-lg transition-all ${viewMode === 'compact' ? 'bg-white dark:bg-stone-700 text-primary shadow-sm' : 'text-stone-400 hover:text-stone-600'}`}
+                  title="Vista Cuadrícula"
                 >
-                  <Grip size={14} />
-                  Cuadrícula
+                  <Grip size={18} />
                 </button>
             </div>
           </div>
@@ -278,6 +317,7 @@ export const Home: React.FC = () => {
                 key={animal.id} 
                 animal={animal} 
                 compact={viewMode === 'compact'} 
+                onEdit={handleEditClick}
               />
             ))}
           </div>
@@ -429,6 +469,14 @@ export const Home: React.FC = () => {
       >
         <Instagram size={24} />
       </a>
+
+      {/* Admin Modal */}
+      <AnimalFormModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onSave={handleSaveAnimal}
+        initialData={editingAnimal}
+      />
     </div>
   );
 };

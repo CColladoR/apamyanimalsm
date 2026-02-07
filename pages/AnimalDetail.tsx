@@ -1,11 +1,12 @@
 import React, { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ANIMALS } from '../constants';
-import { Heart, Home, Ruler, Calendar, Info, ArrowLeft, Check, X, Clock, Stethoscope, AlertCircle, Share2 } from 'lucide-react';
+import { useAnimals } from '../context/AnimalContext';
+import { Heart, Home, Ruler, Calendar, Info, ArrowLeft, Check, X, Clock, Stethoscope, AlertCircle } from 'lucide-react';
 
 export const AnimalDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const animal = useMemo(() => ANIMALS.find(a => a.id === id), [id]);
+  const { animals } = useAnimals();
+  const animal = useMemo(() => animals.find(a => a.id === id), [id, animals]);
 
   if (!animal) {
     return (
@@ -54,10 +55,6 @@ export const AnimalDetail: React.FC = () => {
             <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-stone-800 shadow-md">
               {animal.status}
             </div>
-            {/* Mobile Share Button */}
-            <button className="absolute top-4 right-4 p-2 bg-white/90 backdrop-blur rounded-full text-stone-700 shadow-md md:hidden">
-              <Share2 size={20} />
-            </button>
           </div>
 
           {/* Content Side */}

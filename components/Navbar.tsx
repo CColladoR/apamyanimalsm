@@ -2,15 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Menu, X, Sun, Moon, Home, Info, Heart, PawPrint, 
-  MessageCircle, Instagram, ChevronRight, Coins
+  MessageCircle, Instagram, ChevronRight, Coins, Lock, LogOut
 } from 'lucide-react';
 import { Logo } from './Logo';
 import { useTheme } from '../context/ThemeContext';
+import { useAuth } from '../context/AuthContext';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
+  const { isAuthenticated, logout } = useAuth();
 
   const navLinks = [
     { name: 'Inicio', path: '/', icon: Home },
@@ -37,6 +39,11 @@ export const Navbar: React.FC = () => {
     };
   }, [isOpen]);
 
+  const handleLogout = () => {
+    logout();
+    setIsOpen(false);
+  };
+
   return (
     <nav className="bg-white/95 dark:bg-stone-900/95 backdrop-blur-md shadow-sm sticky top-0 z-[70] transition-all duration-300 border-b border-stone-100 dark:border-stone-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +51,7 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center gap-2" onClick={() => setIsOpen(false)}>
               <Logo className="h-10 md:h-14" />
-              <span className="font-brand text-lg md:text-2xl font-bold text-stone-700 dark:text-stone-200 tracking-tight truncate max-w-[150px] md:max-w-none">
+              <span className="font-brand text-lg md:text-2xl font-bold text-stone-700 dark:text-stone-200 tracking-tight whitespace-nowrap">
                 APA Myanimalsm
               </span>
             </Link>
@@ -73,6 +80,16 @@ export const Navbar: React.FC = () => {
             >
               {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
             </button>
+            
+            {isAuthenticated && (
+                <button
+                    onClick={logout}
+                    className="p-2.5 rounded-full text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors"
+                    title="Cerrar sesión"
+                >
+                    <LogOut size={18} />
+                </button>
+            )}
           </div>
 
           {/* Mobile menu button & Theme toggle */}
@@ -143,6 +160,25 @@ export const Navbar: React.FC = () => {
                   <Instagram size={24} />
                   Instagram
                 </a>
+                
+                {isAuthenticated ? (
+                  <button 
+                    onClick={handleLogout}
+                    className="flex flex-col items-center justify-center gap-2 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 border border-red-100 dark:border-red-800/50 py-4 rounded-2xl font-bold text-xs shadow-sm active:scale-95 transition-transform"
+                  >
+                    <LogOut size={24} />
+                    Cerrar Sesión (Admin)
+                  </button>
+                ) : (
+                  <Link 
+                    to="/login" 
+                    onClick={() => setIsOpen(false)}
+                    className="flex flex-col items-center justify-center gap-2 bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400 border border-stone-200 dark:border-stone-700 py-4 rounded-2xl font-bold text-xs shadow-sm active:scale-95 transition-transform"
+                  >
+                    <Lock size={24} />
+                    Acceso Admin
+                  </Link>
+                )}
               </div>
             </div>
             

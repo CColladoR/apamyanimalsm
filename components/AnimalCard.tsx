@@ -1,17 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Animal } from '../types';
-import { Heart } from 'lucide-react';
+import { Heart, Pencil } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
 
 interface AnimalCardProps {
   animal: Animal;
   compact?: boolean;
+  onEdit?: (animal: Animal) => void;
 }
 
-export const AnimalCard: React.FC<AnimalCardProps> = ({ animal, compact = false }) => {
+export const AnimalCard: React.FC<AnimalCardProps> = ({ animal, compact = false, onEdit }) => {
+  const { isAuthenticated } = useAuth();
+
+  const handleEditClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (onEdit) onEdit(animal);
+  };
+
   if (compact) {
     return (
-      <div className="bg-white dark:bg-stone-900 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-stone-100 dark:border-stone-800 group flex flex-col h-full">
+      <div className="bg-white dark:bg-stone-900 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-stone-100 dark:border-stone-800 group flex flex-col h-full relative">
+        {isAuthenticated && onEdit && (
+            <button 
+                onClick={handleEditClick}
+                className="absolute top-2 right-2 z-10 bg-teal-600 text-white p-1.5 rounded-full shadow-lg hover:bg-teal-700"
+                title="Editar"
+            >
+                <Pencil size={12} />
+            </button>
+        )}
         <div className="relative h-40 sm:h-48 overflow-hidden flex-shrink-0">
           <img 
             src={animal.imageUrl} 
@@ -50,7 +68,16 @@ export const AnimalCard: React.FC<AnimalCardProps> = ({ animal, compact = false 
   }
 
   return (
-    <div className="bg-white dark:bg-stone-900 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-stone-100 dark:border-stone-800 group flex flex-col h-full">
+    <div className="bg-white dark:bg-stone-900 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-stone-100 dark:border-stone-800 group flex flex-col h-full relative">
+      {isAuthenticated && onEdit && (
+            <button 
+                onClick={handleEditClick}
+                className="absolute top-4 right-4 z-10 bg-teal-600 text-white p-2 rounded-full shadow-lg hover:bg-teal-700"
+                title="Editar"
+            >
+                <Pencil size={18} />
+            </button>
+      )}
       <div className="relative h-64 overflow-hidden flex-shrink-0">
         <img 
           src={animal.imageUrl} 
