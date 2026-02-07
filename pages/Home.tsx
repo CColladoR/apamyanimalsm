@@ -107,6 +107,7 @@ export const Home: React.FC = () => {
     { year: 2023, count: 63 },
     { year: 2024, count: 71 },
     { year: 2025, count: 40 },
+    { year: 2026, count: ANIMALS.length },
   ];
 
   const maxStat = Math.max(...RESCUE_STATS.map(s => s.count));
@@ -411,7 +412,7 @@ export const Home: React.FC = () => {
         href="https://ig.me/m/apa.myanimalsm"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-gradient-to-tr from-yellow-500 via-purple-500 to-blue-500 text-white px-4 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2 group"
+        className="fixed bottom-6 right-6 z-50 bg-teal-600 hover:bg-teal-700 text-white px-4 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2 group"
         aria-label="Chat en Instagram"
       >
         <Instagram size={20} />

@@ -133,7 +133,7 @@ export const AdoptionProcess: React.FC = () => {
                 href={instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gradient-to-tr from-yellow-500 via-purple-500 to-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-3"
+                className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-3"
             >
                 <Instagram size={28} />
                 Iniciar trámite

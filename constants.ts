@@ -157,15 +157,15 @@ export const ANIMALS: Animal[] = [
     gender: 'Macho',
     size: '3kg',
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/IMG_20260119_190406_308%7E2.jpg',
-    description: 'Joven gatito atigrado recién llegado a la familia. Se encuentra en casa de acogida en Toledo esperando completar su protocolo veterinario.',
+    description: '',
     story: 'Me llaman Romeo y es un placer conocerte :P\n\nLlevo tan solo unos días en la protectora. Anteriormente, me había tenido una familia durante varias semanas, aparecí en la puerta de su casa, al principio pensaron que podría tener familia pero cuando las horas pasaban y yo no me alejaba de allí, decidieron llevarme al veterinario. No tenía microchip pero estaba muy limpito y sanito y por mi aspecto el veterinario dijo que quizás podría tener familia.\n\nMe publicaron, me difundieron y mi familia nunca apareció, tampoco nadie que me quisiera así que empezaron a contactar con asociaciones para entregarme en una de ellas.\n\nDe casualidad y en el último momento, justo antes de que valorasen el soltarme de nuevo en la calle, aparecieron estos chicos tan majos, con los que vivo actualmente en Toledo. Me están cuidando y dicen que tengo que ir al veterinario pronto y si todo está bien, podré estar oficialmente en adopción.',
     status: 'Adoptado',
     medicalStatus: {
       deworming: 'Sí',
-      felvFiv: 'Pte',
-      vaccination: 'Pte',
-      microchip: 'Pte',
-      sterilization: 'Pte'
+      felvFiv: 'Negativo',
+      vaccination: 'Sí',
+      microchip: 'Sí',
+      sterilization: 'Sí'
     }
   },
   {

@@ -1,9 +1,29 @@
 import React from 'react';
-import { Home, Heart, ShieldCheck, Stethoscope, CheckCircle2, Instagram } from 'lucide-react';
+import { Home, Heart, ShieldCheck, Stethoscope, CheckCircle2, Instagram, HelpCircle } from 'lucide-react';
 
 export const Foster: React.FC = () => {
   const message = "¡Hola! Me gustaría iniciar el trámite para ser casa de acogida.";
   const instagramUrl = `https://ig.me/m/apa.myanimalsm?text=${encodeURIComponent(message)}`;
+
+  // Configuration for the bubbles grid
+  const bubbles = [
+    { size: 'w-20 h-20 md:w-32 md:h-32', z: 'z-0', rotate: '-rotate-12', mt: 'mt-8' },
+    { size: 'w-24 h-24 md:w-36 md:h-36', z: 'z-10', rotate: '-rotate-3', mt: 'mt-0' },
+    { size: 'w-16 h-16 md:w-24 md:h-24', z: 'z-0', rotate: 'rotate-12', mt: 'mt-12' }, 
+    { 
+        // Main center bubble - User photo
+        size: 'w-28 h-28 md:w-44 md:h-44', 
+        z: 'z-30', 
+        rotate: '-rotate-2', 
+        mt: '-mt-4',
+        imageUrl: "https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/main/IMG_20260206_180035_762.jpg",
+        caption: "Helena y Jengibre"
+    }, 
+    { size: 'w-20 h-20 md:w-32 md:h-32', z: 'z-20', rotate: 'rotate-3', mt: 'mt-6' },
+    { size: 'w-24 h-24 md:w-36 md:h-36', z: 'z-10', rotate: 'rotate-6', mt: 'mt-2' },
+    { size: 'w-16 h-16 md:w-24 md:h-24', z: 'z-0', rotate: '-rotate-6', mt: 'mt-10' },
+    { size: 'w-20 h-20 md:w-28 md:h-28', z: 'z-10', rotate: '-rotate-3', mt: 'mt-4' },
+  ];
 
   return (
     <div className="min-h-screen py-16 bg-white dark:bg-stone-900 transition-colors duration-300">
@@ -87,16 +107,73 @@ export const Foster: React.FC = () => {
         </div>
 
         {/* Instagram CTA Button */}
-        <div className="flex justify-center mt-16 mb-8 scale-100 hover:scale-105 transition-transform duration-300">
+        <div className="flex justify-center mt-16 mb-20 scale-100 hover:scale-105 transition-transform duration-300">
             <a
                 href={instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gradient-to-tr from-yellow-500 via-purple-500 to-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-3 text-center"
+                className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-3 text-center"
             >
                 <Instagram size={28} />
                 Iniciar trámite de acogida
             </a>
+        </div>
+
+        {/* Foster Families Collage Section */}
+        <div className="pt-16 pb-20 border-t border-stone-100 dark:border-stone-800 overflow-hidden">
+           <div className="text-center mb-16">
+              <h2 className="text-3xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-4">
+                 Nuestra Gran Familia De Acogida
+              </h2>
+              <p className="text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">
+                 Ellxs son el corazón de APA Myanimalsm. Gracias a su generosidad abriendo las puertas de su hogar, cientos de vidas han sido salvadas.
+              </p>
+           </div>
+
+           {/* Collage Container */}
+           <div className="flex flex-col items-center">
+              <div className="flex flex-wrap justify-center items-center content-center max-w-5xl mx-auto -space-x-4 md:-space-x-8">
+                 {bubbles.map((bubble, index) => (
+                    <div 
+                       key={index}
+                       className={`
+                         relative ${bubble.z} hover:z-40 
+                         transition-all duration-500 ease-out hover:scale-110
+                         ${bubble.size} ${bubble.rotate} ${bubble.mt}
+                         rounded-full shadow-xl
+                         ${bubble.imageUrl ? '' : 'bg-stone-50 dark:bg-stone-800 border-[4px] md:border-[6px] border-white dark:border-stone-900'}
+                         group cursor-default flex-shrink-0
+                       `}
+                    >
+                       {bubble.imageUrl ? (
+                           <div className="w-full h-full rounded-full overflow-hidden border-[4px] md:border-[6px] border-white dark:border-stone-900">
+                               <img 
+                                   src={bubble.imageUrl} 
+                                   alt="Familia de acogida" 
+                                   className="w-full h-full object-cover"
+                               />
+                           </div>
+                       ) : (
+                           <div className="w-full h-full rounded-full border-2 border-dashed border-stone-300 dark:border-stone-600 flex items-center justify-center text-stone-300 dark:text-stone-600 group-hover:text-teal-500 group-hover:border-teal-400 transition-colors">
+                              <HelpCircle className="w-1/3 h-1/3" strokeWidth={1.5} />
+                           </div>
+                       )}
+
+                       {(bubble as any).caption && (
+                           <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 whitespace-nowrap z-50">
+                               <span className="inline-block bg-white/95 dark:bg-stone-800/95 backdrop-blur px-3 py-1 rounded-full text-[10px] md:text-xs font-serif font-bold text-stone-700 dark:text-stone-200 shadow-md border border-stone-100 dark:border-stone-700">
+                                   {(bubble as any).caption}
+                               </span>
+                           </div>
+                       )}
+                    </div>
+                 ))}
+              </div>
+           </div>
+           
+           <p className="text-center text-xs text-stone-400 mt-16 italic">
+              ¿Te gustaría formar parte de este muro? ¡Escríbenos!
+           </p>
         </div>
 
       </div>

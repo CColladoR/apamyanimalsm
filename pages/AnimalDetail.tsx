@@ -145,28 +145,45 @@ export const AnimalDetail: React.FC = () => {
               <p className="text-stone-600 dark:text-stone-300 leading-relaxed mb-4 whitespace-pre-line">
                 {animal.story}
               </p>
-              <h3 className="text-lg font-bold font-serif mb-2 text-stone-800 dark:text-stone-100">Más sobre mí</h3>
-              <p className="text-stone-600 dark:text-stone-300 leading-relaxed whitespace-pre-line">
-                {animal.description}
-              </p>
+              
+              {animal.description && (
+                <>
+                  <h3 className="text-lg font-bold font-serif mb-2 text-stone-800 dark:text-stone-100">Más sobre mí</h3>
+                  <p className="text-stone-600 dark:text-stone-300 leading-relaxed whitespace-pre-line">
+                    {animal.description}
+                  </p>
+                </>
+              )}
             </div>
 
-            <div className="mt-auto flex flex-col sm:flex-row gap-4">
-              <Link 
-                to="/adopta" 
-                className="flex-1 bg-primary hover:bg-teal-600 text-white text-center px-6 py-4 rounded-xl font-bold text-lg transition-colors shadow-sm flex items-center justify-center gap-2"
-              >
-                <Home size={20} />
-                Adoptar a {animal.name}
-              </Link>
-              <Link 
-                to="/donar"
-                className="flex-1 bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 text-center px-6 py-4 rounded-xl font-bold text-lg transition-colors flex items-center justify-center gap-2"
-              >
-                <Heart size={20} className="text-accent" />
-                Apadrinar
-              </Link>
-            </div>
+            {animal.status !== 'Adoptado' ? (
+              <div className="mt-auto flex flex-col sm:flex-row gap-4">
+                <Link 
+                  to="/adopta" 
+                  className="flex-1 bg-primary hover:bg-teal-600 text-white text-center px-6 py-4 rounded-xl font-bold text-lg transition-colors shadow-sm flex items-center justify-center gap-2"
+                >
+                  <Home size={20} />
+                  Adoptar a {animal.name}
+                </Link>
+                <Link 
+                  to="/donar"
+                  className="flex-1 bg-stone-100 hover:bg-stone-200 dark:bg-stone-800 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 text-center px-6 py-4 rounded-xl font-bold text-lg transition-colors flex items-center justify-center gap-2"
+                >
+                  <Heart size={20} className="text-accent" />
+                  Apadrinar
+                </Link>
+              </div>
+            ) : (
+               <div className="mt-auto p-6 bg-stone-50 dark:bg-stone-800/50 rounded-xl border border-stone-100 dark:border-stone-800 text-center">
+                  <p className="text-lg font-serif font-bold text-primary flex items-center justify-center gap-2">
+                     <Heart className="fill-primary text-primary" />
+                     ¡Final Feliz!
+                  </p>
+                  <p className="text-stone-600 dark:text-stone-400 mt-1">
+                     {animal.name} ya está disfrutando de su nueva familia.
+                  </p>
+               </div>
+            )}
           </div>
         </div>
       </div>

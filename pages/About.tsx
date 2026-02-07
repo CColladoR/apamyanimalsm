@@ -1,27 +1,27 @@
 import React from 'react';
 import { TEAM_MEMBERS } from '../constants';
-import { Camera } from 'lucide-react';
+import { Camera, Instagram } from 'lucide-react';
 
 export const About: React.FC = () => {
-  // Family Album images
+  // Family Album images - Mixed order
   const galleryImages = [
     "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau1.jpg",
-    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau2.jpg",
-    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau3.jpg",
-    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau4.jpg",
-    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau5.jpg",
-    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau6.jpg",
     "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes1.jpg",
-    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes2.jpg",
-    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes3.jpg",
-    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes4.jpg",
-    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes5.jpg",
-    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes6.jpg",
     "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris1.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau2.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes2.jpg",
     "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris2.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau3.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes3.jpg",
     "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris3.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau4.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes4.jpg",
     "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris4.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau5.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes5.jpg",
     "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris5.jpeg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Lau6.jpg",
+    "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/reyes6.jpg",
     "https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Chris6.jpg",
   ];
 
@@ -31,7 +31,7 @@ export const About: React.FC = () => {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-6">Sobre APA Myanimalsm</h1>
           <p className="text-xl text-stone-600 dark:text-stone-300 max-w-4xl mx-auto leading-relaxed">
-            Somos una asociación sin ánimo de lucro dedicada en cuerpo y alma al bienestar animal. Nacimos de la necesidad de dar respuesta a los casos de abandono y maltrato que sufrían las colonias felinas en nuestra comarca, trabajando incansablemente para curar heridas físicas y emocionales de nuestros peludos. A día de hoy, APA. Myanimalsm es un gran equipo. Contamos con las mejores casas de acogida, los mejores adoptantes, voluntarios, seguidores y veterinarias, trabajando con casas de acogida repartidas entre Madrid y Toledo. Ahora bien, las cabecitas pensantes que formamos la junta directiva nos queremos presentar oficialmente:
+            Somos una asociación sin ánimo de lucro dedicada en cuerpo y alma al bienestar animal. Nacimos de la necesidad de dar respuesta a los casos de abandono y maltrato que sufrían las colonias felinas en nuestra comarca, trabajando incansablemente para curar heridas físicas y emocionales de nuestros peludos. A día de hoy, APA. Myanimalsm es un gran equipo. Contamos con las mejores casas de acogida, lxs mejores adoptantes, voluntarixs, seguidorxs y veterinarixs, trabajando con casas de acogida repartidas entre Madrid y Toledo. Ahora bien, las cabecitas pensantes que formamos la junta directiva nos queremos presentar oficialmente:
           </p>
         </div>
 
@@ -68,9 +68,10 @@ export const About: React.FC = () => {
                 <Camera className="text-primary" size={32} />
                 Álbum de Familia
             </h2>
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+            {/* Increased column count to reduce image size */}
+            <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
                 {galleryImages.map((src, idx) => (
-                    <div key={idx} className="break-inside-avoid rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-stone-100 dark:bg-stone-800">
+                    <div key={idx} className="break-inside-avoid rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 bg-stone-100 dark:bg-stone-800">
                         <img 
                             src={src} 
                             alt={`Momento APA Myanimalsm ${idx + 1}`} 
@@ -84,6 +85,18 @@ export const About: React.FC = () => {
             </p>
         </div>
       </div>
+
+      {/* Floating Instagram Chat Button */}
+      <a
+        href="https://ig.me/m/apa.myanimalsm"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-teal-600 hover:bg-teal-700 text-white px-4 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2 group"
+        aria-label="Chat en Instagram"
+      >
+        <Instagram size={20} />
+        <span className="font-bold text-xs md:text-sm">¿Podemos ayudarte?</span>
+      </a>
     </div>
   );
 };
