@@ -10,7 +10,7 @@ export interface MedicalStatus {
   sterilization: MedicalStatusValue; // Esterilización
 }
 
-export type AnimalStatus = 'En Adopción' | 'Reservado' | 'Reservada' | 'Urgente' | 'En residencia' | 'Pronto en adopción' | 'Pendiente de Adopción' | 'Adoptado';
+export type AnimalStatus = 'En Adopción' | 'Reservado' | 'Reservada' | 'Urgente' | 'En residencia' | 'Pronto en adopción' | 'Pendiente de Adopción' | 'Adoptado' | 'Adoptada';
 
 export interface Animal {
   id: string;

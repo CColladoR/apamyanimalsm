@@ -60,8 +60,8 @@ export const AnimalDetail: React.FC = () => {
           {/* Content Side */}
           <div className="p-6 md:p-12 flex flex-col">
             <div className="mb-8">
-              <h1 className="text-3xl md:text-4xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-2">{animal.name}</h1>
-              <p className="text-lg text-stone-500 dark:text-stone-400">{animal.breed}</p>
+              <h1 className="text-3xl md:text-5xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-2">{animal.name}</h1>
+              <p className="text-base md:text-lg text-stone-50 dark:text-stone-400">{animal.breed}</p>
             </div>
 
             <div className="grid grid-cols-2 gap-3 md:gap-4 mb-8">
@@ -84,7 +84,7 @@ export const AnimalDetail: React.FC = () => {
             {/* Medical Status Section - Compact Mobile */}
             {animal.medicalStatus && (
               <div className="mb-8 bg-teal-50/50 dark:bg-teal-900/10 rounded-2xl p-4 md:p-6 border border-teal-100/50 dark:border-teal-900/30">
-                 <h3 className="flex items-center font-serif font-bold text-teal-800 dark:text-teal-200 mb-4 text-sm md:text-base">
+                 <h3 className="flex items-center font-serif font-bold text-teal-800 dark:text-teal-200 mb-4 text-xl md:text-2xl">
                    <Stethoscope size={18} className="mr-2" />
                    Veterinario
                  </h3>
@@ -116,13 +116,13 @@ export const AnimalDetail: React.FC = () => {
             )}
 
             <div className="mb-8">
-              <h3 className="text-lg font-bold font-serif mb-3 text-stone-800 dark:text-stone-100">Mi Historia</h3>
-              <p className="text-stone-600 dark:text-stone-300 text-sm md:text-base leading-relaxed whitespace-pre-line">
+              <h3 className="text-xl md:text-2xl font-bold font-serif mb-3 text-stone-800 dark:text-stone-100">Mi Historia</h3>
+              <p className="text-stone-600 dark:text-stone-300 text-base leading-relaxed whitespace-pre-line">
                 {animal.story}
               </p>
             </div>
 
-            {animal.status !== 'Adoptado' ? (
+            {animal.status !== 'Adoptado' && animal.status !== 'Adoptada' ? (
               <div className="mt-auto flex flex-col sm:flex-row gap-3">
                 <Link 
                   to="/adopta" 

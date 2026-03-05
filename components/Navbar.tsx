@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Menu, X, Sun, Moon, Home, Info, Heart, PawPrint, 
-  MessageCircle, Instagram, ChevronRight, Coins, Lock, LogOut
+  MessageCircle, Instagram, ChevronRight, Coins, Lock, LogOut, Cat
 } from 'lucide-react';
 import { Logo } from './Logo';
 import { useTheme } from '../context/ThemeContext';
@@ -19,6 +19,7 @@ export const Navbar: React.FC = () => {
     { name: 'Nosotros', path: '/nosotros', icon: Info },
     { name: 'Adopta', path: '/adopta', icon: Heart },
     { name: 'Acogidas', path: '/acogida', icon: PawPrint },
+    { name: 'Post-adopción', path: '/post-adopcion', icon: Cat },
     { name: 'Donar', path: '/donar', icon: Coins },
   ];
 
@@ -58,12 +59,12 @@ export const Navbar: React.FC = () => {
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                className={`px-2 lg:px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActive(link.path)
                     ? 'text-primary bg-teal-50 dark:bg-teal-900/30'
                     : 'text-stone-600 dark:text-stone-300 hover:text-primary dark:hover:text-primary hover:bg-stone-50 dark:hover:bg-stone-800'
@@ -93,7 +94,7 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile menu button & Theme toggle */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg text-stone-500 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
@@ -113,7 +114,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu Overlay - Robust visibility and interaction */}
       <div 
-        className={`md:hidden fixed inset-0 top-16 z-[60] bg-white dark:bg-stone-900 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'opacity-100 translate-x-0 visible' : 'opacity-0 translate-x-full invisible pointer-events-none'}`}
+        className={`lg:hidden fixed inset-0 top-16 z-[60] bg-white dark:bg-stone-900 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'opacity-100 translate-x-0 visible' : 'opacity-0 translate-x-full invisible pointer-events-none'}`}
         style={{ height: 'calc(100vh - 4rem)' }}
       >
         <div className="flex flex-col h-full bg-white dark:bg-stone-900 overflow-y-auto overflow-x-hidden">

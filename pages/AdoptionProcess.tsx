@@ -11,8 +11,8 @@ export const AdoptionProcess: React.FC = () => {
         
         {/* Intro */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-6">Proceso de Adopción</h1>
-          <p className="text-lg text-stone-600 dark:text-stone-300">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-6">Proceso de Adopción</h1>
+          <p className="text-base md:text-lg text-stone-600 dark:text-stone-300">
             Adoptar es un acto de amor y responsabilidad. Queremos asegurarnos de que tanto la familia como el animal sean compatibles para toda la vida.
           </p>
         </div>
@@ -24,7 +24,7 @@ export const AdoptionProcess: React.FC = () => {
                     <Video size={32} />
                 </div>
                 <div>
-                    <h3 className="font-bold text-xl mb-3 text-stone-800 dark:text-stone-100">1. Cuestionario y Vídeo del Domicilio</h3>
+                    <h3 className="font-bold text-xl md:text-2xl mb-3 text-stone-800 dark:text-stone-100">1. Cuestionario y Vídeo del Domicilio</h3>
                     <p className="text-stone-600 dark:text-stone-400 mb-4 leading-relaxed">
                         Primero pedimos que se rellene nuestro cuestionario de pre-adopción y que nos enviéis un vídeo del domicilio para ver dónde viviría. 
                     </p>
@@ -45,7 +45,7 @@ export const AdoptionProcess: React.FC = () => {
                     <Euro size={32} />
                 </div>
                 <div>
-                    <h3 className="font-bold text-xl mb-3 text-stone-800 dark:text-stone-100">2. Reserva del Animal</h3>
+                    <h3 className="font-bold text-xl md:text-2xl mb-3 text-stone-800 dark:text-stone-100">2. Reserva del Animal</h3>
                     <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
                         Con el visto bueno de la junta directiva, procederemos a reservar al animal. Para ello, se deberá abonar una <strong>señal de reserva</strong>. 
                     </p>
@@ -60,7 +60,7 @@ export const AdoptionProcess: React.FC = () => {
                     <ClipboardCheck size={32} />
                 </div>
                 <div>
-                    <h3 className="font-bold text-xl mb-3 text-stone-800 dark:text-stone-100">3. Firma del Contrato</h3>
+                    <h3 className="font-bold text-xl md:text-2xl mb-3 text-stone-800 dark:text-stone-100">3. Firma del Contrato</h3>
                     <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
                         Pasamos a la firma del contrato de adopción. En este punto os detallamos todo el historial veterinario del animal y los compromisos que adquiere la familia para su bienestar futuro.
                     </p>
@@ -72,7 +72,7 @@ export const AdoptionProcess: React.FC = () => {
                     <Heart size={32} />
                 </div>
                 <div>
-                    <h3 className="font-bold text-xl mb-3 text-stone-800 dark:text-stone-100">4. Cuota de Adopción y Entrega</h3>
+                    <h3 className="font-bold text-xl md:text-2xl mb-3 text-stone-800 dark:text-stone-100">4. Cuota de Adopción y Entrega</h3>
                     <p className="text-stone-600 dark:text-stone-400 leading-relaxed mb-3">
                         Se abonará una <strong>cuota de adopción</strong> destinada a cubrir parte de los gastos veterinarios. De este total se restará la señal ya abonada en la reserva.
                     </p>
@@ -85,7 +85,7 @@ export const AdoptionProcess: React.FC = () => {
 
         {/* Kitten Policy Highlight */}
         <div className="mb-8 bg-indigo-50 dark:bg-indigo-900/20 rounded-3xl p-8 border border-indigo-100 dark:border-indigo-900/50 shadow-sm">
-            <h2 className="text-2xl font-serif font-bold text-indigo-900 dark:text-indigo-200 mb-4">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-indigo-900 dark:text-indigo-200 mb-4">
                 Adopción de Gatitos
             </h2>
             <p className="text-indigo-800 dark:text-indigo-300 leading-relaxed">
@@ -95,7 +95,7 @@ export const AdoptionProcess: React.FC = () => {
 
         {/* Medical Protocol Highlight */}
         <div className="mb-8 bg-teal-50 dark:bg-teal-900/20 rounded-3xl p-8 border border-teal-100 dark:border-teal-900/50 shadow-sm">
-            <h2 className="text-2xl font-serif font-bold text-teal-900 dark:text-teal-200 mb-6">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-teal-900 dark:text-teal-200 mb-6">
                 Protocolo Veterinario
             </h2>
             <p className="text-teal-800 dark:text-teal-300 mb-6">
@@ -119,7 +119,7 @@ export const AdoptionProcess: React.FC = () => {
 
         {/* Salvas dos vidas Section (Moved from Foster and adapted) */}
         <div className="mb-12 bg-teal-50 dark:bg-teal-900/20 rounded-3xl p-8 border border-teal-100 dark:border-teal-900/50 shadow-sm">
-            <h2 className="text-2xl font-serif font-bold text-teal-900 dark:text-teal-200 mb-4">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-teal-900 dark:text-teal-200 mb-4">
                 Salvas dos vidas
             </h2>
             <p className="text-teal-800 dark:text-teal-300">
@@ -142,20 +142,20 @@ export const AdoptionProcess: React.FC = () => {
 
         {/* FAQ Section */}
         <div className="mb-20">
-             <h2 className="text-2xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-6 flex items-center gap-2">
+             <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-6 flex items-center gap-2">
                 <HelpCircle className="text-primary" size={28}/>
                 Preguntas Frecuentes
              </h2>
              <div className="space-y-4">
                 <div className="bg-stone-50 dark:bg-stone-800 p-6 rounded-2xl border border-stone-100 dark:border-stone-700">
-                    <h3 className="font-bold text-lg text-stone-800 dark:text-stone-100 mb-2">¿Qué pasa si no tengo protecciones en las ventanas?</h3>
-                    <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
+                    <h3 className="font-bold text-lg md:text-xl text-stone-800 dark:text-stone-100 mb-2">¿Qué pasa si no tengo protecciones en las ventanas?</h3>
+                    <p className="text-stone-600 dark:text-stone-400 leading-relaxed text-sm">
                         Como indicamos en el proceso, no es motivo de rechazo inmediato. Valoramos que seas consciente de la seguridad y te guiaremos ofreciéndote distintas opciones que puedes encontrar fácilmente online para adaptar tu hogar antes de la llegada del nuevo miembro.
                     </p>
                 </div>
                 <div className="bg-stone-50 dark:bg-stone-800 p-6 rounded-2xl border border-stone-100 dark:border-stone-700">
-                    <h3 className="font-bold text-lg text-stone-800 dark:text-stone-100 mb-2">¿Puedo adoptar si vivo fuera de Madrid/Toledo?</h3>
-                    <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
+                    <h3 className="font-bold text-lg md:text-xl text-stone-800 dark:text-stone-100 mb-2">¿Puedo adoptar si vivo fuera de Madrid/Toledo?</h3>
+                    <p className="text-stone-600 dark:text-stone-400 leading-relaxed text-sm">
                         Normalmente operamos en estas zonas para facilitar el seguimiento, visitas y entregas pero valoramos cada caso individualmente. Si estás dispuesto a desplazarte para conocer al animal y cumples con los requisitos, ¡podemos estudiarlo!
                     </p>
                 </div>

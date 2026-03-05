@@ -26,8 +26,8 @@ export const Login: React.FC = () => {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-50 dark:bg-teal-900/30 rounded-full mb-4 text-primary">
             <Lock size={32} />
           </div>
-          <h1 className="text-2xl font-serif font-bold text-stone-800 dark:text-stone-100">Área de Administración</h1>
-          <p className="text-stone-500 dark:text-stone-400 mt-2 text-sm">Introduce tus credenciales para gestionar la protectora.</p>
+          <h1 className="text-2xl md:text-3xl font-serif font-bold text-stone-800 dark:text-stone-100">Área de Administración</h1>
+          <p className="text-stone-500 dark:text-stone-400 mt-2 text-base">Introduce tus credenciales para gestionar la protectora.</p>
         </div>
 
         {error && (

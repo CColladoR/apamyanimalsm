@@ -9,6 +9,7 @@ import { AdoptionProcess } from './pages/AdoptionProcess';
 import { AnimalDetail } from './pages/AnimalDetail';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { Foster } from './pages/Foster';
+import { PostAdoption } from './pages/PostAdoption';
 import { Login } from './pages/Login';
 import { ThemeProvider } from './context/ThemeContext';
 import { AuthProvider } from './context/AuthContext';
@@ -41,6 +42,7 @@ const App: React.FC = () => {
                   <Route path="/donar" element={<Donate />} />
                   <Route path="/adopta" element={<AdoptionProcess />} />
                   <Route path="/acogida" element={<Foster />} />
+                  <Route path="/post-adopcion" element={<PostAdoption />} />
                   <Route path="/animal/:id" element={<AnimalDetail />} />
                   <Route path="/privacidad" element={<PrivacyPolicy />} />
                   <Route path="/login" element={<Login />} />

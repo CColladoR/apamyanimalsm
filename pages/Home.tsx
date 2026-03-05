@@ -147,8 +147,8 @@ export const Home: React.FC = () => {
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-4 md:mb-6">
             Encuentra a tu <span className="text-primary">mejor amigo</span>
           </h1>
-          <p className="text-base md:text-xl text-stone-600 dark:text-stone-300 max-w-2xl mx-auto mb-2 md:mb-4">
-            En APA Myanimalsm luchamos cada día por dar una segunda oportunidad a quienes más lo necesitan. Adopta, no compres.
+          <p className="text-base md:text-lg text-stone-600 dark:text-stone-300 max-w-2xl mx-auto mb-2 md:mb-4">
+            En APA Myanimalsm luchamos cada día por dar una segunda oportunidad a quienes más lo necesitan, trabajando con amor para encontrarles el hogar que merecen. Adopta, no compres.
           </p>
         </div>
       </div>
@@ -261,7 +261,7 @@ export const Home: React.FC = () => {
 
             {/* Right (Mobile): View Toggle Stacked */}
             <div className="flex flex-col items-end gap-1 sm:hidden flex-shrink-0">
-                <span className="text-[9px] font-bold text-stone-400 uppercase tracking-widest leading-none">Estilo de vista</span>
+                <span className="text-[9px] font-bold text-stone-400 uppercase tracking-widest leading-none">Vista</span>
                 <div className="flex items-center bg-stone-100 dark:bg-stone-800 p-1 rounded-xl border border-stone-200 dark:border-stone-700">
                     <button 
                       onClick={() => setViewMode('detailed')}
@@ -341,34 +341,32 @@ export const Home: React.FC = () => {
         <div className="bg-stone-50 dark:bg-stone-950 py-12 md:py-16 border-y border-stone-100 dark:border-stone-800 overflow-hidden">
            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-8">
-                 <h2 className="text-2xl font-serif font-bold text-stone-800 dark:text-stone-100 flex items-center justify-center gap-2">
+                 <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-800 dark:text-stone-100 flex items-center justify-center gap-2">
                    <Sparkles className="text-amber-400 fill-amber-400" size={20} />
                    Finales Felices
                    <Sparkles className="text-amber-400 fill-amber-400" size={20} />
                  </h2>
               </div>
               
-              <div className="overflow-hidden">
-                <div className="flex overflow-x-auto pb-4 scrollbar-hide gap-6 justify-start md:justify-center -mx-4 px-4">
-                  {adoptedAnimals.map((animal) => (
-                    <Link 
-                        key={animal.id} 
-                        to={`/animal/${animal.id}`}
-                        className="group flex flex-col items-center flex-shrink-0"
-                    >
-                        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-1 bg-white dark:bg-stone-800 mb-2 shadow-sm group-hover:shadow-md transition-all">
-                          <img 
-                            src={animal.imageUrl} 
-                            alt={animal.name} 
-                            className="w-full h-full object-cover rounded-full"
-                          />
-                        </div>
-                        <span className="font-bold text-xs text-stone-600 dark:text-stone-400">
-                          {animal.name}
-                        </span>
-                    </Link>
-                  ))}
-                </div>
+              <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-y-8 gap-x-4">
+                {adoptedAnimals.map((animal) => (
+                  <Link 
+                      key={animal.id} 
+                      to={`/animal/${animal.id}`}
+                      className="group flex flex-col items-center"
+                  >
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-1 bg-white dark:bg-stone-800 mb-2 shadow-sm group-hover:shadow-md transition-all">
+                        <img 
+                          src={animal.imageUrl} 
+                          alt={animal.name} 
+                          className="w-full h-full object-cover rounded-full"
+                        />
+                      </div>
+                      <span className="font-bold text-[10px] sm:text-xs text-stone-600 dark:text-stone-400 text-center">
+                        {animal.name}
+                      </span>
+                  </Link>
+                ))}
               </div>
            </div>
         </div>
@@ -378,7 +376,7 @@ export const Home: React.FC = () => {
       <div className="bg-white dark:bg-stone-900 py-16 border-b border-stone-200 dark:border-stone-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-4">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-4">
               Reseñas
             </h2>
             <div className="flex items-center justify-center gap-2 mb-2">
@@ -391,21 +389,21 @@ export const Home: React.FC = () => {
             </div>
           </div>
 
-          <div className="overflow-hidden">
-            <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 -mx-4 px-4 gap-6 scrollbar-hide">
+          <div className="-mx-4 sm:-mx-6 lg:-mx-8">
+            <div className="flex overflow-x-auto snap-x snap-mandatory pb-8 px-4 sm:px-6 lg:px-8 gap-8 scrollbar-hide">
               {REVIEWS.map((review) => (
-                <div key={review.id} className="snap-start w-[60%] sm:w-[380px] md:w-[420px] flex-shrink-0 bg-stone-50 dark:bg-stone-800 p-6 md:p-8 rounded-3xl border border-stone-100 dark:border-stone-700 flex flex-col transition-all shadow-sm">
-                  <Quote className="text-teal-200/50 dark:text-teal-900/50 mb-4 w-8 h-8 md:w-10 md:h-10" />
-                  <p className="text-stone-600 dark:text-stone-300 text-xs md:text-base italic mb-6 line-clamp-4 flex-grow leading-relaxed">
+                <div key={review.id} className="snap-start w-[70%] sm:w-[380px] md:w-[440px] flex-shrink-0 bg-stone-50 dark:bg-stone-800 p-7 md:p-9 rounded-[2.5rem] border border-stone-100 dark:border-stone-700 flex flex-col transition-all shadow-sm">
+                  <Quote className="text-teal-200/50 dark:text-teal-900/50 mb-4 w-9 h-9 md:w-11 md:h-11" />
+                  <p className="text-stone-600 dark:text-stone-300 text-sm italic mb-8 line-clamp-6 flex-grow leading-relaxed">
                     "{review.text}"
                   </p>
-                  <div className="flex items-center gap-3 md:gap-4">
-                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-xs md:text-sm">
+                  <div className="flex items-center gap-4 md:gap-5">
+                    <div className="w-9 h-9 md:w-11 md:h-11 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold text-sm md:text-base">
                       {review.author.charAt(0)}
                     </div>
                     <div className="min-w-0">
-                      <p className="font-bold text-stone-800 dark:text-stone-100 text-xs md:text-sm truncate">{review.author}</p>
-                      <p className="text-[10px] md:text-xs text-stone-400 uppercase font-bold tracking-tighter truncate">{review.date}</p>
+                      <p className="font-bold text-stone-800 dark:text-stone-100 text-sm md:text-base truncate">{review.author}</p>
+                      <p className="text-xs md:text-sm text-stone-400 uppercase font-bold tracking-tighter truncate">{review.date}</p>
                     </div>
                   </div>
                 </div>
@@ -430,7 +428,7 @@ export const Home: React.FC = () => {
       <div className="py-16 bg-background dark:bg-stone-950 overflow-hidden">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-             <h2 className="text-2xl font-serif font-bold text-stone-800 dark:text-stone-100 flex items-center justify-center gap-2">
+             <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-800 dark:text-stone-100 flex items-center justify-center gap-2">
                <Activity className="text-primary" size={24} />
                Rescates
              </h2>

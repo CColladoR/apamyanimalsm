@@ -29,13 +29,13 @@ export const About: React.FC = () => {
     <div className="py-16 bg-white dark:bg-stone-900 min-h-screen transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-6">Sobre APA Myanimalsm</h1>
-          <p className="text-sm text-stone-600 dark:text-stone-300 max-w-4xl mx-auto leading-relaxed">
-            Somos una asociación sin ánimo de lucro dedicada al bienestar animal en Madrid y Toledo. Nacimos para proteger a las colonias felinas de nuestra comarca y hoy formamos un gran equipo de voluntarios, familias de acogida y veterinarios comprometidos con dar una segunda oportunidad a los animales más vulnerables. Te presentamos a nuestra junta directiva:
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-6">Sobre APA Myanimalsm</h1>
+          <p className="text-base md:text-lg text-stone-600 dark:text-stone-300 max-w-4xl mx-auto leading-relaxed">
+            Somos una asociación sin ánimo de lucro dedicada al bienestar animal. No tenemos refugio físico, únicamente trabajamos con casas de acogida en Madrid y Toledo. Hoy en día formamos un gran equipo de voluntarios, familias de acogida y veterinarios comprometidos con dar una segunda oportunidad a los animales más vulnerables. Te presentamos a la junta directiva:
           </p>
         </div>
 
-        <h2 className="text-3xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-12 text-center">Nuestro Equipo</h2>
+        <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-12 text-center">Nuestro Equipo</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {TEAM_MEMBERS.map((member) => (
@@ -47,9 +47,9 @@ export const About: React.FC = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-bold text-stone-800 dark:text-stone-100 mb-1">{member.name}</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-stone-800 dark:text-stone-100 mb-1">{member.name}</h3>
               <p className="text-primary font-medium text-sm uppercase tracking-wide mb-4">{member.role}</p>
-              <p className="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
+              <p className="text-stone-600 dark:text-stone-400 text-base leading-relaxed">
                 {member.bio}
               </p>
             </div>
@@ -64,7 +64,7 @@ export const About: React.FC = () => {
 
         {/* Photo Gallery Section */}
         <div className="mt-24 mb-12">
-            <h2 className="text-3xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-8 text-center flex items-center justify-center gap-3">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-8 text-center flex items-center justify-center gap-3">
                 <Camera className="text-primary" size={32} />
                 Álbum de Familia
             </h2>

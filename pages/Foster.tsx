@@ -7,22 +7,36 @@ export const Foster: React.FC = () => {
 
   // Configuration for the bubbles grid - Refined for mobile
   const bubbles = [
-    { size: 'w-16 h-16 md:w-32 md:h-32', z: 'z-0', rotate: '-rotate-12', mt: 'mt-6 md:mt-8' },
-    { size: 'w-20 h-20 md:w-36 md:h-36', z: 'z-10', rotate: '-rotate-3', mt: 'mt-0' },
-    { size: 'w-14 h-14 md:w-24 md:h-24', z: 'z-0', rotate: 'rotate-12', mt: 'mt-10 md:mt-12' }, 
+    { size: 'w-20 h-20 md:w-40 md:h-40', z: 'z-0', rotate: '-rotate-12', mt: 'mt-6 md:mt-8' },
+    { 
+      size: 'w-24 h-24 md:w-48 md:h-48', 
+      z: 'z-10', 
+      rotate: '-rotate-3', 
+      mt: 'mt-0',
+      imageUrl: "https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/569abdbe27a3dff48861f5dc4fd16847dcbe6f2c/IMG_20260223_204216_931.jpg",
+      caption: "María y Cava"
+    },
+    { size: 'w-16 h-16 md:w-32 md:h-32', z: 'z-0', rotate: 'rotate-12', mt: 'mt-10 md:mt-12' }, 
     { 
         // Main center bubble - User photo
-        size: 'w-24 h-24 md:w-44 md:h-44', 
+        size: 'w-28 h-28 md:w-60 md:h-60', 
         z: 'z-30', 
         rotate: '-rotate-2', 
         mt: '-mt-4',
         imageUrl: "https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/main/IMG_20260206_180035_762.jpg",
         caption: "Helena y Jengibre"
     }, 
-    { size: 'w-16 h-16 md:w-32 md:h-32', z: 'z-20', rotate: 'rotate-3', mt: 'mt-4 md:mt-6' },
-    { size: 'w-20 h-20 md:w-36 md:h-36', z: 'z-10', rotate: 'rotate-6', mt: 'mt-2' },
-    { size: 'w-12 h-12 md:w-24 md:h-24', z: 'z-0', rotate: '-rotate-6', mt: 'mt-8 md:mt-10' },
-    { size: 'w-16 h-16 md:w-28 md:h-28', z: 'z-10', rotate: '-rotate-3', mt: 'mt-4' },
+    { size: 'w-20 h-20 md:w-40 md:h-40', z: 'z-20', rotate: 'rotate-3', mt: 'mt-4 md:mt-6' },
+    { 
+      size: 'w-24 h-24 md:w-48 md:h-48', 
+      z: 'z-10', 
+      rotate: 'rotate-6', 
+      mt: 'mt-2',
+      imageUrl: "https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/aea1e1a9c005f2dd14a091b5df85284ad6c00d69/P1470271.jpg",
+      caption: "Laura y Galia"
+    },
+    { size: 'w-14 h-14 md:w-32 md:h-32', z: 'z-0', rotate: '-rotate-6', mt: 'mt-8 md:mt-10' },
+    { size: 'w-20 h-20 md:w-36 md:h-36', z: 'z-10', rotate: '-rotate-3', mt: 'mt-4' },
   ];
 
   return (
@@ -32,10 +46,10 @@ export const Foster: React.FC = () => {
         <div className="inline-flex items-center justify-center p-3 bg-teal-50 dark:bg-teal-900/30 rounded-full mb-6">
           <PawPrint className="text-primary w-6 h-6 md:w-8 md:h-8" />
         </div>
-        <h1 className="text-3xl md:text-5xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-4 md:mb-6 leading-tight">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-4 md:mb-6 leading-tight">
           ¿Quieres ser Casa de Acogida?
         </h1>
-        <p className="text-base md:text-xl text-stone-600 dark:text-stone-300 max-w-3xl mx-auto px-4">
+        <p className="text-base md:text-lg text-stone-600 dark:text-stone-300 max-w-3xl mx-auto px-4">
           Abre las puertas de tu hogar temporalmente y salva vidas. Sin casas de acogida, muchos animales no tendrían una segunda oportunidad.
         </p>
       </div>
@@ -45,11 +59,11 @@ export const Foster: React.FC = () => {
         {/* Info Section */}
         <div className="space-y-10 md:space-y-12">
           <div>
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-4 md:mb-6 flex items-center gap-3">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-4 md:mb-6 flex items-center gap-3">
               <Heart className="text-accent w-5 h-5 md:w-6 md:h-6" />
               ¿Qué implica acoger?
             </h2>
-            <div className="space-y-4 text-stone-600 dark:text-stone-400 leading-relaxed text-sm md:text-base">
+            <div className="space-y-4 text-stone-600 dark:text-stone-400 leading-relaxed text-sm md:text-base pl-4 md:pl-9 border-l-2 border-stone-100 dark:border-stone-800">
                 <p>Ser casa de acogida significa cuidar temporalmente de un animal en tu propia casa hasta que encuentre una familia definitiva.</p>
                 <p>Es la opción ideal si quieres disfrutar de la compañía de un animal pero no puedes comprometerte a largo plazo.</p>
             </div>
@@ -57,7 +71,7 @@ export const Foster: React.FC = () => {
 
           {/* Requisitos Section */}
           <div className="bg-stone-50 dark:bg-stone-800 rounded-3xl p-6 md:p-8 border border-stone-100 dark:border-stone-700 shadow-sm">
-              <h3 className="text-lg md:text-xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-6">Requisitos imprescindibles</h3>
+              <h3 className="text-xl md:text-2xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-6">Requisitos imprescindibles</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="text-primary mt-1 flex-shrink-0" size={18} />
@@ -85,15 +99,15 @@ export const Foster: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             <div className="bg-white dark:bg-stone-800 p-6 rounded-2xl border border-stone-100 dark:border-stone-700 shadow-sm">
               <ShieldCheck className="text-teal-600 dark:text-teal-400 mb-3 h-8 w-8" />
-              <h3 className="font-bold text-base md:text-lg text-stone-800 dark:text-stone-100 mb-1">Seguridad</h3>
-              <p className="text-xs md:text-sm text-stone-500 dark:text-stone-400 leading-relaxed">
+              <h3 className="font-bold text-xl md:text-2xl text-stone-800 dark:text-stone-100 mb-1">Seguridad</h3>
+              <p className="text-sm md:text-base text-stone-500 dark:text-stone-400 leading-relaxed">
                 El animal está bajo la tutela de la asociación. Nosotros filtramos a los adoptantes.
               </p>
             </div>
             <div className="bg-white dark:bg-stone-800 p-6 rounded-2xl border border-stone-100 dark:border-stone-700 shadow-sm">
               <Stethoscope className="text-teal-600 dark:text-teal-400 mb-3 h-8 w-8" />
-              <h3 className="font-bold text-base md:text-lg text-stone-800 dark:text-stone-100 mb-1">Gastos Cubiertos</h3>
-              <p className="text-xs md:text-sm text-stone-500 dark:text-stone-400 leading-relaxed">
+              <h3 className="font-bold text-xl md:text-2xl text-stone-800 dark:text-stone-100 mb-1">Gastos Cubiertos</h3>
+              <p className="text-sm md:text-base text-stone-500 dark:text-stone-400 leading-relaxed">
                 Cubrimos gastos veterinarios y alimentación si lo necesitas. Tú pones el hogar.
               </p>
             </div>

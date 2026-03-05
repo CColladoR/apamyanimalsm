@@ -130,6 +130,7 @@ export const AnimalFormModal: React.FC<AnimalFormModalProps> = ({ isOpen, onClos
                             <option value="Reservado">Reservado</option>
                             <option value="Reservada">Reservada</option>
                             <option value="Adoptado">Adoptado (Final Feliz)</option>
+                            <option value="Adoptada">Adoptada (Final Feliz)</option>
                         </select>
                     </div>
                 </div>

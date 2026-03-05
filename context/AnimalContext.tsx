@@ -16,7 +16,13 @@ export const AnimalProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [animals, setAnimals] = useState<Animal[]>(() => {
     try {
       const savedAnimals = localStorage.getItem('apa_animals_data');
-      return savedAnimals ? JSON.parse(savedAnimals) : INITIAL_ANIMALS;
+      let data = savedAnimals ? JSON.parse(savedAnimals) : INITIAL_ANIMALS;
+      
+      // Migration: Ensure Coral (id: 10) is marked as Adopted if she's in the list
+      // This ensures users with old localStorage data see the update
+      data = data.map((a: Animal) => a.id === '10' ? { ...a, status: 'Adoptado' } : a);
+      
+      return data;
     } catch (error) {
       console.error('Error loading animals from localStorage:', error);
       return INITIAL_ANIMALS;
