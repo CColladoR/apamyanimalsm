@@ -5,7 +5,7 @@ import {
   HeartHandshake, Dog, Cat, LayoutGrid, Star, Quote, 
   ExternalLink, Instagram, Activity,
   AlertCircle, Clock, Home as HomeIcon, Building2, Bookmark, Heart,
-  ChevronDown, Filter, XCircle, Sparkles, Grip, List, Plus
+  ChevronDown, Filter, XCircle, Sparkles, Grip, List, Plus, RefreshCw
 } from 'lucide-react';
 import { useAnimals } from '../context/AnimalContext';
 import { useAuth } from '../context/AuthContext';
@@ -13,7 +13,7 @@ import { AnimalFormModal } from '../components/AnimalFormModal';
 import { Animal } from '../types';
 
 export const Home: React.FC = () => {
-  const { animals, addAnimal, updateAnimal } = useAnimals();
+  const { animals, addAnimal, updateAnimal, resetAnimals } = useAnimals();
   const { isAuthenticated } = useAuth();
   
   const [activeCategory, setActiveCategory] = useState<'Todos' | 'Perro' | 'Gato'>('Todos');
@@ -161,13 +161,22 @@ export const Home: React.FC = () => {
             En Adopción
           </h2>
           {isAuthenticated && (
-            <button 
-              onClick={handleAddClick}
-              className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-xl font-bold text-sm shadow-md flex items-center gap-2 transition-transform hover:scale-105"
-            >
-                <Plus size={18} />
-                Añadir Animal
-            </button>
+            <div className="flex gap-2">
+              <button 
+                onClick={resetAnimals}
+                className="bg-rose-100 hover:bg-rose-200 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300 px-4 py-2 rounded-xl font-bold text-sm shadow-sm flex items-center gap-2 transition-transform hover:scale-105"
+                title="Restaurar datos originales"
+              >
+                  <RefreshCw size={18} />
+              </button>
+              <button 
+                onClick={handleAddClick}
+                className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-xl font-bold text-sm shadow-md flex items-center gap-2 transition-transform hover:scale-105"
+              >
+                  <Plus size={18} />
+                  Añadir Animal
+              </button>
+            </div>
           )}
         </div>
 
@@ -260,7 +269,7 @@ export const Home: React.FC = () => {
             </div>
 
             {/* Right (Mobile): View Toggle Stacked */}
-            <div className="flex flex-col items-end gap-1 sm:hidden flex-shrink-0">
+            <div className="flex flex-col items-center gap-1 sm:hidden flex-shrink-0">
                 <span className="text-[9px] font-bold text-stone-400 uppercase tracking-widest leading-none">Vista</span>
                 <div className="flex items-center bg-stone-100 dark:bg-stone-800 p-1 rounded-xl border border-stone-200 dark:border-stone-700">
                     <button 

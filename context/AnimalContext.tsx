@@ -7,22 +7,40 @@ interface AnimalContextType {
   addAnimal: (animal: Animal) => void;
   updateAnimal: (updatedAnimal: Animal) => void;
   deleteAnimal: (id: string) => void;
+  resetAnimals: () => void;
 }
 
 const AnimalContext = createContext<AnimalContextType | undefined>(undefined);
+
+const STORAGE_KEY = 'apa_animals_v2';
 
 export const AnimalProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Initialize with localStorage if available, otherwise use constant data
   const [animals, setAnimals] = useState<Animal[]>(() => {
     try {
-      const savedAnimals = localStorage.getItem('apa_animals_data');
-      let data = savedAnimals ? JSON.parse(savedAnimals) : INITIAL_ANIMALS;
-      
-      // Migration: Ensure Coral (id: 10) is marked as Adopted if she's in the list
-      // This ensures users with old localStorage data see the update
-      data = data.map((a: Animal) => a.id === '10' ? { ...a, status: 'Adoptado' } : a);
-      
-      return data;
+      const savedAnimals = localStorage.getItem(STORAGE_KEY);
+      if (savedAnimals) {
+        let data = JSON.parse(savedAnimals);
+        // Migration: Ensure Jengibre (id: 7) is marked as Reservado
+        data = data.map((a: Animal) => a.id === '7' ? { ...a, status: 'Reservado' } : a);
+        
+        // Migration: Ensure Matilde (id: 12) is added if not present or has the correct image
+        const matildeIndex = data.findIndex((a: Animal) => a.id === '12');
+        const matildeSource = INITIAL_ANIMALS.find(a => a.id === '12');
+        if (matildeIndex === -1) {
+          if (matildeSource) data.push(matildeSource);
+        } else if (matildeSource) {
+          // Update image if it's still the placeholder
+          if (data[matildeIndex].imageUrl.includes('unsplash')) {
+            data[matildeIndex].imageUrl = matildeSource.imageUrl;
+          }
+          // Update breed/capa
+          data[matildeIndex].breed = matildeSource.breed;
+        }
+        
+        return data;
+      }
+      return INITIAL_ANIMALS;
     } catch (error) {
       console.error('Error loading animals from localStorage:', error);
       return INITIAL_ANIMALS;
@@ -32,7 +50,7 @@ export const AnimalProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   // Save to localStorage whenever animals state changes
   useEffect(() => {
     try {
-      localStorage.setItem('apa_animals_data', JSON.stringify(animals));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(animals));
     } catch (error) {
       console.error('Error saving animals to localStorage:', error);
     }
@@ -50,8 +68,15 @@ export const AnimalProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     setAnimals(prev => prev.filter(a => a.id !== id));
   };
 
+  const resetAnimals = () => {
+    if (window.confirm('¿Estás seguro de que quieres restaurar los datos originales? Se perderán todos los cambios locales.')) {
+      setAnimals(INITIAL_ANIMALS);
+      localStorage.removeItem(STORAGE_KEY);
+    }
+  };
+
   return (
-    <AnimalContext.Provider value={{ animals, addAnimal, updateAnimal, deleteAnimal }}>
+    <AnimalContext.Provider value={{ animals, addAnimal, updateAnimal, deleteAnimal, resetAnimals }}>
       {children}
     </AnimalContext.Provider>
   );
