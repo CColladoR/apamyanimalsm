@@ -62,12 +62,13 @@ export const Home: React.FC = () => {
 
   const filteredAnimals = useMemo(() => {
     const priority: Record<string, number> = {
-      'Urgente': 1,
-      'En Adopción': 2,
-      'Pronto en adopción': 3,
-      'En residencia': 4,
-      'Reservado': 5,
-      'Reservada': 5
+      'En Adopción': 1,
+      'Busca acogida urgente': 2,
+      'Urgente': 3,
+      'Pronto en adopción': 4,
+      'En residencia': 5,
+      'Reservado': 6,
+      'Reservada': 6
     };
 
     const getPriority = (status: string) => priority[status] || 99;
@@ -94,6 +95,7 @@ export const Home: React.FC = () => {
   const statusCategories = [
     { id: 'Todos', label: 'Todos los estados', icon: LayoutGrid },
     { id: 'En Adopción', label: 'En adopción', icon: HomeIcon },
+    { id: 'Busca acogida urgente', label: 'Busca acogida urgente', icon: AlertCircle },
     { id: 'Urgente', label: 'Casos Urgentes', icon: AlertCircle },
     { id: 'Pronto en adopción', label: 'Pronto en adopción', icon: Clock },
     { id: 'En residencia', label: 'En residencia', icon: Building2 },

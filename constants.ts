@@ -10,9 +10,9 @@ export const ANIMALS: Animal[] = [
     gender: 'Macho',
     size: 'Grande',
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Maiz.jpg',
-    description: 'Maíz es un perro súper casero, actualmente en residencia, que busca urgentemente un hogar. Ha trabajado mucho sus miedos y es un perro agradecido y listo para aprender.',
+    description: 'Maíz es un perro súper casero que busca urgentemente un hogar. Ha trabajado mucho sus miedos y es un perro agradecido y listo para aprender.',
     story: 'Maíz es un perro super casero, se fue adoptado con 3 meses (en 2021) y lo devolvieron en otoño de 2023 con un cuadro de ansiedad importante. La familia no supo educarle y en lugar de trabajar con el desde una parte positiva, lo hicieron con castigos, encierros y ansiedad. Eso provocó que Maíz volviera muy vulnerable, sin entender nada y que estuviera varios meses en shock, apático y llorando de pena💔\n\nDesde que nos lo devolvieron, se encuentra en una residencia canina donde hemos trabajado con especialistas sus miedos y su frustración, además de que le han enseñado muchos trucos que le motivan en el día a día y hacen su estancia más amena. De hecho, vuelve a ser el perrito contento que era, pero no deja de estar en una residencia...es decir, como perro que siempre ha vivido en una casa, le esta afectando el vivir en un chenil 😞\n\nSabemos que por tamaño y por no ser "un bebé pequeño" sus solicitudes de adopción o acogida temporal son NULAS. Pero no por ello vamos a dejar de intentarlo, así que: buscamos sacarlo de allí bien como casa de acogida o bien con adopción definitiva 🙏🏻\n\nEsto no es un juego, hablamos de una vida que, a su corta edad, ya ha sido dañada. Los casi de perros devueltos a las protectoras son muy sensibles puesto que el animal es muy consciente del abandono y, siendo totalmente casero, tiene que pasar a vivir en un chenil de una residencia canina donde se pierden todas las comodidades de un hogar, generando en ellos un shock y adaptación brutal. Necesitamos que las personas que estén interesadas en ayudar tengan muy claro que se necesita paciencia y conectar desde el cariño con el animal para poco a poco ir enseñándole que no volverá a pasar por ese shock, que no todos somos malos y que puede llevar de nuevo una vida feliz 🥹',
-    status: 'En residencia',
+    status: 'Busca acogida urgente',
     secondaryStatuses: ['Urgente', 'En Adopción'],
     medicalStatus: {
       deworming: 'Sí',
@@ -119,7 +119,7 @@ export const ANIMALS: Animal[] = [
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Jengibre.jpg',
     description: 'Jengibre se recupera actualmente en una casa de acogida en Toledo. Está en proceso de sociabilización y valoración veterinaria tras ser rescatado de la calle.',
     story: 'Fui rescatado de una zona peligrosa donde corría riesgo de atropello. Vivía con Cava y Sidra, que fueron sacadas de la colonia unos pocos días antes que yo. En cuanto ellas no estuvieron, los vecinos dejaron desatendida la colonia y de repente no tenía comida ni agua. Dormía en la calle y cuando el frío llegó mi estado de salud peoró drásticamente. Además, estoy cojito. Las chicas que me rescataron me llevaron al veterinario y parece que tengo una fractura en la cadera que se está valorando a día de hoy por el equipo de Traumatólogos. \n\nEstoy ubicado en una casa de acogida en Toledo. Están sociabilizando conmigo para que empiece a confiar en las personas y pueda llevar una vida feliz cuando esté totalmente recuperada.',
-    status: 'Reservado',
+    status: 'Adoptado',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Pte',
@@ -199,7 +199,7 @@ export const ANIMALS: Animal[] = [
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Jade2.jpg',
     description: 'Ella es una gata tímida, pero la más noble y bella del mundo. Actualmente se está recuperando de un pico de estrés para estar pronto en adopción.',
     story: 'Septiembre de 2020, cuando Apa Myanimalsm se estaba formando, sacamos a la camada de "Las Piedras Preciosas" del patio de un instituto de La Sagra. Las primeras acogidas que confiaron en nosotras aceptaron cuidar a las 5 hermanas hasta salir en adopción, de hecho, ahí fue el momento donde empezamos a hacer equipo y cadena solidaria felina 🥹 Jade y Coral fueron adoptadas juntas a las pocas semanas y fue una gran celebración, ya que era de las primeras adopciones conjuntas que conseguíamos ✨\n\nEn 2023, tres años después de su adopción, la que era su familia, alegando problemas médicos y familiares, recurre a nosotras para devolverlas😡 Llegando Jade y Coral en shock a su nueva acogida, donde estuvieron más de dos meses escondidas debajo de la cama porque no se fiaban de nadie y con mucha pena, puesto que sacar a dos animales del que ha sido su hogar toda su vida también les duele y afecta. Ambas estuvieron con signos de estrés y estereotipias el primer año de vuelta a Apa Myanimalsm 😭\n\nDurante estos 3 años, hemos trabajado muy despacito la adaptación y confianza de ambas. Pero, lamentablemente, la realidad es que ya es difícil una adopción conjunta de dos cachorros, imaginaos la de dos adultas...💔\n\nDespués de mucho valorarlo y ver cómo ellas, a día de hoy, no son dependientes la una de la otra, al revés, se relacionan con todo ser: gatos, perros, humanos, llega el momento de separarlas para buscarles en este 2026 su hogar definitivo, el que tanto se merecen.\n\nEn el caso de Jade, después de su cambio de acogida, ha vuelto a tener un pico de estrés. En la analítica salen los valores un poquito alterados, por lo que toca estar un tiempo con inmunoestimuladores hasta estabilizarla. Ella es una gata tímida, pero la más noble y bella del mundo. Sabemos que superará el bache y pronto estará en adopción, iremos informando.',
-    status: 'Pronto en adopción',
+    status: 'En Adopción',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -213,19 +213,19 @@ export const ANIMALS: Animal[] = [
     name: 'Matilde',
     species: 'Gato',
     breed: 'Común Europeo / Capa: Negra y Blanca',
-    age: '7 meses',
+    age: '1 año',
     gender: 'Hembra',
     size: 'Pequeño',
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG20260407173318.jpg',
     description: 'Matilde es la nueva integrante de la familia. Apareció famélica y con heridas debajo de un coche, pero ya está a salvo iniciando su recuperación en cuarentena.',
     story: 'Bienvenida, Matilde 🥹💕\n\nNo estábamos económicamente bien para aceptar nuevos casos, pero durante un paseo no pudimos mirar hacia otro lado 💔\n\nEsta bebé de unos 7 meses apareció ayer debajo de un coche, al lado de una de nuestras colonias controladas de Toledo, maullando y llamando nuestra atención. Como siempre, nos paramos y ella no dudó ni un instante en acercarse corriendo a saludar y a pedir ayuda. Nos dimos la vuelta a por latita, pero nos siguió hasta la puerta de casa y obviamente no iba a quedarse ahí. \n\nEstá famélica, todo un saquito de huesos, llena de heridas de pulgas y garrapatas y con signos de haber sido maltratada. Tiene gestos y reacciones de no haber sido una gatita querida 😔\n\nOs presentamos a Matilde, la nueva integrante de la familia 🌷\n \n💉 Inicia su protocolo veterinario con una buena desparasitación y queda en cuarentena para su recuperación. \n\n🆘 Necesitamos la ayuda de todxs vosotrxs para su manutención y futuras visitas veterinarias.\n\nPuedes ayudarnos con sus gastos mediante:\n💍PayPal myanimalsm@gmail.com\n💍Bizum: 04872 (sección donativos de la app)\n💍Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
-    status: 'Pronto en adopción',
+    status: 'En Adopción',
     medicalStatus: {
       deworming: 'Sí',
-      felvFiv: 'Pte',
+      felvFiv: 'Negativo',
       vaccination: 'Pte',
-      microchip: 'Pte',
-      sterilization: 'Pte'
+      microchip: 'Sí',
+      sterilization: 'Sí'
     }
   }
 ];

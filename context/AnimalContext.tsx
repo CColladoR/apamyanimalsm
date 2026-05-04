@@ -21,8 +21,14 @@ export const AnimalProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       const savedAnimals = localStorage.getItem(STORAGE_KEY);
       if (savedAnimals) {
         let data = JSON.parse(savedAnimals);
-        // Migration: Ensure Jengibre (id: 7) is marked as Reservado
-        data = data.map((a: Animal) => a.id === '7' ? { ...a, status: 'Reservado' } : a);
+        // Migration: Ensure Jengibre (id: 7) is marked as Adoptado
+        data = data.map((a: Animal) => a.id === '7' ? { ...a, status: 'Adoptado' } : a);
+        
+        // Migration: Ensure Jade (id: 11) is marked as En Adopción
+        data = data.map((a: Animal) => a.id === '11' ? { ...a, status: 'En Adopción' } : a);
+        
+        // Migration: Ensure Maíz (id: 1) is marked as Busca acogida urgente
+        data = data.map((a: Animal) => a.id === '1' ? { ...a, status: 'Busca acogida urgente', description: (INITIAL_ANIMALS.find(ia => ia.id === '1')?.description || a.description) } : a);
         
         // Migration: Ensure Matilde (id: 12) is added if not present or has the correct image
         const matildeIndex = data.findIndex((a: Animal) => a.id === '12');
@@ -36,6 +42,11 @@ export const AnimalProvider: React.FC<{ children: React.ReactNode }> = ({ childr
           }
           // Update breed/capa
           data[matildeIndex].breed = matildeSource.breed;
+          // Update status
+          data[matildeIndex].status = 'En Adopción';
+          // Update age and medicalStatus
+          data[matildeIndex].age = matildeSource.age;
+          data[matildeIndex].medicalStatus = matildeSource.medicalStatus;
         }
         
         return data;
