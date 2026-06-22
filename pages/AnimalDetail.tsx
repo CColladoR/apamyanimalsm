@@ -122,6 +122,28 @@ export const AnimalDetail: React.FC = () => {
               </p>
             </div>
 
+            {animal.updates && animal.updates.length > 0 && (
+              <div className="mb-8">
+                <h3 className="text-xl md:text-2xl font-bold font-serif mb-4 text-stone-800 dark:text-stone-100 flex items-center gap-2">
+                  <Clock size={24} className="text-primary" />
+                  Actualizaciones
+                </h3>
+                <div className="space-y-6">
+                  {animal.updates.map((update, index) => (
+                    <div key={index} className="bg-stone-50 dark:bg-stone-800/50 rounded-2xl p-6 border border-stone-100 dark:border-stone-800">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Calendar size={16} className="text-stone-400" />
+                        <span className="text-sm font-bold text-stone-500 uppercase tracking-wider">{update.date}</span>
+                      </div>
+                      <p className="text-stone-600 dark:text-stone-300 text-base leading-relaxed whitespace-pre-line">
+                        {update.content}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {animal.status !== 'Adoptado' && animal.status !== 'Adoptada' ? (
               <div className="mt-auto flex flex-col sm:flex-row gap-3">
                 <Link 

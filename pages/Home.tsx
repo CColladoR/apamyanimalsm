@@ -57,24 +57,23 @@ export const Home: React.FC = () => {
   };
 
   const adoptedAnimals = useMemo(() => {
-    return animals.filter(a => a.status === 'Adoptado');
+    return animals.filter(a => a.status === 'Adoptado' || a.status === 'Adoptada');
   }, [animals]);
 
   const filteredAnimals = useMemo(() => {
     const priority: Record<string, number> = {
       'En Adopción': 1,
       'Busca acogida urgente': 2,
-      'Urgente': 3,
-      'Pronto en adopción': 4,
-      'En residencia': 5,
-      'Reservado': 6,
-      'Reservada': 6
+      'Pronto en adopción': 3,
+      'En residencia': 4,
+      'Reservado': 5,
+      'Reservada': 5
     };
 
     const getPriority = (status: string) => priority[status] || 99;
 
     return animals
-      .filter(animal => animal.status !== 'Adoptado')
+      .filter(animal => animal.status !== 'Adoptado' && animal.status !== 'Adoptada')
       .filter(animal => {
         const matchesCategory = activeCategory === 'Todos' || animal.species === activeCategory;
         const matchesStatus = activeStatus === 'Todos' || 
@@ -96,7 +95,6 @@ export const Home: React.FC = () => {
     { id: 'Todos', label: 'Todos los estados', icon: LayoutGrid },
     { id: 'En Adopción', label: 'En adopción', icon: HomeIcon },
     { id: 'Busca acogida urgente', label: 'Busca acogida urgente', icon: AlertCircle },
-    { id: 'Urgente', label: 'Casos Urgentes', icon: AlertCircle },
     { id: 'Pronto en adopción', label: 'Pronto en adopción', icon: Clock },
     { id: 'En residencia', label: 'En residencia', icon: Building2 },
     { id: 'Reservado', label: 'Reservados', icon: Bookmark },

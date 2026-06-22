@@ -13,7 +13,7 @@ export const ANIMALS: Animal[] = [
     description: 'Maíz es un perro súper casero que busca urgentemente un hogar. Ha trabajado mucho sus miedos y es un perro agradecido y listo para aprender.',
     story: 'Maíz es un perro super casero, se fue adoptado con 3 meses (en 2021) y lo devolvieron en otoño de 2023 con un cuadro de ansiedad importante. La familia no supo educarle y en lugar de trabajar con el desde una parte positiva, lo hicieron con castigos, encierros y ansiedad. Eso provocó que Maíz volviera muy vulnerable, sin entender nada y que estuviera varios meses en shock, apático y llorando de pena💔\n\nDesde que nos lo devolvieron, se encuentra en una residencia canina donde hemos trabajado con especialistas sus miedos y su frustración, además de que le han enseñado muchos trucos que le motivan en el día a día y hacen su estancia más amena. De hecho, vuelve a ser el perrito contento que era, pero no deja de estar en una residencia...es decir, como perro que siempre ha vivido en una casa, le esta afectando el vivir en un chenil 😞\n\nSabemos que por tamaño y por no ser "un bebé pequeño" sus solicitudes de adopción o acogida temporal son NULAS. Pero no por ello vamos a dejar de intentarlo, así que: buscamos sacarlo de allí bien como casa de acogida o bien con adopción definitiva 🙏🏻\n\nEsto no es un juego, hablamos de una vida que, a su corta edad, ya ha sido dañada. Los casi de perros devueltos a las protectoras son muy sensibles puesto que el animal es muy consciente del abandono y, siendo totalmente casero, tiene que pasar a vivir en un chenil de una residencia canina donde se pierden todas las comodidades de un hogar, generando en ellos un shock y adaptación brutal. Necesitamos que las personas que estén interesadas en ayudar tengan muy claro que se necesita paciencia y conectar desde el cariño con el animal para poco a poco ir enseñándole que no volverá a pasar por ese shock, que no todos somos malos y que puede llevar de nuevo una vida feliz 🥹',
     status: 'Busca acogida urgente',
-    secondaryStatuses: ['Urgente', 'En Adopción'],
+    secondaryStatuses: ['En Adopción', 'En residencia'],
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'No',
@@ -31,16 +31,32 @@ export const ANIMALS: Animal[] = [
     gender: 'Hembra',
     size: '3kg',
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Brie.jpg',
-    description: 'Actualmente me encuentro en una casa de acogida en Madrid. No estaré en adopción hasta finalizar todos los procedimientos que tengo pendientes y la asociación tenga el visto bueno por parte de nuestras veterinarias. Mientras tanto, puedes ser mi madrina o padrino para ayudar de cubrir los gastos de mi recuperación.',
-    story: 'Brie llegó a nosotras pesando solamente 1kg (siendo gata adulta) en un estado límite rozando la muerte, de hecho, un día más en la calle y no lo hubiera contado. Fue rociada con veneno/gasolina por todo el cuerpo y eso le causó inflamación y quemaduras en la boca y vías respiratorias causándole muchísima mucosidad y dificultad para respirar😭\n\nHace un mes de su tan sonada operación de boca, donde se removió cielo y tierra para conseguirlo. Y sí, aquí estamos, habiendo dado un paso gigante en su calidad de vida. Después de pasar por la operación de odontología, donde pudieron extraerle todas las piezas y curar las úlceras, Brie a día de hoy, está mucho más tranquila: come que da gusto, no tiene dolor e incluso se le ha bajado un poco la inflamación de las vías altas. \n\nActualmente, gracias a toda vuestra ayuda, hemos recorrido la mitad del camino, solo nos queda el final. Nuestras veterinarias están intentando mantener esos mocos con un tratamiento diario y así intentar que siga ganando peso, pero la realidad es que, en breves, habrá que realizarle un TAC para estudiar la causa que provoca que esos mocos no cesen y encontrar la solución para que pueda respirar con normalidad sin necesidad de aerosoles y humidificador. Asimismo, queremos recordar el hecho de que ella es + inmuno, por lo que sus defensas siempre van a estar más bajitas y el tiempo de recuperación se ralentiza más 🥹.\n\nEsto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto es terminar encontrándole un hogar cuando esté totalmente recuperada. Seguimos yendo a por todas, gracias infinitas a quienes nos habéis ayudado y pusisteis vuestro granito de arena, esto es una cadena...¡seguimos! ❤️',
-    status: 'Pronto en adopción',
+    description: 'Actualmente me encuentro en una casa de acogida en Madrid. ¡Ya estoy lista para encontrar a mi familia definitiva!',
+    story: 'Brie llegó a nosotras pesando solamente 1kg (siendo gata adulta) en un estado límite rozando la muerte, de hecho, un día más en la calle y no lo hubiera contado. Fue rociada con veneno/gasolina por todo el cuerpo y eso le causó inflamación y quemaduras en la boca y vías respiratorias causándole muchísima mucosidad y dificultad para respirar😭\n\nHace un mes de su tan sonada operación de boca, donde se removió cielo y tierra para conseguirlo. Y sí, aquí estamos, habiendo dado un paso gigante en su calidad de vida. Después de pasar por la operación de odontología, donde pudieron extraerle todas las piezas y curar las úlceras, Brie a día de hoy, está mucho más tranquila: come que da gusto, no tiene dolor e incluso se le ha bajado un poco la inflamación de las vías altas. \n\nActualmente, gracias a toda vuestra ayuda, hemos recorrido la mitad del camino, solo nos queda el final. Nuestras veterinarias están intentando mantener esos mocos con un tratamiento diario y así intentar que siga ganando peso, pero la realidad es que, en breves, habrá que realizarle un TAC para estudiar la causa que provoca que esos mocos no cesen y encontrar la solución para que pueda respirar con normalidad sin necesidad de aerosoles and humidificador. Asimismo, queremos recordar el hecho de que ella es + inmuno, por lo que sus defensas siempre van a estar más bajitas y el tiempo de recuperación se ralentiza más 🥹.\n\nEsto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto es terminar encontrándole un hogar cuando esté totalmente recuperada. Seguimos yendo a por todas, gracias infinitas a quienes nos habéis ayudado y pusisteis vuestro granito de arena, esto es una cadena...¡seguimos! ❤️',
+    status: 'Adoptada',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Positivo (FIV)',
       vaccination: 'Sí',
       microchip: 'Sí',
       sterilization: 'Sí'
-    }
+    },
+    updates: [
+      {
+        date: '17/05/2026',
+        content: `¡¡¡No os lo vais a creer: Brie ya pesa 3.7kg 🥳🥳🥳y tenemos el visto bueno para esterilizar!!!
+
+Brie llegó a nosotras en el verano 2025, pesando solamente 1kg (siendo gata adulta) en un estado límite rozando la muerte, de hecho, un día más en la calle y no lo hubiera contado. Fue rociada con veneno/gasolina por todo el cuerpo y eso le causó inflamación y quemaduras en la boca y vías respiratorias causándole muchísima mucosidad y dificultad para respirar😭
+
+Tras estabilizar su situación y conseguir una analítica con valores en rango, en noviembre 2025, con la ayuda de todxs vosotrxs, pasó por quirófano de odontología para extraerle todas las piezas y curarle las úlceras ocasionadas en toda la boca ❤️🩹
+
+Actualmente, con mucho esfuerzo, ayuda económica y el amor de su casa de acogida, se han conseguido estabilizar los mocos, las vías altas y la dificultad respiratoria que traía producida por toda la terrible mierd* que vivió en la calle y lo que le hicieron 😡 Parecía casi imposible, pero esto es un paso gigantesco en su calidad de vida (foto 2)🥹❤️🩹 ¿Próxima meta? La esterilización la semana que viene 🤞🏻🤞🏻🤞🏻🤞🏻
+
+Asimismo, queremos recordar el hecho de que ella es + inmuno, por lo que sus defensas siempre van a estar más bajitas y el tiempo de recuperación se ralentiza más 🥹.
+
+Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto es terminar encontrándole un hogar cuando esté totalmente recuperada. Vamos a por todas, gracias infinitas a quienes nos ayudáis, seguimos necesitando granitos de arena, esto es una cadena ❤️❤️❤️`
+      }
+    ]
   },
   {
     id: '3',
@@ -219,13 +235,113 @@ export const ANIMALS: Animal[] = [
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG20260407173318.jpg',
     description: 'Matilde es la nueva integrante de la familia. Apareció famélica y con heridas debajo de un coche, pero ya está a salvo iniciando su recuperación en cuarentena.',
     story: 'Bienvenida, Matilde 🥹💕\n\nNo estábamos económicamente bien para aceptar nuevos casos, pero durante un paseo no pudimos mirar hacia otro lado 💔\n\nEsta bebé de unos 7 meses apareció ayer debajo de un coche, al lado de una de nuestras colonias controladas de Toledo, maullando y llamando nuestra atención. Como siempre, nos paramos y ella no dudó ni un instante en acercarse corriendo a saludar y a pedir ayuda. Nos dimos la vuelta a por latita, pero nos siguió hasta la puerta de casa y obviamente no iba a quedarse ahí. \n\nEstá famélica, todo un saquito de huesos, llena de heridas de pulgas y garrapatas y con signos de haber sido maltratada. Tiene gestos y reacciones de no haber sido una gatita querida 😔\n\nOs presentamos a Matilde, la nueva integrante de la familia 🌷\n \n💉 Inicia su protocolo veterinario con una buena desparasitación y queda en cuarentena para su recuperación. \n\n🆘 Necesitamos la ayuda de todxs vosotrxs para su manutención y futuras visitas veterinarias.\n\nPuedes ayudarnos con sus gastos mediante:\n💍PayPal myanimalsm@gmail.com\n💍Bizum: 04872 (sección donativos de la app)\n💍Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
-    status: 'En Adopción',
+    status: 'Adoptada',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
       vaccination: 'Pte',
       microchip: 'Sí',
       sterilization: 'Sí'
+    }
+  },
+  {
+    id: '13',
+    name: 'Susi',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Atigrada',
+    age: '1.5 meses',
+    gender: 'Hembra',
+    size: 'Pequeño',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-06-21-13-55-58-51_1c337646f29875672b5a61192b9010f9.jpg',
+    description: 'Susi es una de las tres hermanitas rescatadas de una parcela. Una bebé con un carácter muy extrovertido y explorador.',
+    story: 'Como sabéis, la época de camadas es el terror para toda protectora. Actualmente, la mayoría de casos no provienen de las propias colonias felinas ferales que controlamos, eso es un mito, los casos que se presentan vienen por la irresponsabilidad de los "propietarios" que NO esterilizan a sus gatas (y encima las dejan salir al exterior). La gran mayoría son camadas no deseadas y su "solución" es la brillante idea de dejarlos debajo de un coche, en una caja o bolsa en la basura o no permiten que la madre de a luz en casa y la dejan a su suerte para que se busque la vida😡. \n\n¿Sabéis cuántos bebés no llegan a contarlo? Muchísimos mueren sin ser rescatados por asfixia, infección, hambre o la propia violencia humana. ¿Sabéis cuál es la solución más sencilla? ESTERILIZAR. Sí, esterilizar es uno de los mayores actos de amor que podrás hacer por tu peludo y para apoyar el cambio.\n\nAhora bien, aceptamos hace unas semanas a estos 3 hermanitos que estaban en una parcela solitos: Tomás, Susi y Nora. Tuvimos que hacer malabares porque no es nuestro mejor momento y tampoco contábamos con casas de acogida con experiencia en bebés. Finalmente, gracias a las que siempre están ahí, se pudo aceptar el caso y actuar de inmediato porque venían muy muy débiles y Tomas casi no lo cuenta.\n\nDespués de unas semanas de cuarentena, con hidratación, suplementos para coger peso y comida apta para babycat, podemos decir que hemos superado la primera etapa de estos bebés 🎉 Susi tiene un carácter muy extrovertido y explorador, la hermana más fuerte de la camada💪🏻 En cuanto cumplan los 2.5 meses, empezarán su protocolo veterinario para buscar su posterior adopción 💗 \n\nPor favor, tenemos dos camadas bajo nuestra tutela, te necesitamos para poder sacarlos adelante, echanos una patita 🙏\n\n🌸PayPal myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064\n\n⚠️ IMPORTANTE: se dará primerísima prioridad a aquellas familias que opten por la adopción conjunta y, en segundo lugar, las adopciones individuales siempre que en casa haya otro compi felino⚠️',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '14',
+    name: 'Tomás',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Negra',
+    age: '1.5 meses',
+    gender: 'Macho',
+    size: 'Pequeño',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-06-21-13-56-40-20_1c337646f29875672b5a61192b9010f9.jpg',
+    description: 'Tomás es uno de los tres hermanitos rescatados de una parcela. Un bebé luchador, travieso y con muchísima fuerza.',
+    story: 'Como sabéis, la época de camadas es el terror para toda protectora. Actualmente, la mayoría de casos no provienen de las propias colonias felinas ferales que controlamos, eso es un mito, los casos que se presentan vienen por la irresponsabilidad de los "propietarios" que NO esterilizan a sus gatas (y encima las dejan salir al exterior). La gran mayoría son camadas no deseadas y su "solución" es la brillante idea de dejarlos debajo de un coche, en una caja o bolsa en la basura o no permiten que la madre de a luz en casa y la dejan a su suerte para que se busque la vida😡. \n\n¿Sabéis cuántos bebés no llegan a contarlo? Muchísimos mueren sin ser rescatados por asfixia, infección, hambre o la propia violencia humana. ¿Sabéis cuál es la solución más sencilla? ESTERILIZAR. Sí, esterilizar es uno de los mayores actos de amor que podrás hacer por tu peludo y para apoyar el cambio.\n\nAhora bien, aceptamos hace unas semanas a estos 3 hermanitos que estaban en una parcela solitos: Tomás, Susi y Nora. Tuvimos que hacer malabares porque no es nuestro mejor momento y tampoco contábamos con casas de acogida con experiencia en bebés. Finalmente, gracias a las que siempre están ahí, se pudo aceptar el caso y actuar de inmediato porque venían muy muy débiles y Tomas casi no lo cuenta.\n\nDespués de unas semanas de cuarentena, con hidratación, suplementos para coger peso y comida apta para babycat, podemos decir que hemos superado la primera etapa de estos bebés 🎉 Aunque Tomás sigue yendo más despacio que sus hermanas, tiene muchísima fuerza y lo vamos a conseguir 💪🏻 En cuanto cumplan los 2.5 meses, empezarán su protocolo veterinario para buscar su posterior adopción 💗 \n\nPor favor, tenemos dos camadas bajo nuestra tutela, te necesitamos para poder sacarlos adelante, echanos una patita 🙏\n\n🌸PayPal myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064\n\n⚠️ IMPORTANTE: se dará primerísima prioridad a aquellas familias que opten por la adopción conjunta y, en segundo lugar, las adopciones individuales siempre que en casa haya otro compi felino⚠️',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '15',
+    name: 'Nora',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Atigrada',
+    age: '1.5 meses',
+    gender: 'Hembra',
+    size: 'Pequeño',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-06-21-13-56-27-79_1c337646f29875672b5a61192b9010f9.jpg',
+    description: 'Nora es una de las tres hermanitas rescatadas de una parcela. Una auténtica personaja, muy alegre y juguetona.',
+    story: 'Como sabéis, la época de camadas es el terror para toda protectora. Actualmente, la mayoría de casos no provienen de las propias colonias felinas ferales que controlamos, eso es un mito, los casos que se presentan vienen por la irresponsabilidad de los "propietarios" que NO esterilizan a sus gatas (y encima las dejan salir al exterior). La gran mayoría son camadas no deseadas y su "solución" es la brillante idea de dejarlos debajo de un coche, en una caja o bolsa en la basura o no permiten que la madre de a luz en casa y la dejan a su suerte para que se busque la vida😡. \n\n¿Sabéis cuántos bebés no llegan a contarlo? Muchísimos mueren sin ser rescatados por asfixia, infección, hambre o la propia violencia humana. ¿Sabéis cuál es la solución más sencilla? ESTERILIZAR. Sí, esterilizar es uno de los mayores actos de amor que podrás hacer por tu peludo y para apoyar el cambio.\n\nAhora bien, aceptamos hace unas semanas a estos 3 hermanitos que estaban en una parcela solitos: Tomás, Susi y Nora. Tuvimos que hacer malabares porque no es nuestro mejor momento y tampoco contábamos con casas de acogida con experiencia en bebés. Finalmente, gracias a las que siempre están ahí, se pudo aceptar el caso y actuar de inmediato porque venían muy muy débiles y Tomas casi no lo cuenta.\n\nDespués de unas semanas de cuarentena, con hidratación, suplementos para coger peso y comida apta para babycat, podemos decir que hemos superado la primera etapa de estos bebés 🎉 Como veís, Nora es una auténtica personaja, una bebé muy alegre 💪🏻 En cuanto cumplan los 2.5 meses, empezarán su protocolo veterinario para buscar su posterior adopción 💗 \n\nPor favor, tenemos dos camadas bajo nuestra tutela, te necesitamos para poder sacarlos adelante, echanos una patita 🙏\n\n🌸PayPal myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064\n\n⚠️ IMPORTANTE: se dará primerísima prioridad a aquellas familias que opten por la adopción conjunta y, en segundo lugar, las adopciones individuales siempre que en casa haya otro compi felino⚠️',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '16',
+    name: 'Selva',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Gris',
+    age: '1 mes',
+    gender: 'Hembra',
+    size: 'Pequeño',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20260618-WA0019.jpg',
+    description: 'Selva es una adorable bebé sobreviviente rescatada de debajo de un coche. Muy extrovertida, activa y juguetona.',
+    story: 'Aceptamos hace unas semanas a estas 2 hermanitas que aparecieron junto a sus otros 4 hermanos debajo de un coche en un pueblo de Toledo. El resto también fueron rescatados por otros medios y estás dos bebés, casualmente las que estaban en peores condiciones, se quedaban allí a su suerte. En cuanto recibimos el aviso abrimos nuestras puertas para ellas. \n\nEn el caso de Selva, su ojito llegó con una cicatriz en la córnea, valorado por nuestra oftalmologa como una antigua úlcera. Ha tenido tratamiento durante unas semanas y ya le han dado el alta! \n\nDespués de unas semanas de cuarentena, con hidratación, suplementos para coger peso, comida específica para babycat y una buena desparasitación podemos decir que hemos superado la primera etapa y ambas están a salvo. \n\nSelva tiene un carácter muy extrovertido, es muy activa y juguetona. Tolera cualquier tipo de presencia, incluso de otros gatos adultos y su evolución está siendo buenísima.\nEn cuanto cumplan los 2.5 meses, continuarán su protocolo veterinario para buscar su posterior adopción 💗 \n\nPor favor, tenemos dos camadas bajo nuestra tutela, te necesitamos para poder sacarlos adelante, echanos una patita 🙏\n\n🌸PayPal myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064\n\n⚠️ IMPORTANTE: se dará primerísima prioridad a aquellas familias que opten por la adopción conjunta y, en segundo lugar, las adopciones individuales siempre que en casa haya otro compi felino⚠️',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '17',
+    name: 'Irati',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Atigrada',
+    age: '1 mes',
+    gender: 'Hembra',
+    size: 'Pequeño',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20260618-WA0016.jpg',
+    description: 'Irati es una hermosa bebé sobreviviente rescatada de debajo de un coche. Una pequeña muy calmada e introvertida.',
+    story: 'Aceptamos hace unas semanas a estas 2 hermanitas que aparecieron junto a sus otros 4 hermanos debajo de un coche en un pueblo de Toledo. El resto también fueron rescatados por otros medios y estás dos bebés, casualmente las que estaban en peores condiciones, se quedaban allí a su suerte. En cuanto recibimos el aviso abrimos nuestras puertas para ellas. \n\nEn el caso de Irati, su ojito llegó con una infección e inflamación que le ha producido una perforación. ⚠️En las imágenes podéis ver todo el proceso que ha llevado en su recuperación y aunque obviamente con ese ojito no tendrá nada de visión, tras la visita en oftalmología, nos han confirmado que no tendrá complicaciones futuras y podrá vivir con total normalidad sin necesidad de enuclearlo. A día de hoy el ojito ha creado un tapón de fbrina y la córnea ha epitelizado por encima.\n\nDespués de unas semanas de cuarentena, con hidratación, suplementos para coger peso, comida específica para babycat y una buena desparasitación podemos decir que hemos superado la primera etapa y están a salvo. \n\nIrati tiene un carácter muy calmado e introvertido. Dado que es la que más ha sufrido, aún se encuentra constantemente alerta y le cuesta confiar. Poquito a poco los avances son excelentes 💪🏻 En cuanto cumplan los 2.5 meses, continuarán su protocolo veterinario para buscar su posterior adopción 💗 \n\nPor favor, tenemos dos camadas bajo nuestra tutela, te necesitamos para poder sacarlos adelante, echanos una patita 🙏\n\n🌸PayPal myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064\n\n⚠️ IMPORTANTE: se dará primerísima prioridad a aquellas familias que opten por la adopción conjunta y, en segundo lugar, las adopciones individuales siempre que en casa haya otro compi felino⚠️',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
     }
   }
 ];
