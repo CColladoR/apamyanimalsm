@@ -150,8 +150,42 @@ export const AnimalProvider: React.FC<{ children: React.ReactNode }> = ({ childr
           };
         }
 
-        // Migration: Ensure new animals (Susi, Tomás, Nora, Selva, Irati) are added if not present
-        const newAnimalIds = ['13', '14', '15', '16', '17'];
+        // Migration: Ensure Ona (id: 18) is updated with the correct description, story, status, and other fields
+        const onaIndex = data.findIndex((a: Animal) => a.id === '18');
+        const onaSource = INITIAL_ANIMALS.find(a => a.id === '18');
+        if (onaIndex !== -1 && onaSource) {
+          data[onaIndex] = {
+            ...data[onaIndex],
+            species: onaSource.species,
+            breed: onaSource.breed,
+            status: onaSource.status,
+            imageUrl: onaSource.imageUrl,
+            story: onaSource.story,
+            description: onaSource.description,
+            age: onaSource.age,
+            medicalStatus: onaSource.medicalStatus
+          };
+        }
+
+        // Migration: Ensure Brisa (id: 19) is updated with the correct description, story, status, and other fields
+        const brisaIndex = data.findIndex((a: Animal) => a.id === '19');
+        const brisaSource = INITIAL_ANIMALS.find(a => a.id === '19');
+        if (brisaIndex !== -1 && brisaSource) {
+          data[brisaIndex] = {
+            ...data[brisaIndex],
+            species: brisaSource.species,
+            breed: brisaSource.breed,
+            status: brisaSource.status,
+            imageUrl: brisaSource.imageUrl,
+            story: brisaSource.story,
+            description: brisaSource.description,
+            age: brisaSource.age,
+            medicalStatus: brisaSource.medicalStatus
+          };
+        }
+
+        // Migration: Ensure new animals (Susi, Tomás, Nora, Selva, Irati, Ona, Brisa) are added if not present
+        const newAnimalIds = ['13', '14', '15', '16', '17', '18', '19'];
         newAnimalIds.forEach(id => {
           const hasAnimal = data.some((a: Animal) => a.id === id);
           if (!hasAnimal) {
