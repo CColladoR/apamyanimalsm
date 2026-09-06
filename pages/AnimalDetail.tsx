@@ -144,7 +144,17 @@ export const AnimalDetail: React.FC = () => {
               </div>
             )}
 
-            {animal.status !== 'Adoptado' && animal.status !== 'Adoptada' ? (
+            {animal.status === 'Adoptado' || animal.status === 'Adoptada' ? (
+               <div className="mt-auto p-6 bg-stone-50 dark:bg-stone-800/50 rounded-2xl border border-stone-100 dark:border-stone-800 text-center">
+                  <p className="text-lg font-serif font-bold text-primary flex items-center justify-center gap-2">
+                     <Heart className="fill-primary" size={20} />
+                     ¡Final Feliz!
+                  </p>
+                  <p className="text-stone-500 dark:text-stone-400 text-sm mt-1">
+                     {animal.name} ya tiene una familia definitiva.
+                  </p>
+               </div>
+            ) : (
               <div className="mt-auto flex flex-col sm:flex-row gap-3">
                 <Link 
                   to="/adopta" 
@@ -161,16 +171,6 @@ export const AnimalDetail: React.FC = () => {
                   Apadrinar
                 </Link>
               </div>
-            ) : (
-               <div className="mt-auto p-6 bg-stone-50 dark:bg-stone-800/50 rounded-2xl border border-stone-100 dark:border-stone-800 text-center">
-                  <p className="text-lg font-serif font-bold text-primary flex items-center justify-center gap-2">
-                     <Heart className="fill-primary" size={20} />
-                     ¡Final Feliz!
-                  </p>
-                  <p className="text-stone-500 dark:text-stone-400 text-sm mt-1">
-                     {animal.name} ya tiene una familia definitiva.
-                  </p>
-               </div>
             )}
           </div>
         </div>

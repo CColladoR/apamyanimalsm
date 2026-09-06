@@ -184,8 +184,68 @@ export const AnimalProvider: React.FC<{ children: React.ReactNode }> = ({ childr
           };
         }
 
-        // Migration: Ensure new animals (Susi, Tomás, Nora, Selva, Irati, Ona, Brisa) are added if not present
-        const newAnimalIds = ['13', '14', '15', '16', '17', '18', '19'];
+        // Migration: Ensure Lorca (id: 20) is updated with the correct description, story, status, and other fields
+        const lorcaIndex = data.findIndex((a: Animal) => a.id === '20');
+        const lorcaSource = INITIAL_ANIMALS.find(a => a.id === '20');
+        if (lorcaIndex !== -1 && lorcaSource) {
+          data[lorcaIndex] = {
+            ...data[lorcaIndex],
+            species: lorcaSource.species,
+            breed: lorcaSource.breed,
+            status: lorcaSource.status,
+            imageUrl: lorcaSource.imageUrl,
+            story: lorcaSource.story,
+            description: lorcaSource.description,
+            age: lorcaSource.age,
+            gender: lorcaSource.gender,
+            size: lorcaSource.size,
+            medicalStatus: lorcaSource.medicalStatus
+          };
+        }
+
+        // Migration: Ensure Luci (id: 21) is updated with the correct fields
+        const luciIndex = data.findIndex((a: Animal) => a.id === '21');
+        const luciSource = INITIAL_ANIMALS.find(a => a.id === '21');
+        if (luciIndex !== -1 && luciSource) {
+          data[luciIndex] = {
+            ...data[luciIndex],
+            species: luciSource.species,
+            breed: luciSource.breed,
+            status: luciSource.status,
+            secondaryStatuses: luciSource.secondaryStatuses,
+            imageUrl: luciSource.imageUrl,
+            story: luciSource.story,
+            description: luciSource.description,
+            age: luciSource.age,
+            gender: luciSource.gender,
+            size: luciSource.size,
+            medicalStatus: luciSource.medicalStatus
+          };
+        }
+
+        // Migration: Ensure Nikki (id: 22), Tofu (id: 23) and Évole (id: 24) have updated mystery image and details
+        ['22', '23', '24'].forEach(id => {
+          const idx = data.findIndex((a: Animal) => a.id === id);
+          const source = INITIAL_ANIMALS.find(a => a.id === id);
+          if (idx !== -1 && source) {
+            data[idx] = {
+              ...data[idx],
+              imageUrl: source.imageUrl,
+              description: source.description,
+              story: source.story,
+              status: source.status,
+              medicalStatus: source.medicalStatus,
+              age: source.age,
+              gender: source.gender,
+              size: source.size,
+              species: source.species,
+              breed: source.breed
+            };
+          }
+        });
+
+        // Migration: Ensure new animals (Susi, Tomás, Nora, Selva, Irati, Ona, Brisa, Lorca, Luci, Nikki, Tofu, Évole) are added if not present
+        const newAnimalIds = ['13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'];
         newAnimalIds.forEach(id => {
           const hasAnimal = data.some((a: Animal) => a.id === id);
           if (!hasAnimal) {
