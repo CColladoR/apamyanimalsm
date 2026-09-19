@@ -1,5 +1,5 @@
 import { Animal, TeamMember, DonationMethod } from './types';
-import { NIKKI_MYSTERY_IMAGE, TOFU_MYSTERY_IMAGE, EVOLE_MYSTERY_IMAGE } from './data/mysteryCat';
+import { TOFU_MYSTERY_IMAGE, RON_MYSTERY_IMAGE, MARIAH_CAREY_MYSTERY_IMAGE } from './data/mysteryCat';
 
 export const ANIMALS: Animal[] = [
   {
@@ -254,9 +254,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     gender: 'Hembra',
     size: 'Pequeño',
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-06-21-13-55-58-51_1c337646f29875672b5a61192b9010f9.jpg',
-    description: 'Susi es una de las tres hermanitas rescatadas de una parcela. Una bebé con un carácter muy extrovertido and explorador.',
-    story: 'Como sabéis, la época de camadas es el terror para toda protectora. Actualmente, la mayoría de casos no provienen de las propias colonias felinas ferales que controlamos, eso es un mito, los casos que se presentan vienen por la irresponsabilidad de los "propietarios" que NO esterilizan a sus gatas (y encima las dejan salir al exterior). La gran mayoría son camadas no deseadas y su "solución" es la brillante idea de dejarlos debajo de un coche, en una caja o bolsa en la basura o no permiten que la madre de a luz en casa y la dejan a su suerte para que se busque la vida😡. \n\n¿Sabéis cuántos bebés no llegan a contarlo? Muchísimos mueren sin ser rescatados por asfixia, infección, hambre o la propia violencia humana. ¿Sabéis cuál es la solución más sencilla? ESTERILIZAR. Sí, esterilizar es uno de los mayores actos de amor que podrás hacer por tu peludo y para apoyar el cambio.\n\nNow bien, aceptamos hace unas semanas a estos 3 hermanitos que estaban en una parcela solitos: Tomás, Susi y Nora. Tuvimos que hacer malabares porque no es nuestro mejor momento y tampoco contábamos con casas de acogida con experiencia en bebés. Finalmente, gracias a las que siempre están ahí, se pudo aceptar el caso y actuar de inmediato porque venían muy muy débiles y Tomas casi no lo cuenta.\n\nDespués de unas semanas de cuarentena, con hidratación, suplementos para coger peso y comida apta para babycat, podemos decir que hemos superado la primera etapa de estos bebés 🎉 Susi tiene un carácter muy extrovertido y explorador, la hermana más fuerte de la camada💪🏻 En cuanto cumplan los 2.5 meses, empezarán su protocolo veterinario para buscar su posterior adopción 💗 \n\nPor favor, tenemos dos camadas bajo nuestra tutela, te necesitamos para poder sacarlos adelante, echanos una patita 🙏\n\n🌸PayPal myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064\n\n⚠️ IMPORTANTE: se dará primerísima prioridad a aquellas familias que opten por la adopción conjunta y, en segundo lugar, las adopciones individuales siempre que en casa haya otro compi felino⚠️',
-    status: 'Adoptada',
+    description: 'Susi es una de las tres hermanitas rescatadas de una parcela. Una bebé con un carácter muy extrovertido y explorador. ¡Actualmente está reservada! ❤️',
+    story: 'Como sabéis, la época de camadas es el terror para toda protectora. Actualmente, la mayoría de casos no provienen de las propias colonias felinas ferales que controlamos, eso es un mito, los casos que se presentan vienen por la irresponsabilidad de los "propietarios" que NO esterilizan a sus gatas (y encima las dejan salir al exterior). La gran mayoría son camadas no deseadas y su "solución" es la brillante idea de dejarlos debajo de un coche, en una caja o bolsa en la basura o no permiten que la madre de a luz en casa y la dejan a su suerte para que se busque la vida😡. \n\n¿Sabéis cuántos bebés no llegan a contarlo? Muchísimos mueren sin ser rescatados por asfixia, infección, hambre o la propia violencia humana. ¿Sabéis cuál es la solución más sencilla? ESTERILIZAR. Sí, esterilizar es uno de los mayores actos de amor que podrás hacer por tu peludo y para apoyar el cambio.\n\nNow bien, aceptamos hace unas semanas a estos 3 hermanitos que estaban en una parcela solitos: Tomás, Susi y Nora. Tuvimos que hacer malabares porque no es nuestro mejor momento y tampoco contábamos con casas de acogida con experiencia en bebés. Finalmente, gracias a las que siempre están ahí, se pudo aceptar el caso y actuar de inmediato porque venían muy muy débiles y Tomas casi no lo cuenta.\n\nDespués de unas semanas de cuarentena, con hidratación, suplementos para coger peso y comida apta para babycat, podemos decir que hemos superado la primera etapa de estos bebés 🎉 Susi tiene un carácter muy extrovertido y explorador, la hermana más fuerte de la camada💪🏻 En cuanto cumplan los 2.5 meses, empezarán su protocolo veterinario para buscar su posterior adopción 💗\n\n🎉 ¡RESERVADA!\nSusi ya se encuentra reservada y en proceso de adopción con su futura familia definitiva ❤️\n\nPor favor, tenemos dos camadas bajo nuestra tutela, te necesitamos para poder sacarlos adelante, echanos una patita 🙏\n\n🌸PayPal myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064\n\n⚠️ IMPORTANTE: se dará primerísima prioridad a aquellas familias que opten por la adopción conjunta y, en segundo lugar, las adopciones individuales siempre que en casa haya otro compi felino⚠️',
+    status: 'Reservada',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -409,19 +409,18 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     id: '21',
     name: 'Luci',
     species: 'Gato',
-    breed: 'Común Europeo',
+    breed: 'Común Europeo / Capa: Tricolor',
     age: '2.5 meses',
     gender: 'Hembra',
     size: '1.3 kg',
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-09-06-16-37-05-56_1c337646f29875672b5a61192b9010f9.jpg',
-    description: 'Dentro de nada se cumple un mes desde la llegada de Luci y podremos continuar su protocolo veterinario antes de su puesta en adopción. Es increíblemente sociable, ronroneadora y cariñosa.',
-    story: 'Dentro de nada se cumple un mes desde la llegada de Luci Lucifer y podremos continuar su protocolo veterinario antes de una puesta en adopción 💉🩸\n\nLa bebe llegó plagada de parásitos internos y externos que han sido complicados de erradicar, incluso ahora seguimos haciendo tiempo para poder hacer su último análisis coprológico y verificar que no queda nada más ahí dentro, esperemos 🤞\n\nEs una gata increíblemente sociable, ronroneadora, cariñosa... estamos seguras de que también lo será con el resto de gatos, a los que está deseando de conocer en cuanto finalice la cuarentena y el protocolo veterinario 😍\n\n⚠️ IMPORTANTE: se dará primerísima prioridad a aquellas familias que opten por la adopción conjunta y, en segundo lugar, las adopciones individuales siempre que en casa haya otro compi felino⚠️\n\nNecesitamos ayuda para cubrir sus gastos veterinarios, ¿quieres amadrinarla? Escríbenos 💌\n\n🌞PayPal myanimalsm@gmail.com\n🌞Bizum: 04872 (sección donativos de la app)\n🌞Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
-    status: 'Pronto en adopción',
-    secondaryStatuses: ['En Adopción'],
+    description: 'Luci es una gatita increíblemente sociable, ronroneadora y cariñosa. ¡Tiene todo su protocolo veterinario al día salvo la esterilización por edad y está reservada!',
+    story: 'Luci Lucifer es una bebé todoterreno: sociable, súper ronroneadora, cariñosa y muy juguetona 😍\n\nLlegó con parásitos internos y externos, pero tras su cuarentena y cuidados en casa de acogida lo ha superado todo con sobresaliente. ¡Ya tiene todo su protocolo veterinario al día (desparasitada, test FeLV/FIV negativo, vacunada y con microchip)! Únicamente queda pendiente su esterilización cuando cumpla la edad recomendada.\n\n🎉 ¡RESERVADA!\nLuci ya está reservada y en proceso con la que será su familia definitiva ❤️\n\nPuedes colaborar con sus gastos y atenciones mediante donativo o apadrinándola 💌\n\n🌞PayPal myanimalsm@gmail.com\n🌞Bizum: 04872 (sección donativos de la app)\n🌞Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Reservada',
     medicalStatus: {
       deworming: 'Sí',
-      felvFiv: 'Pte',
-      vaccination: 'Pte',
+      felvFiv: 'Negativo',
+      vaccination: 'Sí',
       microchip: 'Sí',
       sterilization: 'Pte'
     }
@@ -430,13 +429,13 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     id: '22',
     name: 'Nikki',
     species: 'Gato',
-    breed: 'Común Europeo',
+    breed: 'Común Europeo / Capa: Siamés',
     age: '1 mes',
     gender: 'Hembra',
     size: 'Cachorro',
-    imageUrl: NIKKI_MYSTERY_IMAGE,
-    description: 'Nikki es una preciosa gatita de 1 mes. Ya no es lactante, come sólida y crece llena de energía. La presentaremos próximamente con todas sus fotos.',
-    story: 'Nikki es una preciosa gatita de 1 mes de vida que se encuentra bajo la protección y el cariño de APA Myanimalsm 🐾✨\n\n¡Buenas noticias! Nikki come su comida sólida de cachorrito con un apetito estupendo, es muy curiosa y juguetona, y disfruta de los mimos en su casa de acogida temporal.\n\n🩺 Estado veterinario:\nActualmente está desparasitada y el resto de pautas (vacunas, test FeLV/FIV, chip y esterilización) quedan pendientes para cuando complete su desarrollo y alcance la edad y peso adecuados.\n\n🤫 ¡Presentación próximamente!\nAún no está abierta su adopción oficial ni disponemos de su reportaje de fotos para que disfrutéis de la intriga mientras sigue creciendo sana y fuerte. Muy pronto os la presentaremos con su reportaje fotográfico al completo.\n\nPuedes seguir sus avances o colaborar apadrinándola para ayudar con su alimentación de crecimiento y cuidados ❤️',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20260907-WA0007.jpg',
+    description: 'Hace un par de semanitas que esta ratona 🐭 está con nosotros. Os presentamos oficialmente a Nikki. Tiene tan solo 1 mesecito de vida y está terminando su cuarentena.',
+    story: 'Hace un par de semanitas que esta ratona 🐭 está con nosotros. Os presentamos oficialmente a Nikki.\n\nNikki tiene tan solo 1 mesecito de vida. Apareció en un pueblo de Toledo sola, sin mami ni hermanos, y por su estado físico y comportamiento con nosotros desde el primer momento, todo apunta a un abandono más. Esta gata había estado en un hogar tan solo unas horas antes de encontrarla 💔 A día de hoy continuamos estabilizando sus problemas de parásitos y digestivos.\n\nEstá terminando su cuarentena y a final de mes podrá iniciar su protocolo veterinario 💉\n\nMientras tanto, NO estará en adopción ni valoraremos familias para ella hasta no tener el VB de nuestros veterinarios. Puedes ayudarnos con sus gastos desde los siguientes medios:\n\n🌸PayPal myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064\n\nAprovechamos este post para agradecer enormemente a las nuevas casas de acogida que abren sus hogares a esta experiencia, como la de Nikki ❤️🩹 Sin vosotrxs nada de esto sería posible. Gracias por vuestro amor, cariño y cuidado incondicional hacia ellos 🫂\n\n⚠️ IMPORTANTE: se dará primerísima prioridad a aquellas familias que opten por la adopción conjunta y, en segundo lugar, las adopciones individuales siempre que en casa haya otro compi felino⚠️',
     status: 'Pronto en adopción',
     medicalStatus: {
       deworming: 'Sí',
@@ -450,7 +449,7 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     id: '23',
     name: 'Tofu',
     species: 'Gato',
-    breed: 'Común Europeo',
+    breed: 'Común Europeo / Capa: Atigrada',
     age: '2 meses',
     gender: 'Hembra',
     size: 'Cachorro',
@@ -468,18 +467,58 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
   },
   {
     id: '24',
-    name: 'Évole',
+    name: 'Marimar',
     species: 'Gato',
-    breed: 'Común Europeo',
+    breed: 'Común Europeo (Carey)',
     age: '2 meses',
     gender: 'Hembra',
     size: 'Cachorro',
-    imageUrl: EVOLE_MYSTERY_IMAGE,
-    description: 'Évole es una preciosa gatita hembra de 2 meses. Aún no está en adopción y la presentaremos próximamente en cuanto complete su protocolo.',
-    story: 'Évole es una entrañable gatita de apenas 2 meses de vida que acaba de llegar bajo el cuidado y la protección de APA Myanimalsm 🐾✨\n\nSe encuentra en una casa de acogida temporal donde recibe todo el cariño, calor y bienestar necesarios para crecer alegre, sana y juguetona.\n\n🩺 Estado veterinario:\nActualmente cuenta con su pauta de desparasitación al día, quedando pendientes (Pte) sus vacunas, microchip, test FeLV/FIV y esterilización para cuando alcance la edad y desarrollo pertinentes.\n\n🤫 ¡Presentación próximamente!\nAl igual que Nikki y Tofu, aún no la vamos a presentar oficialmente ni disponemos de sesión de fotos pública para mantener la intriga mientras crece y se pone a punto. ¡Muy pronto os la mostraremos con su reportaje fotográfico completo!\n\nPuedes seguir sus avances o colaborar apadrinándola para ayudar con sus cuidados diarios ❤️',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-09-09-18-43-09-42_1c337646f29875672b5a61192b9010f9.jpg',
+    description: 'Esta salerosa carey sevillana que se roba el show allá por donde va ya tiene su protocolo veterinario al día (esterilización a los 6 meses) y ¡se encuentra reservada! ❤️',
+    story: 'Teníamos muchísimas ganas de presentaros a esta carey sevillana que se roba el show allá por donde va🤭🤭 \n\nMarimar (en Sevilla la llamaban Évole) fue un golpe de suerte: apareció con 10 dias de vida tirada al lado de una piscina, ni rastro de mamá o hermanos, solo ella siendo una lactante con los ojitos aún sin abrir 💔 Sin embargo, allí estaba @noacow yendo sin pensárselo a recogerla. Gracias a ella y a su red de acogidas, Marimar tuvo una segunda oportunidad, siendo una bebé criada con mucho amor y con muchas ganas de vivir ✨ *podéis ver el inicio de su historia en el perfil de @noacow y echarle una patita para los otros casos que lleva sola*\n\nAhora que ha cumplido los 2 meses, Marimar ha viajado como una señorita carey desde Sevilla a Madrid para encontrar a su familia ideal. Desde ahora, pasa a formar parte de Apa Myanimalsm donde nos está deleitando con su arte y chispa (es una gata muuuu salá) mientras completaba su protocolo veterinario ❣️\n\nYa sabéis que las gatas careys son mágicas, traen suerte y esta niña la va repartiendo allá por donde va 🧡 Es un rayito de sol, super juguetona, activa y apta con gatos y perros, no te la puedes perder 😂\n\n🎉 ¡RESERVADA!\nMarimar ya se encuentra reservada y en proceso de adopción con su futura familia definitiva ❤️\n\nEdad: 2 meses\nSexo: hembra ♀️\nDesparasitación: completa (al día) \nTest FELV/FIV: negativo \nVacunas: al día \nChip: sí \nEsterilización: pendiente (se realizará a los 6 meses)\n\nPuedes ayudarnos con sus gastos mediante:\n💌PayPal myanimalsm@gmail.com\n💌Bizum: 04872 (sección donativos de la app)\n💌Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Reservada',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Negativo',
+      vaccination: 'Sí',
+      microchip: 'Sí',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '25',
+    name: 'Ron',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Atigrada',
+    age: '1 año aprox.',
+    gender: 'Macho',
+    size: 'Mediano',
+    imageUrl: RON_MYSTERY_IMAGE,
+    description: 'Ron es un gato de aproximadamente 1 año. Aún no le vamos a presentar oficialmente, ¡muy pronto podréis conocerle!',
+    story: 'Ron es un precioso gato de aproximadamente 1 año que acaba de llegar bajo el cuidado y la protección de APA Myanimalsm 🐾✨\n\nActualmente se encuentra en una casa de acogida temporal mientras se adapta a su nuevo entorno y ponemos en marcha su protocolo veterinario al completo.\n\n🤫 ¡Próximamente en adopción!\nAún no le vamos a presentar oficialmente ni abrimos su adopción mientras completamos su revisión veterinaria y preparamos su reportaje. ¡Muy pronto os contaremos todo sobre su historia y podréis ver sus fotos!\n\n¿Quieres colaborar con sus cuidados y protocolo veterinario? Puedes ayudarnos apadrinándole o con un donativo para sus gastos ❤️',
     status: 'Pronto en adopción',
     medicalStatus: {
       deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '26',
+    name: 'Mariah Carey',
+    species: 'Gato',
+    breed: 'Común Europeo (Carey)',
+    age: '1.5 meses',
+    gender: 'Hembra',
+    size: 'Cachorro',
+    imageUrl: MARIAH_CAREY_MYSTERY_IMAGE,
+    description: 'Mariah Carey es una preciosa gatita carey de mes y medio. Aún no la presentaremos oficialmente, ¡está próximamente en adopción!',
+    story: 'Mariah Carey es una preciosa gatita carey de tan solo mes y medio de vida que se encuentra bajo la protección y el cariño de APA Myanimalsm 🐾✨\n\nActualmente se encuentra en su casa de acogida temporal mientras se adapta con muchos mimos, crece sana y fuerte, y preparamos sus primeras atenciones y protocolo veterinario.\n\n🤫 ¡Próximamente en adopción!\nAún no la presentaremos oficialmente ni abrimos su adopción mientras sigue creciendo en su etapa de cachorrita. ¡Muy pronto os informaremos de todos sus avances y podréis conocer su historia al completo!\n\n¿Quieres colaborar con sus cuidados y su etapa de crecimiento? Puedes ayudarnos apadrinándola o con un donativo para sus gastos ❤️\n\n🌸PayPal myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Pte',
       felvFiv: 'Pte',
       vaccination: 'Pte',
       microchip: 'Pte',

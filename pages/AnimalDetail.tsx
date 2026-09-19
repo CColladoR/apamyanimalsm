@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useAnimals } from '../context/AnimalContext';
-import { Heart, Home, Ruler, Calendar, Info, ArrowLeft, Check, X, Clock, Stethoscope, AlertCircle } from 'lucide-react';
+import { Heart, Home, Ruler, Calendar, Info, ArrowLeft, Check, X, Clock, Stethoscope, AlertCircle, Bookmark } from 'lucide-react';
 
 export const AnimalDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -153,6 +153,25 @@ export const AnimalDetail: React.FC = () => {
                   <p className="text-stone-500 dark:text-stone-400 text-sm mt-1">
                      {animal.name} ya tiene una familia definitiva.
                   </p>
+               </div>
+            ) : animal.status === 'Reservado' || animal.status === 'Reservada' ? (
+               <div className="mt-auto flex flex-col gap-3">
+                 <div className="p-6 bg-amber-50 dark:bg-amber-900/20 rounded-2xl border border-amber-200 dark:border-amber-800/40 text-center">
+                    <p className="text-lg font-serif font-bold text-amber-700 dark:text-amber-300 flex items-center justify-center gap-2">
+                       <Bookmark className="fill-amber-500 text-amber-500" size={20} />
+                       ¡{animal.status}!
+                    </p>
+                    <p className="text-stone-600 dark:text-stone-400 text-sm mt-1">
+                       {animal.name} está {animal.gender === 'Macho' ? 'reservado' : 'reservada'} y en proceso de adopción con su futura familia.
+                    </p>
+                 </div>
+                 <Link 
+                   to="/donar"
+                   className="w-full bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 text-stone-700 dark:text-stone-200 text-center py-4 rounded-2xl font-bold text-base md:text-lg transition-all active:scale-95 flex items-center justify-center gap-2"
+                 >
+                   <Heart size={20} className="text-accent" />
+                   Apadrinar o Colaborar
+                 </Link>
                </div>
             ) : (
               <div className="mt-auto flex flex-col sm:flex-row gap-3">

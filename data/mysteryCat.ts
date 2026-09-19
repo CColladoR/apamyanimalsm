@@ -2,11 +2,12 @@
 
 export const createMysteryCatImage = (name: string, note = 'Muy pronto'): string => {
   const isNikki = name.toLowerCase().includes('nikki');
-  const accentColor = isNikki ? '#e0a96d' : '#d49b6a';
-  const highlightColor = isNikki ? '#fef08a' : '#fed7aa';
-  const softBg = isNikki ? '#fcf9f5' : '#faf6f0';
-  const midBg = isNikki ? '#f4ece2' : '#f2e8dc';
-  const darkBg = isNikki ? '#ece0d1' : '#eae0d2';
+  const isMariah = name.toLowerCase().includes('mariah');
+  const accentColor = isNikki ? '#e0a96d' : isMariah ? '#c27845' : '#d49b6a';
+  const highlightColor = isNikki ? '#fef08a' : isMariah ? '#fcd34d' : '#fed7aa';
+  const softBg = isNikki ? '#fcf9f5' : isMariah ? '#faf5f0' : '#faf6f0';
+  const midBg = isNikki ? '#f4ece2' : isMariah ? '#f3e8dc' : '#f2e8dc';
+  const darkBg = isNikki ? '#ece0d1' : isMariah ? '#e9ded1' : '#eae0d2';
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
   <defs>
@@ -155,4 +156,6 @@ export const createMysteryCatImage = (name: string, note = 'Muy pronto'): string
 export const NIKKI_MYSTERY_IMAGE = createMysteryCatImage('Nikki');
 export const TOFU_MYSTERY_IMAGE = createMysteryCatImage('Tofu');
 export const EVOLE_MYSTERY_IMAGE = createMysteryCatImage('Évole');
+export const RON_MYSTERY_IMAGE = createMysteryCatImage('Ron');
+export const MARIAH_CAREY_MYSTERY_IMAGE = createMysteryCatImage('Mariah Carey');
 export const MYSTERY_CAT_IMAGE = NIKKI_MYSTERY_IMAGE;

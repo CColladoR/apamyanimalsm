@@ -7,36 +7,73 @@ export const Foster: React.FC = () => {
 
   // Configuration for the bubbles grid - Refined for mobile
   const bubbles = [
-    { size: 'w-20 h-20 md:w-40 md:h-40', z: 'z-0', rotate: '-rotate-12', mt: 'mt-6 md:mt-8' },
+    { size: 'w-14 h-14 md:w-28 md:h-28', z: 'z-0', rotate: '-rotate-12', mt: 'mt-6 md:mt-8' },
     { 
-      size: 'w-24 h-24 md:w-48 md:h-48', 
+      size: 'w-24 h-24 md:w-44 md:h-44', 
       z: 'z-10', 
       rotate: '-rotate-3', 
-      mt: 'mt-0',
+      mt: 'mt-2',
       imageUrl: "https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/569abdbe27a3dff48861f5dc4fd16847dcbe6f2c/IMG_20260223_204216_931.jpg",
       caption: "María y Cava"
     },
-    { size: 'w-16 h-16 md:w-32 md:h-32', z: 'z-0', rotate: 'rotate-12', mt: 'mt-10 md:mt-12' }, 
     { 
-        // Main center bubble - User photo
-        size: 'w-28 h-28 md:w-60 md:h-60', 
+      size: 'w-24 h-24 md:w-48 md:h-48', 
+      z: 'z-20', 
+      rotate: 'rotate-3', 
+      mt: 'mt-1',
+      imageUrl: "https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-09-09-18-46-22-93_6012fa4d4ddec268fc5c7112cbb265e7.jpg",
+      caption: "Reyes y Amaris"
+    }, 
+    { 
+      size: 'w-24 h-24 md:w-48 md:h-48', 
+      z: 'z-20', 
+      rotate: '-rotate-2', 
+      mt: 'mt-0 md:mt-1',
+      imageUrl: "https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20260909-WA0083%7E2.jpg",
+      caption: "Andrea y Nino"
+    },
+    { 
+        // Main center bubble
+        size: 'w-28 h-28 md:w-56 md:h-56', 
         z: 'z-30', 
         rotate: '-rotate-2', 
         mt: '-mt-4',
         imageUrl: "https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/main/IMG_20260206_180035_762.jpg",
         caption: "Helena y Jengibre"
     }, 
-    { size: 'w-20 h-20 md:w-40 md:h-40', z: 'z-20', rotate: 'rotate-3', mt: 'mt-4 md:mt-6' },
     { 
       size: 'w-24 h-24 md:w-48 md:h-48', 
-      z: 'z-10', 
+      z: 'z-20', 
+      rotate: '-rotate-3', 
+      mt: 'mt-1',
+      imageUrl: "https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/20250710_211623.jpg",
+      caption: "Chris y Jalapeño"
+    },
+    { 
+      size: 'w-24 h-24 md:w-48 md:h-48', 
+      z: 'z-20', 
+      rotate: 'rotate-3', 
+      mt: 'mt-0 md:mt-1',
+      imageUrl: "https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-09-12-19-32-01-41_40deb401b9ffe8e1df2f1cc5ba480b12%7E2.jpg",
+      caption: "Ali y los Wicked"
+    },
+    { 
+      size: 'w-24 h-24 md:w-48 md:h-48', 
+      z: 'z-20', 
       rotate: 'rotate-6', 
       mt: 'mt-2',
-      imageUrl: "https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/aea1e1a9c005f2dd14a091b5df85284ad6c00d69/P1470271.jpg",
-      caption: "Laura y Galia"
+      imageUrl: "https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-09-09-19-07-47-57_965bbf4d18d205f782c6b8409c5773a4.jpg",
+      caption: "Laura y Pelusa"
     },
-    { size: 'w-14 h-14 md:w-32 md:h-32', z: 'z-0', rotate: '-rotate-6', mt: 'mt-8 md:mt-10' },
-    { size: 'w-20 h-20 md:w-36 md:h-36', z: 'z-10', rotate: '-rotate-3', mt: 'mt-4' },
+    { 
+      size: 'w-24 h-24 md:w-44 md:h-44', 
+      z: 'z-10', 
+      rotate: '-rotate-3', 
+      mt: 'mt-1 md:mt-2',
+      imageUrl: "https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20260909-WA0004%7E2.jpg",
+      caption: "Natalia y Nikki"
+    },
+    { size: 'w-14 h-14 md:w-28 md:h-28', z: 'z-0', rotate: 'rotate-6', mt: 'mt-6 md:mt-8' },
   ];
 
   return (
@@ -134,13 +171,13 @@ export const Foster: React.FC = () => {
                  Nuestra gran familia de acogida
               </h2>
               <p className="text-sm md:text-base text-stone-600 dark:text-stone-400 max-w-2xl mx-auto px-4">
-                 Ellxs son el corazón de APA Myanimalsm. Gracias a su generosidad abriendo las puertas de su hogar, cientos de vidas han sido salvadas.
+                 Ellxs son el corazón de APA Myanimalsm y nuestra red de acogidas. Gracias a su generosidad abriendo las puertas de su hogar, cientos de vidas han sido salvadas.
               </p>
            </div>
 
            {/* Collage Container - Scale for smaller screens */}
            <div className="flex flex-col items-center">
-              <div className="flex flex-wrap justify-center items-center content-center max-w-5xl mx-auto -space-x-3 md:-space-x-8">
+              <div className="flex flex-wrap justify-center items-center content-center max-w-7xl mx-auto -space-x-3 md:-space-x-5 gap-y-4 md:gap-y-6">
                  {bubbles.map((bubble, index) => (
                     <div 
                        key={index}
@@ -157,8 +194,9 @@ export const Foster: React.FC = () => {
                            <div className="w-full h-full rounded-full overflow-hidden border-[3px] md:border-[6px] border-white dark:border-stone-900">
                                <img 
                                    src={bubble.imageUrl} 
-                                   alt="Familia de acogida" 
+                                   alt={(bubble as any).caption || "Familia de acogida"} 
                                    className="w-full h-full object-cover"
+                                   referrerPolicy="no-referrer"
                                />
                            </div>
                        ) : (
