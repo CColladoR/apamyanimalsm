@@ -1,5 +1,5 @@
 import { Animal, TeamMember, DonationMethod } from './types';
-import { TOFU_MYSTERY_IMAGE, RON_MYSTERY_IMAGE, MARIAH_CAREY_MYSTERY_IMAGE } from './data/mysteryCat';
+import { TOFU_MYSTERY_IMAGE, DAIQUIRI_MYSTERY_IMAGE, AURORA_MYSTERY_IMAGE, ARIEL_MYSTERY_IMAGE, BAMBI_MYSTERY_IMAGE } from './data/mysteryCat';
 
 export const ANIMALS: Animal[] = [
   {
@@ -254,9 +254,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     gender: 'Hembra',
     size: 'Pequeño',
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-06-21-13-55-58-51_1c337646f29875672b5a61192b9010f9.jpg',
-    description: 'Susi es una de las tres hermanitas rescatadas de una parcela. Una bebé con un carácter muy extrovertido y explorador. ¡Actualmente está reservada! ❤️',
-    story: 'Como sabéis, la época de camadas es el terror para toda protectora. Actualmente, la mayoría de casos no provienen de las propias colonias felinas ferales que controlamos, eso es un mito, los casos que se presentan vienen por la irresponsabilidad de los "propietarios" que NO esterilizan a sus gatas (y encima las dejan salir al exterior). La gran mayoría son camadas no deseadas y su "solución" es la brillante idea de dejarlos debajo de un coche, en una caja o bolsa en la basura o no permiten que la madre de a luz en casa y la dejan a su suerte para que se busque la vida😡. \n\n¿Sabéis cuántos bebés no llegan a contarlo? Muchísimos mueren sin ser rescatados por asfixia, infección, hambre o la propia violencia humana. ¿Sabéis cuál es la solución más sencilla? ESTERILIZAR. Sí, esterilizar es uno de los mayores actos de amor que podrás hacer por tu peludo y para apoyar el cambio.\n\nNow bien, aceptamos hace unas semanas a estos 3 hermanitos que estaban en una parcela solitos: Tomás, Susi y Nora. Tuvimos que hacer malabares porque no es nuestro mejor momento y tampoco contábamos con casas de acogida con experiencia en bebés. Finalmente, gracias a las que siempre están ahí, se pudo aceptar el caso y actuar de inmediato porque venían muy muy débiles y Tomas casi no lo cuenta.\n\nDespués de unas semanas de cuarentena, con hidratación, suplementos para coger peso y comida apta para babycat, podemos decir que hemos superado la primera etapa de estos bebés 🎉 Susi tiene un carácter muy extrovertido y explorador, la hermana más fuerte de la camada💪🏻 En cuanto cumplan los 2.5 meses, empezarán su protocolo veterinario para buscar su posterior adopción 💗\n\n🎉 ¡RESERVADA!\nSusi ya se encuentra reservada y en proceso de adopción con su futura familia definitiva ❤️\n\nPor favor, tenemos dos camadas bajo nuestra tutela, te necesitamos para poder sacarlos adelante, echanos una patita 🙏\n\n🌸PayPal myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064\n\n⚠️ IMPORTANTE: se dará primerísima prioridad a aquellas familias que opten por la adopción conjunta y, en segundo lugar, las adopciones individuales siempre que en casa haya otro compi felino⚠️',
-    status: 'Reservada',
+    description: 'Susi es una de las tres hermanitas rescatadas de una parcela. Una bebé con un carácter muy extrovertido y explorador. ¡Felizmente adoptada! ❤️',
+    story: 'Como sabéis, la época de camadas es el terror para toda protectora. Actualmente, la mayoría de casos no provienen de las propias colonias felinas ferales que controlamos, eso es un mito, los casos que se presentan vienen por la irresponsabilidad de los "propietarios" que NO esterilizan a sus gatas (y encima las dejan salir al exterior). La gran mayoría son camadas no deseadas y su "solución" es la brillante idea de dejarlos debajo de un coche, en una caja o bolsa en la basura o no permiten que la madre de a luz en casa y la dejan a su suerte para que se busque la vida😡. \n\n¿Sabéis cuántos bebés no llegan a contarlo? Muchísimos mueren sin ser rescatados por asfixia, infección, hambre o la propia violencia humana. ¿Sabéis cuál es la solución más sencilla? ESTERILIZAR. Sí, esterilizar es uno de los mayores actos de amor que podrás hacer por tu peludo y para apoyar el cambio.\n\nNow bien, aceptamos hace unas semanas a estos 3 hermanitos que estaban en una parcela solitos: Tomás, Susi y Nora. Tuvimos que hacer malabares porque no es nuestro mejor momento y tampoco contábamos con casas de acogida con experiencia en bebés. Finalmente, gracias a las que siempre están ahí, se pudo aceptar el caso y actuar de inmediato porque venían muy muy débiles y Tomas casi no lo cuenta.\n\nDespués de unas semanas de cuarentena, con hidratación, suplementos para coger peso y comida apta para babycat, podemos decir que hemos superado la primera etapa de estos bebés 🎉 Susi tiene un carácter muy extrovertido y explorador, la hermana más fuerte de la camada💪🏻 En cuanto cumplan los 2.5 meses, empezarán su protocolo veterinario para buscar su posterior adopción 💗\n\n🎉 ¡ADOPTADA!\nSusi ya ha encontrado a su familia definitiva y disfruta de su merecido final feliz ❤️\n\nPor favor, tenemos dos camadas bajo nuestra tutela, te necesitamos para poder sacarlos adelante, echanos una patita 🙏\n\n🌸PayPal myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064\n\n⚠️ IMPORTANTE: se dará primerísima prioridad a aquellas familias que opten por la adopción conjunta y, en segundo lugar, las adopciones individuales siempre que en casa haya otro compi felino⚠️',
+    status: 'Adoptada',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -414,9 +414,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     gender: 'Hembra',
     size: '1.3 kg',
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-09-06-16-37-05-56_1c337646f29875672b5a61192b9010f9.jpg',
-    description: 'Luci es una gatita increíblemente sociable, ronroneadora y cariñosa. ¡Tiene todo su protocolo veterinario al día salvo la esterilización por edad y está reservada!',
-    story: 'Luci Lucifer es una bebé todoterreno: sociable, súper ronroneadora, cariñosa y muy juguetona 😍\n\nLlegó con parásitos internos y externos, pero tras su cuarentena y cuidados en casa de acogida lo ha superado todo con sobresaliente. ¡Ya tiene todo su protocolo veterinario al día (desparasitada, test FeLV/FIV negativo, vacunada y con microchip)! Únicamente queda pendiente su esterilización cuando cumpla la edad recomendada.\n\n🎉 ¡RESERVADA!\nLuci ya está reservada y en proceso con la que será su familia definitiva ❤️\n\nPuedes colaborar con sus gastos y atenciones mediante donativo o apadrinándola 💌\n\n🌞PayPal myanimalsm@gmail.com\n🌞Bizum: 04872 (sección donativos de la app)\n🌞Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
-    status: 'Reservada',
+    description: 'Luci es una gatita increíblemente sociable, ronroneadora y cariñosa. ¡Tiene todo su protocolo veterinario al día y ya está felizmente adoptada! ❤️',
+    story: 'Luci Lucifer es una bebé todoterreno: sociable, súper ronroneadora, cariñosa y muy juguetona 😍\n\nLlegó con parásitos internos y externos, pero tras su cuarentena y cuidados en casa de acogida lo ha superado todo con sobresaliente. ¡Ya tiene todo su protocolo veterinario al día (desparasitada, test FeLV/FIV negativo, vacunada y con microchip)! Únicamente queda pendiente su esterilización cuando cumpla la edad recomendada.\n\n🎉 ¡ADOPTADA!\nLuci Lucifer ya disfruta de su final feliz junto a su familia definitiva ❤️\n\nPuedes seguir colaborando con el resto de nuestros casos mediante donativo o apadrinamiento 💌\n\n🌞PayPal myanimalsm@gmail.com\n🌞Bizum: 04872 (sección donativos de la app)\n🌞Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Adoptada',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -474,9 +474,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     gender: 'Hembra',
     size: 'Cachorro',
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-09-09-18-43-09-42_1c337646f29875672b5a61192b9010f9.jpg',
-    description: 'Esta salerosa carey sevillana que se roba el show allá por donde va ya tiene su protocolo veterinario al día (esterilización a los 6 meses) y ¡se encuentra reservada! ❤️',
-    story: 'Teníamos muchísimas ganas de presentaros a esta carey sevillana que se roba el show allá por donde va🤭🤭 \n\nMarimar (en Sevilla la llamaban Évole) fue un golpe de suerte: apareció con 10 dias de vida tirada al lado de una piscina, ni rastro de mamá o hermanos, solo ella siendo una lactante con los ojitos aún sin abrir 💔 Sin embargo, allí estaba @noacow yendo sin pensárselo a recogerla. Gracias a ella y a su red de acogidas, Marimar tuvo una segunda oportunidad, siendo una bebé criada con mucho amor y con muchas ganas de vivir ✨ *podéis ver el inicio de su historia en el perfil de @noacow y echarle una patita para los otros casos que lleva sola*\n\nAhora que ha cumplido los 2 meses, Marimar ha viajado como una señorita carey desde Sevilla a Madrid para encontrar a su familia ideal. Desde ahora, pasa a formar parte de Apa Myanimalsm donde nos está deleitando con su arte y chispa (es una gata muuuu salá) mientras completaba su protocolo veterinario ❣️\n\nYa sabéis que las gatas careys son mágicas, traen suerte y esta niña la va repartiendo allá por donde va 🧡 Es un rayito de sol, super juguetona, activa y apta con gatos y perros, no te la puedes perder 😂\n\n🎉 ¡RESERVADA!\nMarimar ya se encuentra reservada y en proceso de adopción con su futura familia definitiva ❤️\n\nEdad: 2 meses\nSexo: hembra ♀️\nDesparasitación: completa (al día) \nTest FELV/FIV: negativo \nVacunas: al día \nChip: sí \nEsterilización: pendiente (se realizará a los 6 meses)\n\nPuedes ayudarnos con sus gastos mediante:\n💌PayPal myanimalsm@gmail.com\n💌Bizum: 04872 (sección donativos de la app)\n💌Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
-    status: 'Reservada',
+    description: 'Esta salerosa carey sevillana que se roba el show allá por donde va ya tiene su protocolo veterinario al día y ¡ha sido felizmente adoptada! ❤️',
+    story: 'Teníamos muchísimas ganas de presentaros a esta carey sevillana que se roba el show allá por donde va🤭🤭 \n\nMarimar (en Sevilla la llamaban Évole) fue un golpe de suerte: apareció con 10 dias de vida tirada al lado de una piscina, ni rastro de mamá o hermanos, solo ella siendo una lactante con los ojitos aún sin abrir 💔 Sin embargo, allí estaba @noacow yendo sin pensárselo a recogerla. Gracias a ella y a su red de acogidas, Marimar tuvo una segunda oportunidad, siendo una bebé criada con mucho amor y con muchas ganas de vivir ✨ *podéis ver el inicio de su historia en el perfil de @noacow y echarle una patita para los otros casos que lleva sola*\n\nAhora que ha cumplido los 2 meses, Marimar ha viajado como una señorita carey desde Sevilla a Madrid para encontrar a su familia ideal. Desde ahora, pasa a formar parte de Apa Myanimalsm donde nos está deleitando con su arte y chispa (es una gata muuuu salá) mientras completaba su protocolo veterinario ❣️\n\nYa sabéis que las gatas careys son mágicas, traen suerte y esta niña la va repartiendo allá por donde va 🧡 Es un rayito de sol, super juguetona, activa y apta con gatos y perros, no te la puedes perder 😂\n\n🎉 ¡ADOPTADA!\nMarimar ya disfruta de su final feliz junto a su familia definitiva ❤️\n\nEdad: 2 meses\nSexo: hembra ♀️\nDesparasitación: completa (al día) \nTest FELV/FIV: negativo \nVacunas: al día \nChip: sí \nEsterilización: pendiente (se realizará a los 6 meses)\n\nPuedes ayudarnos con el resto de nuestros casos mediante:\n💌PayPal myanimalsm@gmail.com\n💌Bizum: 04872 (sección donativos de la app)\n💌Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Adoptada',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -487,22 +487,22 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
   },
   {
     id: '25',
-    name: 'Ron',
+    name: 'Tom Holland',
     species: 'Gato',
     breed: 'Común Europeo / Capa: Atigrada',
-    age: '1 año aprox.',
+    age: '2 años',
     gender: 'Macho',
     size: 'Mediano',
-    imageUrl: RON_MYSTERY_IMAGE,
-    description: 'Ron es un gato de aproximadamente 1 año. Aún no le vamos a presentar oficialmente, ¡muy pronto podréis conocerle!',
-    story: 'Ron es un precioso gato de aproximadamente 1 año que acaba de llegar bajo el cuidado y la protección de APA Myanimalsm 🐾✨\n\nActualmente se encuentra en una casa de acogida temporal mientras se adapta a su nuevo entorno y ponemos en marcha su protocolo veterinario al completo.\n\n🤫 ¡Próximamente en adopción!\nAún no le vamos a presentar oficialmente ni abrimos su adopción mientras completamos su revisión veterinaria y preparamos su reportaje. ¡Muy pronto os contaremos todo sobre su historia y podréis ver sus fotos!\n\n¿Quieres colaborar con sus cuidados y protocolo veterinario? Puedes ayudarnos apadrinándole o con un donativo para sus gastos ❤️',
-    status: 'Pronto en adopción',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG20261003150322.jpg',
+    description: 'Tom Holland apareció en una piscina municipal escalando como un spidercat en busca de mimos. Es un gato joven de 2 años, mansísimo, calmado y ¡oficialmente en adopción!',
+    story: 'Vamos a poneros en situación: finales de agosto, en las instalaciones de la piscina municipal, aparece con su personalidad arrolladora un gato CASERO llorando suplicando atención. Aunque estaba desnutrido, no quería comer ni beber, solo caricias y ronronear bien fuerte 😭\n\nNo hace falta ser muy experto para saber que los gatos con ese comportamiento tienen un pasado hogareño. ¿Fue un abandono aprovechando el momento? ¿Se escapó? ¿Era gato paseante? Nunca lo sabremos puesto que nadie lo ha reclamado, tampoco tenía chip, aunque no nos sorprende... Lo que sí es evidente es que llevaba bastante fuera de su casa y que se moría de ganas por una buena ración de mimos. El pobre estaba tan loco por conseguir contacto humano que se dedicaba a trepar y escalar como un spidercat los accesos a la piscina 💔 Y con motivo de esa hazaña, entra a Apa Myanimalsm llamándose Tom Holland 🤭\n\nDespués de finalizar su cuarentena en una acogida temporal, ha pasado hoy por el vet para una última revisión y es que el tío está perfecto ❤️❤️❤️ Por cómo tiene de bien la boquita y su tamaño, le calculan unos 2 años aproximadamente, es un gato joven. Además, es mansísimo, calmado, apto con otros gatos y perros (con buenas presentaciones) y con muchísimas ganas de seguir disfrutando de una familia😸\n\n⚠️ Sabemos que con tanto michi bebe de por medio será un poquito difícil que te fijes en el, pero, de verdad, dale una oportunidad a un gato adulto y tanto él como tú lo agradeceréis toda la vida ❤️🩹 ¡ESCRÍBENOS, CORRE!\n\nSexo: macho ♂️\nEdad: 2 años \nDesparasitación: completa \nTest FELV FIV: negativo \nEsterilización: sí \nVacuna: trivalente \nChip: sí \n\nPuedes ayudarnos con sus gastos mediante:\n🥐PayPal myanimalsm@gmail.com\n🥐Bizum: 04872 (sección donativos de la app)\n🥐Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'En Adopción',
     medicalStatus: {
       deworming: 'Sí',
-      felvFiv: 'Pte',
-      vaccination: 'Pte',
-      microchip: 'Pte',
-      sterilization: 'Pte'
+      felvFiv: 'Negativo',
+      vaccination: 'Sí',
+      microchip: 'Sí',
+      sterilization: 'Sí'
     }
   },
   {
@@ -513,12 +513,232 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     age: '1.5 meses',
     gender: 'Hembra',
     size: 'Cachorro',
-    imageUrl: MARIAH_CAREY_MYSTERY_IMAGE,
-    description: 'Mariah Carey es una preciosa gatita carey de mes y medio. Aún no la presentaremos oficialmente, ¡está próximamente en adopción!',
-    story: 'Mariah Carey es una preciosa gatita carey de tan solo mes y medio de vida que se encuentra bajo la protección y el cariño de APA Myanimalsm 🐾✨\n\nActualmente se encuentra en su casa de acogida temporal mientras se adapta con muchos mimos, crece sana y fuerte, y preparamos sus primeras atenciones y protocolo veterinario.\n\n🤫 ¡Próximamente en adopción!\nAún no la presentaremos oficialmente ni abrimos su adopción mientras sigue creciendo en su etapa de cachorrita. ¡Muy pronto os informaremos de todos sus avances y podréis conocer su historia al completo!\n\n¿Quieres colaborar con sus cuidados y su etapa de crecimiento? Puedes ayudarnos apadrinándola o con un donativo para sus gastos ❤️\n\n🌸PayPal myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-10-04-15-33-02-19_1c337646f29875672b5a61192b9010f9%7E2.jpg',
+    description: 'Mariah Carey es una dulce bebita carey de 1.5 meses rescatada en Ciudad Real. Estará en adopción al cumplir los 2.5 meses y completar su protocolo veterinario.',
+    story: 'Parece que la suerte y la magia de las gatas careys está de nuestro lado💫 Desde hace un par de días, ¡¡ya forma parte de la familia Apa Myanimalsm la michina Mariah Carey!! 😻\n\nEsta bolita con ojazos viene de un CES (control de colonias felinas) de Ciudad Real. La persona que dió el aviso se encargó de esterilizar a su mamá y los gatos de la zona, pero quedaba esta bebita con un alto potencial para ser sociable y futura gata manta🥹. De modo que, gracias a las adopciones recientes, pudimos hacer hueco y traerla directamente con nosotras ❣️\n\nLa bebita ha llegado un poquito asustada y con un poquito de respeto hacia las personas, pero nada que una buena dosis de mimos en su casa de acogida + latitas ricas pueda arreglar, es el combo perfecto ❤️🩹 Mariah Carey estará en adopción cuando cumpla los 2.5 meses de edad y tenga su protocolo veterinario completo, iremos actualizando. Mientras tanto, necesitamos tu ayuda para seguir tutelando casos, ¿te animas a amadrinar parte de sus gastos?\n\nSexo: hembra ♀️\nEdad: 1.5 meses\nDesparasitación: completa \nTest FELV FIV: pendiente \nVacuna: pendiente \nChip: pendiente \n\n⚠️ IMPORTANTE: se dará primerísima prioridad a aquellas familias que opten por la adopción conjunta y, en segundo lugar, las adopciones individuales siempre que en casa haya otro compi felino⚠️\n\nPuedes ayudarnos con sus gastos mediante:\n🎀PayPal myanimalsm@gmail.com\n🎀Bizum: 04872 (sección donativos de la app)\n🎀Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
     status: 'Pronto en adopción',
     medicalStatus: {
-      deworming: 'Pte',
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '27',
+    name: 'Cheddar',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Atigrado Naranja',
+    age: '1.5 meses',
+    gender: 'Macho',
+    size: 'Cachorro',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20261002-WA0093%7E3.jpg',
+    description: 'Cheddar forma parte de la camada "Tres salsas". Un precioso bebito de capa atigrado naranja de 1.5 meses desparasitado que estará próximamente en adopción junto a sus hermanos.',
+    story: '¡Os presentamos a Cheddar! 🧀✨\n\nCheddar es un machito de capa atigrado naranja y 1.5 meses de vida que forma parte de la camada "Tres salsas" junto a sus hermanitos Brava y Alioli 🐾\n\nActualmente se encuentra en casa de acogida creciendo feliz, cuidado con todo el cariño y adaptándose fenomenal a su nueva vida. Por el momento únicamente está desparasitado y el resto de pautas de su protocolo veterinario (vacunación, test FeLV/FIV, microchip y futura esterilización) quedan pendientes para cuando alcance el peso y la edad adecuados.\n\n🤫 ¡Próximamente en adopción!\nAún no está abierta su adopción oficial mientras completamos sus primeros cuidados de cachorrito. ¡Aquí tenéis su primera fotografía oficial y muy pronto abriremos su proceso de adopción!\n\n¿Quieres colaborar con sus cuidados y su etapa de crecimiento? Puedes ayudarnos apadrinándole o con un donativo para sus gastos ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '28',
+    name: 'Brava',
+    species: 'Gato',
+    breed: 'Común Europeo',
+    age: '1.5 meses',
+    gender: 'Hembra',
+    size: 'Cachorro',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20261002-WA0093%7E2.jpg',
+    description: 'Brava es la princesa de la camada "Tres salsas". Una bebita de 1.5 meses desparasitada que estará próximamente en adopción junto a sus hermanos.',
+    story: '¡Os presentamos a Brava! 🌶️✨\n\nBrava es una hembrita de 1.5 meses de vida que forma parte de la camada "Tres salsas" junto a sus hermanitos Cheddar y Alioli 🐾\n\nActualmente se encuentra en su casa de acogida temporal recibiendo todos los cuidados, atenciones y mimos que necesita en esta tierna etapa. Por el momento solo está desparasitada y el resto de su protocolo veterinario (vacunas, test FeLV/FIV, microchip y futura esterilización) se realizará en cuanto cumpla la edad recomendada.\n\n🤫 ¡Próximamente en adopción!\nAún no abrimos su adopción oficial mientras sigue creciendo fuerte y sanita. ¡Aquí tenéis su primera fotografía oficial y muy pronto abriremos su proceso!\n\n¿Quieres colaborar con sus cuidados y su etapa de crecimiento? Puedes ayudarnos amadrinándola o con un donativo para sus gastos ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '29',
+    name: 'Alioli',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Atigrada',
+    age: '1.5 meses',
+    gender: 'Macho',
+    size: 'Cachorro',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20261002-WA0092%7E2.jpg',
+    description: 'Alioli forma parte de la camada "Tres salsas". Un bebito de capa atigrada de 1.5 meses desparasitado que estará próximamente en adopción junto a sus hermanos.',
+    story: '¡Os presentamos a Alioli! 🧄✨\n\nAlioli es un precioso machito de capa atigrada y 1.5 meses de vida que forma parte de la camada "Tres salsas" junto a sus hermanitos Cheddar y Brava 🐾\n\nActualmente se encuentra en casa de acogida adaptándose con muchísima dulzura y recibiendo todo el amor del mundo. Por el momento únicamente está desparasitado y el resto de pautas de su protocolo veterinario (vacunación, test FeLV/FIV, chip y posterior esterilización) se programarán según marque el calendario veterinario.\n\n🤫 ¡Próximamente en adopción!\nAún no está abierta su adopción oficial mientras continúa su crecimiento en casa de acogida. ¡Aquí tenéis su primera foto oficial y muy pronto abriremos su proceso!\n\n¿Quieres colaborar con sus cuidados y su etapa de crecimiento? Puedes ayudarnos apadrinándole o con un donativo para sus gastos ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '30',
+    name: 'Daiquiri',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Blanca',
+    age: '1.5 meses',
+    gender: 'Macho',
+    size: 'Cachorro',
+    imageUrl: DAIQUIRI_MYSTERY_IMAGE,
+    description: 'Daiquiri es un precioso bebé de capa blanca de 1.5 meses. Solo está desparasitado y estará próximamente en adopción junto a sus hermanos Ron, Malibú, Aurora, Bambi y Ariel.',
+    story: '¡Os presentamos a Daiquiri! ❄️✨\n\nDaiquiri es un precioso gatito de 1.5 meses con una impresionante capa blanca como la nieve que se encuentra bajo la protección de APA Myanimalsm junto a sus hermanos Ron, Malibú, Aurora, Bambi y Ariel 🐾\n\nActualmente se encuentra en casa de acogida creciendo con mucho amor, mimos y atenciones. Por el momento únicamente está desparasitado y el resto de pautas de su protocolo veterinario (vacunas, test FeLV/FIV, microchip y futura esterilización) se llevarán a cabo en cuanto tenga la edad y peso adecuados.\n\n🤫 ¡Próximamente en adopción!\nAún no está abierta su adopción oficial mientras completamos su etapa de adaptación y primeros cuidados. ¡Muy pronto os mostraremos su reportaje fotográfico completo!\n\n¿Quieres colaborar con sus cuidados y su etapa de crecimiento? Puedes ayudarnos apadrinándole o con un donativo para sus gastos ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '31',
+    name: 'Ron',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Blanca',
+    age: '1.5 meses',
+    gender: 'Macho',
+    size: 'Cachorro',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-10-05-21-36-02-83_965bbf4d18d205f782c6b8409c5773a4.jpg',
+    description: 'Ron es un dulce gatito de capa blanca de 1.5 meses. Solo está desparasitado y estará próximamente en adopción junto a sus hermanos Daiquiri, Malibú, Aurora, Bambi y Ariel.',
+    story: '¡Os presentamos al pequeño Ron! 🥥✨\n\nRon es un precioso bebito de 1.5 meses de hermosa capa blanca que forma parte de la camada junto a sus hermanos Daiquiri, Malibú, Aurora, Bambi y Ariel 🐾\n\nActualmente se encuentra en casa de acogida temporal donde recibe todos los cuidados, cariños y comodidades para crecer fuerte y sano. Al igual que sus hermanos, por el momento solo está desparasitado y el resto de su protocolo veterinario (vacunación, test FeLV/FIV, microchip y esterilización) queda pendiente para cuando cumpla la edad recomendada.\n\n🤫 ¡Próximamente en adopción!\nAún no abrimos su adopción oficial mientras continúa creciendo feliz. ¡Aquí tenéis su primera foto oficial y muy pronto abriremos su proceso!\n\n¿Quieres colaborar con sus cuidados y su etapa de cachorro? Puedes ayudarnos apadrinándole o con un donativo para sus gastos ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '32',
+    name: 'Malibú',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Blanca',
+    age: '1.5 meses',
+    gender: 'Macho',
+    size: 'Cachorro',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-10-05-21-36-50-25_965bbf4d18d205f782c6b8409c5773a4.jpg',
+    description: 'Malibú es un precioso gatito de capa blanca de 1.5 meses. Solo está desparasitado y estará próximamente en adopción junto a sus hermanos Daiquiri, Ron, Aurora, Bambi y Ariel.',
+    story: '¡Os presentamos a Malibú! 🌴✨\n\nMalibú es un dulce gatito de 1.5 meses, con una suave y radiante capa blanca, que ha llegado a APA Myanimalsm junto a sus hermanos Daiquiri, Ron, Aurora, Bambi y Ariel 🐾\n\nActualmente se encuentra en casa de acogida disfrutando de los mimos y el juego mientras se desarrolla sanito. Por ahora solo está desparasitado y el resto de pruebas y atenciones de su protocolo veterinario (vacunas, test FeLV/FIV, chip y posterior esterilización) se realizarán según el calendario veterinario por edad.\n\n🤫 ¡Próximamente en adopción!\nAún no está abierta su adopción oficial mientras sigue creciendo en su casa de acogida. ¡Aquí tenéis su primera fotografía oficial y muy pronto abriremos su proceso!\n\n¿Quieres colaborar con sus cuidados y crecimiento? Puedes ayudarnos apadrinándole o con un donativo para sus gastos ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '33',
+    name: 'Gatita 1',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Naranja',
+    age: '1.5 meses',
+    gender: 'Hembra',
+    size: 'Cachorro',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20260920-WA0038.jpg',
+    description: 'Gatita de capa naranja de 1.5 meses recién rescatada que aún no tiene nombre oficial. Por el momento solo está desparasitada y la presentaremos próximamente.',
+    story: '¡Primera foto de esta preciosidad naranja! 🧡✨\n\nOs presentamos a Gatita 1, una bebita de capa naranja y tan solo 1 mes y medio que acaba de llegar a la familia de APA Myanimalsm junto a su hermanita Gatita 2. Todavía no tiene nombre definitivo, ¡pero aquí tenéis su primera fotografía oficial! 🐾\n\nActualmente se encuentra en casa de acogida recibiendo todos los cuidados, calor y primeras atenciones para crecer fuerte y sana. Por el momento únicamente está desparasitada; las pruebas FeLV/FIV, vacunas, microchip y futura esterilización quedan pendientes para cuando cumpla la edad recomendada.\n\n🤫 ¡Próximamente presentación oficial!\nAún no está abierta su adopción mientras completamos sus primeros cuidados de cachorrita. ¡Iremos actualizando muy pronto su ficha!\n\n¿Quieres colaborar con sus cuidados y su etapa de crecimiento? Puedes ayudarnos amadrinándola o con un donativo para sus primeros gastos ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '34',
+    name: 'Gatita 2',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Carey',
+    age: '1.5 meses',
+    gender: 'Hembra',
+    size: 'Cachorro',
+    imageUrl: 'https://github.com/myanimalsm-apa/APA.-Myanimalsm-/blob/main/IMG-20261002-WA0087.jpg?raw=true',
+    description: 'Gatita de capa carey de 1.5 meses recién rescatada que aún no tiene nombre oficial. Por el momento solo está desparasitada y la presentaremos próximamente junto a su hermanita.',
+    story: '¡Primera foto oficial de esta muñeca carey! 🤎✨\n\nOs presentamos a Gatita 2, una preciosa bebita de manto carey de 1.5 meses que fue rescatada recientemente junto a su hermanita Gatita 1. Al ser tan chiquitita aún no tiene nombre oficial definitivo, ¡pero aquí tenéis su primera foto!\n\nPor ahora disfruta de la tranquilidad y mimos en su casa de acogida mientras va creciendo sanita. Al igual que su hermana, por el momento únicamente está desparasitada y el resto de su protocolo veterinario (vacunación, test FeLV/FIV, microchip y esterilización) se completará según su evolución por edad.\n\n🤫 ¡Próximamente presentación oficial completa!\nSu adopción oficial aún no está abierta mientras finaliza sus primeros cuidados de cachorra, pero estamos deseando que conozcáis todo sobre ella en los próximos días.\n\n¿Quieres apoyarnos con su manutención y primeras atenciones veterinarias? Puedes ayudarnos amadrinándola o aportando tu granito de arena ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '35',
+    name: 'Aurora',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Blanca',
+    age: '1.5 meses',
+    gender: 'Hembra',
+    size: 'Cachorro',
+    imageUrl: AURORA_MYSTERY_IMAGE,
+    description: 'Aurora es una preciosa gatita de capa blanca de 1.5 meses, hermana de Daiquiri, Ron, Malibú, Bambi y Ariel. Solo está desparasitada y la presentaremos próximamente.',
+    story: '¡Os presentamos a Aurora! ❄️✨\n\nAurora es una preciosa bebita de capa blanca pura y 1.5 meses de vida, hermanita directa de Daiquiri, Ron, Malibú, Bambi y Ariel 🐾\n\nActualmente se encuentra en casa de acogida creciendo protegida, mimada y cuidada con todo el cariño. Por el momento únicamente cuenta con su desparasitación y el resto de su protocolo veterinario (vacunas, test FeLV/FIV, microchip y futura esterilización) se completará según su evolución y edad.\n\n🤫 ¡Próximamente presentación oficial!\nMuy pronto compartiremos su reportaje fotográfico completo y abriremos su proceso de adopción. ¡Estad muy atentos!\n\n¿Te gustaría colaborar con sus cuidados iniciales y su etapa de crecimiento? Puedes ayudarnos amadrinándola o aportando tu granito de arena ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '36',
+    name: 'Ariel',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Negra',
+    age: '1.5 meses',
+    gender: 'Hembra',
+    size: 'Cachorro',
+    imageUrl: ARIEL_MYSTERY_IMAGE,
+    description: 'Ariel es una preciosa gatita de capa negra de 1.5 meses, hermana de Daiquiri, Ron, Malibú, Aurora y Bambi. Solo está desparasitada y la presentaremos próximamente.',
+    story: '¡Os presentamos a Ariel! 🖤✨\n\nAriel es una dulcísima bebita de brillante capa negra de 1.5 meses, hermanita de Daiquiri, Ron, Malibú, Aurora y Bambi 🐾\n\nEs la hembrita de manto oscuro de la camada, una auténtica mini panterita repleta de ternura. Se encuentra maravillosamente atendida en su casa de acogida recibiendo calor y mimos constantes. Por ahora solo está desparasitada y el resto de su protocolo veterinario (vacunación, test FeLV/FIV, microchip y esterilización) se llevará a cabo cuando cumpla la edad recomendada.\n\n🤫 ¡Próximamente presentación oficial!\nEn muy poquitos días compartiremos sus primeras fotografías oficiales. ¡Os va a enamorar!\n\n¿Quieres colaborar con sus cuidados y su etapa de cachorro? Puedes ayudarnos amadrinándola o con un donativo para sus gastos veterinarios ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '37',
+    name: 'Bambi',
+    species: 'Gato',
+    breed: 'Común Europeo / Capa: Blanca',
+    age: '1.5 meses',
+    gender: 'Macho',
+    size: 'Cachorro',
+    imageUrl: BAMBI_MYSTERY_IMAGE,
+    description: 'Bambi es un tierno gatito de capa blanca de 1.5 meses, hermano de Daiquiri, Ron, Malibú, Aurora y Ariel. Solo está desparasitado y lo presentaremos próximamente.',
+    story: '¡Os presentamos a Bambi! 🥥✨\n\nBambi es un adorable machito de capa blanca y 1.5 meses de vida, hermano de Daiquiri, Ron, Malibú, Aurora y Ariel 🐾\n\nYa roba corazones en su casa de acogida temporal, donde disfruta del juego, el calor y los mejores cuidados para desarrollarse fuerte y sano. Al igual que sus hermanos, por el momento solo está desparasitado y el resto de pautas de su protocolo veterinario (vacunación, test FeLV/FIV, microchip y esterilización) se programarán según el calendario por edad.\n\n🤫 ¡Próximamente presentación oficial!\n¡Muy pronto os descubriremos sus primeras fotos y abriremos su proceso de adopción!\n\n¿Quieres apoyarnos con sus cuidados veterinarios y manutención de cachorrito? Puedes ayudarnos apadrinándole o con un donativo para sus gastos ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    medicalStatus: {
+      deworming: 'Sí',
       felvFiv: 'Pte',
       vaccination: 'Pte',
       microchip: 'Pte',

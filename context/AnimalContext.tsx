@@ -223,8 +223,8 @@ export const AnimalProvider: React.FC<{ children: React.ReactNode }> = ({ childr
           };
         }
 
-        // Migration: Ensure Nikki (id: 22), Tofu (id: 23), Marimar (id: 24), Ron (id: 25) and Mariah Carey (id: 26) have updated image and details
-        ['22', '23', '24', '25', '26'].forEach(id => {
+        // Migration: Ensure Nikki (id: 22), Tofu (id: 23), Marimar (id: 24), Tom Holland (id: 25), Mariah Carey (id: 26), Camada Tres Salsas (id: 27, 28, 29), Camada Blanca (id: 30, 31, 32), Nuevas Bebitas (id: 33, 34) and Nuevos Hermanitos (id: 35, 36, 37) have updated image and details
+        ['22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37'].forEach(id => {
           const idx = data.findIndex((a: Animal) => a.id === id);
           const source = INITIAL_ANIMALS.find(a => a.id === id);
           if (idx !== -1 && source) {
@@ -246,7 +246,7 @@ export const AnimalProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         });
 
         // Migration: Ensure new animals are added if not present
-        const newAnimalIds = ['13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26'];
+        const newAnimalIds = ['13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37'];
         newAnimalIds.forEach(id => {
           const hasAnimal = data.some((a: Animal) => a.id === id);
           if (!hasAnimal) {

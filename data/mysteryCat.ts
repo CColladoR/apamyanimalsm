@@ -1,13 +1,22 @@
 // Elegant, warm minimalist mystery teaser portraits for kittens coming soon to the sanctuary
 
-export const createMysteryCatImage = (name: string, note = 'Muy pronto'): string => {
+export const createMysteryCatImage = (name: string, note = 'Próximamente en adopción'): string => {
   const isNikki = name.toLowerCase().includes('nikki');
   const isMariah = name.toLowerCase().includes('mariah');
-  const accentColor = isNikki ? '#e0a96d' : isMariah ? '#c27845' : '#d49b6a';
-  const highlightColor = isNikki ? '#fef08a' : isMariah ? '#fcd34d' : '#fed7aa';
-  const softBg = isNikki ? '#fcf9f5' : isMariah ? '#faf5f0' : '#faf6f0';
-  const midBg = isNikki ? '#f4ece2' : isMariah ? '#f3e8dc' : '#f2e8dc';
-  const darkBg = isNikki ? '#ece0d1' : isMariah ? '#e9ded1' : '#eae0d2';
+  const isTom = name.toLowerCase().includes('tom') || name.toLowerCase().includes('holland');
+  const isCheddar = name.toLowerCase().includes('cheddar');
+  const isBrava = name.toLowerCase().includes('brava');
+  const isAlioli = name.toLowerCase().includes('alioli');
+  const isWhite = name.toLowerCase().includes('daiquiri') || name.toLowerCase().includes('daikiri') || name.toLowerCase().includes('malib') || name.toLowerCase() === 'ron' || name.toLowerCase().includes('blanca') || name.toLowerCase().includes('blanco') || name.toLowerCase().includes('aurora') || name.toLowerCase().includes('bambi');
+  const isBlack = name.toLowerCase().includes('negra') || name.toLowerCase().includes('negro') || name.toLowerCase().includes('ariel');
+  const isBebita1 = name.toLowerCase().includes('bebita 1') || name.toLowerCase().includes('bebé 1');
+  const isBebita2 = name.toLowerCase().includes('bebita 2') || name.toLowerCase().includes('bebé 2');
+
+  const accentColor = isNikki ? '#e0a96d' : isMariah ? '#c27845' : isTom ? '#d97706' : isCheddar ? '#f59e0b' : isBrava ? '#e11d48' : isAlioli ? '#ca8a04' : isBlack ? '#475569' : isWhite ? '#0284c7' : isBebita1 ? '#ec4899' : isBebita2 ? '#a855f7' : '#d49b6a';
+  const highlightColor = isNikki ? '#fef08a' : isMariah ? '#fcd34d' : isTom ? '#fde047' : isCheddar ? '#fef08a' : isBrava ? '#fecdd3' : isAlioli ? '#fef9c3' : isBlack ? '#94a3b8' : isWhite ? '#bae6fd' : isBebita1 ? '#fbcfe8' : isBebita2 ? '#e9d5ff' : '#fed7aa';
+  const softBg = isNikki ? '#fcf9f5' : isMariah ? '#faf5f0' : isBrava ? '#fff1f2' : (isWhite || isBlack) ? '#f8fafc' : isBebita1 ? '#fff1f2' : isBebita2 ? '#faf5ff' : '#faf6f0';
+  const midBg = isNikki ? '#f4ece2' : isMariah ? '#f3e8dc' : isBrava ? '#ffe4e6' : (isWhite || isBlack) ? '#f1f5f9' : isBebita1 ? '#fce7f3' : isBebita2 ? '#f3e8ff' : '#f2e8dc';
+  const darkBg = isNikki ? '#ece0d1' : isMariah ? '#e9ded1' : isBrava ? '#fecdd3' : (isWhite || isBlack) ? '#e2e8f0' : isBebita1 ? '#fbcfe8' : isBebita2 ? '#e9d5ff' : '#eae0d2';
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
   <defs>
@@ -127,11 +136,11 @@ export const createMysteryCatImage = (name: string, note = 'Muy pronto'): string
     <path d="M 0 0 C -2 -3, -4 -1, 0 4 C 4 -1, 2 -3, 0 0 Z" fill="#fef08a"/>
   </g>
 
-  <!-- Top Ribbon Badge: "NUEVA LLEGADA" -->
+  <!-- Top Ribbon Badge -->
   <g transform="translate(400, 155)" filter="url(#softBadgeShadow)">
-    <rect x="-95" y="-16" width="190" height="32" rx="16" fill="#fdfbf7" stroke="#e7dac7" stroke-width="1.2"/>
+    <rect x="-105" y="-16" width="210" height="32" rx="16" fill="#fdfbf7" stroke="#e7dac7" stroke-width="1.2"/>
     <text x="0" y="5" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="2.5" fill="#92400e" text-anchor="middle">
-      ✨ NUEVA LLEGADA
+      ${note.toLowerCase().includes('en adopción') && !note.toLowerCase().includes('próximamente') ? '🐾 EN ADOPCIÓN' : '✨ NUEVA LLEGADA'}
     </text>
   </g>
 
@@ -146,7 +155,7 @@ export const createMysteryCatImage = (name: string, note = 'Muy pronto'): string
 
   <!-- Subtitle note -->
   <text x="400" y="695" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="600" letter-spacing="1.5" fill="#8c7e6d" text-anchor="middle">
-    PRÓXIMAMENTE EN ADOPCIÓN
+    ${note.toUpperCase()}
   </text>
 </svg>`;
 
@@ -156,6 +165,22 @@ export const createMysteryCatImage = (name: string, note = 'Muy pronto'): string
 export const NIKKI_MYSTERY_IMAGE = createMysteryCatImage('Nikki');
 export const TOFU_MYSTERY_IMAGE = createMysteryCatImage('Tofu');
 export const EVOLE_MYSTERY_IMAGE = createMysteryCatImage('Évole');
-export const RON_MYSTERY_IMAGE = createMysteryCatImage('Ron');
+export const TOM_HOLLAND_MYSTERY_IMAGE = createMysteryCatImage('Tom Holland', 'En adopción');
+export const RON_MYSTERY_IMAGE = TOM_HOLLAND_MYSTERY_IMAGE;
 export const MARIAH_CAREY_MYSTERY_IMAGE = createMysteryCatImage('Mariah Carey');
+export const CHEDDAR_MYSTERY_IMAGE = createMysteryCatImage('Cheddar');
+export const BRAVA_MYSTERY_IMAGE = createMysteryCatImage('Brava');
+export const ALIOLI_MYSTERY_IMAGE = createMysteryCatImage('Alioli');
+export const DAIQUIRI_MYSTERY_IMAGE = createMysteryCatImage('Daiquiri');
+export const DAIKIRI_MYSTERY_IMAGE = DAIQUIRI_MYSTERY_IMAGE;
+export const RON_KITTEN_MYSTERY_IMAGE = createMysteryCatImage('Ron');
+export const MALIBU_MYSTERY_IMAGE = createMysteryCatImage('Malibú');
+export const BEBITA1_MYSTERY_IMAGE = createMysteryCatImage('Bebita 1', 'Próximamente');
+export const BEBITA2_MYSTERY_IMAGE = createMysteryCatImage('Bebita 2', 'Próximamente');
+export const AURORA_MYSTERY_IMAGE = createMysteryCatImage('Aurora', 'Próximamente');
+export const ARIEL_MYSTERY_IMAGE = createMysteryCatImage('Ariel', 'Próximamente');
+export const BAMBI_MYSTERY_IMAGE = createMysteryCatImage('Bambi', 'Próximamente');
+export const BEBITA_BLANCA_MYSTERY_IMAGE = AURORA_MYSTERY_IMAGE;
+export const BEBITA_NEGRA_MYSTERY_IMAGE = ARIEL_MYSTERY_IMAGE;
+export const BEBE_BLANCO_MYSTERY_IMAGE = BAMBI_MYSTERY_IMAGE;
 export const MYSTERY_CAT_IMAGE = NIKKI_MYSTERY_IMAGE;
