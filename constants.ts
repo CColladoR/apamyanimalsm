@@ -1,5 +1,5 @@
 import { Animal, TeamMember, DonationMethod } from './types';
-import { TOFU_MYSTERY_IMAGE, DAIQUIRI_MYSTERY_IMAGE, AURORA_MYSTERY_IMAGE, ARIEL_MYSTERY_IMAGE, BAMBI_MYSTERY_IMAGE } from './data/mysteryCat';
+import { TOFU_MYSTERY_IMAGE, DAIQUIRI_MYSTERY_IMAGE, BAMBI_MYSTERY_IMAGE } from './data/mysteryCat';
 
 export const ANIMALS: Animal[] = [
   {
@@ -693,9 +693,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     age: '1.5 meses',
     gender: 'Hembra',
     size: 'Cachorro',
-    imageUrl: AURORA_MYSTERY_IMAGE,
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20261006-WA0020.jpg',
     description: 'Aurora es una preciosa gatita de capa blanca de 1.5 meses, hermana de Daiquiri, Ron, Malibú, Bambi y Ariel. Solo está desparasitada y la presentaremos próximamente.',
-    story: '¡Os presentamos a Aurora! ❄️✨\n\nAurora es una preciosa bebita de capa blanca pura y 1.5 meses de vida, hermanita directa de Daiquiri, Ron, Malibú, Bambi y Ariel 🐾\n\nActualmente se encuentra en casa de acogida creciendo protegida, mimada y cuidada con todo el cariño. Por el momento únicamente cuenta con su desparasitación y el resto de su protocolo veterinario (vacunas, test FeLV/FIV, microchip y futura esterilización) se completará según su evolución y edad.\n\n🤫 ¡Próximamente presentación oficial!\nMuy pronto compartiremos su reportaje fotográfico completo y abriremos su proceso de adopción. ¡Estad muy atentos!\n\n¿Te gustaría colaborar con sus cuidados iniciales y su etapa de crecimiento? Puedes ayudarnos amadrinándola o aportando tu granito de arena ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    story: '¡Os presentamos a Aurora! ❄️✨\n\nAurora es una preciosa bebita de capa blanca pura y 1.5 meses de vida, hermanita directa de Daiquiri, Ron, Malibú, Bambi y Ariel 🐾\n\nActualmente se encuentra en casa de acogida creciendo protegida, mimada y cuidada con todo el cariño. Por el momento únicamente cuenta con su desparasitación y el resto de su protocolo veterinario (vacunas, test FeLV/FIV, microchip y futura esterilización) se completará según su evolución y edad.\n\n🤫 ¡Próximamente en adopción!\n¡Aquí tenéis su primera foto oficial y muy pronto abriremos su proceso de adopción! ¡Estad muy atentos!\n\n¿Te gustaría colaborar con sus cuidados iniciales y su etapa de crecimiento? Puedes ayudarnos amadrinándola o aportando tu granito de arena ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
     status: 'Pronto en adopción',
     medicalStatus: {
       deworming: 'Sí',
@@ -713,9 +713,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     age: '1.5 meses',
     gender: 'Hembra',
     size: 'Cachorro',
-    imageUrl: ARIEL_MYSTERY_IMAGE,
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20261006-WA0019.jpg',
     description: 'Ariel es una preciosa gatita de capa negra de 1.5 meses, hermana de Daiquiri, Ron, Malibú, Aurora y Bambi. Solo está desparasitada y la presentaremos próximamente.',
-    story: '¡Os presentamos a Ariel! 🖤✨\n\nAriel es una dulcísima bebita de brillante capa negra de 1.5 meses, hermanita de Daiquiri, Ron, Malibú, Aurora y Bambi 🐾\n\nEs la hembrita de manto oscuro de la camada, una auténtica mini panterita repleta de ternura. Se encuentra maravillosamente atendida en su casa de acogida recibiendo calor y mimos constantes. Por ahora solo está desparasitada y el resto de su protocolo veterinario (vacunación, test FeLV/FIV, microchip y esterilización) se llevará a cabo cuando cumpla la edad recomendada.\n\n🤫 ¡Próximamente presentación oficial!\nEn muy poquitos días compartiremos sus primeras fotografías oficiales. ¡Os va a enamorar!\n\n¿Quieres colaborar con sus cuidados y su etapa de cachorro? Puedes ayudarnos amadrinándola o con un donativo para sus gastos veterinarios ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    story: '¡Os presentamos a Ariel! 🖤✨\n\nAriel es una dulcísima bebita de brillante capa negra de 1.5 meses, hermanita de Daiquiri, Ron, Malibú, Aurora y Bambi 🐾\n\nEs la hembrita de manto oscuro de la camada, una auténtica mini panterita repleta de ternura. Se encuentra maravillosamente atendida en su casa de acogida recibiendo calor y mimos constantes. Por ahora solo está desparasitada y el resto de su protocolo veterinario (vacunación, test FeLV/FIV, microchip y esterilización) se llevará a cabo cuando cumpla la edad recomendada.\n\n🤫 ¡Próximamente en adopción!\n¡Aquí tenéis su primera foto oficial y muy pronto abriremos su proceso de adopción! ¡Os va a enamorar!\n\n¿Quieres colaborar con sus cuidados y su etapa de cachorro? Puedes ayudarnos amadrinándola o con un donativo para sus gastos veterinarios ❤️\n\n🌸PayPal: myanimalsm@gmail.com\n🌸Bizum: 04872 (sección donativos de la app)\n🌸Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
     status: 'Pronto en adopción',
     medicalStatus: {
       deworming: 'Sí',
