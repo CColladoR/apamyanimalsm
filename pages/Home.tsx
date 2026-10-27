@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { AnimalCard } from '../components/AnimalCard';
+import { JointAnimalCard } from '../components/JointAnimalCard';
 import { Link } from 'react-router-dom';
 import { 
   HeartHandshake, Dog, Cat, LayoutGrid, Star, Quote, 
@@ -7,7 +8,7 @@ import {
   AlertCircle, Clock, Home as HomeIcon, Building2, Bookmark, Heart,
   ChevronDown, Filter, XCircle, Sparkles, Grip, List, Plus, RefreshCw,
   ChevronLeft, ChevronRight, CalendarDays, Search, X, Maximize2, History, Calendar,
-  PartyPopper
+  PartyPopper, Users
 } from 'lucide-react';
 import { useAnimals } from '../context/AnimalContext';
 import { useAuth } from '../context/AuthContext';
@@ -116,6 +117,7 @@ export const Home: React.FC = () => {
       .filter(animal => {
         const matchesCategory = activeCategory === 'Todos' || animal.species === activeCategory;
         const matchesStatus = activeStatus === 'Todos' || 
+          (activeStatus === 'AdopcionConjunta' && animal.isJointAdoption) ||
           animal.status === activeStatus || 
           (activeStatus === 'Reservado' && animal.status === 'Reservada') ||
           (animal.secondaryStatuses && animal.secondaryStatuses.includes(activeStatus as any));
@@ -133,6 +135,7 @@ export const Home: React.FC = () => {
   const statusCategories = [
     { id: 'Todos', label: 'Todos los estados', icon: LayoutGrid },
     { id: 'En Adopción', label: 'En adopción', icon: HomeIcon },
+    { id: 'AdopcionConjunta', label: 'Adopción conjunta 🐾', icon: Users },
     { id: 'Busca acogida urgente', label: 'Busca acogida urgente', icon: AlertCircle },
     { id: 'Pronto en adopción', label: 'Pronto en adopción', icon: Clock },
     { id: 'En residencia', label: 'En residencia', icon: Building2 },
@@ -205,14 +208,17 @@ export const Home: React.FC = () => {
         <div className="sticky top-[64px] md:top-20 z-40 bg-white/95 dark:bg-stone-900/95 backdrop-blur-md p-3 md:p-4 rounded-2xl border border-stone-200 dark:border-stone-800 shadow-lg mb-8 flex flex-col gap-3">
           
           {/* Top Row: Categories */}
-          <div className="flex overflow-x-auto pb-1 -mx-3 px-3 md:mx-0 md:px-0 scrollbar-hide gap-2 w-auto">
+          <div className="flex overflow-x-auto pb-1 -mx-3 px-3 md:mx-0 md:px-0 scrollbar-hide gap-2 w-auto items-center">
                {categories.map((cat) => {
                 const Icon = cat.icon;
-                const isSelected = activeCategory === cat.id;
+                const isSelected = activeCategory === cat.id && activeStatus !== 'AdopcionConjunta';
                 return (
                   <button
                     key={cat.id}
-                    onClick={() => setActiveCategory(cat.id)}
+                    onClick={() => {
+                      setActiveCategory(cat.id);
+                      if (activeStatus === 'AdopcionConjunta') setActiveStatus('Todos');
+                    }}
                     className={`
                       flex-shrink-0 flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 border
                       ${isSelected 
@@ -225,6 +231,28 @@ export const Home: React.FC = () => {
                   </button>
                 );
               })}
+
+              <button
+                onClick={() => {
+                  if (activeStatus === 'AdopcionConjunta') {
+                    setActiveStatus('Todos');
+                  } else {
+                    setActiveStatus('AdopcionConjunta');
+                  }
+                }}
+                className={`
+                  flex-shrink-0 flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-bold transition-all duration-200 border
+                  ${activeStatus === 'AdopcionConjunta'
+                    ? 'bg-gradient-to-r from-rose-500 to-pink-600 text-white border-transparent shadow-md ring-2 ring-rose-300 dark:ring-rose-900'
+                    : 'bg-rose-50/70 dark:bg-rose-950/30 text-rose-700 dark:text-rose-300 border-rose-200/80 dark:border-rose-900/50 hover:border-rose-300'}
+                `}
+              >
+                <Heart size={13} className={activeStatus === 'AdopcionConjunta' ? 'fill-white' : 'fill-rose-500 text-rose-500'} />
+                <span>Adopción Conjunta</span>
+                <span className="text-[10px] bg-rose-200/80 dark:bg-rose-900/60 text-rose-800 dark:text-rose-200 px-1.5 py-0.5 rounded-full font-semibold">
+                  Dúos
+                </span>
+              </button>
           </div>
 
           {/* Bottom Row: Filters & View Toggle */}
@@ -342,14 +370,38 @@ export const Home: React.FC = () => {
               ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' 
               : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'
           }`}>
-            {filteredAnimals.map(animal => (
-              <AnimalCard 
-                key={animal.id} 
-                animal={animal} 
-                compact={viewMode === 'compact'} 
-                onEdit={handleEditClick}
-              />
-            ))}
+            {(() => {
+              const renderedBondedIds = new Set<string>();
+              return filteredAnimals.map(animal => {
+                if (renderedBondedIds.has(animal.id)) {
+                  return null;
+                }
+
+                if (animal.isJointAdoption && animal.bondedWithId) {
+                  const partner = animals.find(a => a.id === animal.bondedWithId);
+                  if (partner) {
+                    renderedBondedIds.add(partner.id);
+                    return (
+                      <JointAnimalCard 
+                        key={`joint-${animal.id}-${partner.id}`} 
+                        primaryAnimal={animal} 
+                        partnerAnimal={partner} 
+                        compact={viewMode === 'compact'} 
+                      />
+                    );
+                  }
+                }
+
+                return (
+                  <AnimalCard 
+                    key={animal.id} 
+                    animal={animal} 
+                    compact={viewMode === 'compact'} 
+                    onEdit={handleEditClick}
+                  />
+                );
+              });
+            })()}
           </div>
         ) : (
           <div className="text-center py-16 bg-stone-50 dark:bg-stone-900/50 rounded-3xl border border-stone-100 dark:border-stone-800 border-dashed">

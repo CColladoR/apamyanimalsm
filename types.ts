@@ -27,6 +27,8 @@ export interface Animal {
   secondaryStatuses?: AnimalStatus[];
   medicalStatus?: MedicalStatus; // Optional, mainly for cats
   updates?: { date: string; content: string }[];
+  bondedWithId?: string; // ID del compañero inseparable
+  isJointAdoption?: boolean; // Marca si es adopción conjunta obligatoria
 }
 
 export interface TeamMember {

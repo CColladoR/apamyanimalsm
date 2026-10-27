@@ -7,6 +7,10 @@ export const AnimalDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { animals } = useAnimals();
   const animal = useMemo(() => animals.find(a => a.id === id), [id, animals]);
+  const partnerAnimal = useMemo(() => {
+    if (!animal?.bondedWithId) return undefined;
+    return animals.find(a => a.id === animal.bondedWithId);
+  }, [animal, animals]);
 
   if (!animal) {
     return (
@@ -59,10 +63,50 @@ export const AnimalDetail: React.FC = () => {
 
           {/* Content Side */}
           <div className="p-6 md:p-12 flex flex-col">
-            <div className="mb-8">
+            <div className="mb-6">
               <h1 className="text-3xl md:text-5xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-2">{animal.name}</h1>
-              <p className="text-base md:text-lg text-stone-50 dark:text-stone-400">{animal.breed}</p>
+              <p className="text-base md:text-lg text-stone-500 dark:text-stone-400">{animal.breed}</p>
             </div>
+
+            {/* Joint Adoption Notice Banner */}
+            {partnerAnimal && animal.isJointAdoption && (
+              <div className="mb-8 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-rose-50 via-pink-50 to-amber-50 dark:from-stone-850 dark:via-stone-800 dark:to-stone-850 border-2 border-rose-200 dark:border-rose-900/60 shadow-sm">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-500 text-white font-bold text-xs shadow-xs">
+                    <Heart size={13} className="fill-white animate-pulse" />
+                    ADOPCIÓN CONJUNTA OBLIGATORIA
+                  </span>
+                  <span className="text-xs font-bold text-rose-700 dark:text-rose-300">
+                    Inseparables 🐾
+                  </span>
+                </div>
+                
+                <div className="flex items-center gap-3.5 bg-white/90 dark:bg-stone-800/90 p-3 rounded-xl border border-rose-200/70 dark:border-rose-900/40">
+                  <img 
+                    src={partnerAnimal.imageUrl} 
+                    alt={partnerAnimal.name} 
+                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl object-cover border-2 border-rose-200 dark:border-rose-800 shadow-xs flex-shrink-0"
+                  />
+                  <div className="min-w-0 flex-grow">
+                    <p className="text-xs text-stone-500 dark:text-stone-400 font-semibold">
+                      Solo se entrega en adopción junto a su hermanito/a:
+                    </p>
+                    <h4 className="text-base sm:text-lg font-bold text-stone-800 dark:text-stone-100 truncate">
+                      {partnerAnimal.name} ({partnerAnimal.age})
+                    </h4>
+                    <p className="text-[11px] sm:text-xs text-rose-700 dark:text-rose-300 line-clamp-1 mt-0.5">
+                      {partnerAnimal.breed} • Estado: {partnerAnimal.status}
+                    </p>
+                  </div>
+                  <Link 
+                    to={`/animal/${partnerAnimal.id}`}
+                    className="flex-shrink-0 bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-white text-white dark:text-stone-900 px-3.5 py-2 rounded-xl text-xs font-bold transition-all shadow-xs"
+                  >
+                    Ver a {partnerAnimal.name}
+                  </Link>
+                </div>
+              </div>
+            )}
 
             <div className="grid grid-cols-2 gap-3 md:gap-4 mb-8">
               <div className="flex items-center p-3 md:p-4 bg-stone-50 dark:bg-stone-800 rounded-2xl">
@@ -177,10 +221,16 @@ export const AnimalDetail: React.FC = () => {
               <div className="mt-auto flex flex-col sm:flex-row gap-3">
                 <Link 
                   to="/adopta" 
-                  className="w-full bg-primary hover:bg-teal-600 text-white text-center py-4 rounded-2xl font-bold text-base md:text-lg transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2"
+                  className={`w-full text-white text-center py-4 rounded-2xl font-bold text-base md:text-lg transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2 ${
+                    partnerAnimal && animal.isJointAdoption
+                      ? 'bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 shadow-rose-500/25'
+                      : 'bg-primary hover:bg-teal-600'
+                  }`}
                 >
                   <Home size={20} />
-                  Adoptar
+                  {partnerAnimal && animal.isJointAdoption
+                    ? `Adoptar a ${animal.name} y ${partnerAnimal.name}`
+                    : 'Adoptar'}
                 </Link>
                 <Link 
                   to="/donar"

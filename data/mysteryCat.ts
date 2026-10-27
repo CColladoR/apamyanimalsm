@@ -11,12 +11,13 @@ export const createMysteryCatImage = (name: string, note = 'Próximamente en ado
   const isBlack = name.toLowerCase().includes('negra') || name.toLowerCase().includes('negro') || name.toLowerCase().includes('ariel');
   const isBebita1 = name.toLowerCase().includes('bebita 1') || name.toLowerCase().includes('bebé 1');
   const isBebita2 = name.toLowerCase().includes('bebita 2') || name.toLowerCase().includes('bebé 2');
+  const isRatona = name.toLowerCase().includes('ratona');
 
-  const accentColor = isNikki ? '#e0a96d' : isMariah ? '#c27845' : isTom ? '#d97706' : isCheddar ? '#f59e0b' : isBrava ? '#e11d48' : isAlioli ? '#ca8a04' : isBlack ? '#475569' : isWhite ? '#0284c7' : isBebita1 ? '#ec4899' : isBebita2 ? '#a855f7' : '#d49b6a';
-  const highlightColor = isNikki ? '#fef08a' : isMariah ? '#fcd34d' : isTom ? '#fde047' : isCheddar ? '#fef08a' : isBrava ? '#fecdd3' : isAlioli ? '#fef9c3' : isBlack ? '#94a3b8' : isWhite ? '#bae6fd' : isBebita1 ? '#fbcfe8' : isBebita2 ? '#e9d5ff' : '#fed7aa';
-  const softBg = isNikki ? '#fcf9f5' : isMariah ? '#faf5f0' : isBrava ? '#fff1f2' : (isWhite || isBlack) ? '#f8fafc' : isBebita1 ? '#fff1f2' : isBebita2 ? '#faf5ff' : '#faf6f0';
-  const midBg = isNikki ? '#f4ece2' : isMariah ? '#f3e8dc' : isBrava ? '#ffe4e6' : (isWhite || isBlack) ? '#f1f5f9' : isBebita1 ? '#fce7f3' : isBebita2 ? '#f3e8ff' : '#f2e8dc';
-  const darkBg = isNikki ? '#ece0d1' : isMariah ? '#e9ded1' : isBrava ? '#fecdd3' : (isWhite || isBlack) ? '#e2e8f0' : isBebita1 ? '#fbcfe8' : isBebita2 ? '#e9d5ff' : '#eae0d2';
+  const accentColor = isRatona ? '#ec4899' : isNikki ? '#e0a96d' : isMariah ? '#c27845' : isTom ? '#d97706' : isCheddar ? '#f59e0b' : isBrava ? '#e11d48' : isAlioli ? '#ca8a04' : isBlack ? '#475569' : isWhite ? '#0284c7' : isBebita1 ? '#ec4899' : isBebita2 ? '#a855f7' : '#d49b6a';
+  const highlightColor = isRatona ? '#fbcfe8' : isNikki ? '#fef08a' : isMariah ? '#fcd34d' : isTom ? '#fde047' : isCheddar ? '#fef08a' : isBrava ? '#fecdd3' : isAlioli ? '#fef9c3' : isBlack ? '#94a3b8' : isWhite ? '#bae6fd' : isBebita1 ? '#fbcfe8' : isBebita2 ? '#e9d5ff' : '#fed7aa';
+  const softBg = isRatona ? '#fff1f2' : isNikki ? '#fcf9f5' : isMariah ? '#faf5f0' : isBrava ? '#fff1f2' : (isWhite || isBlack) ? '#f8fafc' : isBebita1 ? '#fff1f2' : isBebita2 ? '#faf5ff' : '#faf6f0';
+  const midBg = isRatona ? '#fce7f3' : isNikki ? '#f4ece2' : isMariah ? '#f3e8dc' : isBrava ? '#ffe4e6' : (isWhite || isBlack) ? '#f1f5f9' : isBebita1 ? '#fce7f3' : isBebita2 ? '#f3e8ff' : '#f2e8dc';
+  const darkBg = isRatona ? '#fbcfe8' : isNikki ? '#ece0d1' : isMariah ? '#e9ded1' : isBrava ? '#fecdd3' : (isWhite || isBlack) ? '#e2e8f0' : isBebita1 ? '#fbcfe8' : isBebita2 ? '#e9d5ff' : '#eae0d2';
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
   <defs>
@@ -183,4 +184,5 @@ export const BAMBI_MYSTERY_IMAGE = createMysteryCatImage('Bambi', 'Próximamente
 export const BEBITA_BLANCA_MYSTERY_IMAGE = AURORA_MYSTERY_IMAGE;
 export const BEBITA_NEGRA_MYSTERY_IMAGE = ARIEL_MYSTERY_IMAGE;
 export const BEBE_BLANCO_MYSTERY_IMAGE = BAMBI_MYSTERY_IMAGE;
+export const RATONA_MYSTERY_IMAGE = createMysteryCatImage('Ratona', 'Próximamente');
 export const MYSTERY_CAT_IMAGE = NIKKI_MYSTERY_IMAGE;
