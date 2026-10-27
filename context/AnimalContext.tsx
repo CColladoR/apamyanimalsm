@@ -226,8 +226,8 @@ export const AnimalProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         // Migration: Purge removed animal Tofu (id: 23) so it never appears even from cache
         data = data.filter((a: Animal) => a.id !== '23');
 
-        // Migration: Ensure Nikki (id: 22), Marimar (id: 24), Tom Holland (id: 25), Mariah Carey (id: 26), Camada Tres Salsas (id: 27, 28, 29), Camada Blanca (id: 30, 31, 32), Nuevas Bebitas (id: 33, 34), Nuevos Hermanitos (id: 35, 36, 37) and Ratona (id: 38) have updated image and details
-        ['22', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38'].forEach(id => {
+        // Migration: Ensure Sidra (5), Cava (6), Selva (16), Irati (17), Ona (18), Brisa (19), Nikki (22), Marimar (24), Tom Holland (25), Mariah Carey (26), Camada Tres Salsas (27, 28, 29), Camada Blanca (30, 31, 32), Nuevas Bebitas (33, 34), Nuevos Hermanitos (35, 36, 37) and Ratona (38) have updated image and details
+        ['5', '6', '16', '17', '18', '19', '22', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38'].forEach(id => {
           const idx = data.findIndex((a: Animal) => a.id === id);
           const source = INITIAL_ANIMALS.find(a => a.id === id);
           if (idx !== -1 && source) {
@@ -235,6 +235,8 @@ export const AnimalProvider: React.FC<{ children: React.ReactNode }> = ({ childr
               ...data[idx],
               name: source.name,
               imageUrl: source.imageUrl,
+              imageScale: source.imageScale,
+              imagePosition: source.imagePosition,
               description: source.description,
               story: source.story,
               status: source.status,

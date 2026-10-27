@@ -16,26 +16,39 @@ export const JointAnimalCard: React.FC<JointAnimalCardProps> = ({
 }) => {
   const [activePhoto, setActivePhoto] = useState<'both' | 'primary' | 'partner'>('both');
 
-  const statusLabel = primaryAnimal.status === 'Reservada' || primaryAnimal.status === 'Reservado'
-    ? 'Reservados'
-    : primaryAnimal.status === 'Pronto en adopción'
-      ? 'Pronto en adopción'
-      : 'En Adopción';
+  const statusLabel = (primaryAnimal.status === 'Adoptado' || primaryAnimal.status === 'Adoptada')
+    ? 'Adoptados'
+    : primaryAnimal.status === 'Reservada' || primaryAnimal.status === 'Reservado'
+      ? 'Reservados'
+      : primaryAnimal.status === 'Pronto en adopción'
+        ? 'Pronto en adopción'
+        : 'En Adopción';
 
   const isReserved = statusLabel === 'Reservados';
+  const isAdopted = statusLabel === 'Adoptados';
 
   // Specific highlighted reason for their bond
   const isDeafDuo = (primaryAnimal.breed?.toLowerCase().includes('sordo') || primaryAnimal.story?.toLowerCase().includes('sordo')) &&
                     (partnerAnimal.breed?.toLowerCase().includes('sordo') || partnerAnimal.story?.toLowerCase().includes('sordo'));
 
+  const isAuroraAriel = (primaryAnimal.name === 'Aurora' && partnerAnimal.name === 'Ariel') ||
+                        (primaryAnimal.name === 'Ariel' && partnerAnimal.name === 'Aurora');
+
+  const isCheddarBambi = (primaryAnimal.name === 'Cheddar' && partnerAnimal.name === 'Bambi') ||
+                         (primaryAnimal.name === 'Bambi' && partnerAnimal.name === 'Cheddar');
+
   if (compact) {
     return (
       <div className="col-span-2 sm:col-span-2 lg:col-span-2 bg-gradient-to-br from-rose-50/70 via-white to-amber-50/50 dark:from-stone-900 dark:via-stone-900 dark:to-stone-850 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border-2 border-rose-200/80 dark:border-rose-900/40 group flex flex-col relative">
         {/* Ribbon Header */}
-        <div className="bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 text-white px-3 py-1.5 flex items-center justify-between text-[11px] font-bold shadow-sm">
+        <div className={`${
+          isAdopted
+            ? 'bg-gradient-to-r from-emerald-600 via-teal-600 to-rose-600'
+            : 'bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500'
+        } text-white px-3 py-1.5 flex items-center justify-between text-[11px] font-bold shadow-sm`}>
           <div className="flex items-center gap-1.5">
-            <Users size={13} className="animate-pulse" />
-            <span>ADOPCIÓN CONJUNTA OBLIGATORIA</span>
+            <Users size={13} className={isAdopted ? '' : 'animate-pulse'} />
+            <span>{isAdopted ? '¡ADOPCIÓN CONJUNTA CONSEGUIDA!' : 'ADOPCIÓN CONJUNTA OBLIGATORIA'}</span>
           </div>
           <span className="bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full text-[10px]">
             {statusLabel}
@@ -85,7 +98,7 @@ export const JointAnimalCard: React.FC<JointAnimalCardProps> = ({
                 <Sparkles size={14} className="text-amber-500" />
               </h3>
               <p className="text-[11px] text-stone-500 dark:text-stone-400">
-                {primaryAnimal.age} • Hermanitos inseparables
+                {isCheddarBambi ? 'No son hermanos • Total compatibilidad en convivencia' : `${primaryAnimal.age} • Hermanitos inseparables`}
               </p>
             </div>
             <span className="text-xs bg-rose-100 dark:bg-rose-900/40 text-rose-700 dark:text-rose-300 font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
@@ -100,9 +113,17 @@ export const JointAnimalCard: React.FC<JointAnimalCardProps> = ({
               <p>
                 👂 <strong>Ambos son totalmente sordos:</strong> se entienden con la mirada y se apoyan a diario. ¡Solo se adoptan juntos!
               </p>
+            ) : isAuroraAriel ? (
+              <p>
+                💞 <strong>Vínculo inseparable:</strong> han crecido juntas, Aurora es sorda y se necesitan mutuamente para su bienestar y adaptación.
+              </p>
+            ) : isCheddarBambi ? (
+              <p>
+                💞 <strong>Total compatibilidad:</strong> no son hermanos pero por sus semejanzas en el carácter y total compatibilidad en la convivencia se marchan adoptados juntos.
+              </p>
             ) : (
               <p>
-                💞 <strong>Vínculo inseparable:</strong> han crecido juntos y se necesitan mutuamente para su bienestar y sociabilización.
+                💞 <strong>Vínculo inseparable:</strong> han crecido juntos y se necesitan mutuamente para su bienestar y adaptación.
               </p>
             )}
           </div>
@@ -133,9 +154,13 @@ export const JointAnimalCard: React.FC<JointAnimalCardProps> = ({
       {/* Visual Section: Split Photos or Tabs */}
       <div className="md:w-1/2 relative min-h-[300px] md:min-h-[380px] bg-stone-100 dark:bg-stone-800 overflow-hidden">
         {/* Banner Top */}
-        <div className="absolute top-3 left-3 z-20 bg-gradient-to-r from-rose-500 to-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-md flex items-center gap-1.5">
+        <div className={`absolute top-3 left-3 z-20 ${
+          isAdopted
+            ? 'bg-gradient-to-r from-emerald-600 via-teal-600 to-rose-600'
+            : 'bg-gradient-to-r from-rose-500 to-amber-500'
+        } text-white px-3 py-1 rounded-full text-xs font-bold shadow-md flex items-center gap-1.5`}>
           <Heart size={13} className="fill-white" />
-          <span>ADOPCIÓN CONJUNTA OBLIGATORIA</span>
+          <span>{isAdopted ? '¡ADOPCIÓN CONJUNTA CONSEGUIDA! 🎉' : 'ADOPCIÓN CONJUNTA OBLIGATORIA'}</span>
         </div>
 
         <div className="absolute top-3 right-3 z-20 bg-white/90 dark:bg-stone-900/90 backdrop-blur-sm text-stone-800 dark:text-stone-200 px-3 py-1 rounded-full text-xs font-bold shadow-md">
@@ -240,7 +265,7 @@ export const JointAnimalCard: React.FC<JointAnimalCardProps> = ({
           </h3>
 
           <p className="text-xs md:text-sm text-stone-500 dark:text-stone-400 mb-4">
-            {primaryAnimal.breed} • {primaryAnimal.age} • Ambos {primaryAnimal.gender}s
+            {isCheddarBambi ? 'No son hermanos de sangre • Total compatibilidad en convivencia' : `${primaryAnimal.breed} • ${primaryAnimal.age} • Ambos ${primaryAnimal.gender}s`}
           </p>
 
           {/* Explanation Callout */}
@@ -252,6 +277,10 @@ export const JointAnimalCard: React.FC<JointAnimalCardProps> = ({
             <p className="text-xs md:text-sm text-stone-700 dark:text-stone-300 leading-relaxed">
               {isDeafDuo
                 ? `${primaryAnimal.name} y ${partnerAnimal.name} son totalmente sordos. No perciben los avisos ni límites sonoros de otros gatos, pero han desarrollado un código propio de gestos, miradas y caricias. Separarlos les generaría desorientación y miedo; juntos son seguros, juguetones y un equipazo inseparable.`
+                : isAuroraAriel
+                ? `Aurora y Ariel comparten un vínculo inseparable: han crecido juntas, Aurora es sorda y se necesitan mutuamente para su bienestar y adaptación. Se buscan muchísimo y se apoyan en el día a día.`
+                : isCheddarBambi
+                ? `Cheddar y Bambi no son hermanos pero por sus semejanzas en el carácter y total compatibilidad en la convivencia se marchan adoptados juntos. En su casa de acogida crearon una unión perfecta e inseparable.`
                 : `${primaryAnimal.name} y ${partnerAnimal.name} comparten un vínculo inquebrantable desde su rescate. Crecen, duermen y juegan juntos, dándose la seguridad y tranquilidad que necesitan para ser gatos felices.`}
             </p>
           </div>

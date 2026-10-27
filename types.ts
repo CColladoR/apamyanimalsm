@@ -21,6 +21,8 @@ export interface Animal {
   gender: 'Macho' | 'Hembra';
   size: string;
   imageUrl: string;
+  imageScale?: number;
+  imagePosition?: string;
   description: string;
   story: string;
   status: AnimalStatus;

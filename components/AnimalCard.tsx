@@ -31,11 +31,18 @@ export const AnimalCard: React.FC<AnimalCardProps> = ({ animal, compact = false,
             </button>
         )}
         <div className="relative h-40 sm:h-48 overflow-hidden flex-shrink-0">
-          <img 
-            src={animal.imageUrl} 
-            alt={animal.name} 
-            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-          />
+          <div className="w-full h-full transform group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+            <img 
+              src={animal.imageUrl} 
+              alt={animal.name} 
+              className="w-full h-full object-cover"
+              style={{
+                objectPosition: animal.imagePosition || 'center',
+                transform: animal.imageScale ? `scale(${animal.imageScale})` : undefined,
+                transformOrigin: animal.imagePosition || 'center',
+              }}
+            />
+          </div>
           <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded-full text-[9px] font-bold text-stone-700 tracking-wide shadow-sm">
             {animal.status}
           </div>
@@ -79,11 +86,18 @@ export const AnimalCard: React.FC<AnimalCardProps> = ({ animal, compact = false,
             </button>
       )}
       <div className="relative h-64 overflow-hidden flex-shrink-0">
-        <img 
-          src={animal.imageUrl} 
-          alt={animal.name} 
-          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-        />
+        <div className="w-full h-full transform group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+          <img 
+            src={animal.imageUrl} 
+            alt={animal.name} 
+            className="w-full h-full object-cover"
+            style={{
+              objectPosition: animal.imagePosition || 'center',
+              transform: animal.imageScale ? `scale(${animal.imageScale})` : undefined,
+              transformOrigin: animal.imagePosition || 'center',
+            }}
+          />
+        </div>
         <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-stone-700 tracking-wide shadow-sm">
           {animal.status}
         </div>

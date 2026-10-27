@@ -75,13 +75,20 @@ export const Home: React.FC = () => {
   const adoptedCatsCount = useMemo(() => adoptedAnimals.filter(a => a.species === 'Gato').length, [adoptedAnimals]);
 
   const filteredAdoptedAnimals = useMemo(() => {
-    return adoptedAnimals.filter(animal => {
-      const matchesFilter = adoptedFilter === 'Todos' || animal.species === adoptedFilter;
-      const matchesSearch = adoptedSearchQuery.trim() === '' || 
-        animal.name.toLowerCase().includes(adoptedSearchQuery.toLowerCase()) ||
-        (animal.breed && animal.breed.toLowerCase().includes(adoptedSearchQuery.toLowerCase()));
-      return matchesFilter && matchesSearch;
-    });
+    return adoptedAnimals
+      .filter(animal => {
+        const matchesFilter = adoptedFilter === 'Todos' || animal.species === adoptedFilter;
+        const matchesSearch = adoptedSearchQuery.trim() === '' || 
+          animal.name.toLowerCase().includes(adoptedSearchQuery.toLowerCase()) ||
+          (animal.breed && animal.breed.toLowerCase().includes(adoptedSearchQuery.toLowerCase()));
+        return matchesFilter && matchesSearch;
+      })
+      .sort((a, b) => {
+        // Keep bonded pairs together
+        if (a.bondedWithId === b.id) return -1;
+        if (b.bondedWithId === a.id) return 1;
+        return 0;
+      });
   }, [adoptedAnimals, adoptedFilter, adoptedSearchQuery]);
 
   // Rescue stats by year interactive modal state
@@ -123,7 +130,32 @@ export const Home: React.FC = () => {
           (animal.secondaryStatuses && animal.secondaryStatuses.includes(activeStatus as any));
         return matchesCategory && matchesStatus;
       })
-      .sort((a, b) => getPriority(a.status) - getPriority(b.status));
+      .sort((a, b) => {
+        // High priority: Joint adoptions come first!
+        const aIsJoint = Boolean(a.isJointAdoption);
+        const bIsJoint = Boolean(b.isJointAdoption);
+        const aIsReserved = a.status === 'Reservado' || a.status === 'Reservada';
+        const bIsReserved = b.status === 'Reservado' || b.status === 'Reservada';
+
+        // 1. Available joint adoptions have absolute top priority
+        if (aIsJoint && !aIsReserved && (!bIsJoint || bIsReserved)) return -1;
+        if (bIsJoint && !bIsReserved && (!aIsJoint || aIsReserved)) return 1;
+
+        // 2. Status priority
+        const priorityDiff = getPriority(a.status) - getPriority(b.status);
+        if (priorityDiff !== 0) return priorityDiff;
+
+        // 3. Among reserved animals, joint adoptions still go first
+        if (aIsReserved && bIsReserved && aIsJoint !== bIsJoint) {
+          return aIsJoint ? -1 : 1;
+        }
+
+        // 4. Group bonded pairs together
+        if (a.bondedWithId === b.id) return -1;
+        if (b.bondedWithId === a.id) return 1;
+
+        return 0;
+      });
   }, [activeCategory, activeStatus, animals]);
 
   const categories = [
@@ -499,9 +531,22 @@ export const Home: React.FC = () => {
 
                     {/* Top status badges */}
                     <div className="absolute top-3 inset-x-3 flex justify-between items-center z-20 pointer-events-none">
-                      <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-emerald-600 text-white text-[10px] font-bold rounded-full shadow-md">
-                        <Sparkles size={11} className="text-amber-200 fill-amber-200" />
-                        <span>Adoptado</span>
+                      <span className={`inline-flex items-center gap-1 px-2.5 py-1 text-white text-[10px] font-bold rounded-full shadow-md ${
+                        animal.isJointAdoption
+                          ? 'bg-gradient-to-r from-emerald-600 to-rose-600 ring-1 ring-white/30'
+                          : 'bg-emerald-600'
+                      }`}>
+                        {animal.isJointAdoption ? (
+                          <>
+                            <Heart size={10} className="fill-white" />
+                            <span>Adopción Conjunta</span>
+                          </>
+                        ) : (
+                          <>
+                            <Sparkles size={11} className="text-amber-200 fill-amber-200" />
+                            <span>Adoptado</span>
+                          </>
+                        )}
                       </span>
                       <span className="px-2 py-0.5 bg-white/95 dark:bg-stone-900/90 text-stone-700 dark:text-stone-200 text-[10px] font-semibold rounded-full shadow-sm border border-stone-200/60 dark:border-stone-700/60 backdrop-blur-xs">
                         {animal.species === 'Perro' ? '🐕' : '🐈'}
@@ -518,9 +563,18 @@ export const Home: React.FC = () => {
                           Ver ficha →
                         </span>
                       </div>
-                      <p className="text-[11px] text-stone-500 dark:text-stone-400 truncate mt-0.5">
-                        {animal.breed || (animal.species === 'Perro' ? 'Mestizo' : 'Común')} {animal.age ? `• ${animal.age}` : ''}
-                      </p>
+                      {animal.isJointAdoption && animal.bondedWithId ? (
+                        <p className="text-[11px] text-rose-600 dark:text-rose-400 font-bold truncate mt-0.5 flex items-center gap-1">
+                          <Heart size={11} className="fill-rose-500 text-rose-500 flex-shrink-0" />
+                          <span className="truncate">
+                            {animal.gender === 'Macho' ? 'Adoptado' : 'Adoptada'} junto a {animals.find(a => a.id === animal.bondedWithId)?.name || (animal.gender === 'Macho' ? 'su compañero' : 'su compañera')}
+                          </span>
+                        </p>
+                      ) : (
+                        <p className="text-[11px] text-stone-500 dark:text-stone-400 truncate mt-0.5">
+                          {animal.breed || (animal.species === 'Perro' ? 'Mestizo' : 'Común')} {animal.age ? `• ${animal.age}` : ''}
+                        </p>
+                      )}
                     </div>
                   </Link>
                 ))}
@@ -657,8 +711,18 @@ export const Home: React.FC = () => {
                             {/* Discreet elegant confetti overlay */}
                             <AdoptedConfetti />
                             <div className="absolute top-2 left-2 z-20 pointer-events-none">
-                              <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-600 text-white text-[9px] font-bold rounded-full shadow-xs">
-                                <Sparkles size={8} className="text-amber-200 fill-amber-200" /> Adoptado
+                              <span className={`inline-flex items-center gap-1 px-2 py-0.5 text-white text-[9px] font-bold rounded-full shadow-xs ${
+                                animal.isJointAdoption ? 'bg-gradient-to-r from-emerald-600 to-rose-600' : 'bg-emerald-600'
+                              }`}>
+                                {animal.isJointAdoption ? (
+                                  <>
+                                    <Heart size={8} className="fill-white" /> Adopción Conjunta
+                                  </>
+                                ) : (
+                                  <>
+                                    <Sparkles size={8} className="text-amber-200 fill-amber-200" /> Adoptado
+                                  </>
+                                )}
                               </span>
                             </div>
                             <div className="absolute top-2 right-2 z-20 pointer-events-none">
@@ -671,9 +735,18 @@ export const Home: React.FC = () => {
                             <h4 className="font-bold text-stone-800 dark:text-stone-100 text-sm group-hover:text-primary transition-colors truncate">
                               {animal.name}
                             </h4>
-                            <p className="text-[11px] text-stone-500 dark:text-stone-400 truncate mb-2">
-                              {animal.breed || animal.species}
-                            </p>
+                            {animal.isJointAdoption && animal.bondedWithId ? (
+                              <p className="text-[11px] text-rose-600 dark:text-rose-400 font-bold truncate mb-2 flex items-center gap-1">
+                                <Heart size={10} className="fill-rose-500 text-rose-500 flex-shrink-0" />
+                                <span className="truncate">
+                                  {animal.gender === 'Macho' ? 'Adoptado' : 'Adoptada'} junto a {animals.find(a => a.id === animal.bondedWithId)?.name || (animal.gender === 'Macho' ? 'su compañero' : 'su compañera')}
+                                </span>
+                              </p>
+                            ) : (
+                              <p className="text-[11px] text-stone-500 dark:text-stone-400 truncate mb-2">
+                                {animal.breed || animal.species}
+                              </p>
+                            )}
                             <span className="mt-auto text-[10px] text-primary dark:text-teal-400 font-semibold group-hover:underline">
                               Ver ficha completa →
                             </span>
