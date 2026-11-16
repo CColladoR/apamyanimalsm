@@ -1,5 +1,5 @@
 import { Animal, TeamMember, DonationMethod } from './types';
-import { RATONA_MYSTERY_IMAGE } from './data/mysteryCat';
+import { RATONA_MYSTERY_IMAGE, ROMA_MYSTERY_IMAGE, REMO_MYSTERY_IMAGE } from './data/mysteryCat';
 
 export const ANIMALS: Animal[] = [
   {
@@ -160,7 +160,7 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/AnaMena.jpg',
     description: 'Actualmente, las chicas me han trasladado a una casa de acogida estable en Madrid, en la que también tengo otros compañeros gatunos que me están ayudando en todo el proceso de adaptación.\n\n¡La bebé ya ha finalizado todo el protocolo veterinario y está lista! Busco un hogar donde me quieran mucho.',
     story: 'Aparecí una mañana en una colonia controlada en un pueblo de Toledo. Las chicas que alimentaban a todos los compis gatunos que estaban allí me vieron enseguida y supieron que me habían dejado allí, abandonada, a -3º toda la noche.\n\nMe rescataron de inmediato y ahora estoy segura, caliente y en proceso de recuperación. ¡La bebé ha finalizado todo el protocolo veterinario y está lista!',
-    status: 'Adoptado',
+    status: 'Adoptada',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -200,7 +200,7 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     imageUrl: 'https://raw.githubusercontent.com/CColladoR/apa/refs/heads/main/Coral.jpg',
     description: '¡Coral ha encontrado su hogar definitivo! Después de una larga espera, esta gata dulce y cariñosa ya disfruta de su nueva familia y de muchos ronroneos en su sofá definitivo. 💓',
     story: 'Septiembre de 2020, cuando Apa Myanimalsm se estaba formando, sacamos a la camada de "Las Piedras Preciosas" del patio de un instituto de La Sagra. Las primeras acogidas que confiaron en nosotras aceptaron cuidar a las 5 hermanas hasta salir en adopción, de hecho, ahí fue el momento donde empezamos a hacer equipo y cadena solidaria felina 🥹 Jade y Coral fueron adoptadas juntas a las pocas semanas y fue una gran celebración, ya que era de las primeras adopciones conjuntas que conseguíamos ✨\n\nEn 2023, tres años después de su adopción, la que era su familia, alegando problemas médicos y familiares, recurre a nosotras para devolverlas😡 Llegando Jade y Coral en shock a su nueva acogida, donde estuvieron más de dos meses escondidas debajo de la cama porque no se fiaban de nadie y con mucha pena, puesto que sacar a dos animales del que ha sido su hogar toda su vida también les duele y afecta. Ambas pobres estuvieron con signos de estrés y estereotipias el primer año de vuelta a Apa Myanimalsm 😭\n\nDurante estos 3 años, hemos trabajado muy despacito la adaptación y confianza de ambas. Pero, lamentablemente, la realidad es que ya es difícil una adopción conjunta de dos cachorros, imaginaos la de dos adultas...💔\n\nDespués de mucho valorarlo y ver cómo ellas, a día de hoy, no son dependientes la una de la otra, al revés, se relacionan con todo ser: gatos, perros, humanos, llega el momento de separarlas para buscarles en este 2026 su hogar definitivo, el que tanto se merecen.\n\n¡Y el sueño se ha cumplido! Coral ya ha sido adoptada y vive feliz con su nueva familia. Es el final feliz que tanto esperábamos para ella. 💓',
-    status: 'Adoptado',
+    status: 'Adoptada',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -506,9 +506,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     gender: 'Hembra',
     size: 'Cachorro',
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-10-04-15-33-02-19_1c337646f29875672b5a61192b9010f9%7E2.jpg',
-    description: 'Mariah Carey es una hermosa y cariñosa gatita carey de 2 meses rescatada en Ciudad Real. ¡Sanísima y oficialmente en adopción!',
-    story: 'Parece que la suerte y la magia de las gatas careys está de nuestro lado💫\n\nEsta bolita con ojazos viene de un CES (control de colonias felinas) de Ciudad Real. La persona que dió el aviso se encargó de esterilizar a su mamá y los gatos de la zona, pero quedaba esta bebita con un alto potencial para ser sociable y futura gata manta🥹. De modo que, gracias a las adopciones recientes, pudimos hacer hueco y traerla directamente con nosotras ❣️\n\nLa micha ya está más que adaptada a la vida en un hogar. Disfruta muchísimo de la compañía felina, le encanta jugar con otros gatos, dormir hecha un burrito las siestas otoñales y se deja mimar de lo lindo por su acogida ❤️🩹\n\nMariah Carey ha tenido su última revisión hoy, después de finalizar su cuarentena y nos confirman que: ¡¡está saniiiiiisima!! Esto significa que ya está oficialmente en adopción 🎉🎉 (aunque no se irá a su casa definitiva hasta que finalice Halloween...). ¿Te has enamorado? ¡Escríbenos! 💌\n\nSexo: hembra ♀️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: sí, negativo\nVacuna: sí\nChip: sí\n\n⚠️ IMPORTANTE: se dará primerísima prioridad a aquellas familias que opten por la adopción conjunta y, en segundo lugar, las adopciones individuales siempre que en casa haya otro compi felino⚠️\n\nPuedes ayudarnos con sus gastos mediante:\n🎀PayPal: myanimalsm@gmail.com\n🎀Bizum: 04872 (sección donativos de la app)\n🎀Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
-    status: 'En Adopción',
+    description: 'Mariah Carey es una hermosa y cariñosa gatita carey de 2 meses rescatada en Ciudad Real. ¡Felizmente adoptada con su familia definitiva! 💫❤️',
+    story: '¡Final feliz para Mariah Carey! 💫❤️\n\nEsta bolita con ojazos viene de un CES (control de colonias felinas) de Ciudad Real. La persona que dió el aviso se encargó de esterilizar a su mamá y los gatos de la zona, pero quedaba esta bebita con un alto potencial para ser sociable y futura gata manta🥹. De modo que, gracias a las adopciones recientes, pudimos hacer hueco y traerla directamente con nosotras ❣️\n\nLa micha se adaptó de maravilla a la vida en un hogar, disfrutando muchísimo de la compañía y los mimos.\n\n🎉 ¡ADOPTADA!\nMariah Carey ya disfruta de su hogar definitivo de forma individual junto a su maravillosa familia ❤️\n\nSexo: hembra ♀️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: sí, negativo\nVacuna: sí\nChip: sí',
+    status: 'Adoptada',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -525,12 +525,11 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     age: '2 meses',
     gender: 'Macho',
     size: 'Cachorro',
-    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20261002-WA0093%7E3.jpg',
-    description: 'Cheddar y Bambi no son hermanos pero por sus semejanzas en el carácter y total compatibilidad en la convivencia se marchan adoptados juntos. ¡En adopción conjunta!',
-    story: 'Cheddar en adopción conjunta obligatoria con Bambi 🧀🥥🐾\n\nNo son hermanos pero por sus semejanzas en el carácter y total compatibilidad en la convivencia se marchan adoptados juntos ❤️\n\nCheddar (de la camada "Tres salsas") y el pequeño Bambi han compartido casa de acogida y han creado un vínculo absoluto: duermen acurrucados, juegan sin parar y se dan una calma y seguridad inmensas el uno al otro. Por esa afinidad tan especial y su química inmejorable, se entregan en adopción conjunta obligatoria.\n\n🩺 Protocolo veterinario al día:\nCheddar cuenta con todo su protocolo veterinario al día, test FELV/FIV negativo, vacunas y microchip. ¡Listo para llegar a un hogar definitivo junto a su compañero inseparable Bambi! 💌',
-    status: 'En Adopción',
-    bondedWithId: '37',
-    isJointAdoption: true,
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG20261102173459.jpg',
+    imagePosition: '50% 30%',
+    description: 'Cheddar es un gatito naranja alegre, curioso y súper cariñoso de la camada "Tres salsas". ¡Felizmente adoptado con su familia definitiva! 🧀🐾',
+    story: '¡Final feliz para Cheddar! 🧀🐾\n\nCheddar es un precioso bebé atigrado naranja de la camada "Tres salsas". Es un gatito dulce, alegre y juguetón al que le encanta estar con personas, jugar y recibir mimos sin parar.\n\nEs un pequeño muy sociable, sano y cariñoso que ha conquistado a su familia definitiva para toda la vida.\n\n🎉 ¡ADOPTADO!\nCheddar ya disfruta de su nuevo hogar de forma individual, rodeado de amor, juegos y latitas para siempre ❤️\n\n🩺 Protocolo veterinario al día:\nTest FELV/FIV negativo, desparasitación completa, vacunas y microchip.',
+    status: 'Adoptado',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -548,9 +547,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     gender: 'Hembra',
     size: 'Cachorro',
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-10-25-13-07-07-99_1c337646f29875672b5a61192b9010f9.jpg',
-    description: 'Brava es la princesa de la camada "Tres salsas" (2 meses). ¡Reservada y con su protocolo veterinario completo y negativo!',
-    story: 'Brava reservada 🔥\n\nContactaron con nosotras a finales de septiembre porque habían atrop3llado a una mamá gata 💔 y esta había dejado a sus tres retoños viviendo entre escondites y rodeados de peligros 🥹 Los tres bebés estaban bastante desnutridos, con un miedo horrible a las personas y con los ojitos bastante pochos.\n\nLlegamos a tiempo y los tres se reubicaron de inmediato en una de nuestras acogidas aprendiendo a perder el miedo y animándose, cada día a más, a jugar y a vivir tranquilos 😍 Han finalizado su tratamiento y tienen todo su protocolo veterinario al día, con test FELV/FIV negativo. ¡Brava ya está reservada!\n\n💗 Les hemos prometido una vida llena de amor, con muchísimas latitas y churus para que no pasen hambre nunca más, ¡ayúdanos a conseguirlo!\n\nSexo: hembra ♀️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: negativo\nVacunas: sí\nChip: Sí\n\nPuedes ayudarnos con sus gastos mediante:\n🍟PayPal: myanimalsm@gmail.com\n🍟Bizum: 04872 (sección donativos de la app)\n🍟Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
-    status: 'Reservada',
+    description: 'Brava es la princesa de la camada "Tres salsas" (2 meses). ¡Adoptada y feliz en su hogar definitivo!',
+    story: 'Brava adoptada 🔥🐾\n\nContactaron con nosotras a finales de septiembre porque habían atrop3llado a una mamá gata 💔 y esta había dejado a sus tres retoños viviendo entre escondites y rodeados de peligros 🥹 Los tres bebés estaban bastante desnutridos, con un miedo horrible a las personas y con los ojitos bastante pochos.\n\nLlegamos a tiempo y los tres se reubicaron de inmediato en una de nuestras acogidas aprendiendo a perder el miedo y animándose, cada día a más, a jugar y a vivir tranquilos 😍 Han finalizado su tratamiento y tienen todo su protocolo veterinario al día, con test FELV/FIV negativo. ¡Brava ya tiene su final feliz y vive con su maravillosa familia definitiva!\n\n💗 Les prometimos una vida llena de amor, con muchísimas latitas y churus para que no pasen hambre nunca más, ¡y hoy es una realidad!\n\nSexo: hembra ♀️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: negativo\nVacunas: sí\nChip: Sí\n\nPuedes ayudarnos con sus gastos mediante:\n🍟PayPal: myanimalsm@gmail.com\n🍟Bizum: 04872 (sección donativos de la app)\n🍟Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Adoptada',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -568,9 +567,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     gender: 'Macho',
     size: 'Cachorro',
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-10-25-12-54-17-36_1c337646f29875672b5a61192b9010f9.jpg',
-    description: 'Alioli forma parte de la camada "Tres salsas" (2 meses). ¡Reservado y con su protocolo veterinario completo y negativo!',
-    story: 'Alioli reservado 🍟\n\nContactaron con nosotras a finales de septiembre porque habían atrop3llado a una mamá gata 💔 y esta había dejado a sus tres retoños viviendo entre escondites y rodeados de peligros 🥹 Los tres bebés estaban bastante desnutridos, con un miedo horrible a las personas y con los ojitos bastante pochos.\n\nLlegamos a tiempo y los tres se reubicaron de inmediato en una de nuestras acogidas aprendiendo a perder el miedo y animándose, cada día a más, a jugar y a vivir tranquilos 😍 Han finalizado su tratamiento y tienen todo su protocolo veterinario al día, con test FELV/FIV negativo. ¡Alioli ya está reservado!\n\n💗 Les hemos prometido una vida llena de amor, con muchísimas latitas y churus para que no pasen hambre nunca más, ¡ayúdanos a conseguirlo!\n\nSexo: macho ♂️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: negativo\nVacunas: sí\nChip: Sí\n\nPuedes ayudarnos con sus gastos mediante:\n🍟PayPal: myanimalsm@gmail.com\n🍟Bizum: 04872 (sección donativos de la app)\n🍟Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
-    status: 'Reservado',
+    description: 'Alioli forma parte de la camada "Tres salsas" (2 meses). ¡Adoptado y disfrutando de su nueva vida en familia!',
+    story: 'Alioli adoptado 🍟🐾\n\nContactaron con nosotras a finales de septiembre porque habían atrop3llado a una mamá gata 💔 y esta había dejado a sus tres retoños viviendo entre escondites y rodeados de peligros 🥹 Los tres bebés estaban bastante desnutridos, con un miedo horrible a las personas y con los ojitos bastante pochos.\n\nLlegamos a tiempo y los tres se reubicaron de inmediato en una de nuestras acogidas aprendiendo a perder el miedo y animándose, cada día a más, a jugar y a vivir tranquilos 😍 Han finalizado su tratamiento y tienen todo su protocolo veterinario al día, con test FELV/FIV negativo. ¡Alioli ya ha encontrado su hogar definitivo y vive felizmente adoptado!\n\n💗 Les prometimos una vida llena de amor, con muchísimas latitas y churus para que no pasen hambre nunca más, ¡y hoy es una realidad!\n\nSexo: macho ♂️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: negativo\nVacunas: sí\nChip: Sí\n\nPuedes ayudarnos con sus gastos mediante:\n🍟PayPal: myanimalsm@gmail.com\n🍟Bizum: 04872 (sección donativos de la app)\n🍟Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Adoptado',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -587,10 +586,10 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     age: '2 meses',
     gender: 'Macho',
     size: 'Cachorro',
-    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-10-25-12-47-55-14_965bbf4d18d205f782c6b8409c5773a4.jpg',
-    description: 'Daiquiri y Ron están en adopción conjunta. Dos preciosos hermanitos blancos (sordos) de 2 meses rescatados en Toledo, sanitos y negativos.',
-    story: 'Esta camada de 6 fue rescatada de una parcela en un pueblo de Toledo. Se hizo CES con su mami y los bebés fueron sociabilizados y estabilizados para abandonar una vida de peligros en la calle y pasar a ser los bebés mimados de sus nuevas casas.\n\nSe repartieron 3 y 3 en dos familias de acogida. Por un lado el príncipe y princesas Disney 👑 y por otro lado los aquí presentes en el post ☝️😻\n\nTras varias semanas de manoseos, tiempo y dedicación ya podemos decir que todos han pasado de ser unos mini leoncitos feralitos 🦁 a unos mimosos y tiernos gatitos, sociabilizados por completo y disfrutando de lo que es una vida de verdad, sin miedos, sin traumas ❤️🩹\n\n¡Han finalizado su cuarentena y protocolo veterinario con éxito y son totalmente negativos a FELV/FIV! Ya están oficialmente EN ADOPCIÓN 🎉🐾\n\nRon y Daiquiri son totalmente sordos, así que se marcharán en adopción conjunta inseparable ya que se apoyan mutuamente en el día a día y no entienden los límites que pueden marcar otros gatos.\n\nSexo: macho ♂️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: negativo\nVacunas: sí\nChip: sí\n\nPuedes ayudarnos con sus gastos mediante:\n🤍PayPal: myanimalsm@gmail.com\n🤍Bizum: 04872 (sección donativos de la app)\n🤍Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064\n\n¡Escríbenos para darles el hogar de sus vidas! 💌',
-    status: 'En Adopción',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG20261027181043.jpg',
+    description: 'Daiquiri y Ron han sido adoptados juntos. Dos preciosos hermanitos blancos (sordos) de 2 meses rescatados en Toledo que ya disfrutan de su hogar definitivo juntos. 🤍🐾',
+    story: '¡Final feliz para Ron y Daiquiri! 🤍🐾\n\nEsta camada de 6 fue rescatada de una parcela en un pueblo de Toledo. Se hizo CES con su mami y los bebés fueron sociabilizados y estabilizados para abandonar una vida de peligros en la calle y pasar a ser los bebés mimados de sus nuevas casas.\n\nSe repartieron 3 y 3 en dos familias de acogida. Por un lado el príncipe y princesas Disney 👑 y por otro lado los aquí presentes en el post ☝️😻\n\nTras varias semanas de manoseos, tiempo y dedicación pasaron de ser unos mini leoncitos feralitos 🦁 a unos mimosos y tiernos gatitos, sociabilizados por completo y disfrutando de lo que es una vida de verdad, sin miedos, sin traumas ❤️🩹\n\nRon y Daiquiri son totalmente sordos, por lo que buscaban una adopción conjunta inseparable para apoyarse mutuamente en el día a día. ¡Su sueño se ha cumplido!\n\n🎉 ¡ADOPCIÓN CONJUNTA CONSEGUIDA!\nRon y Daiquiri ya han sido adoptados juntos y disfrutan de su final feliz con su maravillosa familia definitiva ❤️\n\nSexo: macho ♂️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: negativo\nVacunas: sí\nChip: sí',
+    status: 'Adoptado',
     bondedWithId: '31',
     isJointAdoption: true,
     medicalStatus: {
@@ -609,10 +608,10 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     age: '2 meses',
     gender: 'Macho',
     size: 'Cachorro',
-    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-10-05-21-36-02-83_965bbf4d18d205f782c6b8409c5773a4.jpg',
-    description: 'Ron y Daiquiri están en adopción conjunta. Dos preciosos hermanitos blancos (sordos) de 2 meses rescatados en Toledo, sanitos y negativos.',
-    story: 'Esta camada de 6 fue rescatada de una parcela en un pueblo de Toledo. Se hizo CES con su mami y los bebés fueron sociabilizados y estabilizados para abandonar una vida de peligros en la calle y pasar a ser los bebés mimados de sus nuevas casas.\n\nSe repartieron 3 y 3 en dos familias de acogida. Por un lado el príncipe y princesas Disney 👑 y por otro lado los aquí presentes en el post ☝️😻\n\nTras varias semanas de manoseos, tiempo y dedicación ya podemos decir que todos han pasado de ser unos mini leoncitos feralitos 🦁 a unos mimosos y tiernos gatitos, sociabilizados por completo y disfrutando de lo que es una vida de verdad, sin miedos, sin traumas ❤️🩹\n\n¡Han finalizado su cuarentena y protocolo veterinario con éxito y son totalmente negativos a FELV/FIV! Ya están oficialmente EN ADOPCIÓN 🎉🐾\n\nRon y Daiquiri son totalmente sordos, así que se marcharán en adopción conjunta inseparable ya que se apoyan mutuamente en el día a día y no entienden los límites que pueden marcar otros gatos.\n\nSexo: macho ♂️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: negativo\nVacunas: sí\nChip: sí\n\nPuedes ayudarnos con sus gastos mediante:\n🤍PayPal: myanimalsm@gmail.com\n🤍Bizum: 04872 (sección donativos de la app)\n🤍Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064\n\n¡Escríbenos para darles el hogar de sus vidas! 💌',
-    status: 'En Adopción',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG20261026103704.jpg',
+    description: 'Ron y Daiquiri han sido adoptados juntos. Dos preciosos hermanitos blancos (sordos) de 2 meses rescatados en Toledo que ya disfrutan de su hogar definitivo juntos. 🤍🐾',
+    story: '¡Final feliz para Ron y Daiquiri! 🤍🐾\n\nEsta camada de 6 fue rescatada de una parcela en un pueblo de Toledo. Se hizo CES con su mami y los bebés fueron sociabilizados y estabilizados para abandonar una vida de peligros en la calle y pasar a ser los bebés mimados de sus nuevas casas.\n\nSe repartieron 3 y 3 en dos familias de acogida. Por un lado el príncipe y princesas Disney 👑 y por otro lado los aquí presentes en el post ☝️😻\n\nTras varias semanas de manoseos, tiempo y dedicación pasaron de ser unos mini leoncitos feralitos 🦁 a unos mimosos y tiernos gatitos, sociabilizados por completo y disfrutando de lo que es una vida de verdad, sin miedos, sin traumas ❤️🩹\n\nRon y Daiquiri son totalmente sordos, por lo que buscaban una adopción conjunta inseparable para apoyarse mutuamente en el día a día. ¡Su sueño se ha cumplido!\n\n🎉 ¡ADOPCIÓN CONJUNTA CONSEGUIDA!\nRon y Daiquiri ya han sido adoptados juntos y disfrutan de su final feliz con su maravillosa familia definitiva ❤️\n\nSexo: macho ♂️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: negativo\nVacunas: sí\nChip: sí',
+    status: 'Adoptado',
     bondedWithId: '30',
     isJointAdoption: true,
     medicalStatus: {
@@ -632,9 +631,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     gender: 'Macho',
     size: 'Cachorro',
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-10-05-21-36-50-25_965bbf4d18d205f782c6b8409c5773a4.jpg',
-    description: 'Malibú es una bolita blanca de 2 meses rescatada en Toledo. Un cachito de pan super mimoso, ¡ya reservado!',
-    story: 'Malibú reservado 🍹✨\n\nEsta otra bolita blanca obviamente también pertenece a la camada de 6 bebés que capturamos de entre los escombros de una parcela en un pueblo de Toledo. Con la mamá, como era feral, hicimos CES para que pueda vivir tranquila y sin más camadas. Asimismo, a los pequeños los dividimos en dos familias de acogida: por un lado Ariel, Aurora y Bambi y por otro lado Daiquiri, Ron y Malibú 🤍🖤\n\nDurante toda su cuarentena hemos estado trabajando en su sociabilización y confianza, con mucha paciencia, calma y mimos porque venían con mucho rechazo hacia el ser humano 💔 Y, aunque algunos hermanos eran más extrovertidos que otros, ha llegado el momento de decir que lo hemos conseguido, son 6 bebés buenísimos, ultra sociables, mimosos y cariñosos 😻\n\nMalibú llegó siendo uno de esos bebés más tímidos y feralitos de la camada pero hoy en día es un cachito de pan. Adora estar encima de tí, los mimos y caricias y es increíble la paz que trasmite este gato ❤️🩹 ¡Y ya está oficialmente reservado con su futura familia!\n\nPuedes ayudarnos con sus gastos mediante:\n🤍PayPal: myanimalsm@gmail.com\n🤍Bizum: 04872 (sección donativos de la app)\n🤍Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
-    status: 'Reservado',
+    description: 'Malibú es una bolita blanca de 2 meses rescatada en Toledo. Un cachito de pan super mimoso, ¡felizmente adoptado con su familia definitiva!',
+    story: 'Malibú adoptado 🍹✨🐾\n\nEsta otra bolita blanca obviamente también pertenece a la camada de 6 bebés que capturamos de entre los escombros de una parcela en un pueblo de Toledo. Con la mamá, como era feral, hicimos CES para que pueda vivir tranquila y sin más camadas. Asimismo, a los pequeños los dividimos en dos familias de acogida: por un lado Ariel, Aurora y Bambi y por otro lado Daiquiri, Ron y Malibú 🤍🖤\n\nDurante toda su cuarentena hemos estado trabajando en su sociabilización y confianza, con mucha paciencia, calma y mimos porque venían con mucho rechazo hacia el ser humano 💔 Y, aunque algunos hermanos eran más extrovertidos que otros, ha llegado el momento de decir que lo hemos conseguido, son 6 bebés buenísimos, ultra sociables, mimosos y cariñosos 😻\n\nMalibú llegó siendo uno de esos bebés más tímidos y feralitos de la camada pero hoy en día es un cachito de pan. Adora estar encima de tí, los mimos y caricias y es increíble la paz que trasmite este gato ❤️🩹 ¡Y ya ha encontrado su hogar para siempre, viviendo felizmente adoptado!\n\nPuedes ayudarnos con sus gastos mediante:\n🤍PayPal: myanimalsm@gmail.com\n🤍Bizum: 04872 (sección donativos de la app)\n🤍Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Adoptado',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -652,9 +651,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     gender: 'Hembra',
     size: 'Cachorro',
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20260920-WA0038.jpg',
-    description: 'Amapola y Tulipán se dan en adopción conjunta. Dos preciosas hermanitas rescatadas de 2 meses, inseparables y llenas de amor.',
-    story: 'Amapola y Tulipán en adopción conjunta 💐\n\n¡Son dos gatas de anuncio, no podíamos evitar el subir otro post de ellas! 💖\n\nNuestras dos flores son el último caso que hemos aceptado este mes. A ambas hermanitas las encontraron en una finca solitas rozando el mes de vida, se esperó el tiempo prudencial, pero la mamá no aparecía 💔 Al ser una zona con perros sueltos y ver que sus ojitos estaban bastante malitos, se decidió sacarlas de ahí y cuidarlas en un lugar seguro.\n\nHasta ahora, su rescatista se ha desvivido por estas dos flores 😍 Con ella, durante la cuarentena, han sanado, han crecido, han cogido peso y han sociabilizado de lo lindo ❤️🩹 Gracias siempre a esas personas que no miran hacia otro lado y rescatan cueste lo que cueste🙏🏻❤️\n\nAhora que ya tienen los dos mesecitos, pasan a formar parte de Apa Myanimalsm donde nos encargaremos de finalizar sus protocolos veterinarios y de buscar a una familia perfecta que apueste por la adopción conjunta 💗\n\nQueremos intentarlo, son dos hermanitas super unidas, dos flores que se merecen una vida juntas 💐 ¿Te animas a dar el paso y comértelas a besos? ¡Escríbenos!💌\n\nSexo: hembra ♀️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: negativo\nVacuna: sí\nChip: sí\n\nPuedes ayudarnos con sus gastos mediante:\n🌷PayPal: myanimalsm@gmail.com\n🌷Bizum: 04872 (sección donativos de la app)\n🌷Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
-    status: 'Reservada',
+    description: 'Amapola y Tulipán han sido adoptadas juntas. Dos preciosas hermanitas rescatadas de 2 meses, inseparables y llenas de amor.',
+    story: 'Amapola y Tulipán adoptadas juntas 💐\n\n¡Nuestras dos preciosas flores ya tienen hogar para siempre! 💖\n\nNuestras dos flores fueron rescatadas solitas en una finca rozando el mes de vida, con sus ojitos malitos y rodeadas de peligros. Gracias a los cuidados incansables de su rescatista y de Apa Myanimalsm, sanaron, crecieron y se convirtieron en dos gatas de anuncio ❤️🩹\n\nSon dos hermanitas super unidas que se merecían una vida juntas, ¡y su sueño se ha hecho realidad con su familia definitiva! 🎉\n\nSexo: hembra ♀️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: negativo\nVacuna: sí\nChip: sí',
+    status: 'Adoptada',
     bondedWithId: '34',
     isJointAdoption: true,
     medicalStatus: {
@@ -674,9 +673,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     gender: 'Hembra',
     size: 'Cachorro',
     imageUrl: 'https://github.com/myanimalsm-apa/APA.-Myanimalsm-/blob/main/IMG-20261002-WA0087.jpg?raw=true',
-    description: 'Amapola y Tulipán se dan en adopción conjunta. Dos preciosas hermanitas rescatadas de 2 meses, inseparables y llenas de amor.',
-    story: 'Amapola y Tulipán en adopción conjunta 💐\n\n¡Son dos gatas de anuncio, no podíamos evitar el subir otro post de ellas! 💖\n\nNuestras dos flores son el último caso que hemos aceptado este mes. A ambas hermanitas las encontraron en una finca solitas rozando el mes de vida, se esperó el tiempo prudencial, pero la mamá no aparecía 💔 Al ser una zona con perros sueltos y ver que sus ojitos estaban bastante malitos, se decidió sacarlas de ahí y cuidarlas en un lugar seguro.\n\nHasta ahora, su rescatista se ha desvivido por estas dos flores 😍 Con ella, durante la cuarentena, han sanado, han crecido, han cogido peso y han sociabilizado de lo lindo ❤️🩹 Gracias siempre a esas personas que no miran hacia otro lado y rescatan cueste lo que cueste🙏🏻❤️\n\nAhora que ya tienen los dos mesecitos, pasan a formar parte de Apa Myanimalsm donde nos encargaremos de finalizar sus protocolos veterinarios y de buscar a una familia perfecta que apueste por la adopción conjunta 💗\n\nQueremos intentarlo, son dos hermanitas super unidas, dos flores que se merecen una vida juntas 💐 ¿Te animas a dar el paso y comértelas a besos? ¡Escríbenos!💌\n\nSexo: hembra ♀️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: negativo\nVacuna: sí\nChip: sí\n\nPuedes ayudarnos con sus gastos mediante:\n🌷PayPal: myanimalsm@gmail.com\n🌷Bizum: 04872 (sección donativos de la app)\n🌷Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
-    status: 'Reservada',
+    description: 'Amapola y Tulipán han sido adoptadas juntas. Dos preciosas hermanitas rescatadas de 2 meses, inseparables y llenas de amor.',
+    story: 'Amapola y Tulipán adoptadas juntas 💐\n\n¡Nuestras dos preciosas flores ya tienen hogar para siempre! 💖\n\nNuestras dos flores fueron rescatadas solitas en una finca rozando el mes de vida, con sus ojitos malitos y rodeadas de peligros. Gracias a los cuidados incansables de su rescatista y de Apa Myanimalsm, sanaron, crecieron y se convirtieron en dos gatas de anuncio ❤️🩹\n\nSon dos hermanitas super unidas que se merecían una vida juntas, ¡y su sueño se ha hecho realidad con su familia definitiva! 🎉\n\nSexo: hembra ♀️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: negativo\nVacuna: sí\nChip: sí',
+    status: 'Adoptada',
     bondedWithId: '33',
     isJointAdoption: true,
     medicalStatus: {
@@ -696,9 +695,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     gender: 'Hembra',
     size: 'Cachorro',
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20261009-WA0051.jpg',
-    description: 'Aurora se da en adopción conjunta inseparable con su hermanita Ariel. Una preciosa gatita blanca (sorda) de 2 meses rescatada en Toledo.',
-    story: 'Ariel próximamente en adopción junto con Aurora🧜🏻♀️💗\n\nAriel pertenece a la camada de 6 bebés que capturamos de entre los escombros de una parcela en un pueblo de Toledo. Con la mamá, como era feral, hicimos CES para que pueda vivir tranquila y sin más camadas. Asimismo, a los pequeños los dividimos en dos familias de acogida: por un lado Ariel, Aurora y Bambi y por otro lado Daiquiri, Malibú y Ron🤍🖤\n\nDurante toda su cuarentena hemos estado trabajando en su sociabilización y confianza, con mucha paciencia, calma y mimos porque venían con mucho rechazo hacia el ser humano 💔 Y, aunque hay unos hermanos más extrovertidos que otros, ha llegado el momento de decir que lo hemos conseguido, son 6 bebés buenísimos 🥹😍\n\nAriel está muy unida a su hermanita Aurora que, como buena gata blanca, es sorda, por lo que se buscan muchísimo y se apoyan en el día a día. Por este motivo, queremos que estén juntas toda la vida 💖 Ariel es una sirenita felina bellísima con un pelaje muy particular, es capa humo 🖤 Ella es tímida de primeras, pero un terremotillo en cuanto coge confianza. Se vuelve loca jugando con la cañita de plumas y se relaja muchísimo cuando Aurora empieza a ronronear, contagiándose así ambas de tanto amor😍\n\nEn unos días finalizan su protocolo veterinario, ¿te animas a adoptar a estas dos princesas? ¡Escríbenos!💌\n\nSexo: hembra♀️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: pte.\nVacuna: pte\nChip: pte.\n\nPuedes ayudarnos con sus gastos mediante:\n🤍PayPal: myanimalsm@gmail.com\n🤍Bizum: 04872 (sección donativos de la app)\n🤍Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
-    status: 'Pronto en adopción',
+    description: '2 meses • Hermanitas inseparables. Aurora y Ariel han sido adoptadas juntas. Dos preciosas hermanitas rescatadas en Toledo que ya disfrutan de su hogar definitivo juntas. 🧜🏻♀️💗',
+    story: '¡Final feliz para Aurora y Ariel! 🧜🏻♀️💗\n\n2 meses • Hermanitas inseparables.\n\nAurora pertenece a la camada de 6 bebés que capturamos de entre los escombros de una parcela en un pueblo de Toledo. Con la mamá, como era feral, hicimos CES para que pueda vivir tranquila y sin más camadas. Asimismo, a los pequeños los dividimos en dos familias de acogida: por un lado Ariel, Aurora y Bambi y por otro lado Daiquiri, Malibú y Ron🤍🖤\n\nDurante toda su cuarentena estuvimos trabajando en su sociabilización y confianza, con mucha paciencia, calma y mimos porque venían con mucho rechazo hacia el ser humano 💔 Y, aunque había unas hermanas más extrovertidas que otras, lo conseguimos, ¡son dos bebés buenísimas! 🥹😍\n\nAurora está muy unida a su hermanita Ariel. Como buena gata blanca, Aurora es sorda, por lo que se buscan muchísimo y se apoyan en el día a día. Su familia definitiva decidió adoptarlas juntas para que nunca tuvieran que separarse, regalándoles el final feliz más bonito que podían soñar ❤️\n\n🎉 ¡ADOPCIÓN CONJUNTA CONSEGUIDA!\nAurora y Ariel ya disfrutan de su vida en su hogar definitivo junto a su maravillosa familia 💖',
+    status: 'Adoptada',
     bondedWithId: '36',
     isJointAdoption: true,
     medicalStatus: {
@@ -718,9 +717,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     gender: 'Hembra',
     size: 'Cachorro',
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-10-25-12-33-22-65_1c337646f29875672b5a61192b9010f9.jpg',
-    description: 'Ariel se da en adopción conjunta inseparable con su hermanita Aurora. Una preciosa sirenita felina de capa humo de 2 meses rescatada en Toledo.',
-    story: 'Ariel próximamente en adopción junto con Aurora🧜🏻♀️💗\n\nAriel pertenece a la camada de 6 bebés que capturamos de entre los escombros de una parcela en un pueblo de Toledo. Con la mamá, como era feral, hicimos CES para que pueda vivir tranquila y sin más camadas. Asimismo, a los pequeños los dividimos en dos familias de acogida: por un lado Ariel, Aurora y Bambi y por otro lado Daiquiri, Malibú y Ron🤍🖤\n\nDurante toda su cuarentena hemos estado trabajando en su sociabilización y confianza, con mucha paciencia, calma y mimos porque venían con mucho rechazo hacia el ser humano 💔 Y, aunque hay unos hermanos más extrovertidos que otros, ha llegado el momento de decir que lo hemos conseguido, son 6 bebés buenísimos 🥹😍\n\nAriel está muy unida a su hermanita Aurora que, como buena gata blanca, es sorda, por lo que se buscan muchísimo y se apoyan en el día a día. Por este motivo, queremos que estén juntas toda la vida 💖 Ariel es una sirenita felina bellísima con un pelaje muy particular, es capa humo 🖤 Ella es tímida de primeras, pero un terremotillo en cuanto coge confianza. Se vuelve loca jugando con la cañita de plumas y se relaja muchísimo cuando Aurora empieza a ronronear, contagiándose así ambas de tanto amor😍\n\nEn unos días finalizan su protocolo veterinario, ¿te animas a adoptar a estas dos princesas? ¡Escríbenos!💌\n\nSexo: hembra♀️\nEdad: 2 meses\nDesparasitación: completa\nTest FELV FIV: pte.\nVacuna: pte\nChip: pte.\n\nPuedes ayudarnos con sus gastos mediante:\n🤍PayPal: myanimalsm@gmail.com\n🤍Bizum: 04872 (sección donativos de la app)\n🤍Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
-    status: 'Pronto en adopción',
+    description: '2 meses • Hermanitas inseparables. Ariel y Aurora han sido adoptadas juntas. Dos preciosas hermanitas rescatadas en Toledo que ya disfrutan de su hogar definitivo juntas. 🧜🏻♀️💗',
+    story: '¡Final feliz para Aurora y Ariel! 🧜🏻♀️💗\n\n2 meses • Hermanitas inseparables.\n\nAriel pertenece a la camada de 6 bebés que capturamos de entre los escombros de una parcela en un pueblo de Toledo. Con la mamá, como era feral, hicimos CES para que pueda vivir tranquila y sin más camadas. Asimismo, a los pequeños los dividimos en dos familias de acogida: por un lado Ariel, Aurora y Bambi y por otro lado Daiquiri, Malibú y Ron🤍🖤\n\nDurante toda su cuarentena estuvimos trabajando en su sociabilización y confianza, con mucha paciencia, calma y mimos porque venían con mucho rechazo hacia el ser humano 💔 Y, aunque había unas hermanas más extrovertidas que otras, lo conseguimos, ¡son dos bebés buenísimas! 🥹😍\n\nAriel está muy unida a su hermanita Aurora que, como buena gata blanca, es sorda, por lo que se buscan muchísimo y se apoyan en el día a día. Su familia definitiva decidió adoptarlas juntas para que nunca tuvieran que separarse, regalándoles el final feliz más bonito que podían soñar ❤️\n\n🎉 ¡ADOPCIÓN CONJUNTA CONSEGUIDA!\nAurora y Ariel ya disfrutan de su vida en su hogar definitivo junto a su maravillosa familia 💖',
+    status: 'Adoptada',
     bondedWithId: '35',
     isJointAdoption: true,
     medicalStatus: {
@@ -740,11 +739,9 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     gender: 'Macho',
     size: 'Cachorro',
     imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/IMG-20261009-WA0052.jpg',
-    description: 'Bambi y Cheddar no son hermanos pero por sus semejanzas en el carácter y total compatibilidad en la convivencia se marchan adoptados juntos. ¡En adopción conjunta!',
-    story: 'Bambi en adopción conjunta obligatoria con Cheddar 🥥🧀🐾\n\nNo son hermanos pero por sus semejanzas en el carácter y total compatibilidad en la convivencia se marchan adoptados juntos ❤️\n\nEl pequeño Bambi encontró en Cheddar a su compañero perfecto de juegos, descanso y descubrimientos. Su conexión fue inmediata y su compenetración total, demostrando que el amor y la afinidad van mucho más allá de ser hermanos de camada. Se entregan en adopción conjunta obligatoria.\n\n🩺 Protocolo veterinario al día:\nBambi cuenta con 1.5 meses, desparasitación completa, test FELV/FIV negativo, vacunación y microchip al día. ¡Buscando una familia definitiva junto a su compañero Cheddar! 💌',
-    status: 'En Adopción',
-    bondedWithId: '27',
-    isJointAdoption: true,
+    description: 'Bambi es un gatito blanco adorable, dulce y muy tierno. Sociable y juguetón, ¡felizmente adoptado con su familia definitiva! 🥥🐾',
+    story: '¡Final feliz para Bambi! 🥥🐾\n\nEl pequeño Bambi pertenece a la camada de 6 bebés rescatados de entre los escombros de una parcela en Toledo. Tras su etapa de cuarentena y sociabilización en su casa de acogida, se convirtió en un auténtico tesoro: dulce, confiado, juguetón y súper cariñoso.\n\nEs un gatito de carácter entrañable que adora los mimos, jugar con cañitas de plumas y descansar sintiéndose amado y protegido.\n\n🎉 ¡ADOPTADO!\nBambi ya disfruta de su final feliz junto a su familia definitiva, rodeado de mimos y cuidados para siempre ❤️',
+    status: 'Adoptado',
     medicalStatus: {
       deworming: 'Sí',
       felvFiv: 'Negativo',
@@ -769,6 +766,94 @@ Esto es un pacto entre ella y Apa Myanimalsm, no vamos a dejarla sola y el reto 
     status: 'Pronto en adopción',
     medicalStatus: {
       deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '39',
+    name: 'Bellota',
+    species: 'Gato',
+    breed: 'Común Europeo',
+    age: '2 meses',
+    gender: 'Hembra',
+    size: 'Cachorro',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-11-13-13-15-40-94_1c337646f29875672b5a61192b9010f9.jpg',
+    description: 'Bellota es la más tímida de las dos hermanitas rescatadas junto a Trufa (2 meses). Proviene de una colonia cerrada con CES y está adaptándose en su casa de acogida. ¡Próximamente en adopción!',
+    story: 'Bellota próximamente en adopción 🐿️🤎\n\nCon la retirada de Trufa y Bellota de su colonia y después de haber hecho CES a las dos hembras que faltaban, podemos decir que dicha colonia queda completamente cerrada sin más celos, camadas indeseadas y con mucha tranquilidad para los gatos adultos ferales que la componen☺️\n\nAmbas hermanitas han llegado siendo bastante reacias al contacto humano y con un poquito de susto🥹 Sin embargo, llevan solo un par de días en una casa de acogida y ya se notan muchos avances, es cuestión de tiempo, paciencia y mimos, muchos mimos 😻\n\nEn el caso de Bellota, es la más tímida de las dos. Cada pasito que da, se celebra como un gran logro. Ya hemos conseguido que se anime a pasear por la habitación siguiendo a su hermanita, estamos seguras de que pronto hará click✨ \n\nEn cuanto acaben su cuarentena y finalicen su protocolo veterinario estarán en adopción. Por ahora, porfi porfi porfi, necesitamos una ayudita para poder abonar su manutención y facturas veterinarias 🙏🏻 ¿Nos echas una pata?\n\n⚠️ IMPORTANTE: para garantizar el crecimiento equilibrado y con referentes felinos, solo se valorarán familias que apuesten por la adopción conjunta o que ya tengan un gato en casa, no damos bebés para criarse solos ⚠️\n\nSexo: hembra ♀️ \nEdad: 2 meses\nDesparasitación: completa \nTest FELV FIV: pdte\nVacunas: pdte \nChip: sí \n\nPuedes ayudarnos con sus gastos mediante:\n🤎PayPal myanimalsm@gmail.com (marca amigos/familiares para que no retenga)\n🤎Bizum: 04872 (sección donativos de la app)\n🤎Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    bondedWithId: '40',
+    isJointAdoption: true,
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Sí',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '40',
+    name: 'Trufa',
+    species: 'Gato',
+    breed: 'Común Europeo',
+    age: '2 meses',
+    gender: 'Hembra',
+    size: 'Cachorro',
+    imageUrl: 'https://raw.githubusercontent.com/myanimalsm-apa/APA.-Myanimalsm-/refs/heads/main/Screenshot_2026-11-13-13-18-20-77_1c337646f29875672b5a61192b9010f9.jpg',
+    description: 'Trufa es la más extrovertida y curiosa de las dos hermanitas rescatadas junto a Bellota (2 meses). Proviene de una colonia cerrada con CES y está adaptándose en su casa de acogida. ¡Próximamente en adopción!',
+    story: 'Trufa próximamente en adopción 🍄❤️\n\nCon la retirada de Trufa y Bellota de su colonia y después de haber hecho CES a las dos hembras que faltaban, podemos decir que dicha colonia queda completamente cerrada sin más celos, camadas indeseadas y con mucha tranquilidad para los gatos adultos ferales que la componen☺️\n\nAmbas hermanitas han llegado siendo bastante reacias al contacto humano y con un poquito de susto🥹 Sin embargo, llevan solo un par de días en una casa de acogida y ya se notan muchos avances, es cuestión de tiempo, paciencia y mimos, muchos mimos 😻\n\nEn el caso de Trufa, es la más extrovertida y curiosa de las dos. Cada día da un pasito nuevo y se anima a explorar y jugar delante de nosotras. Va marcando camino y, gracias a eso, Bellota se anima a imitar sus pasos y poco a poco empieza a dejarse querer ✨ \n\nEn cuanto acaben su cuarentena y finalicen su protocolo veterinario estarán en adopción. Por ahora, porfi porfi porfi, necesitamos una ayudita para poder abonar su manutención y facturas veterinarias 🙏🏻 ¿Nos echas una pata?\n\n⚠️ IMPORTANTE: para garantizar el crecimiento equilibrado y con referentes felinos, solo se valorarán familias que apuesten por la adopción conjunta o que ya tengan un gato en casa, no damos bebés para criarse solos ⚠️\n\nSexo: hembra ♀️ \nEdad: 2 meses\nDesparasitación: completa \nTest FELV FIV: pdte\nVacunas: pdte \nChip: sí \n\nPuedes ayudarnos con sus gastos mediante:\n🍄PayPal myanimalsm@gmail.com (marca amigos/familiares para que no retenga)\n🍄Bizum: 04872 (sección donativos de la app)\n🍄Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    bondedWithId: '39',
+    isJointAdoption: true,
+    medicalStatus: {
+      deworming: 'Sí',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Sí',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '41',
+    name: 'Roma',
+    species: 'Gato',
+    breed: 'Común Europeo',
+    age: 'Por confirmar',
+    gender: 'Hembra',
+    size: 'Por confirmar',
+    imageUrl: ROMA_MYSTERY_IMAGE,
+    description: 'Roma es una hembra que forma un dúo inseparable junto a Remo. Ambos suben desde Sevilla y estarán próximamente en adopción. ¡Iremos informando muy pronto!',
+    story: '¡Os presentamos a Roma! 🐾✨\n\nRoma forma junto a su compañero Remo un nuevo caso de adopción conjunta obligatoria. Ambos suben desde Sevilla rumbo a Madrid bajo la tutela de APA Myanimalsm.\n\n🤫 ¡Próximamente en adopción!\nPor ahora están subiendo desde Sevilla y muy pronto iremos compartiendo sus fotos, su historia completa y toda la información sobre su evolución y protocolo veterinario.\n\n⚠️ Adopción conjunta obligatoria: Roma y Remo son un dúo inseparable y buscarán juntos su futuro hogar.\n\nSexo: hembra ♀️\nOrigen: Sevilla\nEstado: próximamente en adopción\n\nSi quieres ayudarnos con los gastos de su viaje y sus primeros cuidados veterinarios, puedes colaborar mediante:\n💌 PayPal: myanimalsm@gmail.com (marca amigos/familiares para que no retenga)\n💌 Bizum: 04872 (sección donativos de la app)\n💌 Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    bondedWithId: '42',
+    isJointAdoption: true,
+    medicalStatus: {
+      deworming: 'Pte',
+      felvFiv: 'Pte',
+      vaccination: 'Pte',
+      microchip: 'Pte',
+      sterilization: 'Pte'
+    }
+  },
+  {
+    id: '42',
+    name: 'Remo',
+    species: 'Gato',
+    breed: 'Común Europeo',
+    age: 'Por confirmar',
+    gender: 'Macho',
+    size: 'Por confirmar',
+    imageUrl: REMO_MYSTERY_IMAGE,
+    description: 'Remo es un macho que forma un dúo inseparable junto a Roma. Ambos suben desde Sevilla y estarán próximamente en adopción. ¡Iremos informando muy pronto!',
+    story: '¡Os presentamos a Remo! 🐾✨\n\nRemo forma junto a su compañera Roma un nuevo caso de adopción conjunta obligatoria. Ambos suben desde Sevilla rumbo a Madrid bajo la tutela de APA Myanimalsm.\n\n🤫 ¡Próximamente en adopción!\nPor ahora están subiendo desde Sevilla y muy pronto iremos compartiendo sus fotos, su historia completa y toda la información sobre su evolución y protocolo veterinario.\n\n⚠️ Adopción conjunta obligatoria: Remo y Roma son un dúo inseparable y buscarán juntos su futuro hogar.\n\nSexo: macho ♂️\nOrigen: Sevilla\nEstado: próximamente en adopción\n\nSi quieres ayudarnos con los gastos de su viaje y sus primeros cuidados veterinarios, puedes colaborar mediante:\n💌 PayPal: myanimalsm@gmail.com (marca amigos/familiares para que no retenga)\n💌 Bizum: 04872 (sección donativos de la app)\n💌 Openbank: APA. Myanimalsm | ES69 0073 0100 5205 0607 9064',
+    status: 'Pronto en adopción',
+    bondedWithId: '41',
+    isJointAdoption: true,
+    medicalStatus: {
+      deworming: 'Pte',
       felvFiv: 'Pte',
       vaccination: 'Pte',
       microchip: 'Pte',
@@ -852,3 +937,14 @@ export const DONATION_METHODS: DonationMethod[] = [
     color: 'bg-teal-500'
   }
 ];
+
+export const formatAnimalStatus = (status?: string, gender?: string): string => {
+  if (!status) return '';
+  if (status === 'Adoptado' || status === 'Adoptada') {
+    return gender === 'Hembra' ? 'Adoptada' : 'Adoptado';
+  }
+  if (status === 'Reservado' || status === 'Reservada') {
+    return gender === 'Hembra' ? 'Reservada' : 'Reservado';
+  }
+  return status;
+};

@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useAnimals } from '../context/AnimalContext';
+import { formatAnimalStatus } from '../constants';
 import { Heart, Home, Ruler, Calendar, Info, ArrowLeft, Check, X, Clock, Stethoscope, AlertCircle, Bookmark } from 'lucide-react';
 
 export const AnimalDetail: React.FC = () => {
@@ -62,12 +63,12 @@ export const AnimalDetail: React.FC = () => {
               }}
             />
             <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-stone-800 shadow-md">
-              {animal.status}
+              {formatAnimalStatus(animal.status, animal.gender)}
             </div>
           </div>
 
           {/* Content Side */}
-          <div className="p-6 md:p-12 flex flex-col">
+          <div className="p-5 sm:p-6 md:p-12 flex flex-col">
             <div className="mb-6">
               <h1 className="text-3xl md:text-5xl font-serif font-bold text-stone-800 dark:text-stone-100 mb-2">{animal.name}</h1>
               <p className="text-base md:text-lg text-stone-500 dark:text-stone-400">{animal.breed}</p>
@@ -76,47 +77,52 @@ export const AnimalDetail: React.FC = () => {
             {/* Joint Adoption Notice Banner */}
             {partnerAnimal && animal.isJointAdoption && (
               <div className="mb-8 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-rose-50 via-pink-50 to-amber-50 dark:from-stone-850 dark:via-stone-800 dark:to-stone-850 border-2 border-rose-200 dark:border-rose-900/60 shadow-sm">
-                <div className="flex items-center justify-between mb-3">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-3.5">
                   {(animal.status === 'Adoptado' || animal.status === 'Adoptada') ? (
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-600 text-white font-bold text-xs shadow-xs">
-                      <Heart size={13} className="fill-white" />
-                      ¡ADOPCIÓN CONJUNTA CONSEGUIDA! 🎉
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:py-1 rounded-full bg-emerald-600 text-white font-bold text-[11px] sm:text-xs shadow-xs leading-tight">
+                      <Heart size={13} className="fill-white flex-shrink-0" />
+                      <span>¡ADOPCIÓN CONJUNTA CONSEGUIDA! 🎉</span>
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-500 text-white font-bold text-xs shadow-xs">
-                      <Heart size={13} className="fill-white animate-pulse" />
-                      ADOPCIÓN CONJUNTA OBLIGATORIA
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:py-1 rounded-full bg-rose-500 text-white font-bold text-[11px] sm:text-xs shadow-xs leading-tight">
+                      <Heart size={13} className="fill-white animate-pulse flex-shrink-0" />
+                      <span>ADOPCIÓN CONJUNTA OBLIGATORIA</span>
                     </span>
                   )}
-                  <span className="text-xs font-bold text-rose-700 dark:text-rose-300">
+                  <span className="text-xs font-bold text-rose-700 dark:text-rose-300 whitespace-nowrap">
                     {(animal.status === 'Adoptado' || animal.status === 'Adoptada')
                       ? (animal.gender === 'Hembra' && partnerAnimal.gender === 'Hembra' ? 'Juntas en su hogar ❤️' : 'Juntos en su hogar ❤️')
                       : 'Inseparables 🐾'}
                   </span>
                 </div>
                 
-                <div className="flex items-center gap-3.5 bg-white/90 dark:bg-stone-800/90 p-3 rounded-xl border border-rose-200/70 dark:border-rose-900/40">
-                  <img 
-                    src={partnerAnimal.imageUrl} 
-                    alt={partnerAnimal.name} 
-                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl object-cover border-2 border-rose-200 dark:border-rose-800 shadow-xs flex-shrink-0"
-                  />
-                  <div className="min-w-0 flex-grow">
-                    <p className="text-xs text-stone-500 dark:text-stone-400 font-semibold">
-                      {(animal.status === 'Adoptado' || animal.status === 'Adoptada')
-                        ? `${animal.gender === 'Macho' ? 'Adoptado' : 'Adoptada'} conjuntamente con ${partnerAnimal.gender === 'Macho' ? 'su compañero' : 'su compañera'} de vida:`
-                        : `Solo se entrega en adopción junto a ${partnerAnimal.gender === 'Macho' ? 'su compañero' : 'su compañera'}:`}
-                    </p>
-                    <h4 className="text-base sm:text-lg font-bold text-stone-800 dark:text-stone-100 truncate">
-                      {partnerAnimal.name} ({partnerAnimal.age})
-                    </h4>
-                    <p className="text-[11px] sm:text-xs text-rose-700 dark:text-rose-300 line-clamp-1 mt-0.5">
-                      {partnerAnimal.breed} • Estado: {partnerAnimal.status}
-                    </p>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-3.5 bg-white/90 dark:bg-stone-800/90 p-3.5 rounded-xl border border-rose-200/70 dark:border-rose-900/40">
+                  <div className="flex items-center gap-3 min-w-0 flex-grow">
+                    <img 
+                      src={partnerAnimal.imageUrl} 
+                      alt={partnerAnimal.name} 
+                      className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl object-cover border-2 border-rose-200 dark:border-rose-800 shadow-xs flex-shrink-0"
+                      style={{
+                        objectPosition: partnerAnimal.imagePosition || 'center',
+                      }}
+                    />
+                    <div className="min-w-0 flex-grow">
+                      <p className="text-xs text-stone-500 dark:text-stone-400 font-semibold leading-snug">
+                        {(animal.status === 'Adoptado' || animal.status === 'Adoptada')
+                          ? `${animal.gender === 'Macho' ? 'Adoptado' : 'Adoptada'} conjuntamente con ${partnerAnimal.gender === 'Macho' ? 'su compañero' : partnerAnimal.gender === 'Hembra' ? 'su compañera' : 'su compañero/a'} de vida:`
+                          : `Solo se entrega en adopción junto a ${partnerAnimal.gender === 'Macho' ? 'su compañero' : partnerAnimal.gender === 'Hembra' ? 'su compañera' : 'su compañero/a'}:`}
+                      </p>
+                      <h4 className="text-base sm:text-lg font-bold text-stone-800 dark:text-stone-100 mt-0.5 break-words">
+                        {partnerAnimal.name} ({partnerAnimal.age})
+                      </h4>
+                      <p className="text-xs text-rose-700 dark:text-rose-300 mt-0.5 leading-snug">
+                        {partnerAnimal.breed} • Estado: {formatAnimalStatus(partnerAnimal.status, partnerAnimal.gender)}
+                      </p>
+                    </div>
                   </div>
                   <Link 
                     to={`/animal/${partnerAnimal.id}`}
-                    className="flex-shrink-0 bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-white text-white dark:text-stone-900 px-3.5 py-2 rounded-xl text-xs font-bold transition-all shadow-xs"
+                    className="w-full sm:w-auto text-center flex-shrink-0 bg-stone-900 hover:bg-stone-800 dark:bg-stone-100 dark:hover:bg-white text-white dark:text-stone-900 px-4 py-2.5 sm:py-2 rounded-xl text-xs font-bold transition-all shadow-xs"
                   >
                     Ver a {partnerAnimal.name}
                   </Link>
@@ -219,7 +225,7 @@ export const AnimalDetail: React.FC = () => {
                  <div className="p-6 bg-amber-50 dark:bg-amber-900/20 rounded-2xl border border-amber-200 dark:border-amber-800/40 text-center">
                     <p className="text-lg font-serif font-bold text-amber-700 dark:text-amber-300 flex items-center justify-center gap-2">
                        <Bookmark className="fill-amber-500 text-amber-500" size={20} />
-                       ¡{animal.status}!
+                       ¡{formatAnimalStatus(animal.status, animal.gender)}!
                     </p>
                     <p className="text-stone-600 dark:text-stone-400 text-sm mt-1">
                        {animal.name} está {animal.gender === 'Macho' ? 'reservado' : 'reservada'} y en proceso de adopción con su futura familia.

@@ -131,26 +131,18 @@ export const Home: React.FC = () => {
         return matchesCategory && matchesStatus;
       })
       .sort((a, b) => {
-        // High priority: Joint adoptions come first!
-        const aIsJoint = Boolean(a.isJointAdoption);
-        const bIsJoint = Boolean(b.isJointAdoption);
-        const aIsReserved = a.status === 'Reservado' || a.status === 'Reservada';
-        const bIsReserved = b.status === 'Reservado' || b.status === 'Reservada';
-
-        // 1. Available joint adoptions have absolute top priority
-        if (aIsJoint && !aIsReserved && (!bIsJoint || bIsReserved)) return -1;
-        if (bIsJoint && !bIsReserved && (!aIsJoint || aIsReserved)) return 1;
-
-        // 2. Status priority
+        // 1. Status priority comes first for all animals (En Adopción -> Busca acogida urgente -> Pronto en adopción -> En residencia -> Reservados)
         const priorityDiff = getPriority(a.status) - getPriority(b.status);
         if (priorityDiff !== 0) return priorityDiff;
 
-        // 3. Among reserved animals, joint adoptions still go first
-        if (aIsReserved && bIsReserved && aIsJoint !== bIsJoint) {
+        // 2. Within the same status tier, joint adoptions come first
+        const aIsJoint = Boolean(a.isJointAdoption);
+        const bIsJoint = Boolean(b.isJointAdoption);
+        if (aIsJoint !== bIsJoint) {
           return aIsJoint ? -1 : 1;
         }
 
-        // 4. Group bonded pairs together
+        // 3. Group bonded pairs together
         if (a.bondedWithId === b.id) return -1;
         if (b.bondedWithId === a.id) return 1;
 
@@ -544,7 +536,7 @@ export const Home: React.FC = () => {
                         ) : (
                           <>
                             <Sparkles size={11} className="text-amber-200 fill-amber-200" />
-                            <span>Adoptado</span>
+                            <span>{animal.gender === 'Hembra' ? 'Adoptada' : 'Adoptado'}</span>
                           </>
                         )}
                       </span>
@@ -720,7 +712,7 @@ export const Home: React.FC = () => {
                                   </>
                                 ) : (
                                   <>
-                                    <Sparkles size={8} className="text-amber-200 fill-amber-200" /> Adoptado
+                                    <Sparkles size={8} className="text-amber-200 fill-amber-200" /> {animal.gender === 'Hembra' ? 'Adoptada' : 'Adoptado'}
                                   </>
                                 )}
                               </span>
@@ -1083,7 +1075,7 @@ export const Home: React.FC = () => {
                             />
                             <div className="absolute top-2 left-2">
                               <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-600/90 text-white text-[9px] font-bold rounded-full shadow-xs backdrop-blur-xs">
-                                <Heart size={8} className="fill-white" /> Adoptado
+                                <Heart size={8} className="fill-white" /> {animal.gender === 'Hembra' ? 'Adoptada' : 'Adoptado'}
                               </span>
                             </div>
                             <div className="absolute top-2 right-2">

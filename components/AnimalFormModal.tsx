@@ -52,7 +52,15 @@ export const AnimalFormModal: React.FC<AnimalFormModalProps> = ({ isOpen, onClos
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSave(formData);
+    const finalData = {
+      ...formData,
+      status: (formData.status === 'Adoptado' || formData.status === 'Adoptada')
+        ? (formData.gender === 'Hembra' ? 'Adoptada' : 'Adoptado')
+        : (formData.status === 'Reservado' || formData.status === 'Reservada')
+          ? (formData.gender === 'Hembra' ? 'Reservada' : 'Reservado')
+          : formData.status
+    } as Animal;
+    onSave(finalData);
     onClose();
   };
 
@@ -118,6 +126,7 @@ export const AnimalFormModal: React.FC<AnimalFormModalProps> = ({ isOpen, onClos
                         <select name="gender" value={formData.gender} onChange={handleChange} className="w-full rounded-lg border-stone-300 dark:border-stone-700 bg-stone-50 dark:bg-stone-800 text-stone-900 dark:text-stone-100 p-2.5 text-sm">
                             <option value="Macho">Macho</option>
                             <option value="Hembra">Hembra</option>
+                            <option value="Por determinar">Por determinar</option>
                         </select>
                     </div>
                     <div>

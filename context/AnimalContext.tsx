@@ -226,8 +226,8 @@ export const AnimalProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         // Migration: Purge removed animal Tofu (id: 23) so it never appears even from cache
         data = data.filter((a: Animal) => a.id !== '23');
 
-        // Migration: Ensure Sidra (5), Cava (6), Selva (16), Irati (17), Ona (18), Brisa (19), Nikki (22), Marimar (24), Tom Holland (25), Mariah Carey (26), Camada Tres Salsas (27, 28, 29), Camada Blanca (30, 31, 32), Nuevas Bebitas (33, 34), Nuevos Hermanitos (35, 36, 37) and Ratona (38) have updated image and details
-        ['5', '6', '16', '17', '18', '19', '22', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38'].forEach(id => {
+        // Migration: Ensure Sidra (5), Cava (6), Ana Mena (8), Coral (10), Selva (16), Irati (17), Ona (18), Brisa (19), Nikki (22), Marimar (24), Tom Holland (25), Mariah Carey (26), Camada Tres Salsas (27, 28, 29), Camada Blanca (30, 31, 32), Nuevas Bebitas (33, 34), Nuevos Hermanitos (35, 36, 37), Ratona (38), Nuevos Bebés Dúo (39, 40) y Roma & Remo (41, 42) have updated image and details
+        ['5', '6', '8', '10', '16', '17', '18', '19', '22', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42'].forEach(id => {
           const idx = data.findIndex((a: Animal) => a.id === id);
           const source = INITIAL_ANIMALS.find(a => a.id === id);
           if (idx !== -1 && source) {
@@ -246,14 +246,30 @@ export const AnimalProvider: React.FC<{ children: React.ReactNode }> = ({ childr
               size: source.size,
               species: source.species,
               breed: source.breed,
-              bondedWithId: source.bondedWithId,
-              isJointAdoption: source.isJointAdoption
+              bondedWithId: source.bondedWithId || undefined,
+              isJointAdoption: source.isJointAdoption ? true : false
             };
+            if (!source.isJointAdoption) {
+              delete data[idx].bondedWithId;
+              delete data[idx].isJointAdoption;
+            }
           }
         });
 
+        // Migration: Ensure all adopted and reserved animals have gender-adapted statuses
+        data = data.map((a: Animal) => {
+          if (a.gender === 'Hembra') {
+            if (a.status === 'Adoptado') return { ...a, status: 'Adoptada' };
+            if (a.status === 'Reservado') return { ...a, status: 'Reservada' };
+          } else if (a.gender === 'Macho') {
+            if (a.status === 'Adoptada') return { ...a, status: 'Adoptado' };
+            if (a.status === 'Reservada') return { ...a, status: 'Reservado' };
+          }
+          return a;
+        });
+
         // Migration: Ensure new animals are added if not present
-        const newAnimalIds = ['13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38'];
+        const newAnimalIds = ['13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40', '41', '42'];
         newAnimalIds.forEach(id => {
           const hasAnimal = data.some((a: Animal) => a.id === id);
           if (!hasAnimal) {

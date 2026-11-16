@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Animal } from '../types';
+import { formatAnimalStatus } from '../constants';
 import { Heart, Pencil } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
@@ -44,7 +45,7 @@ export const AnimalCard: React.FC<AnimalCardProps> = ({ animal, compact = false,
             />
           </div>
           <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded-full text-[9px] font-bold text-stone-700 tracking-wide shadow-sm">
-            {animal.status}
+            {formatAnimalStatus(animal.status, animal.gender)}
           </div>
         </div>
         <div className="p-3 flex flex-col flex-grow">
@@ -99,7 +100,7 @@ export const AnimalCard: React.FC<AnimalCardProps> = ({ animal, compact = false,
           />
         </div>
         <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-stone-700 tracking-wide shadow-sm">
-          {animal.status}
+          {formatAnimalStatus(animal.status, animal.gender)}
         </div>
       </div>
       <div className="p-6 flex flex-col flex-grow">

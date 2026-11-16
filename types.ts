@@ -18,7 +18,7 @@ export interface Animal {
   species: 'Perro' | 'Gato' | 'Otro';
   breed: string;
   age: string;
-  gender: 'Macho' | 'Hembra';
+  gender: 'Macho' | 'Hembra' | 'Por determinar';
   size: string;
   imageUrl: string;
   imageScale?: number;
